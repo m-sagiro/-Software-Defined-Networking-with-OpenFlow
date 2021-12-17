@@ -70,63 +70,6 @@ class Router(Node):
     def terminate(self):
         self.cmd('sysctl net.ipv4.ip_forward=0')
         super(Router, self).terminate()
-        
-def customIperf( self=Mininet, hosts=None, l4Type='TCP', udpBw='10M', fmt=None,
-               seconds=5, port=5001, args=None):
-        """Run iperf between two hosts.
-           hosts: list of hosts; if None, uses first and last hosts
-           l4Type: string, one of [ TCP, UDP ]
-           udpBw: bandwidth target for UDP test
-           fmt: iperf format argument if any
-           seconds: iperf time to transmit
-           port: iperf port
-           returns: two-element array of [ server, client ] speeds
-           note: send() is buffered, so client rate can be much higher than
-           the actual transmission rate; on an unloaded system, server
-           rate should be much closer to the actual receive rate"""
-        hosts = hosts or [ self.hosts[ 0 ], self.hosts[ -1 ] ]
-        assert len( hosts ) == 2
-        client, server = hosts
-        output( '*** Iperf: testing', l4Type, 'bandwidth between',
-                client, 'and', server, '\n' )
-        server.cmd( 'killall -9 iperf' )
-        iperfArgs = 'iperf -p %d ' % port
-        bwArgs = ''
-        args = ''
-        if l4Type == 'UDP':
-            iperfArgs += '-u '
-            bwArgs = '-b ' + udpBw + ' '
-            args = '-l 1k'
-        elif l4Type != 'TCP':
-            raise Exception( 'Unexpected l4 type: %s' % l4Type )
-        if fmt:
-            iperfArgs += '-f %s ' % fmt
-        server.sendCmd( iperfArgs + '-s' )
-        if l4Type == 'TCP':
-            if not waitListening( client, server.IP(), port ):
-                raise Exception( 'Could not connect to iperf on port %d'
-                                 % port )
-        print(iperfArgs + '-t %d -c ' % seconds +
-                             server.IP() + ' ' + bwArgs + args)
-        cliout = client.cmd( iperfArgs + '-t %d -c ' % seconds +
-                             server.IP() + ' ' + bwArgs + args)
-        debug( 'Client output: %s\n' % cliout )
-        servout = ''
-        # We want the last *b/sec from the iperf server output
-        # for TCP, there are two of them because of waitListening
-        count = 2 if l4Type == 'TCP' else 1
-        while len( re.findall( '/sec', servout ) ) < count:
-            servout += server.monitor( timeoutms=5000 )
-        server.sendInt()
-        servout += server.waitOutput()
-        debug( 'Server output: %s\n' % servout )
-        output(servout)
-        result = [ self._parseIperf( servout ), self._parseIperf( cliout ) ]
-        if l4Type == 'UDP':
-            result.insert( 0, udpBw )
-        output( '*** Results: %s\n' % result )
-        return result
-
 
 # Hier implementieren wir unseren Netzwerkplan (Topologie)
 class Netzwerk(Topo):
@@ -166,7 +109,7 @@ class Netzwerk(Topo):
                      intfName2='r2-eth2',
                      params1={'ip': '10.100.12.1/24'},
                      params2={'ip': '10.100.12.2/24'},
-                     #bw=20
+                     bw=20
                      )
         self.addLink(routers[2],
                      routers[3],
@@ -174,7 +117,7 @@ class Netzwerk(Topo):
                      intfName2='r4-eth2',
                      params1={'ip': '10.100.34.3/24'},
                      params2={'ip': '10.100.34.4/24'},
-                     #bw=20
+                     bw=20
                      )
         self.addLink(routers[0],
                      routers[2],
@@ -182,7 +125,7 @@ class Netzwerk(Topo):
                      intfName2='r3-eth3',
                      params1={'ip': '10.100.13.1/24'},
                      params2={'ip': '10.100.13.3/24'},
-                     #bw=20
+                     bw=20
                      )
         self.addLink(routers[0],
                      routers[3],
@@ -190,7 +133,7 @@ class Netzwerk(Topo):
                      intfName2='r4-eth3',
                      params1={'ip': '10.100.14.1/24'},
                      params2={'ip': '10.100.14.4/24'},
-                     #bw=20
+                     bw=20
                      )
         self.addLink(routers[1],
                      routers[2],
@@ -198,7 +141,7 @@ class Netzwerk(Topo):
                      intfName2='r3-eth4',
                      params1={'ip': '10.100.23.2/24'},
                      params2={'ip': '10.100.23.3/24'},
-                     #bw=20
+                     bw=20
                      )
         self.addLink(routers[1],
                      routers[3],
@@ -206,7 +149,7 @@ class Netzwerk(Topo):
                      intfName2='r4-eth4',
                      params1={'ip': '10.100.24.2/24'},
                      params2={'ip': '10.100.24.4/24'},
-                     #bw=20
+                     bw=20
                      )
 
 
@@ -221,12 +164,6 @@ def Main():
     # Initialize a Mininet with our topo object, a controller, the link and switch-version
     net = Mininet(topo=topo, controller=c0,
                   link=TCLink, switch=OVSKernelSwitch)
-    # link und switch können spezifisch eingestellt werden
-    #link=TCLink, switch=OVSKernelSwitch
-    
-
-    # Creating our Mininet Object with our created Netzwerk (topology)
-    #net = Mininet(topo=topo)
 
     # Setting up GRE-Tunnels between the routers
     setup_GRE_Tunnels()
@@ -271,15 +208,6 @@ def Main():
 
     # Pinging all hosts
     # net.pingAll()
-    
-    #hosts = [net.getNodeByName('h1'), net.getNodeByName('h11')]
-    
-    #info(net['h1'].cmd('wireshark&'))
-    #time.sleep(10)
-    
-    #net.iperf(hosts=hosts, l4Type='TCP')
-    
-    #customIperf(self=net, hosts=hosts, l4Type='UDP', udpBw='20M', seconds=10)
 
     # Dropping the user in to the CLI -> If Ctrl+c -> stops mininet
     CLI(net)
