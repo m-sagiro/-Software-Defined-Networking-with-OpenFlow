@@ -7,7 +7,9 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Beziehungen von Klassen und Interfaces \autocite {jtpinterface}\relax }}{3}{figure.caption.5}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Eigenschaften von Vector, PriorityQueue und HashSet\relax }}{4}{table.caption.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {table}{\numberline {3.2}{\ignorespaces Eigenschaften der Python Datenstrukturen \autocite {listuple}\relax }}{4}{table.caption.9}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
