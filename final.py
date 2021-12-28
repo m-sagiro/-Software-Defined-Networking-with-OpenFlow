@@ -10,7 +10,7 @@ import time, re
 import string    
 import random # define the random module  
 
-def setup_GRE_Tunnels():
+def setup_GRE_Tunnels(net):
     for i in range(1,5):
         for j in range(1,5):
             if i != j:
@@ -28,7 +28,7 @@ def generate_key(_key_length):
     ran = ''.join(random.choices(string.ascii_uppercase + string.digits, k = _key_length))    
     return "0x" + str(ran).lower()
 
-def setup_ipsec():
+def setup_ipsec(net):
     for i in range(1,5):
         for j in range(2,5):
             if(i < j ):
@@ -166,7 +166,7 @@ def Main():
                   link=TCLink, switch=OVSKernelSwitch)
 
     # Setting up GRE-Tunnels between the routers
-    setup_GRE_Tunnels()
+    setup_GRE_Tunnels(net)
 
     # Add routing for reaching networks that aren't directly connected trough GRE-Tunnel
     # route from r1 to r2 and r2 to r1
@@ -189,7 +189,7 @@ def Main():
     info(net['r4'].cmd("ip route add 192.168.3.0/24 via 10.10.34.4 dev gre43"))
 
     # IPsec-Verbindung
-    setup_ipsec()
+    setup_ipsec(net)
 
     # Giving routing information output
     info('*** Routing Table on Router:\n')
