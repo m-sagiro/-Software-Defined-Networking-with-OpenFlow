@@ -2344,10 +2344,12 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">Projekt.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="3">jtpinterface</bcf:citekey>
-    <bcf:citekey order="4">jtpinterface</bcf:citekey>
+    <bcf:citekey order="4">listuple</bcf:citekey>
     <bcf:citekey order="5">listuple</bcf:citekey>
-    <bcf:citekey order="6">listuple</bcf:citekey>
+    <bcf:citekey order="6">jtpinterface</bcf:citekey>
+    <bcf:citekey order="7">jtpinterface</bcf:citekey>
+    <bcf:citekey order="8">listuple</bcf:citekey>
+    <bcf:citekey order="9">listuple</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="anyt">
