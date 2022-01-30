@@ -14,8 +14,6 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {lstlisting}{\numberline {7.1}Deklaration eines Interfaces}{19}{lstlisting.7.1}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {lstlisting}{\numberline {7.1}Deklaration eines Interfaces}{27}{lstlisting.7.1}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

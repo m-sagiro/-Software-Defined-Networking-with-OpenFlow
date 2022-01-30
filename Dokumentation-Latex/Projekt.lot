@@ -7,7 +7,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {3.1}{\ignorespaces Eigenschaften der Python Datenstrukturen \autocite {listuple}\relax }}{12}{table.caption.9}%
+\contentsline {table}{\numberline {3.1}{\ignorespaces Eigenschaften der Python Datenstrukturen \autocite {listuple}\relax }}{20}{table.caption.12}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -17,10 +17,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7.1}{\ignorespaces Eigenschaften von Vector, PriorityQueue und HashSet\relax }}{20}{table.caption.11}%
+\contentsline {table}{\numberline {7.1}{\ignorespaces Eigenschaften von Vector, PriorityQueue und HashSet\relax }}{28}{table.caption.14}%
 \defcounter {refsection}{0}\relax 
-\contentsline {table}{\numberline {7.2}{\ignorespaces Eigenschaften der Python Datenstrukturen \autocite {listuple}\relax }}{20}{table.caption.12}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {7.2}{\ignorespaces Eigenschaften der Python Datenstrukturen \autocite {listuple}\relax }}{28}{table.caption.15}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

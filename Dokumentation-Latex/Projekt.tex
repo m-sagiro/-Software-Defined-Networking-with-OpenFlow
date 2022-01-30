@@ -96,6 +96,7 @@ mit entsprechender Software auf Plagiate überprüft wird.
 \listoffigures
 \listoftables
 \lstlistoflistings
+%ABKÜRZUNGSVERZECIHNIS FEHL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 %Aktivierung arabische Seitenzahlen
 \mainmatter % Seite fängt mit 1 an
@@ -103,8 +104,12 @@ mit entsprechender Software auf Plagiate überprüft wird.
 
 
 %Kapitel: Einleitung
-\chapter{Einleitung}\label{ch:intro}
-Seit der Einführung des ... existiert das ..., welcher, wie der Name ausdrückt, einige ... für .... zur Verfügung stellt.
+\chapter{Abstract}\label{ch:intro}
+Der vorliegende Projektbericht dient als Dokumentation des Informatikprojekts „Software-Defined Network mit OpenFlow“ an der Frankfurt University of Applied Sciences im Bachelorstudiengang Informatik im Wintersemester 2021/2022.\par
+Das Aufkommen des Internets hat eine Revolution in der Informationstechnologie geschaffen. Durch eine neue Art der Kommunikation kann der Mensch auf nationaler wie auch auf internationaler Ebene effizienter und effektiver Informationen weitervermitteln. Dies bildet die Grundlage für die heutige Wissensökonomie. \par
+Die traditionelle Netzwerkarchitektur ist jedoch seit einem halben Jahrhundert unverändert geblieben und wird für die Geschäftsanforderungen von Unternehmen, Netzwerkbetreibern und Endbenutzern zunehmend ungeeignet. Gegenwärtig werden die Geschäftsanforderungen von Unternehmen immer komplexer und die Anwendungsvielfalt der Endbenutzer nimmt zu, was zu unterschiedlichen Anforderungen der Benutzer an Verbindungsnetzwerke führt. Das Netzwerk muss auf sich schnell ändernde Parameter von Latenz, Bandbreite, Routing, Sicherheit und so weiter (usw.) entsprechend den Anforderungen der Anwendungen reagieren \cite{case}.\par
+In den letzten Jahren hat die dramatische Zunahme der Netzwerkkomplexität Schwierigkeiten bei der traditionellen Netzwerkadministration mit sich gebracht. Das Konfigurieren von Computernetzwerksystemen unter Verwendung vordefinierter Richtlinien, das Rekonfigurieren von Netzwerken, um auf Änderungen zu reagieren, die Fehlerkorrektur und der Lastausgleich sind zu gewaltigen Aufgaben geworden. Wenn die Parameter des Netzwerks neu konfiguriert wurden, musste jedes Gerät manuell vollständig neu konfiguriert werden, anstatt einfach nur den Teil der Steuerungsebene zu ändern (vgl. Kim/Feamster 2013: 114f). Dies führte zu einem revolutionären Wandel in der Netzwerktechnologie durch die Zentralisierung der Netzwerkadministration. Seitdem wurde das Konzept des Software-Defined Network (SDN) geboren \cite[114-115]{improve}. 
+
 
 \section{Software-defined Networking}\label{sdn}
 asd
@@ -118,83 +123,192 @@ asddsa
 asddsa
 
 \section{Motivation}
-Was hat uns zum schreiben der Projektarbeit (in Bezug auf die Problemstellung) gebracht?
-
-https://www.scribbr.de/aufbau-und-gliederung/motivation-bachelorarbeit/
+Das Modul “Informatik Projekt” wird im 5. Semester des Bachelorstudiengangs Informatik durchgeführt. Nach erfolgreichem Abschluss des Moduls sollten Studierende gewisse Kompetenzen erlernt haben, wie beispielsweise den Software-Engineering Prozess planen und durchführen, als auch auf einem vertieften Niveau gemeinsam programmieren zu können. Außerdem sollten Studierende fähig sein, gemeinsam ein Team zu bilden und einen selbsterstellten Zeitplan einzuhalten sowie auf einem technisch hohen Niveau zu kommunizieren, um als Team auf Ergebnisse zu kommen. Falls unerwartete Komplikationen sowohl technischer als auch sozialer Art entstehen, sollte als Team diese Hürde überwunden werden. Infolgedessen entstand dieser Projektbericht, der als Projektergebnis und als Dokumentation dient, um die erlernten Kompetenzen widerzuspiegeln.\par
+Durch das Thema “Software-Defined Networking mit Openflow” konnte Freizeit mit Studium verbunden werden, da viele selbsterlernte Kenntnisse und Vorkenntnisse aus anderen Modulen praktisch angewendet werden konnten. Zugleich dient die Dokumentation durch ausführliche Erklärungen und Abbildungen auch als Tutorial, dass den Einstieg in das Thema SDN durch Praxis vereinfachen soll.
 \section{Problemstellung}
-Die Problemstellung beschreibt das Forschungsproblem, das du mit deiner Abschlussarbeit lösen möchtest.
-Was ist das Thema des Projekts und wie lautet die konkrete Fragestellung?
+Innerhalb des Informatikprojekts muss sich folgendes Szenario vorgestellt werden:\par
+Ein Unternehmen plane eine Netzwerkkommunikation zwischen vier Standorten mittels Sofware-Defined Networking Funktionen. Die Hauptverwaltung befinde sich in Frankfurt am Main, die drei weiteren Niederlassungen seien in München, Berlin, Hamburg. Zudem sollte jede Lokation einen Asymmetric Digital Subscriber Line Zugang (ADSL) zum Internet haben.\par
+Darüber hinaus müssen im Netzwerk bestimmte Funktionen und Aufgaben realisiert werden. Es solle nicht nur für jede Lokation jeweils ein privater IP-Adressenbereich genutzt werden, sondern auch ein Netzwerkplan vom gesamten Netzwerk erstellt werden. Außerdem solle jede Kommunikation zwischen den einzelnen Lokationen über eine Virtual Private Network Verbindung (VPN) laufen, somit sei der gesamte Datenverkehr über das Internet und zwischen den Lokationen verschlüsselt. Anschließend müsse ein Service-Provider gefunden werden, der die gewünschte Konfiguration und Anforderungen realisiere. Jedoch sollen der Preis und die benötigte Bandbreite nicht nur für den Internetzugang, sondern auch für die Wide Area Network-Verbindungen (WAN) beachtet und verglichen werden. Ebenfalls solle durch SDN sowohl eine Network Address Translation-Firewall-Funktion (NAT) als auch eine Webproxy-Funktion in allen Lokationen implementiert werden. Ergänzend dazu solle mithilfe des SDN-Controllers sowohl eine graphische Darstellung der Netzwerkstruktur durch einen Topologieviewer realisiert werden als auch eine Monitoring-Lösung. Zudem müsse eine Quality of Service -Funktion implementiert werden, die genügend Bandbreite für Audio beziehungsweise (bzw.) Video-Konferenzen habe, auch wenn diese über die WAN-Verbindung mit Symmetric Digital Subscriber Line (SDSL) 20 Megabit begrenzt sei. Anschließend wird ein weiteres Szenario beschrieben:\par
+“Für eine Spezialanwendung muss eine Software in Berlin wichtige Daten an einem Server in der Zentrale senden, dazu kann diese Software über die API mit dem Controller kommunizieren und diesem dies mitteilen. Dadurch wird der Controller nun alle Knoten auf diesem Weg durchs Netzwerk anweisen, diesen Flow zu priorisieren und alle anderen Datenströme zu drosseln.” 
+Schließlich sollen die Netzwerkfunktionen Hub (Repeater), Bridge, Layer-2-Switch, Layer-3-Switch, Dynamic Host Configuration Protocol (DHCP) und Domain Name System (DNS) analysiert und realisiert werden.\par
+In Kapitel 3 wird für die Implementierungen der Netzwerk Funktionalitäten Screenshots von Mininet in VirtualBox gezeigt, die als Nachweis der einzelnen Funktionalitäten dienen sollen.
 
-https://www.scribbr.de/anfang-abschlussarbeit/problemstellung/
-
-Würde hier die Aufgabenstellungen hinschreiben, sollten irgendwo ja erwähnt sein.
 
 \section{Aufbau der Arbeit}
-Wie ist die restliche Projektarbeit aufgebaut? Was kommt noch?
+In Kapitel 2 dieser Projektarbeit wird über das generelle Vorgehen in dem Projekt geschrieben. Nach einer kurzen Vorstellung unseres Projektziels, wird das konkrete Vorgehen innerhalb der Gruppe erläutert. Weiterhin wird sowohl über die Festlegung der Meilensteine, als auch über die genutzten Werkzeuge eingegangen. In Kapitel 3 wird die Projektdurchführung erklärt und in den Unterkapiteln werden die erreichten Ergebnisse vorgestellt, die auch die einzelnen Thematiken der jeweiligen Funktionalitäten ergänzen. Anschließend dient Kapitel 4 mit einer kurzen Analyse aller Ergebnisse, als auch eine kritische Betrachtung der Projektanforderung, als Auswertung und Selbstreflektion, was im Rahmen der Projektarbeit nicht funktionierte und umgesetzt werden konnte, in Bezug auf Netzwerkanforderungen, sowie intern zwischen allen Gruppenmitgliedern. Kapitel 5 bildet mit dem Fazit einen Ausblick in die mögliche Zukunft für SDN.
 
 
 \chapter{Projekt}
-asd
 \section{Projektziel}
-Wie lautet das Ziel des Projekts?
-
-
-Die Zielsetzung deiner Bachelorarbeit sollte deinen Lesenden einen Einblick in das „Warum“ und das „Wie“ deiner Untersuchung geben.
-
-Warum führst du die Forschung durch und wie wirst du dieses Ziel erreichen?
-
-https://www.scribbr.de/anfang-abschlussarbeit/zielsetzung-formulieren/
+Ziel des Projekts war es, ein Netzwerk für ein Unternehmen mit vier Lokationen aufzubauen. Dabei war es besonders wichtig, dass das gesamte Netzwerk mit SDN Funktionen realisiert wurde.\par
+Ein stabiles Netzwerk vom ersten Tag an wird die Grundlage für den Erfolg von Unternehmen sein. Damit Unternehmen gut funktionieren, muss auch das Netzwerksystem gut funktionieren. Das Netzwerk arbeitet mit der richtigen Kapazität und bringt Effizienz. Die Aufgabe war es, ein gutes stabiles Netzwerk aufzubauen, dass zu 100 Prozent bei Datenverkehr funktionierte und unerwartete Sicherheitsprobleme vermeidete.\par
+Das Netzwerksystem musste eng verwaltet und überwacht werden. Zudem musste es leicht unterstützt werden, um Probleme auf die effektivste Weise behandeln und beheben zu können. Es war zwingend erforderlich, dass das Netzwerksystem sicher und verschlüsselt war. Denn Unternehmensdaten sind das Wichtigste. Bei der Netzwerksicherheit ging es auch um den Schutz von Unternehmensressourcen. Je nach Verwendungszweck und Anzahl der Nutzer sollten genügend Bandbreite zur Verfügung gestellt werden.\par
+Im Laufe des Projektberichtes werden die erfolgreichen sowie erfolglosen Ergebnisse des Projekts dokumentiert und dargestellt. Am Ende des Projektes wird ein lauffähiges Produkt entstehen, dass alle benötigten Funktionalitäten erfüllt.  
 
 \section{Vorgehen}
-Wie sieht die Vorgehensweise aus?
+Angemessene Aufgabenverteilung im Kollektiv, brachte viele Vorteile für die Arbeitssituation und den Teammitgliedern. Die Nutzung der maximalen Kapazität jedes Teammitglieds war ein effektiver Weg, um die Arbeitseffizienz zu verbessern.\par
+Um die Wünsche und Fähigkeiten jedes einzelnen Mitglieds zu verstehen, wurden Gespräche und Diskussionen frühzeitig durchgeführt. Die Zuweisung von Aufgaben, die der Produktivität jeder Person entsprachen, half den Mitgliedern, effektiver und mit einem angenehmeren Geist zu arbeiten. Den Mitgliedern wurden bestimmte Aufgaben mit Fristen zugewiesen. Es wurde jede Woche ein permanentes Treffen über Discord gehalten. Spontane Treffen konnten mit dem höchsten Geist und der höchsten Konzentration ebenfalls durchgeführt werden.\par
+Die Analyse von Aufgabenzuweisungen war wichtig, um zu verstehen, was getan werden muss und welche Tools notwendig seien. Der Wissensaustausch half den Mitgliedern, sich Wissen sofort anzueignen und effektiv zu nutzen. Nach einer erfolgreichen Analyse begann unser Team mit der Ausarbeitung eines Plans. Die Arbeit wurde vom Projektleiter aufgeteilt und kontrolliert.
+
 \section{Festlegen von Meilensteinen}
-Welche Meilensteine wurden festgelegt?
+In dem ersten Treffen der Gruppe wurde entschieden, drei zentrale Meilensteine zu definieren (siehe Abbildung \ref{milestones}). Grund dafür sei, einen klaren Faden in der Projektarbeit zu konstruieren, um mit der Menge an Informationen strukturiert umgehen zu können. Die Meilensteine wurden mithilfe der Aufgabenstellungen konkretisiert:
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/meilensteine}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Zeitplan des Projektes}
+ \label{milestones}
+\end{figure}
+
+\textbf{Meilenstein 1}
+\begin{itemize}
+ \item Erstellung eines Netzwerkplans für das gesamte Netzwerk
+ \item Kommunikation zwischen Lokationen soll über eine VPN Verbindung realisiert werden
+ \item Produktauswahl bei einem ISP zur Realisierung des Netzwerkes
+ \item Implementierung einer NAT-Firewall-Funktion in allen Lokationen
+ \item Deadline: 02.12.2021
+\end{itemize}
+
+\textbf{Meilenstein 2}
+\begin{itemize}
+ \item Implementierung einer Webproxy-Funktion für den Internet-Zugang in den einzelnen Lokationen
+ \item Implementierung eines Topologie-Viewers und einer Monitoring-Lösung
+ \item Implementierung einer Quality of Service Funktion für Audio- und Videokonferenzen
+ \item Deadline: 23.12.2021
+\end{itemize}
+
+\textbf{Meilenstein 3}
+\begin{itemize}
+ \item Priorisierung von einem Datenflow mithilfe des Controllers
+ \item Analyse und Umsetzung der Netzwerkfunktionen von Hub, Bridge, Layer-2-Switch, Layer-3-Switch, DHCP und DNS
+ \item Deadline: 10.02.2022
+\end{itemize}
+
+Durch gängige IT-Projektmanagementmethoden, wie beispielsweise die Scrum-Methode, konnten frühzeitig Ergebnisse erzielt werden. Infolgedessen gab es am Ende der Projektarbeit mehr Zeit, um über Kleinigkeiten zu reflektieren.
 
 \section{Verwendete Werkzeuge}
-Text
-\subsection{Mininet}
-vllt. Text
-\subsubsection{Einführung}
-Mininet ist ein Netzwerk Emulator mit der man Netzwerke simulieren kann. Bei Mininet handelt es sich um kostenlose Open-Source-Software, die die virtuelle Maschine und Controller die Recherche in SDN und OpenFlow ermöglichen.
-Mininets ermöglichen eine sehr groß angelegte Topologie, wodurch ein Netzwerk von Hosts, Switch-, Controller- und virtuelle Links erstellt wird. Das Ausführen von Tests mit den Komponenten ist unkompliziert und kann über Python Schnittstelle erledigt werden.
-\subsubsection{Funktionalität}
-•      Mininet stellt ein einfaches Netzwerk Testbed dar, welches aber auch gleichzeitig auch günstig ist. Da der Switch Openflow in Mininet alle Eigenschaften hat, wie ein echter switch OpenFlow, ist die Anwendung von Netzwerkemulator mit Mininet praktisch sinnvoll.
-•      Ermöglicht das Debuggen und Ausführen von Tests großer Netzwerke mithilfe von CLI.
-•      Unterstützung zum Einrichten beliebiger benutzerdefinierter Diagramme
-•      Die Anwendungen im Mininet können im echten Netzwerk realisiert werden, ohne dass man sein Code ändern muss.
-•      Mininet bieten eine benutzerfreundliche und erweiterbare Python-API
+Im Folgenden werden die für die Implementierung und Evaluierung verwendeten Hardware- und Softwareumgebungen kurz beschrieben.\par
+Dieses Projekt wurde auf VirtualBox Oracle VM Version 6.1 durchgeführt. Unter der Verwaltung von VirtualBox wurde Mininet-Emulator Version 2.3 und Floodlight Controller Version 1.2 installiert. Zur Ausführung von Programmen zur Evaluation wurde außerdem Python3 installiert. Weitere Programme sind auch installiert und sie werden im Ablauf von Kapitel 3 bekannt gegeben und ausführlicher erklärt.
 
-\subsubsection{Nachteil}
-Aktuelle Nachteile von Mininet: nur unter Linux lauffähig. Dadurch, dass Mininet nur auf einem Rechner ausgeführt werden kann, ist es leistungsmäßig eingeschränkt. Daher hängt die Leistung von den Ressourcen dieses Rechners ab.
+\subsection{Mininet}
+Der Mininet-Emulator implementiert die Verbindung zwischen Switches und Controllern. Diese ermöglicht es Entwicklern, die an der Erstellung und dem Testen von Controller-Ressourcen interessiert sind, Mininet zur Durchführung ihrer Simulationen zu nutzen.
+
+\subsubsection{Einführung}
+Mininet ist ein Netzwerk Emulator, mit der Netzwerke simuliert werden können. Bei Mininet handelt es sich um eine kostenlose Open-Source-Software, die die virtuelle Maschine und dem Controller die Recherche in SDN und OpenFlow ermöglicht. Mininet ermöglicht eine sehr groß angelegte Topologie, wodurch ein Netzwerk von Hosts, Switches, virtuellen Links und einem Controller erstellt wird. Das Ausführen von Tests mit den Komponenten ist unkompliziert und kann über Python-Schnittstelle erledigt werden. Benutzer können ihre eigene Netzwerktopologie-Struktur nach ihren eigenen Bedürfnissen aufbauen.
+
+\subsubsection{Funktionalität}
+Mininet:
+\begin{itemize}
+ \item stellt ein einfaches Netzwerk Testbed dar, welches aber auch gleichzeitig günstig ist. Da der OpenFlow Switch in Mininet alle Eigenschaften wie ein echter OpenFlow Switch hat, ist die Anwendung von einem Netzwerkemulator mit Mininet praktisch sinnvoll.
+ \item ermöglicht das Debuggen und Ausführen von Tests größerer Netzwerke mithilfe von Command Line Interface (CLI).
+ \item unterstützt das Einrichten beliebiger benutzerdefinierter Diagramme. Die Anwendungen im Mininet können im echten Netzwerk realisiert werden, ohne dass der Code geändert werden muss.
+ \item bietet eine benutzerfreundliche und erweiterbare Python-API.
+ \item ermöglicht mehreren gleichzeitigen Entwicklern, unabhängig voneinander an derselben Topologie zu arbeiten.
+ \item ermöglicht komplexe Topologietests, ohne dass ein physisches Netzwerk verkabelt werden muss.
+\end{itemize}
+
+\subsubsection{Nachteile}
+Aktuell ist Mininet nur unter Linux lauffähig. Nutzer eines anderen Betriebssystems müssen auf Linux entweder durch Simulierung oder Installation zurückgreifen. Zudem könnte der Sourcecode effizienter und sauberer implementiert werden.\par
+Mininet schreibt Ihren OpenFlow-Controller nicht für Benutzer. Wenn Benutzer benutzerdefiniertes Routing- oder Schaltverhalten benötigen, müssen Benutzer einen Controller mit den erforderlichen Funktionen finden oder entwickeln.\par
+Standardmäßig ist Mininet-Netzwerk von Local Area Network (LAN) und vom Internet isoliert - das ist normalerweise eine gute Sache! Benutzer können jedoch das NAT-Objekt und/oder die Option --nat verwenden, um Ihr Mininet-Netzwerk über Network Address Translation mit Ihrem LAN zu verbinden. Benutzer können Ihrem Mininet-Netzwerk auch eine echte (oder virtuelle) Hardware-Schnittstelle hinzufügen (siehe Beispiele/hwintf.py für Details).\par
+Standardmäßig teilen sich alle Mininet-Hosts das Host-Dateisystem und den PID-Speicherplatz. Das bedeutet, dass Benutzer möglicherweise vorsichtig sein müssen, wenn sie Daemons ausführen, die eine Konfiguration in /etc erfordern, und Benutzer müssen darauf achten, dass sie nicht versehentlich die falschen Prozesse beenden. \par
+Im Gegensatz zu einem Simulator hat Mininet keine starke Vorstellung von virtueller Zeit. dies bedeutet, dass Timing-Messungen auf Echtzeit basieren und dass Ergebnisse schneller als Echtzeit (z. B. 100-Gbit/s-Netzwerke) nicht einfach emuliert werden können.
+
 \subsubsection{Komponenten}
-•      Links: Die Links in einem Mininet sind ein Paar virtueller Ethernets, die wie ein Draht funktionieren, der zwei virtuelle Schnittstellen verbindet. Pakete werden von einer Schnittstelle zur anderen gesendet, diese Schnittstellen stellen für alle genau dasselbe wie Ethernet-Ports dar System- und Anwendungssoftware.
-•      Hosts: Die Netzwerk-Namespaces enthalten den Netzwerkstatus (network state). Sie bieten Prozessen (oder Gruppen von Prozessen) die Kontrolle über Schnittstellen, Ports und Routing-Tabellen. Jeder Host hat seine eigenen Ethernet-Schnittstellen (initiiert und gesetzt durch den Befehl ip link add/set) und eine Verbindung zum Mininet.
-•      Switches: OpenFlow-Softswitches bieten die gleiche Semantik für das Senden
-Paket wie ein Hardware-Switch. Ein Switch arbeitet auf der Datenverbindungsschicht (Layer 2) und manchmal auf der Netzwerkschicht (Layer 3) des OSI (Open Systems Interconnection) -Referenzmodells und unterstützt daher jedes beliebige Paketprotokoll. LANs, die zur Verbindung von Segmenten Switches verwenden, werden als geswitchte LANs oder, im Falle von Ethernet-Netzwerken, als geswitchte Ethernet-LANs bezeichnet. In Netzwerken ist der Switch das Gerät, das Pakete zwischen LAN-Segmenten filtert und weiterleitet
-•      Controller: Controller können sich überall im realen Netzwerk oder in der Umgebung befinden Simulation.
+Ein Mininet-Netzwerk besteht aus den folgenden Komponenten:
+\begin{itemize}
+ \item \textbf{Link:} Links sind virtuelle Ethernets, die zwei virtuelle Schnittstellen verbinden. Jeder Link verhält sich für das gesamte System wie ein echter funktionsfähiger Ethernet-Anschluss. Die Datenrate jedes Links wird von Linux Traffic Control (TC) festgelegt.
+ \item \textbf{Hosts:} Ein emulierter Host ist eine Reihe von Prozessen auf Benutzerebene, die in einen Netzwerk-Namespace verlagert wird. Netzwerk-Namespaces bieten Prozessgruppen privaten Besitz von Schnittstellen, Ports und Routing-Tabellen.
+ \item \textbf{Switch:} Mininet verwendet Open vSwitches, die im Kernelmodus ausgeführt werden, um Pakete zwischen verschiedenen virtuellen Netzwerkschnittstellen auszutauschen. Open vSwitches sind OpenFlow-fähig und bieten die gleiche Semantik für das Senden von Paketen wie einen realen Switch.
+ \item \textbf{Controller:} Ein Controller ist in der Mininet-Simulation ein Knoten, der einen OpenFlow-Controller darstellt. Mininet bietet die Möglichkeit einen internen oder externer Controller zu benutzten. Für den externen Controller wird die IPv4-Adresse und der Port benötigt.
+\end{itemize}
+
+
 \subsubsection{Installation}
-sudo apt-get install git
-git clone git://github.com/mininet/mininet
-sudo mininet/util/install.sh –a
+Mininet kann auf verschiedene Weisen installiert werden. In unserer Arbeit wurde die Option: Native Installation from Source ausgewählt. Die Installation wird Schritt für Schritt aufgeführt:
+\begin{itemize}
+\item[1.] Git wird über das Linux-Terminal installiert
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo apt-get install git}}}}
+\begin{itemize}
+\item[2.] Über das git Kommando wird die aktuellste Version von Mininet installiert
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ git clone git://github.com/mininet/mininet}}}}
+\begin{itemize}
+\item[3.] Mit install.sh die Installation starten
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo mininet/util/install.sh -a}}}}
+
 \subsubsection{Aufbau}
-Durch die Eingabe von dem Befehl sudo mn erfolgt ein Default Mininet. Auf der virtuellen Maschine laufen 4 Entitäten (2 Hosts, 1 Switch, 1 Controller).
+Durch die Eingabe von dem Befehl \textit{\textbf{sudo mn}} wird ein Standardnetzwerk mit zwei Hosts, einer Switch und einem Controller gestartet (siehe Abbildung \ref{sudomn}).
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.5\textwidth]{Bilder/sudomn}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Erstellung eines Standardnetzwerkes mit Mininet}
+ \label{sudomn}
+\end{figure}
 
 \subsection{Floodlight}
-vllt. Text
+Floodlight ist ein sogenannter Controller zur Steuerung einer oder mehreren programmierbaren Switches. Die Kommunikation zwischen Switch und Controller erfolgt über ein Kommunikationsprotokoll namens OpenFlow. Die Kontrolle der Switches erfolgt entweder durch Programmierung oder einer vom Controller zur Verfügung gestellten und benutzerfreundlichen Schnittstelle.
+
 \subsubsection{Einführung}
-Derzeit gibt es auf dem Markt einige Controller, die in SDN verwendet werden, wie zum Beispiel: OpenDaylight,Ryu, POX, NOX, HP VENTIL...            Wir haben uns für Floodlight Controller entschieden, weil er die Anforderungen des Projekts erfüllt und einfach zu installiert ist. Floodlight Controller ist sehr user-friendly und bietet sogar eine Benutzeroberfläche.
+In den letzten Jahren wurde eine Vielzahl unterschiedlicher SDN-Controller entwickelt. Aus diesem Grund gibt es mittlerweile eine riesige Auswahl an SDN-Controllern für die breit gefächerten Einsatzzwecke, wo unteranderem OpenDaylight, Ryu, POX, NOX und Floodlight dazugehören. Mit allen Controllern sind alle Projektziele der Projektarbeit erzielbar.\par
+Floodlight wurde als Controller ausgewählt, da einige Punkte und das daraus resultierende Gesamtprodukt die Gruppe überzeugen konnte. Dazu gehört unteranderem die einfache und gut beschriebene Installation. Die moderne Webbenutzeroberfläche und die verständliche, gut dokumentierte REST-API sind sehr benutzerfreundlich und leicht zu verstehen. Daraus resultiert auch die Option, die REST-API über ein Python-Skript zu benutzen. Die Einbindung des Floodlight-Controllers in Eclipse ermöglicht die Implementierung, Untersuchung und das Debuggen verschiedenster Controller-Funktionen. Die gute Dokumentation des in Java geschriebenen Controllers und einige mit der Installation mitgelieferten Beispielanwendungen geben einem Entwickler einen guten Start zur Entwicklung von Netzwerkfunktionen.
+
 \subsubsection{Funktionalität}
-Text
+Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der Ausführung und der Implementierung. Funktionen können über die Webbenutzeroberfläche per Eingabe ausgeführt werden (siehe Abbildung \ref{webui}). Das Einstellen der Switch-Firewall und der Access Control List sind zwei dieser Funktionen. Nach Aktivierung der Firewall werden alle Pakete, die nicht in der Liste eingetragen sind, fallen gelassen. Die Access Control List arbeitet ähnlich wie die Firewall, wohingegen nur eine Liste mit erwünschten und nicht erwünschten Quellen existiert. Die Quellen werden anhand der Paket-Informationen angegeben. Bei einem Treffer wird die Quelle je nach Einstellung zugelassen oder verweigert. Folglich verweigert die Firewall jegliche Verbindung nach Aktivierung, wohingegen die Access Control List nur bestimmte Zugriffe auf ein Netzwerk zulässt oder ablehnt. Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuerten Netzwerk einsehbar. Dazu gehört die Anzahl der Switches, Hosts und Links sowie der verbrauchten Ressourcen des Controllers und der Netzwerktopologie. Die Statistikfunktion des Controllers kann auf der Benutzeroberfläche aktiviert werden. Dieser dient zur ausführlichen Weiterverarbeitung und der Anzeige der vom Controller gesammelten Statistik. Dazu gehören die Flow, meter, queue, aggregate, table und port Statistiken. Die Sammlung benutzerdefinierter Statistiken sind ebenfalls möglich und müssen vom Entwickler nachimplementiert werden. Über die REST-API können sogenannte Flows eingetragen werden, die zur Steuerung des Netzwerkes beitragen. Dabei können Datenpakete modifiziert, zwischengespeichert und umgeleitet werden.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/webui}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Webbenutzeroberfläche vom Floodlight-Controller}
+ \label{webui}
+\end{figure}
+
+
 \subsubsection{Nachteil}
-Text
+Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern. Die Wartung und Konfiguration eines Controllers für komplexe Netzwerkstrukturen erfordern viele geschulte Angestellte.
+
 \subsubsection{Komponenten}
-Modules etc.
+Mit der Installation von Floodlight kommen sogenannte Module zum Einsatz. Die meisten der Module sind bereits aktiviert und stellen bestimmte Funktionen zur Verfügung. Einer davon ist die Learning Switch, welcher für die Speicherung der Routen zu den Hosts zuständig ist. Wenn ein Host einen anderen Host im gleichen Netzwerk erreichen will und der Switch die Route nicht kennt, wird ein Broadcast ausgeführt, der die Anfrage auf allen Ports ausgibt. Wenn der Host antwortet, speichert der Switch die MAC-Adresse des jeweiligen Hosts ab und muss somit keinen Broadcast durchführen. Weitere Beispielmodule wären der Load Balancer und der Topology Manager. Der Load Balancer sorgt für einen Ausgleich des Datenverkehrs im gesamten Netzwerk. Der Topology Manager stellt die Netzwerktopologie über die Webbenutzeroberfläche grafisch dar. Es existieren noch weitere Module, wobei auch eigene programmiert werden können.
+
 \subsubsection{Installation}
-git clone git://github.com/floodlight/floodlight.git
-cd floodlight
-git submodule init
-git submodule update
-ant
+Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux, Mac oder Windows erfolgen. Es wird das Java Development Kit 8, Maven, Git, build-essential und das Python Development Paket benötigt. Da Floodlight in Java geschrieben wurde, wird auch zur Ausführung Java verwendet. Maven wird zum sogenannten Builden benutzt, bei dem die Software Floodlight aus mehreren Dateien zusammengestellt wird. Das Python Development Paket wird zur Ausführung und Git zum Herunterladen von Floodlight vorausgesetzt. Build-essential werden zum Kompilieren einiger Software verwendet. Im Folgenden wird die Installation auf Linux Schritt für Schritt erklärt. Befehle müssen im Linux-Terminal zeilenweise eingegeben werden.
+
+\begin{itemize}
+\item[1.] Alle benötigten Abhängigkeiten installieren.
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo apt-get install build-essential git maven python-dev openjdk-8-jdk}}}}
+\begin{itemize}
+\item[2.] Java Compiler als Alternative festlegen. Befehl eingeben und JDK 8 Auswählen.
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo update-alternatives --config javac}}}}
+\begin{itemize}
+\item[3.] Programmcode per Github herunterladen und aktualisieren
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ git clone git://github.com/floodlight/}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ floodlight.git}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ cd floodlight}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ git submodule init}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ git submodule update}}}}
+\begin{itemize}
+\item[4.] Floodlight Ordnerrechte zuweisen und Builden
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ cd ..}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo chown -hR Benutzername:Gruppenname floodlight/}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ cd floodlight/}}}}\\
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ mvn package -DskipTests}}}}
+\begin{itemize}
+\item[5.] Floodlight im Terminal ausführen (siehe Abbildung)
+\end{itemize}
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}
+
+
+
 \subsubsection{Aufbau}
 java -jar target/floodlight.jar
 
