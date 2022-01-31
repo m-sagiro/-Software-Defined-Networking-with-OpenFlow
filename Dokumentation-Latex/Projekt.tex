@@ -12,6 +12,7 @@
 \usepackage[ngerman]{babel}
 \usepackage[autostyle=true]{csquotes}
 \usepackage{graphicx, booktabs, float, scrhack}
+\usepackage{wrapfig}
 \usepackage{caption}
 \usepackage{listings}
 %\usepackage{fancyref}
@@ -307,21 +308,40 @@ Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux,
 \end{itemize}
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}
 
+Es besteht die Möglichkeit, den Floodlight Controller mithilfe von Eclipse zu starten, somit muss Floodlight nicht im Terminal ausgeführt werden. Außerdem ist Floodlight durch die Entwicklungsumgebung Eclipse leichterer auszuführen und eine Bearbeitung ist übersichtlicher. Zudem hat man eine schnelle Übersicht vom kompletten Conroller, da alle Klassen in einem Eclipse Ordner einzusehen sind. Mit sudo mvn package –Declipse werden mehrere Dateien erstellt. Mit den neu erstellten Dateien kann ein neues Eclipse Projekt importiert werden. Anschließend wird Eclipse gestartet und eine neue Arbeitsumgebung erstellt. \textit{\textbf{File -> import -> General -> Existing Projects into Workspace}} und auf \textit{\textbf{Next}} klicken. Von \textit{\textbf{Select root directory}} auf \textit{\textbf{Browser}} klicken und Verzeichnis das Floodlight enthält auswählen. Das Projekt mit \textit{\textbf{finish}} ausführen und damit sollte Floodlight auf Eclipse importiert sein.\par
+Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden.
 
 
 \subsubsection{Aufbau}
-java -jar target/floodlight.jar
+Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Controller standardmäßig auf Port 6653. Im Terminal werden alle informativen Ereignisse ausgegeben. Um den Controller zu stoppen, wird die Tastenkombination Steuerung und C gleichzeitig gedrückt (siehe Abbildung \ref{floodlight}).
 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/floodlight}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Ausführung von Floodlight über den Linux-Terminal}
+ \label{floodlight}
+\end{figure}
+
+\newpage
 \subsection{Ergebnis}
-Text. Please insert a picture of floodlight GUI
-Zeigen was am Ende mit Controller und Mininet erreicht wird.
+
+
+\setlength{\intextsep}{0pt}
+\setlength{\columnsep}{15pt}
+\begin{wrapfigure}{R}{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{Bilder/ping}
+    \caption{Mininet Controller Verbindung und Ping-Test}
+    \label{ping}
+\end{wrapfigure}
+
+Nach der Ausführung von Floodlight, wurde dieser mit einer OpenFlow-fähigen Switch verbunden. Der Switch wurde mit Mininet mit der Angabe des Controllers simuliert. Die Konsole zeigt die erfolgreiche Verbindung mit dem Controller. Die Konnektivität im Netzwerk kann mit dem Befehl \textit{\textbf{pingall}} überprüft werden. Die Konnektivität zwischen Host 1 und Host 2 wird durch den Befehl \textit{\textbf{h1 ping h2}} getestet. Durch Wireshark kann der ausgelöste Datenverkehr betrachtet werden (siehe Abbildung \ref{ping}).
 
 
 
 \chapter{Durchführung des Projektes}
-Erklären Controller-Auswahl!
-Projektdurchführung
-Würde in diesem Bereich die Lösungen hinschreiben, jeweils für jede Aufgabe eine section. Beispielsweise wäre die erste section Netzwerkplan
+Die in Kapitel 1.3 dargestellten Problemstellungen werden in diesem Kapitel behandelt und realisiert. Durch Abbildungen, Code Ausschnitte und Erläuterungen soll die Dokumentation die Vorgehensweise und Überlegungen der Gruppe wiedergeben. 
 
 
 
