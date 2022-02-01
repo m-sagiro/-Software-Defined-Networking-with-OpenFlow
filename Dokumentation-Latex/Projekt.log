@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  31 JAN 2022 21:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  1 FEB 2022 22:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,9 +844,6 @@ Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
  (Projekt.aux
 
-LaTeX Warning: Label `networkplan' multiply defined.
-
-
 LaTeX Warning: Label `python-data-table' multiply defined.
 
 )
@@ -1072,7 +1069,7 @@ chapter 2.
 [5
 
 ]
-<Bilder/meilensteine.png, id=165, 1240.635pt x 733.74126pt>
+<Bilder/meilensteine.png, id=179, 1240.635pt x 733.74126pt>
 File: Bilder/meilensteine.png Graphic file (type png)
 <use Bilder/meilensteine.png>
 Package pdftex.def Info: Bilder/meilensteine.png  used on input line 159.
@@ -1090,122 +1087,142 @@ ystem und den PID-Speicherplatz.
  []
 
 [9]
-<Bilder/sudomn.png, id=192, 538.01pt x 395.4775pt>
+<Bilder/sudomn.png, id=206, 538.01pt x 395.4775pt>
 File: Bilder/sudomn.png Graphic file (type png)
 <use Bilder/sudomn.png>
 Package pdftex.def Info: Bilder/sudomn.png  used on input line 249.
 (pdftex.def)             Requested size: 224.06548pt x 164.70544pt.
  [10 <./Bilder/sudomn.png>]
-<Bilder/webui.png, id=203, 2569.6pt x 1334.9875pt>
+<Bilder/webui.png, id=217, 2569.6pt x 1334.9875pt>
 File: Bilder/webui.png Graphic file (type png)
 <use Bilder/webui.png>
 Package pdftex.def Info: Bilder/webui.png  used on input line 267.
 (pdftex.def)             Requested size: 448.13095pt x 232.81151pt.
  [11] [12 <./Bilder/webui.png>] [13]
-<Bilder/floodlight.png, id=224, 1389.19pt x 828.09375pt>
+<Bilder/floodlight.png, id=238, 1389.19pt x 828.09375pt>
 File: Bilder/floodlight.png Graphic file (type png)
 <use Bilder/floodlight.png>
 Package pdftex.def Info: Bilder/floodlight.png  used on input line 320.
 (pdftex.def)             Requested size: 448.13095pt x 267.13084pt.
  [14 <./Bilder/floodlight.png>]
-<Bilder/ping.png, id=231, 731.73375pt x 744.7825pt>
+<Bilder/ping.png, id=245, 731.73375pt x 744.7825pt>
 File: Bilder/ping.png Graphic file (type png)
 <use Bilder/ping.png>
 Package pdftex.def Info: Bilder/ping.png  used on input line 334.
 (pdftex.def)             Requested size: 224.06548pt x 228.0618pt.
  [15 <./Bilder/ping.png>]
 chapter 3.
-<Bilder/prototyp.png, id=239, 962.59625pt x 655.44875pt>
-File: Bilder/prototyp.png Graphic file (type png)
-<use Bilder/prototyp.png>
-Package pdftex.def Info: Bilder/prototyp.png  used on input line 356.
-(pdftex.def)             Requested size: 448.13095pt x 305.13055pt.
-<Bilder/netzwerkplan.png, id=240, 2098.84125pt x 1803.73875pt>
+<Bilder/netzwerkplan.png, id=254, 2098.84125pt x 1802.735pt>
 File: Bilder/netzwerkplan.png Graphic file (type png)
 <use Bilder/netzwerkplan.png>
-Package pdftex.def Info: Bilder/netzwerkplan.png  used on input line 367.
-(pdftex.def)             Requested size: 448.13095pt x 385.12657pt.
+Package pdftex.def Info: Bilder/netzwerkplan.png  used on input line 353.
+(pdftex.def)             Requested size: 448.13095pt x 384.91225pt.
 [16
 
-] [17 <./Bilder/prototyp.png>] [18 <./Bilder/netzwerkplan.png>]
-Overfull \hbox (48.3098pt too wide) in paragraph at lines 382--383
-\T1/cmr/m/n/12 der vier Lo-ka-tio-nen ent-hält. Der defaul-tIP String bleibt in
- un-voll-stän-di-ger Form 192.168.%s.1/24.
+] [17 <./Bilder/netzwerkplan.png>]
+<Bilder/mininet1.png, id=266, 477.785pt x 183.68625pt>
+File: Bilder/mininet1.png Graphic file (type png)
+<use Bilder/mininet1.png>
+Package pdftex.def Info: Bilder/mininet1.png  used on input line 370.
+(pdftex.def)             Requested size: 268.8813pt x 103.3709pt.
+<Bilder/mininet2.png, id=268, 682.55pt x 246.9225pt>
+File: Bilder/mininet2.png Graphic file (type png)
+<use Bilder/mininet2.png>
+Package pdftex.def Info: Bilder/mininet2.png  used on input line 380.
+(pdftex.def)             Requested size: 313.69029pt x 113.48398pt.
+<Bilder/mininet3.png, id=270, 771.88374pt x 140.525pt>
+File: Bilder/mininet3.png Graphic file (type png)
+<use Bilder/mininet3.png>
+Package pdftex.def Info: Bilder/mininet3.png  used on input line 390.
+(pdftex.def)             Requested size: 358.50612pt x 65.26625pt.
+ [18 <./Bilder/mininet1.png>]
+<Bilder/mininet4.png, id=279, 626.34pt x 197.73875pt>
+File: Bilder/mininet4.png Graphic file (type png)
+<use Bilder/mininet4.png>
+Package pdftex.def Info: Bilder/mininet4.png  used on input line 400.
+(pdftex.def)             Requested size: 313.69029pt x 99.03508pt.
+ [19 <./Bilder/mininet2.png> <./Bilder/mininet3.png> <./Bilder/mininet4.png>]
+<Bilder/mininet5.png, id=288, 424.58624pt x 63.23625pt>
+File: Bilder/mininet5.png Graphic file (type png)
+<use Bilder/mininet5.png>
+Package pdftex.def Info: Bilder/mininet5.png  used on input line 415.
+(pdftex.def)             Requested size: 313.69029pt x 46.72171pt.
+<Bilder/mininet6.png, id=290, 674.52pt x 67.25125pt>
+File: Bilder/mininet6.png Graphic file (type png)
+<use Bilder/mininet6.png>
+Package pdftex.def Info: Bilder/mininet6.png  used on input line 425.
+(pdftex.def)             Requested size: 448.13095pt x 44.68045pt.
+<Bilder/pingall.png, id=292, 1577.895pt x 1293.83376pt>
+File: Bilder/pingall.png Graphic file (type png)
+<use Bilder/pingall.png>
+Package pdftex.def Info: Bilder/pingall.png  used on input line 436.
+(pdftex.def)             Requested size: 448.13095pt x 367.44347pt.
+ [20 <./Bilder/mininet5.png> <./Bilder/mininet6.png>] [21 <./Bilder/pingall.png
+>]
+Overfull \hbox (30.46425pt too wide) in paragraph at lines 449--450
+\T1/cmr/bx/it/12 Tunnel-Name mo-de gre lo-cal Schnittstelle-Router-Lokation-A r
+e-mo-te Schnittstelle-
  []
 
 
-Overfull \hbox (9.48042pt too wide) in paragraph at lines 395--396
-\T1/cmr/m/n/12 Es wür-de wei-ter bei der Main-Funktion ge-hen. Dort in-itia-li-
-sie-ren wir ein RemoteController-
+Overfull \hbox (30.70062pt too wide) in paragraph at lines 449--450
+\T1/cmr/bx/it/12 Router-Lokation-B ttl 255 \T1/cmr/m/n/12 bei je-dem Rou-ter üb
+er die Mininet-Methode \T1/cmr/bx/it/12 info(net[`Router-
  []
 
-[19]
-Overfull \hbox (11.69565pt too wide) in paragraph at lines 402--405
-\T1/cmr/m/n/12 Router-Schnittstelle-des-eigenen-Routers re-mo-te Router-Schnitt
-stelle-des-anderen-Routers
- []
+<Bilder/gre.png, id=307, 1324.95pt x 498.86375pt>
+File: Bilder/gre.png Graphic file (type png)
+<use Bilder/gre.png>
+Package pdftex.def Info: Bilder/gre.png  used on input line 453.
+(pdftex.def)             Requested size: 448.13095pt x 168.72842pt.
+
+LaTeX Warning: Citation 'listuple' on page 22 undefined on input line 520.
 
 
-Overfull \hbox (13.41473pt too wide) in paragraph at lines 402--405
-\T1/cmr/m/n/12 ttl 255 bei je-dem Rou-ter mit der Mininet-Methode info(net[R
-outer-Name`].cmd(Befehl))
- []
+LaTeX Warning: Citation 'listuple' on page 22 undefined on input line 520.
 
-
-Overfull \hbox (2.30594pt too wide) in paragraph at lines 402--405
-\T1/cmr/m/n/12 aus-ge-ben und aus-füh-ren. Nach-dem die Ver-bin-dung de-fi-nier
-t wur-de fah-ren wir den Tunnel-
- []
-
-[20]
-
-LaTeX Warning: Citation 'listuple' on page 21 undefined on input line 410.
-
-
-LaTeX Warning: Citation 'listuple' on page 21 undefined on input line 410.
-
-[21] [22] [23] [24]
+[22 <./Bilder/gre.png>] [23] [24] [25] [26]
 chapter 4.
-[25
+[27
 
 ]
 chapter 5.
-[26
+[28
 
 ]
 chapter 6.
-[27
+[29
 
 ]
 chapter 7.
 (C:\Users\k42br\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
-<Bilder/bildname.jpg, id=299, 1927.2pt x 1084.05pt>
+<Bilder/bildname.jpg, id=344, 1927.2pt x 1084.05pt>
 File: Bilder/bildname.jpg Graphic file (type jpg)
 <use Bilder/bildname.jpg>
-Package pdftex.def Info: Bilder/bildname.jpg  used on input line 526.
+Package pdftex.def Info: Bilder/bildname.jpg  used on input line 636.
 (pdftex.def)             Requested size: 268.8813pt x 151.23665pt.
 
 
-LaTeX Warning: Citation 'jtpinterface' on page 28 undefined on input line 528.
+LaTeX Warning: Citation 'jtpinterface' on page 30 undefined on input line 638.
 
 
-LaTeX Warning: Citation 'jtpinterface' on page 28 undefined on input line 528.
+LaTeX Warning: Citation 'jtpinterface' on page 30 undefined on input line 638.
 
-[28
+[30
 
  <./Bilder/bildname.jpg>]
 
-LaTeX Warning: Citation 'listuple' on page 29 undefined on input line 569.
+LaTeX Warning: Citation 'listuple' on page 31 undefined on input line 679.
 
 
-LaTeX Warning: Citation 'listuple' on page 29 undefined on input line 569.
+LaTeX Warning: Citation 'listuple' on page 31 undefined on input line 679.
 
 
-LaTeX Warning: Empty bibliography on input line 589.
+LaTeX Warning: Empty bibliography on input line 699.
 
-[29] (Projekt.aux)
+[31] (Projekt.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1224,10 +1241,10 @@ Package logreq Info: Writing requests to 'Projekt.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27495 strings out of 478659
- 523043 string characters out of 2845919
- 1444489 words of memory out of 3000000
- 45113 multiletter control sequences out of 15000+600000
+ 27589 strings out of 478659
+ 524928 string characters out of 2845919
+ 1445070 words of memory out of 3000000
+ 45191 multiletter control sequences out of 15000+600000
  419505 words of font info for 66 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
  108i,20n,106p,10644b,3534s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1244,9 +1261,9 @@ l\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1728.pk> <C:\Users\k42br\AppDat
 a\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecss2488.pk> <C:\Users\k42br\
 AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecbx1728.pk> <C:\Users\
 k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (36 pages, 1907855 bytes).
+Output written on Projekt.pdf (38 pages, 2235465 bytes).
 PDF statistics:
- 959 PDF objects out of 1000 (max. 8388607)
- 115 named destinations out of 1000 (max. 500000)
- 315 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1034 PDF objects out of 1200 (max. 8388607)
+ 124 named destinations out of 1000 (max. 500000)
+ 350 words of extra memory for PDF output out of 10000 (max. 10000000)
 

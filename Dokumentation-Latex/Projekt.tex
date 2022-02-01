@@ -341,69 +341,179 @@ Nach der Ausführung von Floodlight, wurde dieser mit einer OpenFlow-fähigen Sw
 
 
 \chapter{Durchführung des Projektes}
-Die in Kapitel 1.3 dargestellten Problemstellungen werden in diesem Kapitel behandelt und realisiert. Durch Abbildungen, Code Ausschnitte und Erläuterungen soll die Dokumentation die Vorgehensweise und Überlegungen der Gruppe wiedergeben. 
+Die in Kapitel 1.3 dargestellten Problemstellungen werden in diesem Kapitel behandelt und realisiert. Mit den im vorherigen Kapitel erläuterten Werkzeugen wird dieses Projekt umgesetzt. Durch Abbildungen, Code Ausschnitte und Erläuterungen soll die Dokumentation die Vorgehensweise und Überlegungen der Gruppe wiedergeben. 
 
 
 
 \section{Netzwerkplan}
-\subsection{Vorüberlegung}
-Das Netzwerkmodell umfasst:
-Mininet: 4 Switches und 40 Hosts erstellen. Diese Switches und Hosts werden verbunden mit unserem Floodlight Controller. 4 Switches repräsentieren 4 Lokationen mit jeweils 10 Hosts. Damit die Hosts und Switches mit dem Internet verbunden werden können, steht 4 Routers da. Router kann man wie ein Gateway betrachten. Anhand von Headern und Weiterleitungstabellen bestimmt der Router den besten Weg zur Weiterleitung der Pakete.
-Floodlight Controller: SDN-Controller (SDN-Controller) steuert den Zugriff zwischen Hosts im Netzwerk. Dies wird durch eine Python Datei implementiert
-
-\begin{figure}[htbp]
- \centering
- \includegraphics[width=1.0\textwidth]{Bilder/prototyp}
- \captionsetup{justification=centering,margin=2cm}
- \caption{Netzwerkplan unseres Unternehmens}
- \label{networkplan}
-\end{figure}
-
-\subsection{Durchführung}
-
+Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Abbindung \ref{netzwerkplan} dargestellt. Das Netzwerkdiagramm enthält 40 Hosts, 4 Switches, 4 Router und einen Controller. Der Floodlight-Controller hat einen globalen Überblick über die physikalische Topologie. Die 4 Switches sind mit dem Controller verbunden. Zehn Hosts in den jeweiligen Lokationen sind mit einem Switch verbunden. Um die Hosts in jeder Lokation mit dem Internet und mit anderen Lokationen zu verbinden, wird ein Router benötigt. Durch die grüne Linie und den Tunnel wird gezeigt, dass die Kommunikation zwischen Lokationen verschlüsselt sind. Ebenfalls sind alle Router der Lokationen mit dem Internet verbunden, welches durch eine Cloud visualisiert wird.
 
 \begin{figure}[htbp]
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/netzwerkplan}
- \captionsetup{justification=centering,margin=2cm}
- \caption{Netzwerkplan unseres Unternehmens}
- \label{networkplan}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Netzwerkplan aller Lokationen}
+ \label{netzwerkplan}
 \end{figure}
 
 \section{Aufbau des Netzwerkgerüstes in Mininet}
+In diesem Abschnitt wird die beschriebene Topologie unter Verwendung von Mininet simuliert und erklärt.
+
 \subsection{Durchführung}
-In diesem Abschnitt wird der Aufbau der Simulation über Mininet erklärt.
- 
-In der Main-Funktion werden die Komponenten eines Netzwerks deklariert und aufgerufen. Das sind eine Topologie, ein Controller mit zugewiesenem Port und ein Mininet Objekt mit der deklarierten Topologie. Anschließend geben wir für unsere Routers Routing-Regeln und Informationen.
+In der Main-Funktion werden die Komponenten eines Netzwerks deklariert und aufgerufen. Das sind eine Topologie, ein Controller mit zugewiesenem Port und ein Mininet Objekt mit der deklarierten Topologie. Anschließend wurde für unsere Router Routing-Regeln und Informationen gegeben.
 
 \subsection{Aufbau der Topologie}
-Der Mininet-Script besteht aus einer Main-Funktion bei der als allererstes mit der von uns definierten Klasse „Netzwerk()“. Und damit zeigen wir wie das Netzwerk beziehungsweise eine Topologie erstellt wird. Die Klasse übernimmt ein Topo-Objekt an dem er mit der in ihm definierten „build()“ Methode die Konfiguration des Netzwerkes vornimmt. 
- 
-In der „build()“ Methode definieren wir zuerst einen String der den privaten-IP-Bereich der vier Lokationen enthält. Der defaultIP String bleibt in unvollständiger Form „192.168.\%s.1/24“. Somit kann er später durch passende Stellen ersetzt und genutzt werden. Lediglich ist hier im dritten Block ein Platzhalter eingesetzt der beim erstellen der Router in einer Schleife durch die Zahl der Iteration ersetzt wird.
- 
-Zunächst wird ein leeres Array/Liste unter dem Namen „Routers“ deklariert. Dies wird dann später genutzt und mit den Router-Objekten gefüllt. Später für die Verlinkung der Router mit dem jeweiligen Switch wird die Liste aufgerufen. Für große Anzahl von Router ist die Bedeutung der Liste sehr praktisch.
- 
-Im nächsten Teil der Klasse Netzwerk, Zeile 35 bis 53 wollen wir die Komponenten des Netzwerks implementieren. Dies ist mit Hilfe einer Schleife mit 4 Durchläufe ausgeführt worden. 4 Durchläufe entsprechen 4 Lokationen, jeweils 1 Switch 1 Router und 10 Hosts.
-Dabei wird bei jeder Iteration erst ein Router-Objekt mit der Methode „self.addNode()“ erstellt, bei dem der Name, der private IP-Adressen-Bereich, die MAC-Adresse und benutzerdefinierte Parameter für die Konfiguration, dass der Router IP-Forwarding aktiviert bekommt, übergeben. Danach wird der Router der vorher erstellten Liste eingefügt.
- 
-Als nächstes wird ein Switch mit der Methode „self.addSwitch()“ erstellt, der nur einen Namen erhält, der anschließend mit der Methode „self.addLink()“ mit dem Router verbunden wird, bei dem die Netzwerkschnittstelle des Router benannt und der private-IP-Adressenbereich vergeben wird.
- 
-Danach folgt noch eine Schleife, bei der insgesamt n Hosts erstellt und mit dem Switch verbunden werden. Die Hosts erhalten für den jeweiligen privaten-IP-Bereich eine IP, eine MAC-Adresse und die IP des jeweiligen Routers als Standard-Route zugewiesen. 
-Nachdem für alle Lokationen der Rumpf erstellt worden ist, stellen wir die Verbindungen zwischen den Routern mit dem Befehl „self.addLink()“ her. Dabei wird jeder Router mit allen anderen Routern verbunden. Dieser Vorgang wird das Internet simulieren, worauf ebenfalls der Tunnel und die Verschlüsselung implementiert wird. Dabei wird der Netzwerkschnittstellen-Name für beide Router und die jeweilige öffentliche-IP-Adresse definiert. Zusätzlich setzen wir per „bw=20“ Befehl die Bandbreite der Leitung auf 20 Megabit, wobei dies die geforderte SDSL-Leitung der Aufgabe sieben darstellen soll. 
+Die Klasse Netzwerk bildet die Netzwerktopologie. Diese befindet sich in der Main-Funktion des Mininet-Skripts. Das Mininet-Skript besteht aus einer Main-Funktion. Die Main-Funktion enthält eine definierte Klasse \textit{\textbf{Netzwerk()}}. Mithilfe dieser Klasse wird das Netzwerk beziehungsweise eine Topologie erstellt (siehe Abbildung \ref{mininet1}). Die Klasse übernimmt ein Topo-Objekt an dem er mit der in ihm definierten \textit{\textbf{build()}} Methode die Konfiguration des Netzwerkes vornimmt. In der \textit{\textbf{build()}} Methode wird zuerst ein String definiert, der den privaten-IP-Bereich der vier Lokationen enthält. Der \textit{\textbf{defaultIP}} String bleibt in unvollständiger Form \textit{\textbf{192.168.\%s.1/24}}. Somit kann er später durch passende Stellen ersetzt und genutzt werden. Lediglich ist hier im dritten Block ein Platzhalter eingesetzt der beim Erstellen der Router in einer Schleife durch die Zahl der Iteration ersetzt wird. Zunächst wird ein leeres Array/Liste unter dem Namen Routers deklariert. Dies wird dann später genutzt und mit den Router-Objekten gefüllt. Später für die Verlinkung der Router mit dem jeweiligen Switch wird die Liste aufgerufen. Für größere Anzahl von Router ist die Bedeutung der Liste sehr praktisch.
 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.6\textwidth]{Bilder/mininet1}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Netzwerk-Klasse zur Topologie Erstellung}
+ \label{mininet1}
+\end{figure}
+
+Im nächsten Teil der Klasse Netzwerk, werden die Komponenten des Netzwerks implementieren. Dies ist mit Hilfe einer Schleife mit 4 Durchläufen ausgeführt worden. Jeder Durchlauf entspricht einer Lokation, der jeweils einen Switch, einen Router und zehn Hosts erstellt. Dabei wird bei jeder Iteration erst ein Router-Objekt mit der Methode \textit{\textbf{self.addNode()}} erstellt, bei dem der Name, der private IP-Adressen-Bereich, die MAC-Adresse und der benutzerdefinierte Parameter für die Konfiguration, dass der Router IP-Forwarding aktiviert bekommt, übergeben. Danach wird der Router der vorher erstellten Liste eingefügt. Mit der Methode \textit{\textbf{self.addSwitch()}} wird ein Switch erstellt der einen Namen erhält. Anschließend wird mit der Methode \textit{\textbf{self.addLink()}} eine Verbindung zwischen dem Router und der Switch erstellt. Dabei wird auch die Netzwerkschnittstelle des Routers benannt und der private-IP-Adressenbereich vergeben  (siehe Abbildung \ref{mininet2}).
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.7\textwidth]{Bilder/mininet2}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Erstellung und Verbindung von Router und Switch}
+ \label{mininet2}
+\end{figure}
+
+Danach folgt noch eine Schleife, bei der insgesamt n Hosts erstellt und mit dem Switch verbunden werden (siehe Abbildung \ref{mininet3}). Die Hosts erhalten für den jeweiligen privaten-IP-Bereich eine IP, eine MAC-Adresse und die IP des jeweiligen Routers als Standard-Route zugewiesen.
+ 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.8\textwidth]{Bilder/mininet3}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Erstellung und Verbindung von Hosts und Switch}
+ \label{mininet3}
+\end{figure}
+
+Nachdem für alle Lokationen der Rumpf erstellt worden ist, werden die Verbindungen zwischen den Routern mit dem Befehl \textit{\textbf{self.addLink()}} hergestellt. Dabei wird jeder Router mit allen anderen Routern verbunden. Dieser Vorgang wird das Internet simulieren, worauf ebenfalls der Tunnel und die Verschlüsselung implementiert wird. Dabei wird der Netzwerkschnittstellen-Name für beide Router und die jeweilige öffentliche-IP-Adresse definiert. Zusätzlich wird per \textit{\textbf{bw=20}} Befehl die Bandbreite der Leitung auf 20 Megabit gesetzt, wobei dies die geforderte SDSL-Leitung im Kapitel 3.8 darstellen soll (siehe Abbildung \ref{mininet4}).
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.7\textwidth]{Bilder/mininet4}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Verbindung und Konfigurierung der Router}
+ \label{mininet4}
+\end{figure}
+
+
+
+
+\newpage
 \subsection{Controller Implementierung}
-Es würde weiter bei der Main-Funktion gehen. Dort initialisieren wir ein RemoteController-Objekt der einen Namen, die Konfiguration um was für einen Controller es sich handelt, die IP-Adresse und den Port, wo er zu erreichen ist, bekommt. Hier ist wichtig zu erwähnen, dass der Controller auf Ubuntu läuft und das der Controller per „localhost“ zu erreichen ist. Hier könnte man ebenfalls den Controller auf einer anderen VM laufen lassen und ihn per Internes Netzwerk verbinden oder auf der echten Welt laufen lassen und ihn per NAT-Verbindung verbinden. Auch besteht noch die Möglichkeit den Controller auf dem Betriebssystem, auf dem Virtualbox läuft, laufen zu lassen und ihn per Host-Only-Adapter zu verbinden. Anschließend wird ein Mininet-Objekt erstellt, bei dem die erstellte Topologie, der erstellte Controller, ein TCLink-Objekt für die Einstellung der Bandbreite der Netzwerkadapter und ein OVSKernelSwitch-Objekt für die Erstellung der Switche als Open vSwitche. Die Open vSwitche nutzen wir später, um den Quality of Service zu implementieren, bei dem wir per ovs-vsctl-Befehle Queues an den Ports der Switche erstellen und die Priorisierung der Pakete vornehmen. 
+Nach der Erstellung der Topologie geht es weiter bei der Main-Funktion. Es wird ein \textit{\textbf{RemoteController-Objekt}} erstellt, der einen Namen, die Konfiguration, um was für ein Controller es sich handelt, die IP-Adresse und den Port, wo er zu erreichen ist, bekommt (siehe Abbildung \ref{mininet5}). Hier ist wichtig zu erwähnen, dass der Controller auf Ubuntu läuft und zurzeit per \textit{\textbf{localhost}} zu erreichen ist. Der Controller könnte auf einer anderen VirtualBox-Maschine laufen und per \textit{\textbf{internes Netzwerk}} verbunden werden. Ebenfalls kann der Controller auf dem Hostsystem laufen und per \textit{\textbf{Host-Only-Adapter}} in Mininet eingebunden werden. 
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=0.7\textwidth]{Bilder/mininet5}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Erstellung eines RemoteController's}
+ \label{mininet5}
+\end{figure}
+
+Anschließend wird ein Mininet-Objekt erstellt, bei dem die erstellte Topologie, der erstellte Controller, ein \textit{\textbf{TCLink-Objekt}} für die Einstellung der Bandbreite der Netzwerkadapter und ein \textit{\textbf{OVSKernelSwitch-Objekt}} für die Erstellung der Switches als \textit{\textbf{Open vSwitches}} (siehe Abbildung \ref{mininet6}). Diese werden später verwendet, um den Quality of Service zu implementieren. Dabei werden per \textit{\textbf{ovs-vsctl-Befehle}} Queues an den Ports der Switches erstellt und die Priorisierung der Pakete vorgenommen.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/mininet6}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Erstellung des Mininet-Objektes}
+ \label{mininet6}
+\end{figure}
 
 \subsection{Ergebnis}
-Was haben wir dadurch erreicht. Zusammenfassen.
-Was ist schief gelaufen?
+Wenn das Mininet Skript ausgeführt wird, ist eine Topologie mit 40 Hosts über 4 Switches und 4 Routers zu sehen. Durch \textit{\textbf{pingall}} kann es festgestellt werden, dass alles richtig funktioniert hat (siehe Abbildung \ref{pingall}).
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/pingall}
+ \captionsetup{justification=centering,margin=1cm}
+ \caption{Ausführung und Testen vom Mininet-Skript}
+ \label{pingall}
+\end{figure}
 
 \section{Verschlüsselung der Netzwerkverbindung zwischen den Lokationen}
-Als nächstes folgt in der Main-Funktion die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den wir den Befehl „ip tunnel add Tunnel-Name mode gre local Router-Schnittstelle-des-eigenen-Routers remote Router-Schnittstelle-des-anderen-Routers ttl 255“ bei jedem Router mit der Mininet-Methode „info(net[‚Router-Name‘].cmd(Befehl))“ ausgeben und ausführen. Nachdem die Verbindung definiert wurde fahren wir den Tunnel-Adapter per „ip link set Tunnel-Name up“ hoch. Anschließend geben wir dem Tunnel Adapter mit dem Befehl „ip addr add Tunnel-IP dev Tunnel-Name“ die jeweilige Tunnel IP. Hier ist wichtig zu erwähnen, dass die IP zwischen zwei Lokationen im selben Netzwerkbereich, wie bei der Erstellung und Simulierung des Internets zwischen den Routern, sein muss. Nachdem der Tunnel aufgesetzt worden ist, sind alle Pakete, die durch den Tunnel versendet werden, nun als Payload eines neuen Paketes, wo der IP-Header der dem Tunnel entspricht. Auch ist sehr wichtig, dass nun Pakete, die den MTU erreichen, jetzt eine geringere Länge annehmen müssen, da der neue Payload aus dem alten Payload und dem IP-Header besteht. Wenn dies der Fall ist schickt der Router eine Aufforderung an den Absender zurück das Paket kleiner zu gestalten.
-Im nächsten Schritt definieren wir für jeden Router die Route zum anderen Sub-Netzwerkadressenbereich, welches wir per „ip route add IP-der-anderen-Lokation via IP-über-welchen-Adapter dev Adapter-Name“ Befehl in die Routing-Tabelle einfügen. Hier ist sehr wichtig, dass die Lokationen jeweils andere privaten-Adressenbereiche besitzen, da es sonst bei Überschneidungen Probleme auftreten können, weil wir das Internet simulieren. Bei einer echten Umgebung mit echten öffentlichen-IP-Adressen könnte man ohne Bedenken die gleichen privaten-IP-Adressen für die Hosts unterschiedlicher Lokationen benutzen, wie es auch im echten Leben üblich ist.
-Nachdem der Tunnel aller Lokationen von und zu den Lokationen aufgesetzt ist, verschlüsseln wir als nächstes alle Pakete, die am Router aus dem privaten-IP-Adressenbereich ankommen und entschlüsseln alle Pakete die am Router aus dem öffentlichen-IP-Adressenbereich ankommen. Für diese Methoden wird die Verschlüsselung über IPSEC im Transport-Modus benutzt, welches wir per „ip xfrm state add src IP-Adresse-des-Routers dst IP-Adresse-des-Zie-Routers proto esp spi V……. 
-\par
-Wir haben den Verkehr zwischen allen 4 Routern verschlüsselt verschickt. Die Methode die wir benutzt haben heißt IPSEC over GRE und bedeutet, dass wir erst ein Paket per IPSEC (esp Methode) verschlüsseln und dann durch ein GRE-Tunnel versenden. Angekommen auf der anderen Seite wird das Packet entschlüsselt und zum Zielort weitergeroutet.
+Zwischen den vier Lokationen soll ein Tunnel über das Internet konfiguriert werden. Dieser wird auch Virtual Private Network (VPN) genannt. Der gesamte Datenverkehr durch den Tunnel soll verschlüsselt und für unbeteiligte nicht einsehbar sein.
+
+\subsection{Vorüberlegung}
+Der Tunnel wird zwischen den Routern r1-r4 entstehen und für eine Verbindung der Netzwerke der Lokationen sorgen. Damit soll eine \textit{\textbf{Site-to-Site-VPN}} Verbindung zwischen allen Lokationen hergestellt werden. Dieser zeichnet sich durch die Verschlüsselung ab den Schnittstellen, also den Routern der Lokationen, aus. Zudem werden aus dem privaten Netzwerk eingehende Pakete an den Routern verschlüsselt und weiterverschickt. Der Router an der Ziellokation wird das Paket entschlüsseln und an die Zieladresse weiterleiten. Die Methode, die implementiert werden soll, heißt \textit{\textbf{IPSEC over GRE}} und soll alle angestellten Vorüberlegungen ermöglichen.
+
+\subsection{Durchführung}
+Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle-Router-Lokation-A remote Schnittstelle-Router-Lokation-B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router-Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/gre}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Aufstellen der GRE-Tunnel}
+ \label{gre}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Auswahl des Service-Providers}
 \begin{table}[htbp]
