@@ -35,7 +35,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Aufstellen der GRE-Tunnel\relax }}{22}{figure.caption.20}%
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Konfiguration der Routen\relax }}{23}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Erstellung der States für die Ver- und Entschlüsselung\relax }}{23}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Erstellung der Policies für die Ver- und Entschlüsselung\relax }}{24}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Verschlüsselter Verkehr zwischen Standort Frankfurt und Berlin\relax }}{24}{figure.caption.24}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
@@ -43,6 +49,8 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Beziehungen von Klassen und Interfaces \autocite {jtpinterface}\relax }}{30}{figure.caption.22}%
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Beziehungen von Klassen und Interfaces \autocite {jtpinterface}\relax }}{33}{figure.caption.26}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

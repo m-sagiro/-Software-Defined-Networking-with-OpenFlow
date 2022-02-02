@@ -456,81 +456,102 @@ Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einric
  \label{gre}
 \end{figure}
 
+Nachdem der Tunnel aufgesetzt worden ist, sind alle Pakete, die durch den Tunnel versendet werden, nun als Payload eines neuen Paketes, wo der neue IP-Header der IP des Tunnels entspricht. Daraus folgt, dass nun Pakete, die die Maximum Transmission Unit (MTU) erreichen, jetzt eine geringere Länge annehmen müssen, da der neue Payload aus dem ursprünglichen Payload und IP-Header besteht. Wenn der Fall eintritt, schickt der Router eine Aufforderung an den Absender zurück, das Paket kleiner zu gestalten.
+
+Im nächsten Schritt wird die Route zum jeweils anderen Subnetzwerkadressenbereich per \textit{\textbf{ip route add IP-anderen-Lokation via IP-Adapter dev Adapter-Name}} Befehl in die Routing-Tabelle eingefügt (siehe Abbildung \ref{route}). Da es sich hierbei um eine Simulation handelt, sollten alle Lokationen einen jeweils anderen privaten Adressenbereich besitzen. Bei Überschneidungen könnte es zu Problemen führen. Bei einer echten Umgebung mit echten öffentlichen IP-Adressen könnten dieselben privaten IP-Adressen für verschiedene Lokationen genutzt werden. Dies wird in der Realität üblicherweise so gemacht.
+
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/route}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Konfiguration der Routen}
+ \label{route}
+\end{figure}
 
 
+Der Tunnel von und zu den Lokationen ist nun aufgesetzt. Als Nächstes sollen alle Pakete aus dem privaten IP-Adressenbereich bei der Übermittlung durch den Router verschlüsselt und weitergeleitet werden. Dazu sollen alle Pakete von außen entschlüsselt und zum Zielort weitergeleitet werden. Für diese Methode wird die Verschlüsselung und Entschlüsselung über IPSEC im Transport-Modus benutzt. Dafür wird zuerst der Befehl \textit{\textbf{ip xfrm state add src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers proto esp Security-Parameter-Index-Key enc ‘cbc(aes)‘ 256bit-Key mode transport}} ausgeführt, um Regeln für die Ver- und Entschlüsselung auf dem Router einzufügen. Jeder Router bekommt zwei Regeln für jeweils einen anderen Router. Eine Regel ist für die Entschlüsselung bei ankommenden Paketen und die andere Regel für die Verschlüsselung bei abgehenden Paketen (siehe Abbildung \ref{state}).
 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/state}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Erstellung der States für die Ver- und Entschlüsselung}
+ \label{state}
+\end{figure}
 
+Der Befehl legt für Pakete mit bestimmter IP-Quelladresse, IP-Zieladresse, einem Security-Parameter-Index Key (SPI) und einer 256 Bit Verschlüsselung fest, bei einer Übereinstimmung das Paket zu verschlüsseln oder zu entschlüsseln. Aus diesem Grund wird für eingehende Pakete und für ausgehende Pakete eine Regel festgelegt. Der Unterschied ist, dass die IP-Ziel- und Quelladresse, der Security-Parameter-Index-Key und die 256 Bit Verschlüsselung verschieden sind. Durch die States wurden die Ver- und Entschlüsselungen auf den Routern installiert. Die Keys und SPI’s wurden zufällig gewählt.
 
+Nun muss den Routern angewiesen werden, auf welchem Datenverkehr die installierten States angewandt werden sollen. Dies geschieht über Policies. Dort wird über den \textit{\textbf{ip xfrm policy add dir out src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers tmpl proto esp mode transport}} Befehl die Anweisung erteilt, dass auf den IP-Ziel- und Quelladressen die Ver- und Entschlüsselung stattfinden soll. Dabei muss der Befehl zweimal eingegeben werden, wobei die IP-Adressen vertauscht werden (siehe Abbildung \ref{policy}). Es wird nicht die Tunnel-IP, sondern die Router-IP angegeben.
 
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/policy}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Erstellung der Policies für die Ver- und Entschlüsselung}
+ \label{policy}
+\end{figure}
 
+\subsection{Ergebnis}
+Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die komplette Kommunikation zwischen den Lokationen sicherer. Dazu gehört unter anderem die Authentifizierung des Kommunikationspartners und der Verhinderung unautorisierter Veränderungen von Paketen. Zwischen den Lokationen war vorher der gesamte Datenverkehr ersichtlich, wohingegen jetzt alles verschlüsselt ist (siehe Abbildung \ref{esp}).
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{figure}[htbp]
+ \centering
+ \includegraphics[width=1.0\textwidth]{Bilder/esp}
+ \captionsetup{justification=centering,margin=2cm}
+ \caption{Verschlüsselter Verkehr zwischen Standort Frankfurt und Berlin}
+ \label{esp}
+\end{figure}
 
 \section{Auswahl des Service-Providers}
+Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden. Deswegen benötigen alle Lokationen eine DSL-Verbindung mit der richtigen Konfiguration zur Realisierung. Der Preis und die Bandbreite der DSL-Leitung zählen bei der Auswahl als primäre Faktoren. Zusätzlich können weitere Leistungen betrachtet werden. Im Folgenden sind in einer Tabelle die Internet-Service-Provider O2, Vodafone, 1\&1 und Telekom mit verschiedenen Bandbreiten und den dazugehörigen Nettopreisen aufgelistet. Die Angebote sind aktuell und aus den originalen Webseiten der Provider entnommen worden.
+
 \begin{table}[htbp]
-\caption{Eigenschaften der Python Datenstrukturen \autocite{listuple}}
-\label{python-data-table}
+\caption{DSL-Angebote verschiedener Internet-Service-Provider}
+\label{dsl}
 \centering
-  \begin{tabular}{l  c  c  c c} 
+  \begin{tabular}{p{1.5cm} p{2cm} p{4cm} p{4cm} p{2.8cm}} 
 \toprule
-    Eigenschaften & List & Tuple & Set & Dict\\ 
+    Anbieter & Tarife & Download in Mbit/s (min/normal/max) & Upload in Mbit/s (min/normal/max)& Monate: Preis (Netto) \\
 \midrule  
-    	Doppelte Einträge erlaubt:   			& Ja  	&  Ja  		& Nein 	& Keine doppelten Keys\\
-    	Reihenfolge:   						& Ja 	&  Ja 		& Nein 	& Ja\\ 
-	Veränderbar:   						& Ja	&  Nein 	& Ja 		& Ja\\ 
-	Thread-Safe:   						& Ja 	& Ja 	& Ja 		& Ja\\ 
+    	Telekom & Company Start 16 &  6,3 / 9,5 / 16 & 0,7 / 1,5 / 2,4 & 0-24: 37 Euro\\
+    	&Company Start 50&27,9 / 47 / 50&2,7 / 9,4 / 10&0-24: 42 Euro\\
+	&Company Start 100&54 / 83,8 / 100&20 / 33,4 / 40&0-24: 47 Euro\\
+	&Company Start 250&175/ 200 / 250&20 / 35 / 40&0-24: 57 Euro\\
+	&Company Start 500&400 / 500/ 500&80/ 100/ 100&0-24: 70 Euro\\
+	&Company Start 1000&700/ 850 / 1000&200 / 200 / 200&0-24: 100 Euro\\
+	1\&1	&DSL 16	&6,6 / 11 / 16	&0,128 / 0,983 / 1		&0-12: 10 Euro 13-24: 30 Euro\\
+ 	&DSL 50	&16,7/ 44 / 50&	1,6 / 9,6 / 10&		0-12: 10 Euro 13-24: 35 Euro\\
+ 	&DSL 100	&54 / 88,6 / 100	&20 / 36,9 / 40&		0-12: 10 Euro 13-24: 40 Euro\\
+ 	&DSL 250&	175/ 200/ 250	& 20 / 35 / 40		&0-12: 10 Euro 13-24: 50 Euro\\
+	&Glasfaser 500&	431/ 250/ 480	 &215/ 225/ 240	&	0-12: 99 Euro 13-24: 300 Euro\\
+ 	&Glasfaser 1.000&	860/ 900/ 1000	&430/ 450/ 500&	0-12: 200 Euro 13-24: 500 Euro\\
+	Vodafone& Plus 16 Regio DSL&	6 / 9,5 / 16&	0,7 / 0,9 / 1&		0-6 : 0 Euro 7-12: 20 Euro 13-24: 30 Euro\\
+ 	&Plus 50 Regio DSL&	28 / 38 / 50&	2,7 / 7,5 / 10&		0-6 : 0 Euro 7-12: 20 Euro 13-24: 35 Euro\\
+ 	&Plus 100 Regio DSL&	54 / 87/ 100&	20 / 37 / 40&		0-6 : 0 Euro 7-12: 20 Euro 13-24: 40 Euro\\
+ 	&Plus 250 Regio DSL&	175/ 210/ 250& 	20/ 37/ 40	&	0-6 : 0 Euro 7-12: 20 Euro 13-24: 50 Euro\\
+
+
+	O2 &MyOffice S&	0,3/ 8 / 10	& 0,3 / 1,5 / 2&		0-12: 20 Euro 13-24: 30 Euro\\
+ 	&MyOffice M&	3/ 38 / 50&	0,7 / 8 / 10&		0-12: 20 Euro 13-24: 35 Euro\\
+ 	&MyOffice L&	50/ 83/ 100&	10 / 33/ 40&		0-12: 20 Euro 13-24: 40 Euro\\
+ 	&MyOffice XL&	105/ 200 / 250&	12/ 33 / 40&		0-12: 20 Euro 13-24: 50 Euro\\
+
   \end{tabular}
 
 \end{table}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Einrichtung des NAT-Firewalls}
 Für die Aufgabe vier wird verlangt, dass wir auf dem Router die NAT-Firewall Funktion implementieren, sodass jede Anfrage ins World-Wide-Web mit der öffentlichen-IP-Adresse des Routers und nicht mit der privaten-IP-Adresse durchgeführt wird. Wichtig ist zu wissen, dass dies zum Verstecken der privaten-IP-Adressen beziehungsweise der Geräte führt und damit auch keine Informationen über die Geräte ins World-Wide-Web geschickt werden, welches zu einer noch größeren Sicherheit führt. Hinter jeder öffentlichen-IP-Adresse können mehrere tausende Geräte stehen und das Internet erreichen. Des Weiteren ist die Anzahl der IPv4-Adressen durch den eigenen Aufbau begrenzt. Für unsere vier Lokationen würden wir vier öffentliche-IP-Adressen über unseren Internet-Service-Provider zugeteilt bekommen. Diese wird vom Internet-Service-Provider in bestimmten Zeitintervallen immer wieder neu vergeben, welches ebenfalls zu einer gewissen Sicherheit beiträgt.
