@@ -1,0 +1,78 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{case}{online}{}
+      \name{author}{1}{}{%
+        {{hash=58afa6249eb1691141030c90bc1bf752}{%
+           family={Emmerson},
+           familyi={E\bibinitperiod},
+           given={Bob},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{58afa6249eb1691141030c90bc1bf752}
+      \strng{fullhash}{58afa6249eb1691141030c90bc1bf752}
+      \strng{bibnamehash}{58afa6249eb1691141030c90bc1bf752}
+      \strng{authorbibnamehash}{58afa6249eb1691141030c90bc1bf752}
+      \strng{authornamehash}{58afa6249eb1691141030c90bc1bf752}
+      \strng{authorfullhash}{58afa6249eb1691141030c90bc1bf752}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The Case for SDN}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2012}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nojitter.com/case-sdn
+      \endverb
+      \verb{url}
+      \verb https://www.nojitter.com/case-sdn
+      \endverb
+    \endentry
+    \entry{improve}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e1ca82d99cbf15ba66d1994a69b7381f}{%
+           family={Hyojoon\bibnamedelima Kim},
+           familyi={H\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Nick\bibnamedelima Feamster},
+           giveni={N\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \strng{fullhash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \strng{bibnamehash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \strng{authorbibnamehash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \strng{authornamehash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \strng{authorfullhash}{e1ca82d99cbf15ba66d1994a69b7381f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Magazine}
+      \field{title}{Improving Network Management with Software Defined Networking}
+      \field{year}{2013}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

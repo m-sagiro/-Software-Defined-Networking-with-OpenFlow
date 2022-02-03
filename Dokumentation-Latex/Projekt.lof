@@ -11,46 +11,82 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Webbenutzeroberfläche vom Floodlight-Controller\relax }}{12}{figure.caption.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Ausführung von Floodlight über den Linux-Terminal\relax }}{14}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Ausführung von Floodlight über den Linux-Terminal\relax }}{15}{figure.caption.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Mininet Controller Verbindung und Ping-Test\relax }}{15}{figure.caption.11}%
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Netzwerkplan aller Lokationen\relax }}{17}{figure.caption.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Netzwerk-Klasse zur Topologie Erstellung\relax }}{18}{figure.caption.13}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Erstellung und Verbindung von Router und Switch\relax }}{19}{figure.caption.14}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Erstellung und Verbindung von Hosts und Switch\relax }}{19}{figure.caption.15}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Verbindung und Konfigurierung der Router\relax }}{19}{figure.caption.16}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Erstellung eines RemoteController's\relax }}{20}{figure.caption.17}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Erstellung des Mininet-Objektes\relax }}{20}{figure.caption.18}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ausführung und Testen vom Mininet-Skript\relax }}{21}{figure.caption.19}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Aufstellen der GRE-Tunnel\relax }}{22}{figure.caption.20}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Konfiguration der Routen\relax }}{23}{figure.caption.21}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Erstellung der States für die Ver- und Entschlüsselung\relax }}{23}{figure.caption.22}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Erstellung der Policies für die Ver- und Entschlüsselung\relax }}{24}{figure.caption.23}%
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.13}{\ignorespaces Verschlüsselter Verkehr zwischen Standort Frankfurt und Berlin\relax }}{24}{figure.caption.24}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Mininet Controller Verbindung und Ping-Test\relax }}{16}{figure.caption.11}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Netzwerkplan aller Lokationen\relax }}{18}{figure.caption.12}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Netzwerk-Klasse zur Topologie Erstellung\relax }}{19}{figure.caption.13}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Erstellung und Verbindung von Router und Switch\relax }}{20}{figure.caption.14}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Erstellung und Verbindung von Hosts und Switch\relax }}{20}{figure.caption.15}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Verbindung und Konfigurierung der Router\relax }}{20}{figure.caption.16}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Erstellung eines RemoteController's\relax }}{21}{figure.caption.17}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Erstellung des Mininet-Objektes\relax }}{21}{figure.caption.18}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ausführung und Testen vom Mininet-Skript\relax }}{22}{figure.caption.19}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Aufstellen der GRE-Tunnel\relax }}{23}{figure.caption.20}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Konfiguration der Routen\relax }}{24}{figure.caption.21}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Erstellung der States für die Ver- und Entschlüsselung\relax }}{24}{figure.caption.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Erstellung der Policies für die Ver- und Entschlüsselung\relax }}{25}{figure.caption.23}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Verschlüsselter Verkehr zwischen Standort Frankfurt und Berlin\relax }}{25}{figure.caption.24}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.14}{\ignorespaces VirtualBox NAT-Adapter\relax }}{28}{figure.caption.26}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Einbindung und Konfigurierung des NAT-Adapters\relax }}{28}{figure.caption.27}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Anfrage von H1 wird über Public IP des Routers durchgeführt\relax }}{29}{figure.caption.28}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Topologie des Netzwerkes auf der Webbenutzeroberfläche von Floodlight\relax }}{32}{figure.caption.29}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Hinzufügen der Switch IP\relax }}{33}{figure.caption.30}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Definition der Switch für Nagios\relax }}{35}{figure.caption.31}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Definition der Services für die Switch\relax }}{35}{figure.caption.32}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Webbenutzeroberfläche von Nagios Core\relax }}{36}{figure.caption.33}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Ausgabe der QoS und Queue der Switches aller Lokationen\relax }}{38}{figure.caption.34}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Sprachanruf zwischen Berlin und Frankfurt\relax }}{39}{figure.caption.35}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Ausgabe der Flows von s1\relax }}{40}{figure.caption.36}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.25}{\ignorespaces UDP-Pakete während dem Sprachanruf\relax }}{40}{figure.caption.37}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Flows für die Priorisierung und die Drosselung\relax }}{41}{figure.caption.38}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Abfrage der Daten für den Dateitransfer\relax }}{42}{figure.caption.39}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.28}{\ignorespaces Übermittlung der Datei über SSH\relax }}{42}{figure.caption.40}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Statische IP-Adressenverwaltung\relax }}{44}{figure.caption.41}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Dynamische IP-Adressenverwaltung\relax }}{44}{figure.caption.42}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.31}{\ignorespaces DHCP-Konfiguration für alle Standorte\relax }}{44}{figure.caption.43}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.32}{\ignorespaces Datenverkehr zwischen h1 und h11\relax }}{45}{figure.caption.44}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.33}{\ignorespaces Wireshark-Aufnahme der Switch s1 (Frankfurt)\relax }}{46}{figure.caption.45}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {7.1}{\ignorespaces Beziehungen von Klassen und Interfaces \autocite {jtpinterface}\relax }}{33}{figure.caption.26}%
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

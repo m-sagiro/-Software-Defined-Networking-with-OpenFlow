@@ -1,5 +1,15 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'Projekt.blg'
 [86] biber-MSWIN64:340> INFO - === 
-[112] Utils.pm:411> ERROR - Projekt.bcf is malformed, last biblatex run probably failed. Deleted Projekt.bbl
-[112] Biber.pm:132> INFO - ERRORS: 1
+[115] Biber.pm:415> INFO - Reading 'Projekt.bcf'
+[200] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
+[212] Biber.pm:4340> INFO - Processing section 0
+[221] Biber.pm:4531> INFO - Looking for bibtex format file 'Projekt.bib' for section 0
+[254] bibtex.pm:1689> INFO - LaTeX decoding ...
+[258] bibtex.pm:1494> INFO - Found BibTeX data source 'Projekt.bib'
+[288] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[288] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[288] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[288] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[294] bbl.pm:654> INFO - Writing 'Projekt.bbl' with encoding 'UTF-8'
+[295] bbl.pm:757> INFO - Output to Projekt.bbl
