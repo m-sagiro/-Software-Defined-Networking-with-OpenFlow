@@ -21,6 +21,9 @@
 \usepackage{amsmath,amssymb}
 \usepackage[automark]{scrlayer-scrpage}
 \usepackage[backend=biber,style=numeric]{biblatex} %,sortcase=false,
+\usepackage[nohyperlinks]{acronym}
+\usepackage{etoolbox}
+\usepackage{hyphenat}
 
 %*************************************************************************
 % Bibliographies - Zitatquellen
@@ -35,6 +38,7 @@
 \setkomafont{disposition}{\sffamily}
 \setcounter{secnumdepth}{3}
 \addtocontents{toc}{\setcounter{tocdepth}{1}}
+\hyphenation{every-where}
 %*************************************************************************
 % Dokumentanfang
 %*************************************************************************
@@ -96,18 +100,37 @@ mit entsprechender Software auf Plagiate überprüft wird.
 \tableofcontents
 \listoffigures
 \listoftables
-\lstlistoflistings
-%ABKÜRZUNGSVERZECIHNIS FEHL!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%\lstlistoflistings
+%ABKÜRZUNGSVERZECIHNIS
+\chapter{Abkürzungsverzeichnis}
+\begin{acronym}
+	\acro{k}[ADSL]{Asymmetric Digital Subscriber Line}
+	\acro{k}[bzw.]{beziehungsweise}
+	\acro{k}[CLI]{Command Line Interface}
+	\acro{k}[DHCP]{Dynamic Host Configuration Protocol}
+	\acro{k}[DNS]{Domain Name System}
+	\acro{k}[HTTP]{Hypertext Transfer Protocol }
+	\acro{k}[HTTPS]{Hypertext Transfer Protocol Secure}
+	\acro{k}[ISP]{Internet Service Provider}
+	\acro{k}[LAN]{Local Area Network}
+	\acro{k}[MTU]{Maximum Transmission Unit}
+	\acro{k}[NAT]{Network Address Translation}
+	\acro{k}[OSI-Modell]{Open Systems Interconnection model}
+	\acro{k}[SDN]{Software Defined Network}
+	\acro{k}[SDSL]{Symmetric Digital Subscriber Line}
+	\acro{k}[usw.]{und so weiter}
+	\acro{k}[VPN]{Virtual Private Network}
+	\acro{k}[WAN]{Wide Area Network}
+\end{acronym}
+
 
 %Aktivierung arabische Seitenzahlen
 \mainmatter % Seite fängt mit 1 an
 
-
-
 %Kapitel: Einleitung
-\chapter{Abstract}\label{ch:intro}
+\chapter{Abstract}
 Der vorliegende Projektbericht dient als Dokumentation des Informatikprojekts „Software-Defined Network mit OpenFlow“ an der Frankfurt University of Applied Sciences im Bachelorstudiengang Informatik im Wintersemester 2021/2022.\par
-Das Aufkommen des Internets hat eine Revolution in der Informationstechnologie geschaffen. Durch eine neue Art der Kommunikation kann der Mensch auf nationaler wie auch auf internationaler Ebene effizienter und effektiver Informationen weitervermitteln. Dies bildet die Grundlage für die heutige Wissensökonomie. \par
+Das Aufkommen des Internets hat eine Revolution in der Informationstechnologie geschaffen. Durch eine neue Art der Kommunikation kann der Mensch auf nationaler wie auch auf internationaler Ebene effizienter und effektiver Informationen weitervermitteln. Dies bildet die Grundlage für die heutige Wissensökonomie.\par
 Die traditionelle Netzwerkarchitektur ist jedoch seit einem halben Jahrhundert unverändert geblieben und wird für die Geschäftsanforderungen von Unternehmen, Netzwerkbetreibern und Endbenutzern zunehmend ungeeignet. Gegenwärtig werden die Geschäftsanforderungen von Unternehmen immer komplexer und die Anwendungsvielfalt der Endbenutzer nimmt zu, was zu unterschiedlichen Anforderungen der Benutzer an Verbindungsnetzwerke führt. Das Netzwerk muss auf sich schnell ändernde Parameter von Latenz, Bandbreite, Routing, Sicherheit und so weiter (usw.) entsprechend den Anforderungen der Anwendungen reagieren \cite{case}.\par
 In den letzten Jahren hat die dramatische Zunahme der Netzwerkkomplexität Schwierigkeiten bei der traditionellen Netzwerkadministration mit sich gebracht. Das Konfigurieren von Computernetzwerksystemen unter Verwendung vordefinierter Richtlinien, das Rekonfigurieren von Netzwerken, um auf Änderungen zu reagieren, die Fehlerkorrektur und der Lastausgleich sind zu gewaltigen Aufgaben geworden. Wenn die Parameter des Netzwerks neu konfiguriert wurden, musste jedes Gerät manuell vollständig neu konfiguriert werden, anstatt einfach nur den Teil der Steuerungsebene zu ändern (vgl. Kim/Feamster 2013: 114f). Dies führte zu einem revolutionären Wandel in der Netzwerktechnologie durch die Zentralisierung der Netzwerkadministration. Seitdem wurde das Konzept des Software-Defined Network (SDN) geboren \cite[114-115]{improve}. 
 
@@ -265,7 +288,7 @@ Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der A
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/webui}
- \captionsetup{justification=centering,margin=2cm}
+ \captionsetup{justification=centering}
  \caption{Webbenutzeroberfläche vom Floodlight-Controller}
  \label{webui}
 \end{figure}
@@ -327,9 +350,10 @@ Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Contro
 \subsection{Ergebnis}
 
 
-\setlength{\intextsep}{0pt}
-\setlength{\columnsep}{15pt}
+%\setlength{\intextsep}{0pt}
+%\setlength{\columnsep}{15pt}
 \begin{wrapfigure}{R}{0.5\textwidth}
+	\vspace{-\baselineskip}
     \centering
     \includegraphics[width=0.5\textwidth]{Bilder/ping}
     \caption{Mininet Controller Verbindung und Ping-Test}
@@ -446,7 +470,7 @@ Zwischen den vier Lokationen soll ein Tunnel über das Internet konfiguriert wer
 Der Tunnel wird zwischen den Routern r1-r4 entstehen und für eine Verbindung der Netzwerke der Lokationen sorgen. Damit soll eine \textit{\textbf{Site-to-Site-VPN}} Verbindung zwischen allen Lokationen hergestellt werden. Dieser zeichnet sich durch die Verschlüsselung ab den Schnittstellen, also den Routern der Lokationen, aus. Zudem werden aus dem privaten Netzwerk eingehende Pakete an den Routern verschlüsselt und weiterverschickt. Der Router an der Ziellokation wird das Paket entschlüsseln und an die Zieladresse weiterleiten. Die Methode, die implementiert werden soll, heißt \textit{\textbf{IPSEC over GRE}} und soll alle angestellten Vorüberlegungen ermöglichen.
 
 \subsection{Durchführung}
-Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle-Router-Lokation-A remote Schnittstelle-Router-Lokation-B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router-Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen.
+Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}A remote Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router\hyp{}Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen.
 
 \begin{figure}[H]
  \centering
@@ -542,7 +566,7 @@ Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden
 
 
 Die notwendige Bandbreite für den Download und Upload wurde in der Gruppe abgestimmt. Vorher wurden kleine Tests zur Belegung und Stärkung der Argumente für die Abstimmung gemacht. Bei der Abstimmung wurde pro Arbeitsplatz mindestens 10 Megabit als Download und 5 Megabit als Upload für einen flüssigen Arbeitsrhythmus als notwendig gesehen. Demnach sind bei zehn Arbeitsplätzen ein Upload von mindestens 50 Megabit und ein Download von mindestens 100 Megabit nötig. Nach dem Preisleistungsverhältnis ist der Telekom Company Start 500 Angebot mit einer garantierten Uploadrate von mindestens 80 Megabit und einer garantierten Downloadrate von mindestens 400 Megabit die beste Wahl. Zusätzlich besitzt die Telekom jahrelange Erfahrung und beweist dadurch gute Qualitäten, welches die Entscheidung für das Produkt noch einmal gestärkt hat.\par
-Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standleitung ist sicherer als das Internet, weil der Datenverkehr über eine private Leitung verläuft. Es ist im Rahmen des Möglichen, dass bei der Leitung physikalisch von außen Pakete abgefangen werden können. Standleitungen sind meistens symmetrisch ausgelegt und besitzen die gleiche Upload-Rate wie die Downloadrate. Die Preise für Standleitungen gibt es bei Service-Providern erst nach einer Anfrage mit der Angabe der Adressen der Lokationen. Demnach ist eine genauere Preisangabe nicht möglich. Die Kosten für eine Standleitung aller vier Lokationen würde bei einer symmetrischen Geschwindigkeit von 100 Megabit ungefähr zwischen 600 und 1100 Euro liegen. Die Spanne zwischen den Preisen ist groß, da Preise sich selbst von Gebäude zu Gebäude ändern. Infolgedessen ist für einen genaueren Preis eine Anfrage unabdingbar.
+Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standleitung ist sicherer als das Internet, weil der Datenverkehr über eine private Leitung verläuft. Es ist im Rahmen des Möglichen, dass bei der Leitung physikalisch von außen Pakete abgefangen werden können. Standleitungen sind meistens symmetrisch ausgelegt und besitzen die gleiche Uploadrate wie die Downloadrate. Die Preise für Standleitungen gibt es bei Service-Providern erst nach einer Anfrage mit der Angabe der Adressen der Lokationen. Demnach ist eine genauere Preisangabe nicht möglich. Die Kosten für eine Standleitung aller vier Lokationen würde nach Recherchen bei einer symmetrischen Geschwindigkeit von 100 Megabit ungefähr zwischen 500 und 1100 Euro liegen. Die Spanne zwischen den Preisen ist groß, da Preise sich selbst von Gebäude zu Gebäude ändern. Infolgedessen ist für einen genaueren Preis eine Anfrage unabdingbar.
 
 
 \section{Einrichtung des NAT-Firewalls}
@@ -553,11 +577,12 @@ Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da
 
 \subsection{Durchführung}
 \begin{wrapfigure}{R}{0.5\textwidth}
- \centering
- \includegraphics[width=0.5\textwidth]{Bilder/adapter}
- \captionsetup{justification=centering}
- \caption{VirtualBox NAT-Adapter}
- \label{adapter}
+	\vspace{-\baselineskip}
+ 	\centering
+ 	\includegraphics[width=0.5\textwidth]{Bilder/adapter}
+ 	\captionsetup{justification=centering}
+ 	\caption{VirtualBox NAT-Adapter}
+	\label{adapter}
 \end{wrapfigure}
 
 Um den Hosts der Lokationen den Internetzugang zu ermöglichen, muss zuerst den Routern der Zugang zum Internet möglich sein. Dafür wurde in VirtualBox die vier Netzwerk-Adapter für die vier vorgesehenen Lokationen aktiviert und als NAT konfiguriert (siehe Abbildung \ref{adapter}). 
@@ -629,6 +654,9 @@ Zunächst wird Nagios Core auf der VirtualBox-Maschine installiert, wo auch Mini
  
 Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt und wird Schritt für Schritt erklärt. Die Befehle sollten nacheinander im Linux-Terminal ausgeführt werden.
 
+\newlength\myboxwidth
+
+\setlength{\myboxwidth}{\dimexpr\textwidth-2\fboxsep}
 
 \begin{itemize}
 \item[1.] Das Betriebssystem auf den neuesten Stand bringen
@@ -637,7 +665,7 @@ Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt 
 \begin{itemize}
 \item[2.] Alle benötigten Abhängigkeiten installieren
 \end{itemize}
-\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo apt install -y build-essential apache2 php openssl perl makephp-gd libgd-dev libapache2-mod-php libperl-dev libssl-dev daemonwget apache2-utils unzip}}}}
+\colorbox{CadetBlue}{\parbox{\myboxwidth}{\textbf{\textsf{\textcolor{white}{\$ sudo apt install \hyp{}y build\hyp{}essential apache2 php openssl perl makephp\hyp{}gd libgd\hyp{}dev libapache2\hyp{}mod\hyp{}php libperl\hyp{}dev libssl\hyp{}dev daemonwget apache2\hyp{}utils unzip}}}}}
 \begin{itemize}
 \item[3.] Nagios Benutzer und Gruppe hinzufügen
 \end{itemize}
@@ -648,7 +676,7 @@ Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt 
 \begin{itemize}
 \item[4.] Nagios in einen beliebigen Ordner herunterladen
 \end{itemize}
-\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz}}}}
+\colorbox{CadetBlue}{\parbox{\myboxwidth}{\textbf{\textsf{\textcolor{white}{\$ wget https://assets.nagios.com/downloads/nagioscore/releases/nagios-4.4.5.tar.gz}}}}}
 \begin{itemize}
 \item[5.] Die Datei extrahieren und in den Ordner wechseln
 \end{itemize}
@@ -657,7 +685,7 @@ Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt 
 \begin{itemize}
 \item[6.] Nagios einstellen (hierbei wird der Benutzer und die Gruppe angegeben)
 \end{itemize}
-\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo ./configure --with-nagios-group=nagios--with-command-group=nagcmd --with-httpd\_conf=/etc/apache2/sites-enabled/}}}}
+\colorbox{CadetBlue}{\parbox{\myboxwidth}{\textbf{\textsf{\textcolor{white}{\$ sudo ./configure --with-nagios-group=nagios--with-command-group=nagcmd --with-httpd\_conf=/etc/apache2/sites-enabled/}}}}}
 \begin{itemize}
 \item[7.] Die Dateien vorbereiten und installieren
 \end{itemize}
@@ -736,7 +764,7 @@ Pakete, die für die Audio- und Videokonferenzen verantwortlich sind, müssen an
 An dem Port der Switch, der zum Router der Lokationen führt, werden zwei sogenannte Queues erstellt. Eine Queue wird für die Audio- und Videokonferenzen und die andere Queue für den restlichen Datenverkehr verwendet. Dabei erhalten die Queues Eigenschaften wie der minimalen und/oder maximalen Bandbreite zur Gewährleistung der Quality of Service. Nach der Konfiguration sollte gezeigt werden, ob Pakete tatsächlich über die Queue verlaufen. 
 
 \subsection{Durchführung}
-Auf allen vier Switches wird zuerst der Befehl \textit{\textbf{sudo ovs-vsctl set port Router-Port qos=@newqos -- --id=@newqos create qos type=linux-htb other-config:max-rate=20000000 queues:0=@newqueue0 queues:1=@newqueue1 -- --id=@newqueue0 create queue other-config:max-rate=20000000 -- --id=@newqueue1 create queue other-config:min-rate=7000000 other-config:max-rate=20000000}} mit der Angabe der Bezeichnung für den Port zum Router ausgeführt. Das Ganze geschieht im Ubuntu-Terminal während Mininet ausgeführt wird. Dabei wird auf dem Switch die Quality of Service und genau zwei Queues konfiguriert, die sich anhand der ID unterscheiden. Die allgemeine Bandbreite des Ports wird auf 20 Megabit, die Queue 0 auf maximal 20 Megabit und die Queue 1 auf minimal sieben und maximal 20 Megabit gesetzt. Die minimale Bandbreite für die Priorisierung wurde anhand eines Selbst-Tests mit Zoom und der Information des Ressourcenmonitors von Windows festgelegt. Dabei wurde mit Video- und Audioübertragungen eine Uploadrate zwischen \textit{\textbf{500-900 Kilobit}} pro Sekunde gemessen. Daraus resultierend wurden für zehn Arbeitsplätzen die Geschwindigkeit auf Minimum sieben Megabit eingestellt.\par
+Auf allen vier Switches wird zuerst der Befehl \textit{\textbf{sudo ovs\hyp{}vsctl set port Router\hyp{}Port qos=@newqos \hyp{}\hyp{} \hyp{}\hyp{}id=@newqos create qos type=linux\hyp{}htb other\hyp{}config:max\hyp{}rate=20000000 queues:0=@newqueue0 queues:1=@newqueue1 \hyp{}\hyp{} \hyp{}\hyp{}id=@newqueue0 create queue other\hyp{}config:max\hyp{}rate=20000000 \hyp{}\hyp{} \hyp{}\hyp{}id=\linebreak{}@newqueue1 create queue other\hyp{}config:min\hyp{}rate=7000000 other\hyp{}config:max\hyp{}rate=20000000}} mit der Angabe der Bezeichnung für den Port zum Router ausgeführt. Das Ganze geschieht im Ubuntu\hyp{}Terminal während Mininet ausgeführt wird. Dabei wird auf dem Switch die Quality of Service und genau zwei Queues konfiguriert, die sich anhand der ID unterscheiden. Die allgemeine Bandbreite des Ports wird auf 20 Megabit, die Queue 0 auf maximal 20 Megabit und die Queue 1 auf minimal sieben und maximal 20 Megabit gesetzt. Die minimale Bandbreite für die Priorisierung wurde anhand eines Selbst\hyp{}Tests mit Zoom und der Information des Ressourcenmonitors von Windows festgelegt. Dabei wurde mit Video\hyp{} und Audioübertragungen eine Uploadrate zwischen \textit{\textbf{500\hyp{}900 Kilobit}} pro Sekunde gemessen. Daraus resultierend wurden für zehn Arbeitsplätzen die Geschwindigkeit auf Minimum sieben Megabit eingestellt.\par
 Der Datenverkehr wird über den Open vSwitch konfiguriert. Der Verkehr soll entweder auf die Queue 0 oder Queue 1 weitergeleitet werden. So erhaltet der Verkehr die Eigenschaften dieser Queue bezüglicher der festgelegten Raten. Dazu wird über das Mininet-Skript im Ubuntu-Terminal für alle Switches der Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=1000, actions=set\_queue:0, normal}} ausgeführt. Der Befehl leitet jedes Paket an die Queue 0. Somit wäre jeglicher Datenverkehr auf maximal 20 Megabit begrenzt. Als Nächstes werden nur die UDP-Pakete mit dem angegebenen Adressenbereich mit dem Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=65535, udp, nw\_src=192.168.0.0/16, nw\_dst=192.168.0.0/16, actions=set\_queue:1, normal}} bei allen Switches auf die Queue 1 weitergeleitet. Damit hätten die UDP-Pakete eine minimale Bandbreite von sieben und eine maximale Bandbreite von 20 Megabit. Bei den Bedingungen wurde zusätzlich die Priorität eingegeben. Desto höher die Priorität gesetzt wird, desto höher ist die Priorität des Flows und auch somit die Wichtigkeit. Bei der Bedingung für die Quality of Service wird die Priorität auf das Maximum, nämlich 65535, gestellt. Beim restlichen Datenverkehr kann dieser beliebig größer null gewählt werden. Zusätzlich wird am Ende jeder Bedingung der Flow auf normal gesetzt. Dieser bedeutet, dass das Paket wie gewöhnlich im Layer zwei weiterverarbeitet wird.
 
 \subsection{Ergebnis}
@@ -792,10 +820,11 @@ Der Controller, genauer der OpenFlow-Server und der Restserver laufen unter der 
 
 \subsection{Durchführung}
 \begin{wrapfigure}{R}{0.5\textwidth}
- \centering
- \includegraphics[width=0.35\textwidth]{Bilder/transfer-flow}
- \caption{Flows für die Priorisierung und die Drosselung}
- \label{transfer-flow}
+	\vspace{-\baselineskip}
+ 	\centering
+ 	\includegraphics[width=0.35\textwidth]{Bilder/transfer-flow}
+ 	\caption{Flows für die Priorisierung und die Drosselung}
+ 	\label{transfer-flow}
 \end{wrapfigure}
 Die Durchführung erfolgt mit den im vorherigen Kapitel aufgestellten VirtualBox Maschinen. Auf dem Server in Frankfurt wurde per \textit{\textbf{sudo apt install openssh-server}} Befehl der SSH-Server installiert. Dieser wurde eingestellt, auf der IP des Servers zu laufen. Dafür wurde per \textit{\textbf{sudo nano /etc/ssh/sshd\_config}} Befehl in der Konfigurationsdatei des SSH-Servers die IP-Adresse geändert und die Publickeyauthentication ausgeschaltet. Anschließend wurde der SSH-Server-Dienst mit dem Befehl \textit{\textbf{sudo systemctl restart ssh}} neugestartet, um die Einstellungen zu übernehmen. Auf dem Berliner Host wurde per \textit{\textbf{dd if=/dev/zero of=wichtige\_datei bs=50MB count=1}} Befehl eine Dummy-Datei für die Übertragung auf dem Schreibtisch erstellt.\par
 
@@ -855,11 +884,12 @@ Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manue
 \end{figure}
 
 \subsubsection{Durchführung}
-\begin{wrapfigure}{R}{0.5\textwidth}
- \centering
- \includegraphics[width=0.4\textwidth]{Bilder/dhcp2}
- \caption{DHCP-Konfiguration für alle Standorte}
- \label{dhcp2}
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\vspace{-\baselineskip}
+ 	\centering
+ 	\includegraphics[width=0.4\textwidth]{Bilder/dhcp2}
+ 	\caption{DHCP-Konfiguration für alle Standorte}
+ 	\label{dhcp2}
 \end{wrapfigure}
 Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Abbildung \ref{netzwerkplan}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden. 
 

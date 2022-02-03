@@ -6,7 +6,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{vii}{chapter*.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Listings}{viii}{chapter*.6}%
+\contentsline {chapter}{\nonumberline Abkürzungsverzeichnis}{viii}{chapter*.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Abstract}{1}{chapter.1}%
 \defcounter {refsection}{0}\relax 
@@ -88,74 +88,74 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.3}Ergebnis}{25}{subsection.3.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Auswahl des Service-Providers}{25}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Auswahl des Service-Providers}{26}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Einrichtung des NAT-Firewalls}{27}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Einrichtung des NAT-Firewalls}{28}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.1}Vorüberlegung}{27}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.1}Vorüberlegung}{28}{subsection.3.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.2}Durchführung}{28}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.2}Durchführung}{29}{subsection.3.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.5.3}Ergebnis}{29}{subsection.3.5.3}%
+\contentsline {subsection}{\numberline {3.5.3}Ergebnis}{30}{subsection.3.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Implementierung der Webproxy-Funktion}{30}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Implementierung der Webproxy-Funktion}{31}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Vorüberlegung}{30}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}Vorüberlegung}{31}{subsection.3.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Durchführung}{30}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.2}Durchführung}{31}{subsection.3.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.3}Ergebnis}{31}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.3}Ergebnis}{32}{subsection.3.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Aufbau eines zentralen Topologie-Viewers und einer Monitoring-Lösung}{31}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Aufbau eines zentralen Topologie-Viewers und einer Monitoring-Lösung}{33}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.1}Topologie}{31}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.1}Topologie}{33}{subsection.3.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.2}Monitoring-Lösung}{32}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Monitoring-Lösung}{33}{subsection.3.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Realisierung einer Quality of Service Funktion}{36}{section.3.8}%
+\contentsline {section}{\numberline {3.8}Realisierung einer Quality of Service Funktion}{37}{section.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.1}Vorüberlegung}{36}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.1}Vorüberlegung}{38}{subsection.3.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.2}Durchführung}{37}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.2}Durchführung}{38}{subsection.3.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.8.3}Ergebnis}{38}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.3}Ergebnis}{39}{subsection.3.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Priorisierung der Datenübertragung über API}{40}{section.3.9}%
+\contentsline {section}{\numberline {3.9}Priorisierung der Datenübertragung über API}{42}{section.3.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9.1}Vorüberlegung}{40}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.1}Vorüberlegung}{42}{subsection.3.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9.2}Durchführung}{41}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.2}Durchführung}{43}{subsection.3.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.9.3}Ergebnis}{43}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.3}Ergebnis}{44}{subsection.3.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.10}Analyse weiterer Netzwerkfunktionen}{43}{section.3.10}%
+\contentsline {section}{\numberline {3.10}Analyse weiterer Netzwerkfunktionen}{45}{section.3.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.1}Hub}{43}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.1}Hub}{45}{subsection.3.10.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.2}Bridge}{43}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.2}Bridge}{45}{subsection.3.10.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.3}Layer-2-Switch}{43}{subsection.3.10.3}%
+\contentsline {subsection}{\numberline {3.10.3}Layer-2-Switch}{45}{subsection.3.10.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.4}Layer-3-Switch}{43}{subsection.3.10.4}%
+\contentsline {subsection}{\numberline {3.10.4}Layer-3-Switch}{45}{subsection.3.10.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.5}Dynamic Host Configuration Protocol}{44}{subsection.3.10.5}%
+\contentsline {subsection}{\numberline {3.10.5}Dynamic Host Configuration Protocol}{45}{subsection.3.10.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.10.5.1}Durchführung}{44}{subsubsection.3.10.5.1}%
+\contentsline {subsubsection}{\numberline {3.10.5.1}Durchführung}{46}{subsubsection.3.10.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.10.5.2}Ergebnis}{45}{subsubsection.3.10.5.2}%
+\contentsline {subsubsection}{\numberline {3.10.5.2}Ergebnis}{47}{subsubsection.3.10.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.6}Domain Name System}{46}{subsection.3.10.6}%
+\contentsline {subsection}{\numberline {3.10.6}Domain Name System}{48}{subsection.3.10.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Zusammenfassung}{47}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Zusammenfassung}{49}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Analyse der Ergebnisse}{47}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Analyse der Ergebnisse}{49}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Kritische Betrachtung}{47}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Kritische Betrachtung}{49}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{48}{chapter.5}%
+\contentsline {chapter}{\numberline {5}Fazit}{50}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{48}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{50}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{49}{chapter*.46}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.46}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
