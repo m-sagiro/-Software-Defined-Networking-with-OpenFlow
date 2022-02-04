@@ -156,6 +156,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}Zukunftsaussichten}{50}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.46}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{51}{chapter*.47}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
