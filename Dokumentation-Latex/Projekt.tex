@@ -129,7 +129,7 @@ mit entsprechender Software auf Plagiate überprüft wird.
 \mainmatter % Seite fängt mit 1 an
 
 %Kapitel: Einleitung
-\chapter{Abstract}
+\chapter{Abstract \tiny Verfasst von: Name, Name..}
 Der vorliegende Projektbericht dient als Dokumentation des Informatikprojekts „Software-Defined Network mit OpenFlow“ an der Frankfurt University of Applied Sciences im Bachelorstudiengang Informatik im Wintersemester 2021/2022.\par
 Das Aufkommen des Internets hat eine Revolution in der Informationstechnologie geschaffen. Durch eine neue Art der Kommunikation kann der Mensch auf nationaler wie auch auf internationaler Ebene effizienter und effektiver Informationen weitervermitteln. Dies bildet die Grundlage für die heutige Wissensökonomie.\par
 Die traditionelle Netzwerkarchitektur ist jedoch seit einem halben Jahrhundert unverändert geblieben und wird für die Geschäftsanforderungen von Unternehmen, Netzwerkbetreibern und Endbenutzern zunehmend ungeeignet. Gegenwärtig werden die Geschäftsanforderungen von Unternehmen immer komplexer und die Anwendungsvielfalt der Endbenutzer nimmt zu, was zu unterschiedlichen Anforderungen der Benutzer an Verbindungsnetzwerke führt. Das Netzwerk muss auf sich schnell ändernde Parameter von Latenz, Bandbreite, Routing, Sicherheit und so weiter (usw.) entsprechend den Anforderungen der Anwendungen reagieren \cite{case}.\par
@@ -137,7 +137,8 @@ In den letzten Jahren hat die dramatische Zunahme der Netzwerkkomplexität Schwi
 
 
 \section{Software-defined Networking}\label{sdn}
-asd
+Im folgenden Abschnitt werden die jeweiligen Einleitungen jedes Mitgliedes vorgestellt. Sie dienen als separate Einleitungen zum Projektbericht.
+
 \subsection{Einleitung von James}\label{einl-james}
 asddsa
 \subsection{Einleitung von Naghmeh}\label{einl-naghmeh}
@@ -388,7 +389,7 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 	\hspace*{-1cm}
 	\begin{tabular}{|p{3.5cm} p{3cm} p{3cm} p{3cm} p{3cm}|}
 		\toprule
-		Ort & Frankfurt & Hamburg & München & Berlin \\
+		 Standort & Frankfurt & Hamburg & München & Berlin \\
 		\midrule 
 		Subnetz & 192.168.1.0/24 &  192.168.2.0/24 & 192.168.3.0/24 & 192.168.4.0/24\\
 		
@@ -403,7 +404,7 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 		
 		erster Host& 192.168.1.2& 192.168.2.2& 192.168.3.2&192.168.4.2\\
 		
-		letzter Host& 192.168.1.11& 192.168.2.11& 192.168.3.11& 192.168.4.11\\
+		letzter Host& 192.168.1.11 & 192.168.2.11 & 192.168.3.11 & 192.168.4.11\\
 		
 		Controller &192.168.1.20&	& &\\
 		
@@ -917,7 +918,7 @@ DHCP ist ein Dienst, der an das Netzwerk angeschlossene Geräte mit einer Netzwe
  \label{fororig}
 \end{figure}
 
-Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manuellen Eingriff des Administrators und weist jedem Host eine IP-Adresse zu. Somit wurde die Funktion der for-Schleife umgeändert, dass jeder Host von Beginn an die IP-Adresse \textit{\textbf{0.0.0.0}} zugewiesen bekommt und die IP-Adressverwaltung vom DHCP-Server übernommen wird (siehe Abbildung \ref{forneu}).
+Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manuellen Eingriff des Administrators und weist jedem Host eine IP-Adresse zu. Somit wurde die Funktion der for-Schleife umgeändert, sodass jeder Host von Beginn an die IP-Adresse \textit{\textbf{0.0.0.0}} zugewiesen bekommt. Dadurch wird dem Host keine IP-Adresse manuell zugeteilt. Die IP-Adressverwaltung wird vom DHCP-Server übernommen (siehe Abbildung \ref{forneu}).
   
 \begin{figure}[H]
  \centering
@@ -947,7 +948,7 @@ Nachdem das Mininet Skript ausgeführt wird, kann mit Wireshark geprüft werden,
  \label{wireshark}
 \end{figure}
 
-Um die Netzwerkkonfiguration vom DHCP-Server zu betrachten, muss Wireshark vor Mininet gestartet und beim Ausführen des Mininet Skripts die eine Switch betrachtet werden. In diesem Beispiel wird die Lokation Frankfurt betrachtet (siehe Abbildung \ref{s1}).
+Um die Netzwerkkonfiguration vom DHCP-Server zu betrachten, muss Wireshark vor Mininet gestartet und beim Ausführen des Mininet Skripts eine Switch betrachtet werden. In diesem Beispiel wird die Lokation Frankfurt betrachtet (siehe Abbildung \ref{s1}).
 
 \begin{figure}[H]
  \centering
