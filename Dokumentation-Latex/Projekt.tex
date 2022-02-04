@@ -381,6 +381,41 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
  \label{netzwerkplan}
 \end{figure}
 
+\begin{table}[H]
+	\caption{Vergabe von IP-Adressen im Netzwerk}
+	\label{netzwerkplan}
+	\centering
+	\hspace*{-1cm}
+	\begin{tabular}{|p{3.5cm} p{3cm} p{3cm} p{3cm} p{3cm}|}
+		\toprule
+		Ort & Frankfurt & Hamburg & München & Berlin \\
+		\midrule 
+		Subnetz & 192.168.1.0/24 &  192.168.2.0/24 & 192.168.3.0/24 & 192.168.4.0/24\\
+		
+		
+		Netzwerkmaske	&255.255.255.0& 255.255.255.0& 255.255.255.0	& 255.255.255.0 \\
+		
+		Broadcast & 192.168.1.255 &	192.168.2.255 &	192.168.3.255 & 192.168.4.255\\
+		
+		Router & 192.168.1.1&192.168.2.1& 192.168.3.1 &192.168.4.1\\
+		
+		Switch & 192.168.1.20& 192.168.2.20&192.168.3.20&	192.168.4.20\\
+		
+		erster Host& 192.168.1.2& 192.168.2.2& 192.168.3.2&192.168.4.2\\
+		
+		letzter Host& 192.168.1.11& 192.168.2.11& 192.168.3.11& 192.168.4.11\\
+		
+		Controller &192.168.1.20&	& &\\
+		
+		Server in Frankfurt & 192.168.1.18 & & & \\
+		
+		Berliner Host & & & & 192.168.2.15 \\
+		
+		\hline
+	\end{tabular}
+	
+\end{table}
+
 \section{Aufbau des Netzwerkgerüstes in Mininet}
 In diesem Abschnitt wird die beschriebene Topologie unter Verwendung von Mininet simuliert und erklärt.
 
