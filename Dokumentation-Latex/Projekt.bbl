@@ -19,6 +19,36 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{failure}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d96391b267f78dc8e9c91aefbb68e1fd}{%
+           family={Bredel},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \strng{fullhash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \strng{bibnamehash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \strng{authorbibnamehash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \strng{authornamehash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \strng{authorfullhash}{d96391b267f78dc8e9c91aefbb68e1fd}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{OpenFlow Controller}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.admin-magazine.com/Articles/Floodlight-Welcome-to-the-World-of-Software-Defined-Networking
+      \endverb
+      \verb{url}
+      \verb https://www.admin-magazine.com/Articles/Floodlight-Welcome-to-the-World-of-Software-Defined-Networking
+      \endverb
+    \endentry
     \entry{case}{online}{}
       \name{author}{1}{}{%
         {{hash=58afa6249eb1691141030c90bc1bf752}{%
@@ -72,7 +102,356 @@
       \field{title}{Improving Network Management with Software Defined Networking}
       \field{year}{2013}
     \endentry
+    \entry{loadbalance}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4ea7c5e3972564a4ccecb613837e9b68}{%
+           family={Izard},
+           familyi={I\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{fullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{bibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorbibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authornamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorfullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Floodlight Controller Load Balancer}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343617/Load\+Balancer
+      \endverb
+      \verb{url}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343617/Load%5C+Balancer
+      \endverb
+    \endentry
+    \entry{statistik}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4ea7c5e3972564a4ccecb613837e9b68}{%
+           family={Izard},
+           familyi={I\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{fullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{bibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorbibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authornamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorfullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to Collect Switch Statistics (and Compute Bandwidth Utilization)}
+      \field{urlday}{13}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/21856267/How+to+Collect+Switch+Statistics+and+Compute+Bandwidth+Utilization
+      \endverb
+      \verb{url}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/21856267/How+to+Collect+Switch+Statistics+and+Compute+Bandwidth+Utilization
+      \endverb
+    \endentry
+    \entry{restapi}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4ea7c5e3972564a4ccecb613837e9b68}{%
+           family={Izard},
+           familyi={I\bibinitperiod},
+           given={Ryan},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{fullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{bibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorbibnamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authornamehash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \strng{authorfullhash}{4ea7c5e3972564a4ccecb613837e9b68}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web GUI}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web\+GUI
+      \endverb
+      \verb{url}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web%5C+GUI
+      \endverb
+    \endentry
+    \entry{mininetdefinition}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7db13d8e27d74ae7e8d4cf18696a238e}{%
+           family={Karamjeet\bibnamedelima Kaur},
+           familyi={K\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Navtej\bibnamedelima Ghumman},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           suffix={Japinder\bibnamedelima Singh},
+           suffixi={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \strng{fullhash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \strng{bibnamehash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \strng{authorbibnamehash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \strng{authornamehash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \strng{authorfullhash}{7db13d8e27d74ae7e8d4cf18696a238e}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Communication, Computing \& Systems}
+      \field{title}{Mininet as Software Defined Networking Testing Platform}
+      \field{year}{2014}
+    \endentry
+    \entry{mininetoverview}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0bf9f9f1cc7663e9ba74b2f706364e97}{%
+           family={Mininet},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{fullhash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{bibnamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authorbibnamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authornamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authorfullhash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mininet Overview}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://mininet.org/overview/
+      \endverb
+      \verb{url}
+      \verb http://mininet.org/overview/
+      \endverb
+    \endentry
+    \entry{firewall}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=bd5c69da79651e829d09fcb476810df3}{%
+           family={Morzhov},
+           familyi={M\bibinitperiod},
+           given={Sergey},
+           giveni={S\bibinitperiod}}}%
+        {{hash=84651804346140686e29cc4ebc8496cc}{%
+           family={Alekseev},
+           familyi={A\bibinitperiod},
+           given={Igor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=67b30af8351943c29e6e26d367e98b02}{%
+           family={Nikitinskiy},
+           familyi={N\bibinitperiod},
+           given={Mikhail},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9e0046a7c2a5fb829161aedbd971c337}
+      \strng{fullhash}{9e0046a7c2a5fb829161aedbd971c337}
+      \strng{bibnamehash}{9e0046a7c2a5fb829161aedbd971c337}
+      \strng{authorbibnamehash}{9e0046a7c2a5fb829161aedbd971c337}
+      \strng{authornamehash}{9e0046a7c2a5fb829161aedbd971c337}
+      \strng{authorfullhash}{9e0046a7c2a5fb829161aedbd971c337}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 International Siberian Conference on Control and Communications (SIBCON)}
+      \field{title}{Firewall application for Floodlight SDN controller}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1109/SIBCON.2016.7491821
+      \endverb
+    \endentry
+    \entry{floodlightdefinition}{article}{}
+      \name{author}{1}{}{%
+        {{hash=25ac174bd550d0eda213e57586e2aa03}{%
+           family={Raphael\bibnamedelima Eweka},
+           familyi={R\bibinitperiod\bibinitdelim E\bibinitperiod},
+           given={Sangeetha\bibnamedelima Elango},
+           giveni={S\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{25ac174bd550d0eda213e57586e2aa03}
+      \strng{fullhash}{25ac174bd550d0eda213e57586e2aa03}
+      \strng{bibnamehash}{25ac174bd550d0eda213e57586e2aa03}
+      \strng{authorbibnamehash}{25ac174bd550d0eda213e57586e2aa03}
+      \strng{authornamehash}{25ac174bd550d0eda213e57586e2aa03}
+      \strng{authorfullhash}{25ac174bd550d0eda213e57586e2aa03}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{IMPLEMENTATION OF ADDRESS LEARNING/PACKET FORWARDING, FIREWALL AND LOAD BALANCING IN FLOODLIGHT CONTROLLER FOR SDN NETWORK MANAGEMENT}
+      \field{urlday}{17}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2015}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ftms.edu.my/journals/pdf/IJISE/Apr2015/160-170.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.ftms.edu.my/journals/pdf/IJISE/Apr2015/160-170.pdf
+      \endverb
+    \endentry
+    \entry{floodlightnachteil}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0a1b2044606903a96baeaaf27374a489}{%
+           family={Room},
+           familyi={R\bibinitperiod},
+           given={Mishal},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{fullhash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{bibnamehash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{authorbibnamehash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{authornamehash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{authorfullhash}{0a1b2044606903a96baeaaf27374a489}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{5 Advantages and Disadvantages of SDN | Drawbacks \& Benefits of SDN}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.hitechwhizz.com/2021/06/5-advantages-and-disadvantages-drawbacks-benefits-of-sdn.html
+      \endverb
+      \verb{url}
+      \verb https://www.hitechwhizz.com/2021/06/5-advantages-and-disadvantages-drawbacks-benefits-of-sdn.html
+      \endverb
+    \endentry
+    \entry{controllers}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=081b1379afceeca770566cf8b8121c9e}{%
+           family={Salman},
+           familyi={S\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=037487b1cc207efe3d93e2286c67155c}{%
+           family={Elhajj},
+           familyi={E\bibinitperiod},
+           given={Imad\bibnamedelima H.},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=47acae888fc2af6c02d23a0303378240}{%
+           family={Kayssi},
+           familyi={K\bibinitperiod},
+           given={Ayman},
+           giveni={A\bibinitperiod}}}%
+        {{hash=51b6bb83d47f4294f0fd400e937405da}{%
+           family={Chehab},
+           familyi={C\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{fullhash}{1750f843327d2d190a907fe2410f6394}
+      \strng{bibnamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authorbibnamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authornamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authorfullhash}{1750f843327d2d190a907fe2410f6394}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 18th Mediterranean Electrotechnical Conference (MELECON)}
+      \field{title}{SDN controllers: A comparative study}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/MELCON.2016.7495430
+      \endverb
+    \endentry
+    \entry{mnnachteile}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b22371fabc9025ad4a68e5ce3d947a65}{%
+           family={u.a.},
+           familyi={u\bibinitperiod},
+           given={Bob\bibnamedelima Lantz},
+           giveni={B\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \strng{fullhash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \strng{bibnamehash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \strng{authorbibnamehash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \strng{authornamehash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \strng{authorfullhash}{b22371fabc9025ad4a68e5ce3d947a65}
+      \field{sortinit}{u}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Introduction to Mininet}
+      \field{urlday}{8}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
+      \endverb
+      \verb{url}
+      \verb https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
+      \endverb
+    \endentry
+    \entry{broadcast}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0ec3a528eb577ec52d65ccf0ed89f404}{%
+           family={Wiki},
+           familyi={W\bibinitperiod},
+           given={Github},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \strng{fullhash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \strng{bibnamehash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \strng{authorbibnamehash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \strng{authornamehash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \strng{authorfullhash}{0ec3a528eb577ec52d65ccf0ed89f404}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Openflow Tutorial}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://github-wiki-see.page/m/mininet/openflow-tutorial/wiki/Create-a-Learning-Switch
+      \endverb
+      \verb{url}
+      \verb https://github-wiki-see.page/m/mininet/openflow-tutorial/wiki/Create-a-Learning-Switch
+      \endverb
+    \endentry
   \enddatalist
+  \missing{mnapi}
 \endrefsection
 \endinput
 

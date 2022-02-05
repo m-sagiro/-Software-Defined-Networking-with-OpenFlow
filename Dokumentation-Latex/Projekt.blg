@@ -1,15 +1,17 @@
 [0] Config.pm:311> INFO - This is Biber 2.16
 [0] Config.pm:314> INFO - Logfile is 'Projekt.blg'
-[99] biber-MSWIN64:340> INFO - === 
-[132] Biber.pm:415> INFO - Reading 'Projekt.bcf'
-[213] Biber.pm:952> INFO - Found 2 citekeys in bib section 0
-[225] Biber.pm:4340> INFO - Processing section 0
-[235] Biber.pm:4531> INFO - Looking for bibtex format file 'Projekt.bib' for section 0
-[267] bibtex.pm:1689> INFO - LaTeX decoding ...
-[273] bibtex.pm:1494> INFO - Found BibTeX data source 'Projekt.bib'
-[303] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
-[303] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[303] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
-[304] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
-[311] bbl.pm:654> INFO - Writing 'Projekt.bbl' with encoding 'UTF-8'
-[312] bbl.pm:757> INFO - Output to Projekt.bbl
+[95] biber-MSWIN64:340> INFO - === 
+[127] Biber.pm:415> INFO - Reading 'Projekt.bcf'
+[214] Biber.pm:952> INFO - Found 15 citekeys in bib section 0
+[226] Biber.pm:4340> INFO - Processing section 0
+[236] Biber.pm:4531> INFO - Looking for bibtex format file 'Projekt.bib' for section 0
+[279] bibtex.pm:1689> INFO - LaTeX decoding ...
+[291] bibtex.pm:1494> INFO - Found BibTeX data source 'Projekt.bib'
+[339] Utils.pm:395> WARN - I didn't find a database entry for 'mnapi' (section 0)
+[354] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'variable = shifted' with 'variable = non-ignorable'
+[354] UCollate.pm:68> INFO - Overriding locale 'de-DE' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[354] Biber.pm:4168> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'de-DE'
+[354] Biber.pm:4174> INFO - No sort tailoring available for locale 'de-DE'
+[367] bbl.pm:654> INFO - Writing 'Projekt.bbl' with encoding 'UTF-8'
+[371] bbl.pm:757> INFO - Output to Projekt.bbl
+[372] Biber.pm:128> INFO - WARNINGS: 1

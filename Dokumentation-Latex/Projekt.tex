@@ -70,7 +70,7 @@ Matrikelnummer: 1340604\\
 Naghmeh Ghavidel Rostami\\
 Matrikelnummer: 1249307\\
 Tung Trinh\\
-Matrikelnummer:\\
+Matrikelnummer: 1320718\\
 }
 \date{Vorgelegt am: 10. Februar 2022}
 \publishers{Dozent: Maurizio Petrozziello\\
@@ -116,6 +116,7 @@ mit entsprechender Software auf Plagiate überprüft wird.
 	\acro{k}[LAN]{Local Area Network}
 	\acro{k}[MTU]{Maximum Transmission Unit}
 	\acro{k}[NAT]{Network Address Translation}
+	\acro{k}[OF]{OpenFlow}
 	\acro{k}[OSI-Modell]{Open Systems Interconnection model}
 	\acro{k}[SDN]{Software Defined Network}
 	\acro{k}[SDSL]{Symmetric Digital Subscriber Line}
@@ -218,10 +219,10 @@ Im Folgenden werden die für die Implementierung und Evaluierung verwendeten Har
 Dieses Projekt wurde auf VirtualBox Oracle VM Version 6.1 durchgeführt. Unter der Verwaltung von VirtualBox wurde Mininet-Emulator Version 2.3 und Floodlight Controller Version 1.2 installiert. Zur Ausführung von Programmen zur Evaluation wurde außerdem Python3 installiert. Weitere Programme sind auch installiert und sie werden im Ablauf von Kapitel 3 bekannt gegeben und ausführlicher erklärt.
 
 \subsection{Mininet}
-Der Mininet-Emulator implementiert die Verbindung zwischen Switches und Controllern. Diese ermöglicht es Entwicklern, die an der Erstellung und dem Testen von Controller-Ressourcen interessiert sind, Mininet zur Durchführung ihrer Simulationen zu nutzen.
+Der Mininet-Emulator implementiert die Verbindung zwischen Switches und Controllern. Diese ermöglicht es Entwicklern, die an der Erstellung und dem Testen von Controller-Ressourcen interessiert sind, Mininet zur Durchführung ihrer Simulationen zu nutzen \cite{mininetoverview}.
 
 \subsubsection{Einführung}
-Mininet ist ein Netzwerk Emulator, mit der Netzwerke simuliert werden können. Bei Mininet handelt es sich um eine kostenlose Open-Source-Software, die die virtuelle Maschine und dem Controller die Recherche in SDN und OpenFlow ermöglicht. Mininet ermöglicht eine sehr groß angelegte Topologie, wodurch ein Netzwerk von Hosts, Switches, virtuellen Links und einem Controller erstellt wird. Das Ausführen von Tests mit den Komponenten ist unkompliziert und kann über Python-Schnittstelle erledigt werden. Benutzer können ihre eigene Netzwerktopologie-Struktur nach ihren eigenen Bedürfnissen aufbauen.
+Mininet ist ein Netzwerk Emulator, mit der Netzwerke simuliert werden können. Bei Mininet handelt es sich um eine kostenlose Open-Source-Software, die die virtuelle Maschine und dem Controller die Recherche in SDN und OpenFlow ermöglicht. Mininet ermöglicht eine sehr groß angelegte Topologie, wodurch ein Netzwerk von Hosts, Switches, virtuellen Links und einem Controller erstellt wird \cite[139]{mininetdefinition}. Das Ausführen von Tests mit den Komponenten ist unkompliziert und kann über Python-Schnittstelle erledigt werden. Benutzer können ihre eigene Netzwerktopologie-Struktur nach ihren eigenen Bedürfnissen aufbauen\cite[141]{mininetdefinition}.
 
 \subsubsection{Funktionalität}
 Mininet:
@@ -231,7 +232,7 @@ Mininet:
  \item unterstützt das Einrichten beliebiger benutzerdefinierter Diagramme. Die Anwendungen im Mininet können im echten Netzwerk realisiert werden, ohne dass der Code geändert werden muss.
  \item bietet eine benutzerfreundliche und erweiterbare Python-API.
  \item ermöglicht mehreren gleichzeitigen Entwicklern, unabhängig voneinander an derselben Topologie zu arbeiten.
- \item ermöglicht komplexe Topologietests, ohne dass ein physisches Netzwerk verkabelt werden muss.
+ \item ermöglicht komplexe Topologietests, ohne dass ein physisches Netzwerk verkabelt werden muss \cite{mininetoverview}.
 \end{itemize}
 
 \subsubsection{Nachteile}
@@ -239,7 +240,7 @@ Aktuell ist Mininet nur unter Linux lauffähig. Nutzer eines anderen Betriebssys
 Mininet schreibt Ihren OpenFlow-Controller nicht für Benutzer. Wenn Benutzer benutzerdefiniertes Routing- oder Schaltverhalten benötigen, müssen Benutzer einen Controller mit den erforderlichen Funktionen finden oder entwickeln.\par
 Standardmäßig ist Mininet-Netzwerk von Local Area Network (LAN) und vom Internet isoliert - das ist normalerweise eine gute Sache! Benutzer können jedoch das NAT-Objekt und/oder die Option --nat verwenden, um Ihr Mininet-Netzwerk über Network Address Translation mit Ihrem LAN zu verbinden. Benutzer können Ihrem Mininet-Netzwerk auch eine echte (oder virtuelle) Hardware-Schnittstelle hinzufügen (siehe Beispiele/hwintf.py für Details).\par
 Standardmäßig teilen sich alle Mininet-Hosts das Host-Dateisystem und den PID-Speicherplatz. Das bedeutet, dass Benutzer möglicherweise vorsichtig sein müssen, wenn sie Daemons ausführen, die eine Konfiguration in /etc erfordern, und Benutzer müssen darauf achten, dass sie nicht versehentlich die falschen Prozesse beenden. \par
-Im Gegensatz zu einem Simulator hat Mininet keine starke Vorstellung von virtueller Zeit. dies bedeutet, dass Timing-Messungen auf Echtzeit basieren und dass Ergebnisse schneller als Echtzeit (z. B. 100-Gbit/s-Netzwerke) nicht einfach emuliert werden können.
+Im Gegensatz zu einem Simulator hat Mininet keine starke Vorstellung von virtueller Zeit. dies bedeutet, dass Timing-Messungen auf Echtzeit basieren und dass Ergebnisse schneller als Echtzeit (z. B. 100-Gbit/s-Netzwerke) nicht einfach emuliert werden können \cite{mnnachteile}.
 
 \subsubsection{Komponenten}
 Ein Mininet-Netzwerk besteht aus den folgenden Komponenten:
@@ -252,7 +253,7 @@ Ein Mininet-Netzwerk besteht aus den folgenden Komponenten:
 
 
 \subsubsection{Installation}
-Mininet kann auf verschiedene Weisen installiert werden. In unserer Arbeit wurde die Option: Native Installation from Source ausgewählt. Die Installation wird Schritt für Schritt aufgeführt:
+Mininet kann auf verschiedene Weisen installiert werden. In unserer Arbeit wurde die Option: Native Installation from Source ausgewählt. Die Installation wird Schritt für Schritt aufgeführt \cite{mnapi}:
 \begin{itemize}
 \item[1.] Git wird über das Linux-Terminal installiert
 \end{itemize}
@@ -278,14 +279,15 @@ Durch die Eingabe von dem Befehl \textit{\textbf{sudo mn}} wird ein Standardnetz
 \end{figure}
 
 \subsection{Floodlight}
-Floodlight ist ein sogenannter Controller zur Steuerung einer oder mehreren programmierbaren Switches. Die Kommunikation zwischen Switch und Controller erfolgt über ein Kommunikationsprotokoll namens OpenFlow. Die Kontrolle der Switches erfolgt entweder durch Programmierung oder einer vom Controller zur Verfügung gestellten und benutzerfreundlichen Schnittstelle.
+Floodlight ist ein sogenannter SDN-Controller in der Control Plane. Dieser kommuniziert mit der Data Plane über ein Kommunikationsprotokoll namens OpenFlow und verwaltet diesen \cite[161]{floodlightdefinition}.
 
 \subsubsection{Einführung}
-In den letzten Jahren wurde eine Vielzahl unterschiedlicher SDN-Controller entwickelt. Aus diesem Grund gibt es mittlerweile eine riesige Auswahl an SDN-Controllern für die breit gefächerten Einsatzzwecke, wo unteranderem OpenDaylight, Ryu, POX, NOX und Floodlight dazugehören. Mit allen Controllern sind alle Projektziele der Projektarbeit erreichbar.\par
+In den letzten Jahren wurde eine Vielzahl unterschiedlicher SDN-Controller entwickelt. Aus diesem Grund gibt es mittlerweile eine riesige Auswahl an SDN-Controllern für die breit gefächerten Einsatzzwecke, wo unteranderem OpenDaylight, Ryu, POX, NOX und Floodlight dazugehören. Mit allen Controllern sollten alle Projektziele der Projektarbeit erreichbar sein \cite{controllers}.\par
 Floodlight wurde als Controller ausgewählt, da einige Punkte und das daraus resultierende Gesamtprodukt die Gruppe überzeugen konnte. Dazu gehört unteranderem die einfache und gut beschriebene Installation. Die moderne Webbenutzeroberfläche und die verständliche, gut dokumentierte REST-API sind sehr benutzerfreundlich und leicht zu verstehen. Daraus resultiert auch die Option, die REST-API über ein Python-Skript zu benutzen. Die Einbindung des Floodlight-Controllers in Eclipse ermöglicht die Implementierung, Untersuchung und das Debuggen verschiedenster Controller-Funktionen. Die gute Dokumentation des in Java geschriebenen Controllers und einige mit der Installation mitgelieferten Module geben dem Entwickler einen guten Start zur Entwicklung von Netzwerkfunktionen.
 
 \subsubsection{Funktionalität}
-Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der Ausführung und der Implementierung. Funktionen können über die Webbenutzeroberfläche per Eingabe ausgeführt werden (siehe Abbildung \ref{webui}). Das Einstellen der Switch-Firewall und der Access Control List sind zwei dieser Funktionen. Nach Aktivierung der Firewall werden alle Pakete, die nicht in der Liste eingetragen sind, fallen gelassen. Die Access Control List arbeitet ähnlich wie die Firewall, wohingegen nur eine Liste mit erwünschten und nicht erwünschten Quellen existiert. Die Quellen werden anhand der Paket-Informationen angegeben. Bei einem Treffer wird die Quelle je nach Einstellung zugelassen oder verweigert. Folglich verweigert die Firewall jegliche Verbindung nach Aktivierung, wohingegen die Access Control List nur bestimmte Zugriffe auf ein Netzwerk zulässt oder ablehnt. Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuerten Netzwerk einsehbar. Dazu gehört die Anzahl der Switches, Hosts und Links sowie der verbrauchten Ressourcen des Controllers und der Netzwerktopologie. Die Statistikfunktion des Controllers kann auf der Benutzeroberfläche aktiviert werden. Dieser dient zur ausführlichen Weiterverarbeitung und der Anzeige der vom Controller gesammelten Statistik. Dazu gehören die Flow, meter, queue, aggregate, table und port Statistiken. Die Sammlung benutzerdefinierter Statistiken sind ebenfalls möglich und müssen vom Entwickler nachimplementiert werden. Über die REST-API können sogenannte Flows eingetragen werden, die zur Steuerung des Netzwerkes beitragen. Dabei können Datenpakete modifiziert, zwischengespeichert und umgeleitet werden.
+Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der Ausführung und der Implementierung. Funktionen können über die Webbenutzeroberfläche per Eingabe ausgeführt werden (siehe Abbildung \ref{webui}). Das Einstellen der Firewall und der Access Control List sind zwei dieser Funktionen. Nach Aktivierung der Firewall werden alle Pakete, die nicht in der Liste eingetragen sind, fallen gelassen. Die Access Control List arbeitet ähnlich wie die Firewall, wohingegen nur eine Liste mit erwünschten und nicht erwünschten Quellen existiert. Die Quellen werden anhand der Paket-Informationen angegeben. Bei einem Treffer wird die Quelle je nach Einstellung zugelassen oder verweigert. Folglich verweigert die Firewall jegliche Verbindung nach Aktivierung, wohingegen die Access Control List nur bestimmte Zugriffe auf ein Netzwerk zulässt oder ablehnt \cite{firewall}. \par
+Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuerten Netzwerk einsehbar. Dazu gehört die Anzahl der Switches, Hosts und Links sowie der verbrauchten Ressourcen des Controllers und der Netzwerktopologie. Die Statistikfunktion des Controllers kann auf der Benutzeroberfläche aktiviert werden. Dieser dient zur ausführlichen Weiterverarbeitung und der Anzeige der vom Controller gesammelten Statistik. Dazu gehören die Flow, meter, queue, aggregate, table und port Statistiken. Die Sammlung benutzerdefinierter Statistiken sind ebenfalls möglich und müssen vom Entwickler nachimplementiert werden. Über die REST-API können sogenannte Flows eingetragen werden, die zur Steuerung des Netzwerkes beitragen. Dabei können Datenpakete modifiziert, zwischengespeichert und umgeleitet werden \cite{statistik}.
 
 \begin{figure}[H]
  \centering
@@ -297,10 +299,10 @@ Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der A
 
 
 \subsubsection{Nachteil}
-Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern. Die Wartung und Konfiguration eines Controllers für komplexe Netzwerkstrukturen erfordern viele geschulte Angestellte.
+Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern\cite{failure}. Die Wartung und Konfiguration eines Controllers für komplexe Netzwerkstrukturen erfordern viele geschulte Angestellte \cite{floodlightnachteil}.
 
 \subsubsection{Komponenten}
-Mit der Installation von Floodlight kommen sogenannte Module zum Einsatz. Die meisten der Module sind bereits aktiviert und stellen bestimmte Funktionen zur Verfügung. Einer davon ist die Learning Switch, welcher für die Speicherung der Routen zu den Hosts zuständig ist. Wenn ein Host einen anderen Host im gleichen Netzwerk erreichen will und der Switch die Route nicht kennt, wird ein Broadcast ausgeführt, der die Anfrage auf allen Ports ausgibt. Wenn der Host antwortet, speichert der Switch die MAC-Adresse des jeweiligen Hosts ab und muss somit keinen Broadcast durchführen. Weitere Beispielmodule wären der Load Balancer und der Topology Manager. Der Load Balancer sorgt für einen Ausgleich des Datenverkehrs im gesamten Netzwerk. Der Topology Manager stellt die Netzwerktopologie über die Webbenutzeroberfläche grafisch dar. Es existieren noch weitere Module, wobei auch eigene programmiert werden können.
+Mit der Installation von Floodlight kommen sogenannte Module zum Einsatz. Die meisten der Module sind bereits aktiviert und stellen bestimmte Funktionen zur Verfügung. Einer davon ist die Learning Switch, welcher für die Speicherung der Routen zu den Hosts zuständig ist. Wenn ein Host einen anderen Host im gleichen Netzwerk erreichen will und der Switch die Route nicht kennt, wird ein Broadcast ausgeführt, der die Anfrage auf allen Ports ausgibt. Wenn der Host antwortet, speichert der Switch die MAC-Adresse des jeweiligen Hosts ab und muss somit keinen Broadcast durchführen \cite{broadcast}. Weitere Beispielmodule wären der Load Balancer, der für einen Ausgleich des Datenverkehrs im gesamten Netzwerk sorgt \cite{loadbalance}. Über die REST-API stellt Floodlight die Netzwerktopologie über die Webbenutzeroberfläche grafisch dar. Es existieren noch weitere Module, wobei auch eigene programmiert werden können \cite{restapi}.
 
 \subsubsection{Installation}
 Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux, Mac oder Windows erfolgen. Es wird das Java Development Kit 8, Maven, Git, build-essential und das Python Development Paket benötigt. Da Floodlight in Java geschrieben wurde, wird auch zur Ausführung Java verwendet. Maven wird zum sogenannten Builden benutzt, bei dem die Software Floodlight aus mehreren Dateien zusammengestellt wird. Das Python Development Paket wird zur Ausführung und Git zum Herunterladen von Floodlight vorausgesetzt. Build-essential werden zum Kompilieren einiger Software verwendet. Im Folgenden wird die Installation auf Linux Schritt für Schritt erklärt. Befehle müssen im Linux-Terminal zeilenweise eingegeben werden.
@@ -383,16 +385,15 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 \end{figure}
 
 \begin{table}[H]
-	\caption{Vergabe von IP-Adressen im Netzwerk}
+	\caption{Vergabe von IPv4-Adressen im Netzwerk}
 	\label{netzwerkplan}
 	\centering
 	\hspace*{-1cm}
-	\begin{tabular}{|p{3.5cm} p{3cm} p{3cm} p{3cm} p{3cm}|}
+	\begin{tabular}{p{3.5cm} p{3cm} p{3cm} p{3cm} p{3cm}}
 		\toprule
-		 Standort & Frankfurt & Hamburg & München & Berlin \\
+		 Standort & Frankfurt & Berlin  & München & Hamburg \\
 		\midrule 
 		Subnetz & 192.168.1.0/24 &  192.168.2.0/24 & 192.168.3.0/24 & 192.168.4.0/24\\
-		
 		
 		Netzwerkmaske	&255.255.255.0& 255.255.255.0& 255.255.255.0	& 255.255.255.0 \\
 		
@@ -404,15 +405,8 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 		
 		erster Host& 192.168.1.2& 192.168.2.2& 192.168.3.2&192.168.4.2\\
 		
-		letzter Host& 192.168.1.11 & 192.168.2.11 & 192.168.3.11 & 192.168.4.11\\
+		letzter Host& 192.168.1.254 & 192.168.2.254 & 192.168.3.254 & 192.168.4.254\\
 		
-		Controller &192.168.1.20&	& &\\
-		
-		Server in Frankfurt & 192.168.1.18 & & & \\
-		
-		Berliner Host & & & & 192.168.2.15 \\
-		
-		\hline
 	\end{tabular}
 	
 \end{table}
@@ -962,7 +956,7 @@ Um die Netzwerkkonfiguration vom DHCP-Server zu betrachten, muss Wireshark vor M
 \subsection{Domain Name System}
 
 
-\chapter{Zusammenfassung}
+\chapter{Diskussion der Ergebnisse}
 Analyse der Ergebnisse
 Kritische Betrachtung
 Hier erwähnen welche Teile der Aufgaben nicht geklappt haben, wie beispielsweise Aufgabe 5 Webproxy
@@ -974,6 +968,10 @@ Eventuell als Überpunkt zu Gesamtergebnis?
 Was ist der finale Stand des Projekts?
 Inwiefern wurden die Ziele erreicht?
 
+1. Fragestellung/Aufgabenstellung kurz einführen wieder
+2. Zusammenfassen
+3. Wurden die Ziele erreicht
+scribbr.de
 \section{Zukunftsaussichten}
 Inwiefern können die Ergebnisse des Projekts weiter genutzt werden?
 \par

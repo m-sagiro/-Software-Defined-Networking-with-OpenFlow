@@ -146,7 +146,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.10.6}Domain Name System}{49}{subsection.3.10.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Zusammenfassung}{50}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Diskussion der Ergebnisse}{50}{chapter.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Analyse der Ergebnisse}{50}{section.4.1}%
 \defcounter {refsection}{0}\relax 
