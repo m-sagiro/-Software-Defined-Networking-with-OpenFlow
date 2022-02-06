@@ -19,6 +19,113 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{sdn1}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1ac612f4dddc84fad57e3fd562ba01be}{%
+           family={Agouros},
+           familyi={A\bibinitperiod},
+           given={Konstantin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Walter de Gruyter}%
+      }
+      \strng{namehash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \strng{fullhash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \strng{bibnamehash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \strng{authorbibnamehash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \strng{authornamehash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \strng{authorfullhash}{1ac612f4dddc84fad57e3fd562ba01be}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-11-044984-6}
+      \field{title}{Software Defined Networking}
+      \field{year}{2017}
+      \keyw{Networking}
+    \endentry
+    \entry{SDNdefTung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e482f6dc6f01159c423a0685730501fb}{%
+           family={AVI},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{e482f6dc6f01159c423a0685730501fb}
+      \strng{fullhash}{e482f6dc6f01159c423a0685730501fb}
+      \strng{bibnamehash}{e482f6dc6f01159c423a0685730501fb}
+      \strng{authorbibnamehash}{e482f6dc6f01159c423a0685730501fb}
+      \strng{authornamehash}{e482f6dc6f01159c423a0685730501fb}
+      \strng{authorfullhash}{e482f6dc6f01159c423a0685730501fb}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Software Defined Networking}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://avinetworks.com/glossary/software-defined-networking/
+      \endverb
+      \verb{url}
+      \verb https://avinetworks.com/glossary/software-defined-networking/
+      \endverb
+    \endentry
+    \entry{sdn2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=e81a429052d70a3182a3bf17f49b08f9}{%
+           family={Azodolmolky},
+           familyi={A\bibinitperiod},
+           given={Siamak},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Packt Publishing}%
+      }
+      \strng{namehash}{e81a429052d70a3182a3bf17f49b08f9}
+      \strng{fullhash}{e81a429052d70a3182a3bf17f49b08f9}
+      \strng{bibnamehash}{e81a429052d70a3182a3bf17f49b08f9}
+      \strng{authorbibnamehash}{e81a429052d70a3182a3bf17f49b08f9}
+      \strng{authornamehash}{e81a429052d70a3182a3bf17f49b08f9}
+      \strng{authorfullhash}{e81a429052d70a3182a3bf17f49b08f9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-84969-872-6}
+      \field{title}{Software Defined Networking with OpenFlow}
+      \field{year}{2013}
+      \keyw{Networking}
+    \endentry
+    \entry{baun2019grundlagen}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=c8362ec3de9dbb4de64fee2d8b9cfe70}{%
+           family={Baun},
+           familyi={B\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \strng{fullhash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \strng{bibnamehash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \strng{authorbibnamehash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \strng{authornamehash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \strng{authorfullhash}{c8362ec3de9dbb4de64fee2d8b9cfe70}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Computer Networks/Computernetze}
+      \field{title}{Grundlagen der Computervernetzung}
+      \field{year}{2019}
+      \field{pages}{15\bibrangedash 33}
+      \range{pages}{19}
+    \endentry
     \entry{failure}{online}{}
       \name{author}{1}{}{%
         {{hash=d96391b267f78dc8e9c91aefbb68e1fd}{%
@@ -47,6 +154,37 @@
       \endverb
       \verb{url}
       \verb https://www.admin-magazine.com/Articles/Floodlight-Welcome-to-the-World-of-Software-Defined-Networking
+      \endverb
+    \endentry
+    \entry{tranetworkTung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4a5c78f4258f5f4219282e459bfead76}{%
+           family={Donner},
+           familyi={D\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4a5c78f4258f5f4219282e459bfead76}
+      \strng{fullhash}{4a5c78f4258f5f4219282e459bfead76}
+      \strng{bibnamehash}{4a5c78f4258f5f4219282e459bfead76}
+      \strng{authorbibnamehash}{4a5c78f4258f5f4219282e459bfead76}
+      \strng{authornamehash}{4a5c78f4258f5f4219282e459bfead76}
+      \strng{authorfullhash}{4a5c78f4258f5f4219282e459bfead76}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Was ist Software-Defined Networking}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2018}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ip-insider.de/was-ist-software-defined-networking-sdn-a-657442/
+      \endverb
+      \verb{url}
+      \verb https://www.ip-insider.de/was-ist-software-defined-networking-sdn-a-657442/
       \endverb
     \endentry
     \entry{case}{online}{}
@@ -80,6 +218,143 @@
       \verb https://www.nojitter.com/case-sdn
       \endverb
     \endentry
+    \entry{networkdevices}{online}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={GeeksforGeeks},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Network Devices (Hub, Repeater, Bridge, Switch, Router, Gateways and Router)}
+      \field{urlday}{24}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/
+      \endverb
+      \verb{url}
+      \verb https://www.geeksforgeeks.org/network-devices-hub-repeater-bridge-switch-router-gateways/
+      \endverb
+    \endentry
+    \entry{gelberger2013performance}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=a7adf533afd148d2c968a6ee080e1327}{%
+           family={Gelberger},
+           familyi={G\bibinitperiod},
+           given={Alexander},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f0ae413cc3db31b936ff8338283fb629}{%
+           family={Yemini},
+           familyi={Y\bibinitperiod},
+           given={Niv},
+           giveni={N\bibinitperiod}}}%
+        {{hash=4ed9e2c67549a8886474594b10b61495}{%
+           family={Giladi},
+           familyi={G\bibinitperiod},
+           given={Ran},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \strng{fullhash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \strng{bibnamehash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \strng{authorbibnamehash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \strng{authornamehash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \strng{authorfullhash}{1c5cc3130f2b4d99091fdd7db80644e9}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2013 IEEE 21st International Symposium on Modelling, Analysis and Simulation of Computer and Telecommunication Systems}
+      \field{title}{Performance analysis of software-defined networking (SDN)}
+      \field{year}{2013}
+      \field{pages}{389\bibrangedash 393}
+      \range{pages}{5}
+    \endentry
+    \entry{cloudcomputing}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d4656d1f66e0d24f44b51c2e1bef523c}{%
+           family={Hales},
+           familyi={H\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \strng{fullhash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \strng{bibnamehash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \strng{authorbibnamehash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \strng{authornamehash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \strng{authorfullhash}{d4656d1f66e0d24f44b51c2e1bef523c}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{SDN and Cloud Computing}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://novacontext.com/sdn-and-cloud-computing/
+      \endverb
+      \verb{url}
+      \verb http://novacontext.com/sdn-and-cloud-computing/
+      \endverb
+    \endentry
+    \entry{hasan2020sdn}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f70b8ea6fb03cc6c41ff77f72e574fd3}{%
+           family={Hasan},
+           familyi={H\bibinitperiod},
+           given={Muhamad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=37fba6e208b16aeae3ae71c3248b28e0}{%
+           family={Dahshan},
+           familyi={D\bibinitperiod},
+           given={Hisham},
+           giveni={H\bibinitperiod}}}%
+        {{hash=d1d461f3f7e7a3ee6946ff5292d442d9}{%
+           family={Abdelwanees},
+           familyi={A\bibinitperiod},
+           given={Essam},
+           giveni={E\bibinitperiod}}}%
+        {{hash=1f11e0999ff85070676b7299d627a755}{%
+           family={Elmoghazy},
+           familyi={E\bibinitperiod},
+           given={Aly},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{5171b83dab6b7eeb848ddd4077d92dec}
+      \strng{fullhash}{88a651d70605436690591d8e02266b6f}
+      \strng{bibnamehash}{5171b83dab6b7eeb848ddd4077d92dec}
+      \strng{authorbibnamehash}{5171b83dab6b7eeb848ddd4077d92dec}
+      \strng{authornamehash}{5171b83dab6b7eeb848ddd4077d92dec}
+      \strng{authorfullhash}{88a651d70605436690591d8e02266b6f}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2020 2nd Novel Intelligent and Leading Emerging Sciences Conference (NILES)}
+      \field{title}{SDN Mininet Emulator Benchmarking and Result Analysis}
+      \field{year}{2020}
+      \field{pages}{355\bibrangedash 360}
+      \range{pages}{6}
+    \endentry
     \entry{improve}{article}{}
       \name{author}{1}{}{%
         {{hash=e1ca82d99cbf15ba66d1994a69b7381f}{%
@@ -101,6 +376,35 @@
       \field{journaltitle}{IEEE Communications Magazine}
       \field{title}{Improving Network Management with Software Defined Networking}
       \field{year}{2013}
+    \endentry
+    \entry{sdnbenefitstung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9256770b5ac9b3710d853b06344fdefb}{%
+           family={ingrammicro},
+           familyi={i\bibinitperiod}}}%
+      }
+      \strng{namehash}{9256770b5ac9b3710d853b06344fdefb}
+      \strng{fullhash}{9256770b5ac9b3710d853b06344fdefb}
+      \strng{bibnamehash}{9256770b5ac9b3710d853b06344fdefb}
+      \strng{authorbibnamehash}{9256770b5ac9b3710d853b06344fdefb}
+      \strng{authornamehash}{9256770b5ac9b3710d853b06344fdefb}
+      \strng{authorfullhash}{9256770b5ac9b3710d853b06344fdefb}
+      \field{sortinit}{i}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{7 Advantages of Software Defined Networking}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://imaginenext.ingrammicro.com/data-center/7-advantages-of-software-defined-networking
+      \endverb
+      \verb{url}
+      \verb https://imaginenext.ingrammicro.com/data-center/7-advantages-of-software-defined-networking
+      \endverb
     \endentry
     \entry{loadbalance}{online}{}
       \name{author}{1}{}{%
@@ -220,6 +524,62 @@
       \field{title}{Mininet as Software Defined Networking Testing Platform}
       \field{year}{2014}
     \endentry
+    \entry{sdn3}{book}{}
+      \name{author}{1}{}{%
+        {{hash=ff77e2023fe43bf8e5ee8cb661b1fbec}{%
+           family={Khondoker},
+           familyi={K\bibinitperiod},
+           given={Rahamatullah},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \strng{fullhash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \strng{bibnamehash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \strng{authorbibnamehash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \strng{authornamehash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \strng{authorfullhash}{ff77e2023fe43bf8e5ee8cb661b1fbec}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-319-71760-9}
+      \field{title}{SDN and NFV Security - Security Analysis of Software-Defined Networking and Network Function Virtualization}
+      \field{year}{2018}
+      \keyw{Networking}
+    \endentry
+    \entry{mnapi}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0bf9f9f1cc7663e9ba74b2f706364e97}{%
+           family={Mininet},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{fullhash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{bibnamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authorbibnamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authornamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \strng{authorfullhash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \field{extraname}{1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Mininet Download}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb http://mininet.org/download/
+      \endverb
+      \verb{url}
+      \verb http://mininet.org/download/
+      \endverb
+    \endentry
     \entry{mininetoverview}{online}{}
       \name{author}{1}{}{%
         {{hash=0bf9f9f1cc7663e9ba74b2f706364e97}{%
@@ -232,6 +592,7 @@
       \strng{authorbibnamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
       \strng{authornamehash}{0bf9f9f1cc7663e9ba74b2f706364e97}
       \strng{authorfullhash}{0bf9f9f1cc7663e9ba74b2f706364e97}
+      \field{extraname}{2}
       \field{sortinit}{M}
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
@@ -248,6 +609,43 @@
       \verb{url}
       \verb http://mininet.org/overview/
       \endverb
+    \endentry
+    \entry{morales2015extending}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=ed0417f154c77e65c9418058cb3588cc}{%
+           family={Morales},
+           familyi={M\bibinitperiod},
+           given={Laura\bibnamedelima Victoria},
+           giveni={L\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+        {{hash=b29bb10b41533721666505ee49f428ea}{%
+           family={Murillo},
+           familyi={M\bibinitperiod},
+           given={Andres\bibnamedelima Felipe},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=1eddfd81980c9e31c202a177a29490a7}{%
+           family={Rueda},
+           familyi={R\bibinitperiod},
+           given={Sandra\bibnamedelima Julieta},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{217b904c87ad0da8046d13bb7a85f209}
+      \strng{fullhash}{217b904c87ad0da8046d13bb7a85f209}
+      \strng{bibnamehash}{217b904c87ad0da8046d13bb7a85f209}
+      \strng{authorbibnamehash}{217b904c87ad0da8046d13bb7a85f209}
+      \strng{authornamehash}{217b904c87ad0da8046d13bb7a85f209}
+      \strng{authorfullhash}{217b904c87ad0da8046d13bb7a85f209}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE 14th International Symposium on Network Computing and Applications}
+      \field{title}{Extending the floodlight controller}
+      \field{year}{2015}
+      \field{pages}{126\bibrangedash 133}
+      \range{pages}{8}
     \endentry
     \entry{firewall}{inproceedings}{}
       \name{author}{3}{}{%
@@ -286,6 +684,34 @@
       \verb 10.1109/SIBCON.2016.7491821
       \endverb
     \endentry
+    \entry{ONFTung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=dc1200f86f4e1ce8093319ecca77a951}{%
+           family={ONF},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{dc1200f86f4e1ce8093319ecca77a951}
+      \strng{fullhash}{dc1200f86f4e1ce8093319ecca77a951}
+      \strng{bibnamehash}{dc1200f86f4e1ce8093319ecca77a951}
+      \strng{authorbibnamehash}{dc1200f86f4e1ce8093319ecca77a951}
+      \strng{authornamehash}{dc1200f86f4e1ce8093319ecca77a951}
+      \strng{authorfullhash}{dc1200f86f4e1ce8093319ecca77a951}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Software-Defined Networking (SDN) Definition}
+      \field{urlday}{16}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://opennetworking.org/sdn-definition/
+      \endverb
+      \verb{url}
+      \verb https://opennetworking.org/sdn-definition/
+      \endverb
+    \endentry
     \entry{floodlightdefinition}{article}{}
       \name{author}{1}{}{%
         {{hash=25ac174bd550d0eda213e57586e2aa03}{%
@@ -316,6 +742,72 @@
       \verb{url}
       \verb https://www.ftms.edu.my/journals/pdf/IJISE/Apr2015/160-170.pdf
       \endverb
+    \endentry
+    \entry{7840116}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fc4c79f9e46cd13e72e74301c423d7b7}{%
+           family={Rastogi},
+           familyi={R\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=57ba74ed79be4eb517e20354634c9bd2}{%
+           family={Bais},
+           familyi={B\bibinitperiod},
+           given={Abdul},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{fullhash}{6bbac072a50e42510f45c16039bef362}
+      \strng{bibnamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authorbibnamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authornamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authorfullhash}{6bbac072a50e42510f45c16039bef362}
+      \field{extraname}{1}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 19th International Multi-Topic Conference (INMIC)}
+      \field{title}{Comparative analysis of software defined networking (SDN) controllers — In terms of traffic handling capabilities}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1109/INMIC.2016.7840116
+      \endverb
+    \endentry
+    \entry{rastogi2016comparative}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{hash=fc4c79f9e46cd13e72e74301c423d7b7}{%
+           family={Rastogi},
+           familyi={R\bibinitperiod},
+           given={Abhishek},
+           giveni={A\bibinitperiod}}}%
+        {{hash=57ba74ed79be4eb517e20354634c9bd2}{%
+           family={Bais},
+           familyi={B\bibinitperiod},
+           given={Abdul},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{fullhash}{6bbac072a50e42510f45c16039bef362}
+      \strng{bibnamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authorbibnamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authornamehash}{6bbac072a50e42510f45c16039bef362}
+      \strng{authorfullhash}{6bbac072a50e42510f45c16039bef362}
+      \field{extraname}{2}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2016 19th International Multi-Topic Conference (INMIC)}
+      \field{title}{Comparative analysis of software defined networking (SDN) controllers—In terms of traffic handling capabilities}
+      \field{year}{2016}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
     \endentry
     \entry{floodlightnachteil}{online}{}
       \name{author}{1}{}{%
@@ -389,6 +881,75 @@
       \verb 10.1109/MELCON.2016.7495430
       \endverb
     \endentry
+    \entry{6553676}{article}{}
+      \name{author}{9}{}{%
+        {{hash=e28f46004da0a8f9c890b6f5cf600105}{%
+           family={Sezer},
+           familyi={S\bibinitperiod},
+           given={Sakir},
+           giveni={S\bibinitperiod}}}%
+        {{hash=95ce90ec3191c23b427c5abac55c728c}{%
+           family={Scott-Hayward},
+           familyi={S\bibinithyphendelim H\bibinitperiod},
+           given={Sandra},
+           giveni={S\bibinitperiod}}}%
+        {{hash=bdcd2ea8c65b56eee7b658f832ce3a41}{%
+           family={Chouhan},
+           familyi={C\bibinitperiod},
+           given={Pushpinder\bibnamedelima Kaur},
+           giveni={P\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d6bdc3bf4d5e5dbbc2dc50deb9998736}{%
+           family={Fraser},
+           familyi={F\bibinitperiod},
+           given={Barbara},
+           giveni={B\bibinitperiod}}}%
+        {{hash=bf7fed05d9fd16bdefdef45324fa6435}{%
+           family={Lake},
+           familyi={L\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=8173276fc708fca4aa1a1ee8bf959544}{%
+           family={Finnegan},
+           familyi={F\bibinitperiod},
+           given={Jim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=f9a61987049efc6cf17a14c04bcce37e}{%
+           family={Viljoen},
+           familyi={V\bibinitperiod},
+           given={Niel},
+           giveni={N\bibinitperiod}}}%
+        {{hash=8326d5a67db5c20a9dee5a9fe5780af0}{%
+           family={Miller},
+           familyi={M\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=fd219f1121b1fc8ccf148e068ae1cd20}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Navneet},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{4543b535885f15165565e3921c8b5a30}
+      \strng{fullhash}{cf66c509b17cc9ec38ad0cdbaf3d89f1}
+      \strng{bibnamehash}{4543b535885f15165565e3921c8b5a30}
+      \strng{authorbibnamehash}{4543b535885f15165565e3921c8b5a30}
+      \strng{authornamehash}{4543b535885f15165565e3921c8b5a30}
+      \strng{authorfullhash}{cf66c509b17cc9ec38ad0cdbaf3d89f1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Communications Magazine}
+      \field{number}{7}
+      \field{title}{Are we ready for SDN? Implementation challenges for software-defined networks}
+      \field{volume}{51}
+      \field{year}{2013}
+      \field{pages}{36\bibrangedash 43}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1109/MCOM.2013.6553676
+      \endverb
+    \endentry
     \entry{mnnachteile}{online}{}
       \name{author}{1}{}{%
         {{hash=b22371fabc9025ad4a68e5ce3d947a65}{%
@@ -418,6 +979,36 @@
       \endverb
       \verb{url}
       \verb https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
+      \endverb
+    \endentry
+    \entry{openvswitch1}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfb2bc749931d2188eca3c24ebc2145d}{%
+           family={vSwitch},
+           familyi={v\bibinitperiod},
+           given={Open},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{fullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{bibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorbibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authornamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorfullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Production Quality, Multilayer Open Virtual Switch}
+      \field{urlday}{26}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.openvswitch.org/
+      \endverb
+      \verb{url}
+      \verb https://www.openvswitch.org/
       \endverb
     \endentry
     \entry{broadcast}{online}{}
@@ -451,7 +1042,6 @@
       \endverb
     \endentry
   \enddatalist
-  \missing{mnapi}
 \endrefsection
 \endinput
 
