@@ -130,7 +130,8 @@ mit entsprechender Software auf Plagiate überprüft wird.
 \mainmatter % Seite fängt mit 1 an
 
 %Kapitel: Einleitung
-\chapter{Abstract \tiny Verfasst von: Name, Name..}
+\chapter{Abstract}
+{\tiny Verfasst von: Name, Name\par}
 Der vorliegende Projektbericht dient als Dokumentation des Informatikprojekts „Software-Defined Network mit OpenFlow“ an der Frankfurt University of Applied Sciences im Bachelorstudiengang Informatik im Wintersemester 2021/2022.\par
 Das Aufkommen des Internets hat eine Revolution in der Informationstechnologie geschaffen. Durch eine neue Art der Kommunikation kann der Mensch auf nationaler wie auch auf internationaler Ebene effizienter und effektiver Informationen weitervermitteln. Dies bildet die Grundlage für die heutige Wissensökonomie.\par
 Die traditionelle Netzwerkarchitektur ist jedoch seit einem halben Jahrhundert unverändert geblieben und wird für die Geschäftsanforderungen von Unternehmen, Netzwerkbetreibern und Endbenutzern zunehmend ungeeignet. Gegenwärtig werden die Geschäftsanforderungen von Unternehmen immer komplexer und die Anwendungsvielfalt der Endbenutzer nimmt zu, was zu unterschiedlichen Anforderungen der Benutzer an Verbindungsnetzwerke führt. Das Netzwerk muss auf sich schnell ändernde Parameter von Latenz, Bandbreite, Routing, Sicherheit und so weiter (usw.) entsprechend den Anforderungen der Anwendungen reagieren \cite{case}.\par
@@ -150,9 +151,11 @@ asddsa
 asddsa
 
 \section{Motivation}
+{\tiny Verfasst von: Name, Name\par}
 Das Modul “Informatik Projekt” wird im 5. Semester des Bachelorstudiengangs Informatik durchgeführt. Nach erfolgreichem Abschluss des Moduls sollten Studierende gewisse Kompetenzen erlernt haben, wie beispielsweise den Software-Engineering Prozess planen und durchführen, als auch auf einem vertieften Niveau gemeinsam programmieren zu können. Außerdem sollten Studierende fähig sein, gemeinsam ein Team zu bilden und einen selbsterstellten Zeitplan einzuhalten sowie auf einem technisch hohen Niveau zu kommunizieren, um als Team auf Ergebnisse zu kommen. Falls unerwartete Komplikationen sowohl technischer als auch sozialer Art entstehen, sollte als Team diese Hürde überwunden werden. Infolgedessen entstand dieser Projektbericht, der als Projektergebnis und als Dokumentation dient, um die erlernten Kompetenzen widerzuspiegeln.\par
 Durch das Thema “Software-Defined Networking mit Openflow” konnte Freizeit mit Studium verbunden werden, da viele selbsterlernte Kenntnisse und Vorkenntnisse aus anderen Modulen praktisch angewendet werden konnten. Zugleich dient die Dokumentation durch ausführliche Erklärungen und Abbildungen auch als Tutorial, dass den Einstieg in das Thema SDN durch Praxis vereinfachen soll.
 \section{Problemstellung}
+{\tiny Verfasst von: Name, Name\par}
 Innerhalb des Informatikprojekts muss sich folgendes Szenario vorgestellt werden:\par
 Ein Unternehmen plane eine Netzwerkkommunikation zwischen vier Standorten mittels Sofware-Defined Networking Funktionen. Die Hauptverwaltung befinde sich in Frankfurt am Main, die drei weiteren Niederlassungen seien in München, Berlin, Hamburg. Zudem sollte jede Lokation einen Asymmetric Digital Subscriber Line Zugang (ADSL) zum Internet haben.\par
 Darüber hinaus müssen im Netzwerk bestimmte Funktionen und Aufgaben realisiert werden. Es solle nicht nur für jede Lokation jeweils ein privater IP-Adressenbereich genutzt werden, sondern auch ein Netzwerkplan vom gesamten Netzwerk erstellt werden. Außerdem solle jede Kommunikation zwischen den einzelnen Lokationen über eine Virtual Private Network Verbindung (VPN) laufen, somit sei der gesamte Datenverkehr über das Internet und zwischen den Lokationen verschlüsselt. Anschließend müsse ein Service-Provider gefunden werden, der die gewünschte Konfiguration und Anforderungen realisiere. Jedoch sollen der Preis und die benötigte Bandbreite nicht nur für den Internetzugang, sondern auch für die Wide Area Network-Verbindungen (WAN) beachtet und verglichen werden. Ebenfalls solle durch SDN sowohl eine Network Address Translation-Firewall-Funktion (NAT) als auch eine Webproxy-Funktion in allen Lokationen implementiert werden. Ergänzend dazu solle mithilfe des SDN-Controllers sowohl eine graphische Darstellung der Netzwerkstruktur durch einen Topologieviewer realisiert werden als auch eine Monitoring-Lösung. Zudem müsse eine Quality of Service -Funktion implementiert werden, die genügend Bandbreite für Audio beziehungsweise (bzw.) Video-Konferenzen habe, auch wenn diese über die WAN-Verbindung mit Symmetric Digital Subscriber Line (SDSL) 20 Megabit begrenzt sei. Anschließend wird ein weiteres Szenario beschrieben:\par
@@ -162,22 +165,26 @@ In Kapitel 3 wird für die Implementierungen der Netzwerk Funktionalitäten Scre
 
 
 \section{Aufbau der Arbeit}
+{\tiny Verfasst von: Name, Name\par}
 In Kapitel 2 dieser Projektarbeit wird über das generelle Vorgehen in dem Projekt geschrieben. Nach einer kurzen Vorstellung unseres Projektziels, wird das konkrete Vorgehen innerhalb der Gruppe erläutert. Weiterhin wird sowohl über die Festlegung der Meilensteine, als auch über die genutzten Werkzeuge eingegangen. In Kapitel 3 wird die Projektdurchführung erklärt und in den Unterkapiteln werden die erreichten Ergebnisse vorgestellt, die auch die einzelnen Thematiken der jeweiligen Funktionalitäten ergänzen. Anschließend dient Kapitel 4 mit einer kurzen Analyse aller Ergebnisse, als auch eine kritische Betrachtung der Projektanforderung, als Auswertung und Selbstreflektion, was im Rahmen der Projektarbeit nicht funktionierte und umgesetzt werden konnte, in Bezug auf Netzwerkanforderungen, sowie intern zwischen allen Gruppenmitgliedern. Kapitel 5 bildet mit dem Fazit einen Ausblick in die mögliche Zukunft für SDN.
 
 
 \chapter{Projekt}
 \section{Projektziel}
+{\tiny Verfasst von: Name, Name\par}
 Ziel des Projekts war es, ein Netzwerk für ein Unternehmen mit vier Lokationen aufzubauen. Dabei war es besonders wichtig, dass das gesamte Netzwerk mit SDN Funktionen realisiert wurde.\par
 Ein stabiles Netzwerk vom ersten Tag an wird die Grundlage für den Erfolg von Unternehmen sein. Damit Unternehmen gut funktionieren, muss auch das Netzwerksystem gut funktionieren. Das Netzwerk arbeitet mit der richtigen Kapazität und bringt Effizienz. Die Aufgabe war es, ein gutes stabiles Netzwerk aufzubauen, dass zu 100 Prozent bei Datenverkehr funktionierte und unerwartete Sicherheitsprobleme vermeidete.\par
 Das Netzwerksystem musste eng verwaltet und überwacht werden. Zudem musste es leicht unterstützt werden, um Probleme auf die effektivste Weise behandeln und beheben zu können. Es war zwingend erforderlich, dass das Netzwerksystem sicher und verschlüsselt war. Denn Unternehmensdaten sind das Wichtigste. Bei der Netzwerksicherheit ging es auch um den Schutz von Unternehmensressourcen. Je nach Verwendungszweck und Anzahl der Nutzer sollten genügend Bandbreite zur Verfügung gestellt werden.\par
 Im Laufe des Projektberichtes werden die erfolgreichen sowie erfolglosen Ergebnisse des Projekts dokumentiert und dargestellt. Am Ende des Projektes wird ein lauffähiges Produkt entstehen, dass alle benötigten Funktionalitäten erfüllt.  
 
 \section{Vorgehen}
+{\tiny Verfasst von: Name, Name\par}
 Angemessene Aufgabenverteilung im Kollektiv, brachte viele Vorteile für die Arbeitssituation und den Teammitgliedern. Die Nutzung der maximalen Kapazität jedes Teammitglieds war ein effektiver Weg, um die Arbeitseffizienz zu verbessern.\par
 Um die Wünsche und Fähigkeiten jedes einzelnen Mitglieds zu verstehen, wurden Gespräche und Diskussionen frühzeitig durchgeführt. Die Zuweisung von Aufgaben, die der Produktivität jeder Person entsprachen, half den Mitgliedern, effektiver und mit einem angenehmeren Geist zu arbeiten. Den Mitgliedern wurden bestimmte Aufgaben mit Fristen zugewiesen. Es wurde jede Woche ein permanentes Treffen über Discord gehalten. Spontane Treffen konnten mit dem höchsten Geist und der höchsten Konzentration ebenfalls durchgeführt werden.\par
 Die Analyse von Aufgabenzuweisungen war wichtig, um zu verstehen, was getan werden muss und welche Tools notwendig seien. Der Wissensaustausch half den Mitgliedern, sich Wissen sofort anzueignen und effektiv zu nutzen. Nach einer erfolgreichen Analyse begann unser Team mit der Ausarbeitung eines Plans. Die Arbeit wurde vom Projektleiter aufgeteilt und kontrolliert.
 
 \section{Festlegen von Meilensteinen}
+{\tiny Verfasst von: Name, Name\par}
 In dem ersten Treffen der Gruppe wurde entschieden, drei zentrale Meilensteine zu definieren (siehe Abbildung \ref{milestones}). Grund dafür sei, einen klaren Faden in der Projektarbeit zu konstruieren, um mit der Menge an Informationen strukturiert umgehen zu können. Die Meilensteine wurden mithilfe der Aufgabenstellungen konkretisiert:
 
 \begin{figure}[H]
@@ -215,16 +222,20 @@ In dem ersten Treffen der Gruppe wurde entschieden, drei zentrale Meilensteine z
 Durch gängige IT-Projektmanagementmethoden, wie beispielsweise die Scrum-Methode, konnten frühzeitig Ergebnisse erzielt werden. Infolgedessen gab es am Ende der Projektarbeit mehr Zeit, um über Kleinigkeiten zu reflektieren.
 
 \section{Verwendete Werkzeuge}
+{\tiny Verfasst von: Name, Name\par}
 Im Folgenden werden die für die Implementierung und Evaluierung verwendeten Hardware- und Softwareumgebungen kurz beschrieben.\par
 Dieses Projekt wurde auf VirtualBox Oracle VM Version 6.1 durchgeführt. Unter der Verwaltung von VirtualBox wurde Mininet-Emulator Version 2.3 und Floodlight Controller Version 1.2 installiert. Zur Ausführung von Programmen zur Evaluation wurde außerdem Python3 installiert. Weitere Programme sind auch installiert und sie werden im Ablauf von Kapitel 3 bekannt gegeben und ausführlicher erklärt.
 
 \subsection{Mininet}
+{\tiny Verfasst von: Tung\par}
 Der Mininet-Emulator implementiert die Verbindung zwischen Switches und Controllern. Diese ermöglicht es Entwicklern, die an der Erstellung und dem Testen von Controller-Ressourcen interessiert sind, Mininet zur Durchführung ihrer Simulationen zu nutzen \cite{mininetoverview}.
 
 \subsubsection{Einführung}
+{\tiny Verfasst von: Tung\par}
 Mininet ist ein Netzwerk Emulator, mit der Netzwerke simuliert werden können. Bei Mininet handelt es sich um eine kostenlose Open-Source-Software, die die virtuelle Maschine und dem Controller die Recherche in SDN und OpenFlow ermöglicht. Mininet ermöglicht eine sehr groß angelegte Topologie, wodurch ein Netzwerk von Hosts, Switches, virtuellen Links und einem Controller erstellt wird \cite[139]{mininetdefinition}. Das Ausführen von Tests mit den Komponenten ist unkompliziert und kann über Python-Schnittstelle erledigt werden. Benutzer können ihre eigene Netzwerktopologie-Struktur nach ihren eigenen Bedürfnissen aufbauen\cite[141]{mininetdefinition}.
 
 \subsubsection{Funktionalität}
+{\tiny Verfasst von: Tung\par}
 Mininet:
 \begin{itemize}
  \item stellt ein einfaches Netzwerk Testbed dar, welches aber auch gleichzeitig günstig ist. Da der OpenFlow Switch in Mininet alle Eigenschaften wie ein echter OpenFlow Switch hat, ist die Anwendung von einem Netzwerkemulator mit Mininet praktisch sinnvoll.
@@ -236,13 +247,15 @@ Mininet:
 \end{itemize}
 
 \subsubsection{Nachteile}
+{\tiny Verfasst von: Tung\par}
 Aktuell ist Mininet nur unter Linux lauffähig. Nutzer eines anderen Betriebssystems müssen auf Linux entweder durch Simulierung oder Installation zurückgreifen. Zudem könnte der Sourcecode effizienter und sauberer implementiert werden.\par
 Mininet schreibt Ihren OpenFlow-Controller nicht für Benutzer. Wenn Benutzer benutzerdefiniertes Routing- oder Schaltverhalten benötigen, müssen Benutzer einen Controller mit den erforderlichen Funktionen finden oder entwickeln.\par
 Standardmäßig ist Mininet-Netzwerk von Local Area Network (LAN) und vom Internet isoliert - das ist normalerweise eine gute Sache! Benutzer können jedoch das NAT-Objekt und/oder die Option --nat verwenden, um Ihr Mininet-Netzwerk über Network Address Translation mit Ihrem LAN zu verbinden. Benutzer können Ihrem Mininet-Netzwerk auch eine echte (oder virtuelle) Hardware-Schnittstelle hinzufügen (siehe Beispiele/hwintf.py für Details).\par
-Standardmäßig teilen sich alle Mininet-Hosts das Host-Dateisystem und den PID-Speicherplatz. Das bedeutet, dass Benutzer möglicherweise vorsichtig sein müssen, wenn sie Daemons ausführen, die eine Konfiguration in /etc erfordern, und Benutzer müssen darauf achten, dass sie nicht versehentlich die falschen Prozesse beenden. \par
+Standardmäßig teilen sich alle Mininet-Hosts das Host-Dateisystem und den PID\hyp{}Speicherplatz. Das bedeutet, dass Benutzer möglicherweise vorsichtig sein müssen, wenn sie Daemons ausführen, die eine Konfiguration in /etc erfordern, und Benutzer müssen darauf achten, dass sie nicht versehentlich die falschen Prozesse beenden. \par
 Im Gegensatz zu einem Simulator hat Mininet keine starke Vorstellung von virtueller Zeit. dies bedeutet, dass Timing-Messungen auf Echtzeit basieren und dass Ergebnisse schneller als Echtzeit (z. B. 100-Gbit/s-Netzwerke) nicht einfach emuliert werden können \cite{mnnachteile}.
 
 \subsubsection{Komponenten}
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
 Ein Mininet-Netzwerk besteht aus den folgenden Komponenten:
 \begin{itemize}
  \item \textbf{Link:} Links sind virtuelle Ethernets, die zwei virtuelle Schnittstellen verbinden. Jeder Link verhält sich für das gesamte System wie ein echter funktionsfähiger Ethernet-Anschluss. Die Datenrate jedes Links wird von Linux Traffic Control (TC) festgelegt.
@@ -253,6 +266,7 @@ Ein Mininet-Netzwerk besteht aus den folgenden Komponenten:
 
 
 \subsubsection{Installation}
+{\tiny Verfasst von: Tung\par}
 Mininet kann auf verschiedene Weisen installiert werden. In unserer Arbeit wurde die Option: Native Installation from Source ausgewählt. Die Installation wird Schritt für Schritt aufgeführt \cite{mnapi}:
 \begin{itemize}
 \item[1.] Git wird über das Linux-Terminal installiert
@@ -268,6 +282,7 @@ Mininet kann auf verschiedene Weisen installiert werden. In unserer Arbeit wurde
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo mininet/util/install.sh -a}}}}
 
 \subsubsection{Aufbau}
+{\tiny Verfasst von: Tung\par}
 Durch die Eingabe von dem Befehl \textit{\textbf{sudo mn}} wird ein Standardnetzwerk mit zwei Hosts, einer Switch und einem Controller gestartet (siehe Abbildung \ref{sudomn}).
 
 \begin{figure}[H]
@@ -279,13 +294,17 @@ Durch die Eingabe von dem Befehl \textit{\textbf{sudo mn}} wird ein Standardnetz
 \end{figure}
 
 \subsection{Floodlight}
+{\tiny Verfasst von: Mücahit, Tung\par}
 Floodlight ist ein sogenannter SDN-Controller in der Control Plane. Dieser kommuniziert mit der Data Plane über ein Kommunikationsprotokoll namens OpenFlow und verwaltet diesen \cite[161]{floodlightdefinition}.
 
 \subsubsection{Einführung}
+{\tiny Verfasst von: Mücahit, Tung\par}
 In den letzten Jahren wurde eine Vielzahl unterschiedlicher SDN-Controller entwickelt. Aus diesem Grund gibt es mittlerweile eine riesige Auswahl an SDN-Controllern für die breit gefächerten Einsatzzwecke, wo unteranderem OpenDaylight, Ryu, POX, NOX und Floodlight dazugehören. Mit allen Controllern sollten alle Projektziele der Projektarbeit erreichbar sein \cite{controllers}.\par
+{\tiny Verfasst von: Mücahit\par}
 Floodlight wurde als Controller ausgewählt, da einige Punkte und das daraus resultierende Gesamtprodukt die Gruppe überzeugen konnte. Dazu gehört unteranderem die einfache und gut beschriebene Installation. Die moderne Webbenutzeroberfläche und die verständliche, gut dokumentierte REST-API sind sehr benutzerfreundlich und leicht zu verstehen. Daraus resultiert auch die Option, die REST-API über ein Python-Skript zu benutzen. Die Einbindung des Floodlight-Controllers in Eclipse ermöglicht die Implementierung, Untersuchung und das Debuggen verschiedenster Controller-Funktionen. Die gute Dokumentation des in Java geschriebenen Controllers und einige mit der Installation mitgelieferten Module geben dem Entwickler einen guten Start zur Entwicklung von Netzwerkfunktionen.
 
 \subsubsection{Funktionalität}
+{\tiny Verfasst von: Mücahit\par}
 Die Funktionalitäten des Floodlight-Controllers unterscheiden sich anhand der Ausführung und der Implementierung. Funktionen können über die Webbenutzeroberfläche per Eingabe ausgeführt werden (siehe Abbildung \ref{webui}). Das Einstellen der Firewall und der Access Control List sind zwei dieser Funktionen. Nach Aktivierung der Firewall werden alle Pakete, die nicht in der Liste eingetragen sind, fallen gelassen. Die Access Control List arbeitet ähnlich wie die Firewall, wohingegen nur eine Liste mit erwünschten und nicht erwünschten Quellen existiert. Die Quellen werden anhand der Paket-Informationen angegeben. Bei einem Treffer wird die Quelle je nach Einstellung zugelassen oder verweigert. Folglich verweigert die Firewall jegliche Verbindung nach Aktivierung, wohingegen die Access Control List nur bestimmte Zugriffe auf ein Netzwerk zulässt oder ablehnt \cite{firewall}. \par
 Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuerten Netzwerk einsehbar. Dazu gehört die Anzahl der Switches, Hosts und Links sowie der verbrauchten Ressourcen des Controllers und der Netzwerktopologie. Die Statistikfunktion des Controllers kann auf der Benutzeroberfläche aktiviert werden. Dieser dient zur ausführlichen Weiterverarbeitung und der Anzeige der vom Controller gesammelten Statistik. Dazu gehören die Flow, meter, queue, aggregate, table und port Statistiken. Die Sammlung benutzerdefinierter Statistiken sind ebenfalls möglich und müssen vom Entwickler nachimplementiert werden. Über die REST-API können sogenannte Flows eingetragen werden, die zur Steuerung des Netzwerkes beitragen. Dabei können Datenpakete modifiziert, zwischengespeichert und umgeleitet werden \cite{statistik}.
 
@@ -299,12 +318,15 @@ Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuer
 
 
 \subsubsection{Nachteil}
+{\tiny Verfasst von: Mücahit\par}
 Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern\cite{failure}. Die Wartung und Konfiguration eines Controllers für komplexe Netzwerkstrukturen erfordern viele geschulte Angestellte \cite{floodlightnachteil}.
 
 \subsubsection{Komponenten}
+{\tiny Verfasst von: Mücahit\par}
 Mit der Installation von Floodlight kommen sogenannte Module zum Einsatz. Die meisten der Module sind bereits aktiviert und stellen bestimmte Funktionen zur Verfügung. Einer davon ist die Learning Switch, welcher für die Speicherung der Routen zu den Hosts zuständig ist. Wenn ein Host einen anderen Host im gleichen Netzwerk erreichen will und der Switch die Route nicht kennt, wird ein Broadcast ausgeführt, der die Anfrage auf allen Ports ausgibt. Wenn der Host antwortet, speichert der Switch die MAC-Adresse des jeweiligen Hosts ab und muss somit keinen Broadcast durchführen \cite{broadcast}. Weitere Beispielmodule wären der Load Balancer, der für einen Ausgleich des Datenverkehrs im gesamten Netzwerk sorgt \cite{loadbalance}. Über die REST-API stellt Floodlight die Netzwerktopologie über die Webbenutzeroberfläche grafisch dar. Es existieren noch weitere Module, wobei auch eigene programmiert werden können \cite{restapi}.
 
 \subsubsection{Installation}
+{\tiny Verfasst von: Mücahit\par}
 Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux, Mac oder Windows erfolgen. Es wird das Java Development Kit 8, Maven, Git, build-essential und das Python Development Paket benötigt. Da Floodlight in Java geschrieben wurde, wird auch zur Ausführung Java verwendet. Maven wird zum sogenannten Builden benutzt, bei dem die Software Floodlight aus mehreren Dateien zusammengestellt wird. Das Python Development Paket wird zur Ausführung und Git zum Herunterladen von Floodlight vorausgesetzt. Build-essential werden zum Kompilieren einiger Software verwendet. Im Folgenden wird die Installation auf Linux Schritt für Schritt erklärt. Befehle müssen im Linux-Terminal zeilenweise eingegeben werden.
 
 \begin{itemize}
@@ -333,13 +355,14 @@ Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux,
 \begin{itemize}
 \item[5.] Floodlight im Terminal ausführen (siehe Abbildung \ref{floodlight})
 \end{itemize}
-\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}
-
+\colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}\par
+{\tiny Verfasst von: James\par}
 Es besteht die Möglichkeit, den Floodlight Controller mithilfe von Eclipse zu starten, somit muss Floodlight nicht im Terminal ausgeführt werden. Außerdem ist Floodlight durch die Entwicklungsumgebung Eclipse leichterer auszuführen und eine Bearbeitung ist übersichtlicher. Zudem hat man eine schnelle Übersicht vom kompletten Conroller, da alle Klassen in einem Eclipse Ordner einzusehen sind. Mit sudo mvn package –Declipse werden mehrere Dateien erstellt. Mit den neu erstellten Dateien kann ein neues Eclipse Projekt importiert werden. Anschließend wird Eclipse gestartet und eine neue Arbeitsumgebung erstellt. \textit{\textbf{File -> import -> General -> Existing Projects into Workspace}} und auf \textit{\textbf{Next}} klicken. Von \textit{\textbf{Select root directory}} auf \textit{\textbf{Browser}} klicken und Verzeichnis das Floodlight enthält auswählen. Das Projekt mit \textit{\textbf{finish}} ausführen und damit sollte Floodlight auf Eclipse importiert sein.\par
 Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden.
 
 
 \subsubsection{Aufbau}
+{\tiny Verfasst von: Mücahit\par}
 Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Controller standardmäßig auf Port 6653. Im Terminal werden alle informativen Ereignisse ausgegeben. Um den Controller zu stoppen, wird die Tastenkombination Steuerung und C gleichzeitig gedrückt (siehe Abbildung \ref{floodlight}).
 
 \begin{figure}[H]
@@ -352,8 +375,7 @@ Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Contro
 
 \newpage
 \subsection{Ergebnis}
-
-
+{\tiny Verfasst von: Tung\par}
 %\setlength{\intextsep}{0pt}
 %\setlength{\columnsep}{15pt}
 \begin{wrapfigure}{R}{0.5\textwidth}
@@ -369,11 +391,13 @@ Nach der Ausführung von Floodlight, wurde dieser mit einer OpenFlow-fähigen Sw
 
 
 \chapter{Durchführung des Projektes}
+{\tiny Verfasst von: James?\par}
 Die in Kapitel 1.3 dargestellten Problemstellungen werden in diesem Kapitel behandelt und realisiert. Mit den im vorherigen Kapitel erläuterten Werkzeugen wird dieses Projekt umgesetzt. Durch Abbildungen, Code Ausschnitte und Erläuterungen soll die Dokumentation die Vorgehensweise und Überlegungen der Gruppe wiedergeben. 
 
 
 
 \section{Netzwerkplan}
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
 Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Abbildung \ref{netzwerkplan} dargestellt. Das Netzwerkdiagramm enthält 40 Hosts, 4 Switches, 4 Router und einen Controller. Der Floodlight-Controller hat einen globalen Überblick über die physikalische Topologie. Die 4 Switches sind mit dem Controller verbunden. Zehn Hosts in den jeweiligen Lokationen sind mit einem Switch verbunden. Um die Hosts in jeder Lokation mit dem Internet und mit anderen Lokationen zu verbinden, wird ein Router benötigt. Durch die grüne Linie und den Tunnel wird gezeigt, dass die Kommunikation zwischen Lokationen verschlüsselt sind. Ebenfalls sind alle Router der Lokationen mit dem Internet verbunden, welches durch eine Cloud visualisiert wird.
 
 \begin{figure}[H]
@@ -415,9 +439,11 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 In diesem Abschnitt wird die beschriebene Topologie unter Verwendung von Mininet simuliert und erklärt.
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Tung?\par}
 In der Main-Funktion werden die Komponenten eines Netzwerks deklariert und aufgerufen. Das sind eine Topologie, ein Controller mit zugewiesenem Port und ein Mininet Objekt mit der deklarierten Topologie. Anschließend wurde für unsere Router Routing-Regeln und Informationen gegeben.
 
 \subsection{Aufbau der Topologie}
+{\tiny Verfasst von: Tung, Mücahit\par}
 Die Klasse Netzwerk bildet die Netzwerktopologie. Diese befindet sich in der Main-Funktion des Mininet-Skripts. Das Mininet-Skript besteht aus einer Main-Funktion. Die Main-Funktion enthält eine definierte Klasse \textit{\textbf{Netzwerk()}}. Mithilfe dieser Klasse wird das Netzwerk beziehungsweise eine Topologie erstellt (siehe Abbildung \ref{mininet1}). Die Klasse übernimmt ein Topo-Objekt an dem er mit der in ihm definierten \textit{\textbf{build()}} Methode die Konfiguration des Netzwerkes vornimmt. In der \textit{\textbf{build()}} Methode wird zuerst ein String definiert, der den privaten-IP-Bereich der vier Lokationen enthält. Der \textit{\textbf{defaultIP}} String bleibt in unvollständiger Form \textit{\textbf{192.168.\%s.1/24}}. Somit kann er später durch passende Stellen ersetzt und genutzt werden. Lediglich ist hier im dritten Block ein Platzhalter eingesetzt der beim Erstellen der Router in einer Schleife durch die Zahl der Iteration ersetzt wird. Zunächst wird ein leeres Array/Liste unter dem Namen Routers deklariert. Dies wird dann später genutzt und mit den Router-Objekten gefüllt. Später für die Verlinkung der Router mit dem jeweiligen Switch wird die Liste aufgerufen. Für größere Anzahl von Router ist die Bedeutung der Liste sehr praktisch.
 
 \begin{figure}[H]
@@ -463,6 +489,7 @@ Nachdem für alle Lokationen der Rumpf erstellt worden ist, werden die Verbindun
 
 \newpage
 \subsection{Controller Implementierung}
+{\tiny Verfasst von: Tung, Mücahit\par}
 Nach der Erstellung der Topologie geht es weiter bei der Main-Funktion. Es wird ein \textit{\textbf{RemoteController-Objekt}} erstellt, der einen Namen, die Konfiguration, um was für ein Controller es sich handelt, die IP-Adresse und den Port, wo er zu erreichen ist, bekommt (siehe Abbildung \ref{mininet5}). Hier ist wichtig zu erwähnen, dass der Controller auf Ubuntu läuft und zurzeit per \textit{\textbf{localhost}} zu erreichen ist. Der Controller könnte auf einer anderen VirtualBox-Maschine laufen und per \textit{\textbf{internes Netzwerk}} verbunden werden. Ebenfalls kann der Controller auf dem Hostsystem laufen und per \textit{\textbf{Host-Only-Adapter}} in Mininet eingebunden werden. 
 
 \begin{figure}[H]
@@ -484,6 +511,7 @@ Anschließend wird ein Mininet-Objekt erstellt, bei dem die erstellte Topologie,
 \end{figure}
 
 \subsection{Ergebnis}
+{\tiny Verfasst von: Tung\par}
 Wenn das Mininet Skript ausgeführt wird, ist eine Topologie mit 40 Hosts über 4 Switches und 4 Routers zu sehen. Durch \textit{\textbf{pingall}} kann es festgestellt werden, dass alles richtig funktioniert hat (siehe Abbildung \ref{pingall}).
 
 \begin{figure}[H]
@@ -495,12 +523,15 @@ Wenn das Mininet Skript ausgeführt wird, ist eine Topologie mit 40 Hosts über 
 \end{figure}
 
 \section{Verschlüsselung der Netzwerkverbindung zwischen den Lokationen}
+{\tiny Verfasst von: Mücahit\par}
 Zwischen den vier Lokationen soll ein Tunnel über das Internet konfiguriert werden. Dieser wird auch Virtual Private Network (VPN) genannt. Der gesamte Datenverkehr durch den Tunnel soll verschlüsselt und für unbeteiligte nicht einsehbar sein.
 
 \subsection{Vorüberlegung}
+{\tiny Verfasst von: Mücahit\par}
 Der Tunnel wird zwischen den Routern r1-r4 entstehen und für eine Verbindung der Netzwerke der Lokationen sorgen. Damit soll eine \textit{\textbf{Site-to-Site-VPN}} Verbindung zwischen allen Lokationen hergestellt werden. Dieser zeichnet sich durch die Verschlüsselung ab den Schnittstellen, also den Routern der Lokationen, aus. Zudem werden aus dem privaten Netzwerk eingehende Pakete an den Routern verschlüsselt und weiterverschickt. Der Router an der Ziellokation wird das Paket entschlüsseln und an die Zieladresse weiterleiten. Die Methode, die implementiert werden soll, heißt \textit{\textbf{IPSEC over GRE}} und soll alle angestellten Vorüberlegungen ermöglichen.
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Mücahit\par}
 Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}A remote Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router\hyp{}Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen.
 
 \begin{figure}[H]
@@ -555,7 +586,8 @@ Nun muss den Routern angewiesen werden, auf welchem Datenverkehr die installiert
 \end{figure}
 
 \subsection{Ergebnis}
-Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die komplette Kommunikation zwischen den Lokationen sicherer. Dazu gehört unter anderem die Authentifizierung des Kommunikationspartners und der Verhinderung unautorisierter Veränderungen von Paketen. Zwischen den Lokationen war vorher der gesamte Datenverkehr ersichtlich, wohingegen jetzt alles verschlüsselt ist (siehe Abbildung \ref{esp}).
+{\tiny Verfasst von: Mücahit\par}
+Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die komplette Kommunikation zwischen den Lokationen sicherer. Dazu gehört unter anderem die Authentifizierung des Kommunikationspartners und der Verhinderung unautorisierter Veränderungen von Paketen. Zwischen den Lokationen war vorher der gesamte Datenverkehr ersichtlich, wohingegen jetzt nahezu alles verschlüsselt ist (siehe Abbildung \ref{esp}).
 
 \begin{figure}[H]
  \centering
@@ -566,6 +598,7 @@ Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die ko
 \end{figure}
 
 \section{Auswahl des Service-Providers}
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
 Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden. Deswegen benötigen alle Lokationen eine DSL-Verbindung mit der richtigen Konfiguration zur Realisierung. Der Preis und die Bandbreite der DSL-Leitung zählen bei der Auswahl als primäre Faktoren. Zusätzlich können weitere Leistungen betrachtet werden. Im Folgenden sind in einer Tabelle die Internet-Service-Provider O2, Vodafone, 1\&1 und Telekom mit verschiedenen Bandbreiten und den dazugehörigen Nettopreisen aufgelistet (siehe Tabelle \ref{dsl}). Die Angebote sind aktuell und aus den originalen Webseiten der Provider entnommen worden.
 
 \begin{table}[H]
@@ -609,12 +642,15 @@ Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standl
 
 
 \section{Einrichtung des NAT-Firewalls}
+{\tiny Verfasst von: Mücahit\par}
 Durch die Network Address Translation (NAT) Firewall Funktion werden private IPv4-Adressen beziehungsweise Geräte geheim gehalten. Es wird durch die Netzwerkadressenübersetzung keine Informationen über die privaten IPv4-Adressen ins World Wide Web geschickt. Dazu wird der IPv4-Header von IP-Paketen aus dem privaten Netzwerkbereich auf die öffentliche IPv4-Adresse verändert. Hinter jeder öffentlichen IPv4-Adresse können mehrere Tausende Geräte stehen und auf das Internet zugreifen. Des Weiteren ist die Anzahl der IPv4-Adressen durch den eigenen Aufbau begrenzt. Für die vier Lokationen würde der Internet-Service-Provider vier öffentliche IPv4-Adressen vergeben. Die Adressen werden vom Internet-Service-Provider in bestimmten Zeitintervallen immer wieder neu vergeben, welches ebenfalls zu einer gewissen Sicherheit beiträgt.
 
 \subsection{Vorüberlegung}
+{\tiny Verfasst von: Mücahit\par}
 Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da alle Hosts über ihn Anfragen ins Internet verschicken werden. Dazu sollte jede Anfrage ins World Wide Web mit der öffentlichen IPv4-Adresse des Routers durchgeführt werden. Zusätzlich sollte der Router beziehungsweise die Hosts den Dynamic-Name-Server (DNS) konfiguriert bekommen, damit die Hosts nicht nur über die IPv4-Adressen aufs Internet zugreifen.
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Mücahit\par}
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\vspace{-\baselineskip}
  	\centering
@@ -640,6 +676,7 @@ Da nun eine Internetverbindung für alle Router besteht, muss der Domain Name Sy
 Die Default-Route der Hosts ist der jeweilige Router in der Lokation. Wenn ein Host eine Website aufruft, schickt er eine Anfrage an und über den Router. Im Moment wird die Anfrage beim Router fallengelassen, da der Router noch keine Regeln bezüglich solcher Anfragen besitzt. Die Regel wird über das im Ubuntu vorhandene Programm \textit{\textbf{iptables}} eingetragen, welches den Linux-Kernel umkonfiguriert. Dazu wird auf allen Routern der Befehl \textit{\textbf{sudo iptables -t nat -A POSTROUTING -o Schnittstellenbezeichnung -j MASQUERADE}} ausgeführt. Der Befehl vergibt jedem eingehenden Paket als Quelladresse die IPv4-Adresse der NAT-Schnittstelle des Routers (siehe Abbildung \ref{adapter}). Es wird \textit{\textbf{MASQUERADE}} genutzt, weil zum Zeitpunkt der Ausführung des Befehls die IPv4-Adresse der Schnittstelle unbekannt sein beziehungsweise sich ändern kann. Bei einer statischen IPv4-Adresse der NAT-Schnittstelle würde statt MASQUERADE direkt die IP eingegeben werden.
 
 \subsection{Ergebnis}
+{\tiny Verfasst von: Mücahit\par}
 Zusammenfassend wurde die NAT-Firewall-Funktion an allen Lokationen konfiguriert. Den Hosts ist es nun möglich, Anfragen ins Internet zu versenden. Der Router führt die Anfragen mit der von VirtualBox zur Verfügung gestellten Schnittstelle aus und gibt dem Host die Antwort zurück (siehe Abbildung \ref{nat}).
 
 \begin{figure}[H]
@@ -653,21 +690,26 @@ Zusammenfassend wurde die NAT-Firewall-Funktion an allen Lokationen konfiguriert
 Ein Problem bei der Durchführung war, dass die Netzwerkschnittstellen beim Beenden von Mininet auch für Ubuntu nicht mehr verfügbar waren. Deshalb musste immer wieder die virtuelle Maschine beziehungsweise Ubuntu neu gestartet werden, wenn Mininet beendet wurde. Um dem entgegenzuwirken, wurde der Befehl \textit{\textbf{ip link set Schnittstellenbezeichnung netns 1}} im Mininet-Script kurz vor dem Beenden eingefügt, damit die Schnittstelle erneut für Ubuntu verfügbar war.
 
 \section{Implementierung der Webproxy-Funktion}
+{\tiny Verfasst von: Mücahit\par}
 Der Proxy übernimmt jede Hypertext Transfer Protocol (HTTP) und Hypertext Transfer Protocol Secure (HTTPS) Anfrage der Hosts, führt sie selber durch und leitet die Antwort dem ursprünglichen Host wieder zurück. Der Vorteil hierbei ist, dass der Web-Proxy-Server für eine Sicherheit in allen Schichten des OSI-Modells sorgen kann. Es muss lediglich nur an dem Web-Proxy-Server Einstellungen bezüglich gewünschter Inhalte, IP-Adressen oder MAC-Adressen vorgenommen werden. Damit ist die Sicherheit für alle Geräte gewährleistet, die über den Web-Proxy-Server Anfragen verschicken. Des Weiteren wäre die Bandbreite weniger ausgelastet, da der Web-Proxy-Server jede neue Antwort in seinem Cache speichert. Bei gleicher Anfrage in einem benutzerdefinierten Zeitintervall wird die Antwort aus dem Cache statt durch erneute Anfrage ins Internet ausgegeben.
 
 \subsection{Vorüberlegung}
+{\tiny Verfasst von: Mücahit\par}
 Für eine Webproxy-Funktion muss in allen Lokationen ein Webproxy-Server eingerichtet werden. Hosts müssen ohne vorher konfiguriert zu werden, Anfragen über den Proxy versenden können, wenn sie neu an das Netzwerk hinzukommen. Dem Host ist nicht bewusst, dass seine Anfragen über einen Proxy laufen. Anfragen würden über den Switch an den Webproxy weitergeleitet werden. Dieser führt die Anfrage durch und gibt dem Host die Antwort zurück. Die Umleitung sollte durch den Controller konfiguriert werden. 
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Mücahit\par}
 Um die Webproxy-Funktion zu realisieren, wurde in allen Lokationen jeweils ein weiterer Host in Mininet konfiguriert. Es wurde allen eine IPv4-Adresse im privaten Netzwerkadressenbereich vergeben und mit dem dazugehörigen Switch verbunden. Diese Hosts sollen nun als Webproxy-Server dienen. Es wurde zunächst per \textit{\textbf{Xterm Proxybezeichnung}} Befehl ein externes Terminal gestartet und die Internetverbindung durch das Aufrufen einer beliebigen Website als funktionsfähig getestet. Dazu wurde das Kommandozeilenprogramm \textit{\textbf{cURL}} verwendet, welcher vorher per \textit{\textbf{sudo apt install curl}} installiert werden muss.
 Als Nächstes sollte eine weitere Schnittstelle des Webproxy-Servers mit einer Schnittstelle von VirtualBox verbunden werden. Dieser sollte dann als Bridge zwischen zwei VirtualBox-Maschinen genutzt werden. Auf der zweiten VirtualBox-Maschine sollte das Programm Squid installiert werden. Im Gesamtbild sollte eine Anfrage eines Hosts über den Proxy-Server auf eine andere VirtualBox-Maschine weitergeleitet, dort durchgeführt und die Antwort anschließend zurückgeleitet werden. Leider scheiterte dieser Versuch, da bei der Haupt-VirtualBox-Maschine der Promiscuous-Modus des Netzwerkbrückenadapters auf deny eingestellt war. Dadurch konnte keine gescheite Verbindung zwischen den zwei VirtualBox-Maschinen hergestellt werden. Aus diesem Grund haben wurde ein alternativer Proxy-Skript aus Github benutzt, um die Webproxy-Funktionalität direkt auf dem Host beziehungsweise Server einzurichten. Dazu wurde per Xterm ein Terminal gestartet und das Skript ausgeführt. Dieser nimmt nur HTTP Anfragen entgegen, führt sie selber durch und gibt für einen bestimmtes Zeitintervall die Antworten aus dem Cache zurück. Hier ist noch mal zu verdeutlichen, dass das Python-Skript für keine umfangreiche Web-Proxy-Funktionalität ausgelegt ist, jedoch dieser aus Testzwecken benutzt wurde. Als Nächstes wurden alle Pakete, die beim Switch eingehen und einen Ziel-Port als 80 besitzen, an den Proxy weitergeleitet. Hierfür wurde über den Controller die entsprechenden Flows als Match eingetragen, die dazugehörigen Actions implementiert und dem Switch die Anweisungen geschrieben. Dadurch bekommt der Webproxy-Server die Anfragen der Hosts, ohne dass die Geräte umkonfiguriert werden müssen. Der Proxy nimmt die Anfrage entgegen, führt sie selber durch und gibt die Antwort an das jeweilige Gerät weiter. Hier tritt das Problem auf, dass das Gerät eine Antwort von der Website erwartet, jedoch die Antwort vom Proxy geschickt bekommt. Die Antwort des Proxys könnte ebenfalls per Controller modifiziert und an das jeweilige Gerät weitergeleitet werden. Jedoch fehlte die Information des Absenders aus dem Internet zu dem Zeitpunkt, an dem die Antwort vom Proxy an den Host geschickt wurde.
 
 \subsection{Ergebnis}
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
 Resultierend war es nicht möglich, die Webproxy-Funktion zu implementieren. Alternativ könnte eine transparente Web-Proxy-Funktion an dem Router der jeweiligen Lokationen eingerichtet werden. Dieser führt die Anfragen selber durch, speichert und sendet die Antwort an den jeweiligen Host zurück. Auch das Eintragen des Proxyservers an den jeweiligen Hosts, die mit dem Switch verbunden sind, würde sich als funktionsfähig erweisen. Diese Art wird direkter Proxy genannt und trägt viel Aufwand mit sich.
 
 \section{Aufbau eines zentralen Topologie-Viewers und einer Monitoring-Lösung}
 
 \subsection{Topologie}
+{\tiny Verfasst von: Mücahit\par}
 Die Topologie unseres Netzwerkes kann auf dem Web User Interface des Floodlight-Controllers eingesehen werden. Ein mit der Standardinstallation geliefertes Floodlight-Modul stellt die Information der Topologie in einer Weboberfläche zur Verfügung. Zum Einsehen der Topologie muss auf einem Webbrowser die Benutzeroberfläche des Controllers über den Link \textit{\textbf{http://<controller-ip>:8080/ui/index.html}} aufgerufen werden. Anschließend wird auf dem linken Reiter die Option Topology angeklickt, wodurch die Topologie angezeigt wird (siehe Abbildung \ref{topo}). Durch die Benutzung einer VirtualBox werden vier getrennte Topologien angezeigt. Die Verbindungen zwischen den Routern werden bei der Visualisierung vom Controller ignoriert. Dies schränkt jedoch nicht die Funktionsweise des Netzwerkes ein. Bei der Nutzung vier getrennter VirtualBox-Maschinen, würde die Topologie korrekt dargestellt werden.
 
 \begin{figure}[H]
@@ -680,6 +722,7 @@ Die Topologie unseres Netzwerkes kann auf dem Web User Interface des Floodlight-
 
 
 \subsection{Monitoring-Lösung}
+{\tiny Verfasst von: Mücahit\par}
 Für das zentrale Monitoring wird Nagios Core zum Einsatz kommen. Es kann auf einer großen Anzahl an Umgebungen installiert werden. Die Software bietet eine Weboberfläche, die von allen Netzwerkteilnehmern erreicht werden kann. Dabei kann die Verfügbarkeit, Geschwindigkeit und Dienste der Netzwerkkomponenten überprüft werden. Bei entstehenden Fehlern können Administratoren benachrichtigt werden, um die Fehler zu beheben. Bei großen Netzwerken spielt dies eine wichtige Rolle, da die Verfügbarkeit bei kritischen Anwendungen von großer Bedeutung ist.\par
 Zunächst wird Nagios Core auf der VirtualBox-Maschine installiert, wo auch Mininet und Floodlight laufen. Bis jetzt lief Floodlight auf dem localhost, also der \textit{\textbf{127.0.0.1}} IP, welches nun geändert werden muss damit die Netzwerkteilnehmer auf die Floodlight REST-API und im Moment wichtiger auf den Nagios Core Dienst zugreifen können. Dafür werden im Mininet-Skript Befehle eingefügt, um den Switches 1-4 eine IP-Adresse zuzuweisen (siehe Abbildung \ref{switch}). Ebenfalls wird die Default-Route als \textit{\textbf{192.168.1.1}} hinzugefügt, da Nagios Core auf der IP \textit{\textbf{192.168.1.20}} laufen wird. Der Controller wurde auch konfiguriert auf dieser IP zu laufen. Nagios Core und der Controller sind nun von allen Netzwerkteilnehmern erreichbar.
 
@@ -796,17 +839,21 @@ Nachdem alle Netzwerkteilnehmer und -komponenten hinzugefügt und die gewünscht
 
 
 \section{Realisierung einer Quality of Service Funktion}
+{\tiny Verfasst von: Mücahit\par}
 Die Quality of Service Funktion gewährleistet die Fähigkeit des Netzwerkes, Anwendungen und Datenverkehr selbst bei begrenzter Netzwerkkapazität zuverlässig mit hoher Priorität auszuführen. Das Netzwerkes muss für alle Audio- und Video-Konferenzen innerhalb der Lokationen genügend Bandbreite zur Verfügung stellen. Die Verbindung zwischen den Lokationen besteht aus einer Standleitung mit einer Geschwindigkeit von 20 Megabit.
 
 \subsection{Vorüberlegung}
+{\tiny Verfasst von: Mücahit\par}
 Pakete, die für die Audio- und Videokonferenzen verantwortlich sind, müssen an dem Switch über den Controller priorisiert werden. Durch die Priorisierung sollen bei einer Auslastung des Netzwerkes die Audio- und Videokonferenzen stabil und flüssig laufen. Nach einer ausgiebigen Recherche kam der Entschluss, UDP Pakete zu priorisieren, da die meisten Videokonferenzprogramme wie beispielsweise Skype und Zoom diese verwenden. Zusätzlich muss getestet werden, wie viel Megabit pro Host eine ausreichende Bandbreite darstellen.\par
 An dem Port der Switch, der zum Router der Lokationen führt, werden zwei sogenannte Queues erstellt. Eine Queue wird für die Audio- und Videokonferenzen und die andere Queue für den restlichen Datenverkehr verwendet. Dabei erhalten die Queues Eigenschaften wie der minimalen und/oder maximalen Bandbreite zur Gewährleistung der Quality of Service. Nach der Konfiguration sollte gezeigt werden, ob Pakete tatsächlich über die Queue verlaufen. 
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Mücahit\par}
 Auf allen vier Switches wird zuerst der Befehl \textit{\textbf{sudo ovs\hyp{}vsctl set port Router\hyp{}Port qos=@newqos \hyp{}\hyp{} \hyp{}\hyp{}id=@newqos create qos type=linux\hyp{}htb other\hyp{}config:max\hyp{}rate=20000000 queues:0=@newqueue0 queues:1=@newqueue1 \hyp{}\hyp{} \hyp{}\hyp{}id=@newqueue0 create queue other\hyp{}config:max\hyp{}rate=20000000 \hyp{}\hyp{} \hyp{}\hyp{}id=\linebreak{}@newqueue1 create queue other\hyp{}config:min\hyp{}rate=7000000 other\hyp{}config:max\hyp{}rate=20000000}} mit der Angabe der Bezeichnung für den Port zum Router ausgeführt. Das Ganze geschieht im Ubuntu\hyp{}Terminal während Mininet ausgeführt wird. Dabei wird auf dem Switch die Quality of Service und genau zwei Queues konfiguriert, die sich anhand der ID unterscheiden. Die allgemeine Bandbreite des Ports wird auf \textit{\textbf{20 Megabit}}, die \textit{\textbf{Queue 0}} auf \textit{\textbf{maximal 20 Megabit}} und die \textit{\textbf{Queue 1}} auf \textit{\textbf{minimal sieben}} und \textit{\textbf{maximal 20 Megabit}} gesetzt. Die minimale Bandbreite für die Priorisierung wurde anhand eines Selbst\hyp{}Tests mit Zoom und der Information des Ressourcenmonitors von Windows festgelegt. Dabei wurde mit Video\hyp{} und Audioübertragungen eine Uploadrate zwischen \textit{\textbf{500\hyp{}900 Kilobit}} pro Sekunde gemessen. Daraus resultierend wurden für zehn Arbeitsplätzen die Geschwindigkeit auf Minimum sieben Megabit eingestellt.\par
 Der Datenverkehr wird über den Open vSwitch konfiguriert. Der Verkehr soll entweder auf die \textit{\textbf{Queue 0}} oder \textit{\textbf{Queue 1}} weitergeleitet werden. So erhaltet der Verkehr die Eigenschaften dieser Queue bezüglicher der festgelegten Raten. Dazu wird über das Mininet-Skript im Ubuntu-Terminal für alle Switches der Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=1000, actions=set\_queue:0, normal}} ausgeführt. Der Befehl leitet jedes Paket an die Queue 0. Somit wäre jeglicher Datenverkehr auf maximal 20 Megabit begrenzt. Als Nächstes werden nur die UDP-Pakete mit dem angegebenen Adressenbereich mit dem Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=65535, udp, nw\_src=192.168.0.0/16, nw\_dst=192.168.0.0/16, actions=set\_queue:1, normal}} bei allen Switches auf die Queue 1 weitergeleitet. Damit hätten die UDP-Pakete eine minimale Bandbreite von sieben und eine maximale Bandbreite von 20 Megabit. Bei den Bedingungen wurde zusätzlich die Priorität eingegeben. Desto höher die Priorität gesetzt wird, desto höher ist die Priorität des Flows und auch somit die Wichtigkeit. Bei der Bedingung für die Quality of Service wird die Priorität auf das Maximum, nämlich \textit{\textbf{65535}}, gestellt. Beim restlichen Datenverkehr kann dieser beliebig größer null gewählt werden. Zusätzlich wird am Ende jeder Bedingung der Flow auf normal gesetzt. Dieser bedeutet, dass das Paket wie gewöhnlich im Layer zwei weiterverarbeitet wird.
 
 \subsection{Ergebnis}
+{\tiny Verfasst von: Mücahit\par}
 Die Quality of Service und Queue Einstellungen können über die Befehle \textit{\textbf{sudo ovs-vsctl list qos}} und \textit{\textbf{sudo ovs-vsctl list queue}} angezeigt werden (siehe Abbildung \ref{queue-qos}). Mit dem Befehl \textit{\textbf{sudo ovs-ofctl dump-flows switchbezeichnung}} können die Flows des jeweiligen Switches ausgegeben werden. Dort werden unteranderem die Flows für die Quality of Service und des restlichen Datenverkehrs angezeigt.
 
 \begin{figure}[H]
@@ -846,6 +893,7 @@ Um nun die Quality of Service und Queue Konfiguration zu testen, wurde auf dem S
 
 \section{Priorisierung der Datenübertragung über API}
 \subsection{Vorüberlegung}
+{\tiny Verfasst von: Mücahit\par}
 Anhand des Schlüsselwortes \textit{\textbf{priority}} soll der Flow einer Datenübertragung zwischen der Lokation Berlin und Frankfurt priorisiert werden. Allen anderen Flows werden auf der Strecke eine geringere Priorität zugewiesen, sodass die Datenübertragung bevorzugt wird. Falls die gleiche Priorität bei zwei Flows existiert, wird der Flow mit der genaueren Bedingung verwendet. Die Datenübertragung soll über einem in der Zentrale eingerichteten \textit{\textbf{Secure-Shell}} (SSH) Server laufen. Dazu wird auf dem Host in Berlin ein \textit{\textbf{SSH-Client}} benötigt. Bei der Übertragung nutzt SSH üblicherweise den \textit{\textbf{Port 22}} über dem \textit{\textbf{Transport Control Protocol}} (TCP). Mit dieser Information wird die Bedingung für die Priorisierung des Flows festgelegt. Die Übertragung und die Priorisierung werden versucht, in einem ausführbaren Python-Skript zu realisieren, bei der die Angabe der IPv4-Adresse des Hosts in Berlin und des Hosts in der Zentrale als Parameter nötig werden. Es könnte die IPv4-Adresse der Quelle und des Ziels auch automatisch vom Skript durch das System ermittelt werden. Das Skript sollte folgende Schritte beinhalten:
 \begin{itemize}
 \item[1.] IP-Quelle und Ziel eingeben und einlesen (später -> automatisieren)
@@ -858,6 +906,7 @@ Der Controller, genauer der OpenFlow-Server und der Restserver laufen unter der 
 
 
 \subsection{Durchführung}
+{\tiny Verfasst von: Mücahit\par}
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\vspace{-\baselineskip}
  	\centering
@@ -886,22 +935,28 @@ Der Server betreibt einen SSH-Server und der Host einen SSH-Client, womit wichti
 \end{figure}
 
 \subsection{Ergebnis}
+{\tiny Verfasst von: Mücahit\par}
 Über das Python-Skript ist es nun möglich eine Datei priorisiert auf einen Server an der Zentrale zu senden. Das Skript enthält einige Überprüfungen, um beispielsweise zu schauen, ob die eingegebene IP-Adresse und der Dateipfad gültig sind.
 
 
 \section{Analyse weiterer Netzwerkfunktionen}
 
 \subsection{Hub}
+{\tiny Verfasst von: Naghmeh\par}
 Repeater arbeiten auf der Ebene 1 des OSI-Modells. Seine Aufgabe ist es, das Signal über dasselbe Netz zu regenerieren, bevor es zu schwach oder beschädigt wird, um die Länge von Signalübertragung im selben Netzwerk zu verlängern. Ein Hub ist im Grunde ein Multiport-Repeater. Ein Hub verbindet mehrere Geräte in einem Netzwerk. Hubs können keine Daten filtern, daher werden Pakete an alle verbundenen Geräte gesendet. Darüber hinaus verfügen sie nicht über die Intelligenz, um den besten Pfad für Pakete zu finden, was zu Ineffizienz und Verschwendung führt.\par
 Beim Layer-1-Switching geht es im Wesentlichen um unintelligente Geräte wie Hubs und Repeater. SDN-Switches können so angepasst werden, dass sie sich wie Hubs oder Repeater verhalten. Da Hubs und Repeater keine Informationen speichern können, können Controller bei der Layer-1-Switching keine Datenflüsse weiterleiten. In diesem Fall, jedes Mal, wenn ein Paket ankommt, wird es an den Controller weitergeleitet, der dann entscheidet, alle mit ihm verbundenen Hosts zu überfluten. Dies braucht Zeit, um herauszufinden, wohin das Paket gehen soll, was die Gesamtleistung des Netzes beeinträchtigt.
 
 \subsection{Bridge}
+{\tiny Verfasst von: Naghmeh\par}
 
 \subsection{Layer-2-Switch}
+{\tiny Verfasst von: Naghmeh\par}
 
 \subsection{Layer-3-Switch}
+{\tiny Verfasst von: James\par}
 Da Switching schneller als Routing ist, werden in LANS fast nur mit Switches gearbeitet und an zentralen Stellen Router genutzt, um das Internet zu erreichen. Im Netzwerkplan wurde an jeder Lokation nur ein Switch benötigt, dieser musste nicht VLAN fähig sein. Ein Layer-3-Switch ist beispielsweise ein VLAN-fähiger Switch, der grundlegende Routingfunktionalität bietet und auf Ebene 3 des OSI-Modells arbeitet, die Vermittlungsschicht. Das heißt, ein Layer-3-Switch arbeitet mit IP-Adressen und hat mit der Vermittlung von Paketen zu tun. Innerhalb unseres Projekts entschied man sich keine Layer-3-Switches zu nutzen, da die Funktionalitäten des Layer-2-Switches ausgereicht haben. 
 \subsection{Dynamic Host Configuration Protocol}
+{\tiny Verfasst von: James\par}
 DHCP ist ein Dienst, der an das Netzwerk angeschlossene Geräte mit einer Netzwerkkonfiguration versorgt. Falls ein Gerät eine Konfiguration benötigt, wird dies mithilfe vom DHCP Server konfiguriert, dieser kann beispielsweise im Router des Netzwerks sein. Mithilfe von Mininet konnte eine DHCP Konfiguration realisiert werden. Bis zu diesem Punkt wurde die IP-Adressverwaltung ohne DHCP realisiert. Das heißt, jeder Host musste manuell eine IP-Adresse zugewiesen bekommen. Diese manuelle Konfiguration wurde durch eine for-Schleife im Skript (siehe Abbildung \ref{fororig}) durchgeführt.
 
 \begin{figure}[H]
@@ -923,6 +978,7 @@ Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manue
 \end{figure}
 
 \subsubsection{Durchführung}
+{\tiny Verfasst von: James\par}
 \begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-\baselineskip}
  	\centering
@@ -933,6 +989,7 @@ Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manue
 Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Abbildung \ref{netzwerkplan}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden. 
 
 \subsubsection{Ergebnis}
+{\tiny Verfasst von: James\par}
 Nachdem das Mininet Skript ausgeführt wird, kann mit Wireshark geprüft werden, ob ein DHCP-Server richtig implementiert wurde. Aus der folgenden Abbildung \ref{wireshark} ist ersichtlich, dass die Pakete zwischen h1 (192.168.1.2) und h11 (192.168.2.2) übertragen werden.
 \begin{figure}[H]
  \centering
@@ -954,16 +1011,21 @@ Um die Netzwerkkonfiguration vom DHCP-Server zu betrachten, muss Wireshark vor M
 
 
 \subsection{Domain Name System}
+{\tiny Verfasst von: James\par}
 
 
 \chapter{Diskussion der Ergebnisse}
+{\tiny Verfasst von: ?, ?, ?, ?\par}
 Analyse der Ergebnisse
 Kritische Betrachtung
 Hier erwähnen welche Teile der Aufgaben nicht geklappt haben, wie beispielsweise Aufgabe 5 Webproxy
 \section{Analyse der Ergebnisse}
+{\tiny Verfasst von: ?, ?, ?, ?\par}
 \section{Kritische Betrachtung}
+{\tiny Verfasst von: ?, ?, ?, ?\par}
 
 \chapter{Fazit}\label{ch:fazit}
+{\tiny Verfasst von: ?, ?, ?, ?\par}
 Eventuell als Überpunkt zu Gesamtergebnis?
 Was ist der finale Stand des Projekts?
 Inwiefern wurden die Ziele erreicht?
@@ -973,6 +1035,7 @@ Inwiefern wurden die Ziele erreicht?
 3. Wurden die Ziele erreicht
 scribbr.de
 \section{Zukunftsaussichten}
+{\tiny Verfasst von: ?, ?, ?, ?\par}
 Inwiefern können die Ergebnisse des Projekts weiter genutzt werden?
 \par
 
