@@ -19,6 +19,34 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{1u1}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d94e9f128f57e2926d21a900047a93c9}{%
+           family={1und1},
+           familyi={1\bibinitperiod}}}%
+      }
+      \strng{namehash}{d94e9f128f57e2926d21a900047a93c9}
+      \strng{fullhash}{d94e9f128f57e2926d21a900047a93c9}
+      \strng{bibnamehash}{d94e9f128f57e2926d21a900047a93c9}
+      \strng{authorbibnamehash}{d94e9f128f57e2926d21a900047a93c9}
+      \strng{authornamehash}{d94e9f128f57e2926d21a900047a93c9}
+      \strng{authorfullhash}{d94e9f128f57e2926d21a900047a93c9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Internet- und DSL-Tarife}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://dsl.1und1.de/business
+      \endverb
+      \verb{url}
+      \verb https://dsl.1und1.de/business
+      \endverb
+    \endentry
     \entry{sdn1}{book}{}
       \name{author}{1}{}{%
         {{hash=1ac612f4dddc84fad57e3fd562ba01be}{%
@@ -44,6 +72,32 @@
       \field{title}{Software Defined Networking}
       \field{year}{2017}
       \keyw{Networking}
+    \endentry
+    \entry{qosof}{article}{}
+      \name{author}{1}{}{%
+        {{hash=c63ca5d60c6cb0ff09c20be3894253da}{%
+           family={Ammar\bibnamedelima D.Jasim},
+           familyi={A\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Dalia\bibnamedelima A.Hamid},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \strng{fullhash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \strng{bibnamehash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \strng{authorbibnamehash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \strng{authornamehash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \strng{authorfullhash}{c63ca5d60c6cb0ff09c20be3894253da}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Scientific and Engineering Research}
+      \field{month}{05}
+      \field{title}{Enhancing the Performance of OpenFlow Network by Using QoS}
+      \field{year}{2016}
+      \verb{doi}
+      \verb ISSN 2229-5518
+      \endverb
     \endentry
     \entry{SDNdefTung}{online}{}
       \name{author}{1}{}{%
@@ -126,6 +180,37 @@
       \field{pages}{15\bibrangedash 33}
       \range{pages}{19}
     \endentry
+    \entry{addroute}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2805af11ace0476af03dd947d1a7b61a}{%
+           family={Baydan},
+           familyi={B\bibinitperiod},
+           given={Ismail},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{2805af11ace0476af03dd947d1a7b61a}
+      \strng{fullhash}{2805af11ace0476af03dd947d1a7b61a}
+      \strng{bibnamehash}{2805af11ace0476af03dd947d1a7b61a}
+      \strng{authorbibnamehash}{2805af11ace0476af03dd947d1a7b61a}
+      \strng{authornamehash}{2805af11ace0476af03dd947d1a7b61a}
+      \strng{authorfullhash}{2805af11ace0476af03dd947d1a7b61a}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Add Route In Linux}
+      \field{urlday}{4}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linuxtect.com/ip-route-add-add-route-in-linux/
+      \endverb
+      \verb{url}
+      \verb https://linuxtect.com/ip-route-add-add-route-in-linux/
+      \endverb
+    \endentry
     \entry{failure}{online}{}
       \name{author}{1}{}{%
         {{hash=d96391b267f78dc8e9c91aefbb68e1fd}{%
@@ -154,6 +239,98 @@
       \endverb
       \verb{url}
       \verb https://www.admin-magazine.com/Articles/Floodlight-Welcome-to-the-World-of-Software-Defined-Networking
+      \endverb
+    \endentry
+    \entry{MTU}{online}{}
+      \name{author}{1}{}{%
+        {{hash=8877e3f298b3f55c8d42fb492d246012}{%
+           family={Cohen},
+           familyi={C\bibinitperiod},
+           given={Dor},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8877e3f298b3f55c8d42fb492d246012}
+      \strng{fullhash}{8877e3f298b3f55c8d42fb492d246012}
+      \strng{bibnamehash}{8877e3f298b3f55c8d42fb492d246012}
+      \strng{authorbibnamehash}{8877e3f298b3f55c8d42fb492d246012}
+      \strng{authornamehash}{8877e3f298b3f55c8d42fb492d246012}
+      \strng{authorfullhash}{8877e3f298b3f55c8d42fb492d246012}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{MTU and MSS: What you need to know}
+      \field{urlday}{7}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{year}{2017}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.imperva.com/blog/mtu-mss-explained/
+      \endverb
+      \verb{url}
+      \verb https://www.imperva.com/blog/mtu-mss-explained/
+      \endverb
+    \endentry
+    \entry{nagiosrouter}{online}{}
+      \name{author}{1}{}{%
+        {{hash=73de8ff247a90c68c9e0e2c0791e68b3}{%
+           family={Core},
+           familyi={C\bibinitperiod},
+           given={Nagios},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \strng{fullhash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \strng{bibnamehash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \strng{authorbibnamehash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \strng{authornamehash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \strng{authorfullhash}{73de8ff247a90c68c9e0e2c0791e68b3}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Monitoring Routers and Switches}
+      \field{urlday}{27}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/monitoring-routers.html
+      \endverb
+      \verb{url}
+      \verb https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/monitoring-routers.html
+      \endverb
+    \endentry
+    \entry{qosbenefits}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9f144857bab85ac820287dab4d2b75b3}{%
+           family={David},
+           familyi={D\bibinitperiod},
+           given={Sudi},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f144857bab85ac820287dab4d2b75b3}
+      \strng{fullhash}{9f144857bab85ac820287dab4d2b75b3}
+      \strng{bibnamehash}{9f144857bab85ac820287dab4d2b75b3}
+      \strng{authorbibnamehash}{9f144857bab85ac820287dab4d2b75b3}
+      \strng{authornamehash}{9f144857bab85ac820287dab4d2b75b3}
+      \strng{authorfullhash}{9f144857bab85ac820287dab4d2b75b3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Importance of QoS}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2021}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.section.io/engineering-education/understanding-quality-of-service/
+      \endverb
+      \verb{url}
+      \verb https://www.section.io/engineering-education/understanding-quality-of-service/
       \endverb
     \endentry
     \entry{tranetworkTung}{online}{}
@@ -216,6 +393,62 @@
       \endverb
       \verb{url}
       \verb https://www.nojitter.com/case-sdn
+      \endverb
+    \endentry
+    \entry{newpayload}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ab3091e3e14f3106beff8824c8d1c162}{%
+           family={firewall.cx},
+           familyi={f\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab3091e3e14f3106beff8824c8d1c162}
+      \strng{fullhash}{ab3091e3e14f3106beff8824c8d1c162}
+      \strng{bibnamehash}{ab3091e3e14f3106beff8824c8d1c162}
+      \strng{authorbibnamehash}{ab3091e3e14f3106beff8824c8d1c162}
+      \strng{authornamehash}{ab3091e3e14f3106beff8824c8d1c162}
+      \strng{authorfullhash}{ab3091e3e14f3106beff8824c8d1c162}
+      \field{sortinit}{f}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UNDERSTANDING VPN IPSEC TUNNEL MODE AND IPSEC TRANSPORT MODE – WHAT'S THE DIFFERENCE?}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.firewall.cx/networking-topics/protocols/870-ipsec-modes.html
+      \endverb
+      \verb{url}
+      \verb https://www.firewall.cx/networking-topics/protocols/870-ipsec-modes.html
+      \endverb
+    \endentry
+    \entry{vpntunnel}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7fdcdc78537f670387ecd9798323b020}{%
+           family={Forewall.cx},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fdcdc78537f670387ecd9798323b020}
+      \strng{fullhash}{7fdcdc78537f670387ecd9798323b020}
+      \strng{bibnamehash}{7fdcdc78537f670387ecd9798323b020}
+      \strng{authorbibnamehash}{7fdcdc78537f670387ecd9798323b020}
+      \strng{authornamehash}{7fdcdc78537f670387ecd9798323b020}
+      \strng{authorfullhash}{7fdcdc78537f670387ecd9798323b020}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Configuring site to site ipsec vpn tunnel between cisco routers}
+      \field{urlday}{5}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/867-cisco-router-site-to-site-ipsec-vpn.html
+      \endverb
+      \verb{url}
+      \verb https://www.firewall.cx/cisco-technical-knowledgebase/cisco-routers/867-cisco-router-site-to-site-ipsec-vpn.html
       \endverb
     \endentry
     \entry{networkdevices}{online}{}
@@ -282,6 +515,34 @@
       \field{year}{2013}
       \field{pages}{389\bibrangedash 393}
       \range{pages}{5}
+    \endentry
+    \entry{mnvm}{online}{}
+      \name{author}{1}{}{%
+        {{hash=c37a963cba3f86083dfe488f2096c465}{%
+           family={Grotto},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c37a963cba3f86083dfe488f2096c465}
+      \strng{fullhash}{c37a963cba3f86083dfe488f2096c465}
+      \strng{bibnamehash}{c37a963cba3f86083dfe488f2096c465}
+      \strng{authorbibnamehash}{c37a963cba3f86083dfe488f2096c465}
+      \strng{authornamehash}{c37a963cba3f86083dfe488f2096c465}
+      \strng{authorfullhash}{c37a963cba3f86083dfe488f2096c465}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Working with the Mininet VM}
+      \field{urlday}{11}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.grotto-networking.com/SDNfun.html
+      \endverb
+      \verb{url}
+      \verb https://www.grotto-networking.com/SDNfun.html
+      \endverb
     \endentry
     \entry{cloudcomputing}{online}{}
       \name{author}{1}{}{%
@@ -489,15 +750,43 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Web GUI}
-      \field{urlday}{26}
+      \field{urlday}{28}
       \field{urlmonth}{12}
       \field{urlyear}{2021}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web\+GUI
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web+GUI
       \endverb
       \verb{url}
-      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web%5C+GUI
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/40403023/Web+GUI
+      \endverb
+    \endentry
+    \entry{nagiosinstall}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d4a1edf368fb51b54b322beef4f201c5}{%
+           family={jolson},
+           familyi={j\bibinitperiod}}}%
+      }
+      \strng{namehash}{d4a1edf368fb51b54b322beef4f201c5}
+      \strng{fullhash}{d4a1edf368fb51b54b322beef4f201c5}
+      \strng{bibnamehash}{d4a1edf368fb51b54b322beef4f201c5}
+      \strng{authorbibnamehash}{d4a1edf368fb51b54b322beef4f201c5}
+      \strng{authornamehash}{d4a1edf368fb51b54b322beef4f201c5}
+      \strng{authorfullhash}{d4a1edf368fb51b54b322beef4f201c5}
+      \field{sortinit}{j}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nagios Core - Installing Nagios Core From Source}
+      \field{urlday}{29}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://support.nagios.com/kb/article.php?id=96
+      \endverb
+      \verb{url}
+      \verb https://support.nagios.com/kb/article.php?id=96
       \endverb
     \endentry
     \entry{mininetdefinition}{article}{}
@@ -524,6 +813,37 @@
       \field{title}{Mininet as Software Defined Networking Testing Platform}
       \field{year}{2014}
     \endentry
+    \entry{esp}{online}{}
+      \name{author}{1}{}{%
+        {{hash=7f32f61adec784489cc0fa2cefa610a3}{%
+           family={Kerrisk},
+           familyi={K\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f32f61adec784489cc0fa2cefa610a3}
+      \strng{fullhash}{7f32f61adec784489cc0fa2cefa610a3}
+      \strng{bibnamehash}{7f32f61adec784489cc0fa2cefa610a3}
+      \strng{authorbibnamehash}{7f32f61adec784489cc0fa2cefa610a3}
+      \strng{authornamehash}{7f32f61adec784489cc0fa2cefa610a3}
+      \strng{authorfullhash}{7f32f61adec784489cc0fa2cefa610a3}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ip-xfrm(8) — Linux manual page}
+      \field{urlday}{6}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://man7.org/linux/man-pages/man8/ip-xfrm.8.html
+      \endverb
+      \verb{url}
+      \verb https://man7.org/linux/man-pages/man8/ip-xfrm.8.html
+      \endverb
+    \endentry
     \entry{sdn3}{book}{}
       \name{author}{1}{}{%
         {{hash=ff77e2023fe43bf8e5ee8cb661b1fbec}{%
@@ -549,6 +869,99 @@
       \field{title}{SDN and NFV Security - Security Analysis of Software-Defined Networking and Network Function Virtualization}
       \field{year}{2018}
       \keyw{Networking}
+    \endentry
+    \entry{nameservers}{online}{}
+      \name{author}{1}{}{%
+        {{hash=4e2f5e3282fbf2db87ca5ad211d9d91a}{%
+           family={Kili},
+           familyi={K\bibinitperiod},
+           given={Aaron},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \strng{fullhash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \strng{bibnamehash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \strng{authorbibnamehash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \strng{authornamehash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \strng{authorfullhash}{4e2f5e3282fbf2db87ca5ad211d9d91a}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{How to set permanent DNS Nameservers in Ubuntu and Debian}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.tecmint.com/set-permanent-dns-nameservers-in-ubuntu-debian/
+      \endverb
+      \verb{url}
+      \verb https://www.tecmint.com/set-permanent-dns-nameservers-in-ubuntu-debian/
+      \endverb
+    \endentry
+    \entry{espsecurity}{online}{}
+      \name{author}{1}{}{%
+        {{hash=ab2a21633306e9517ffe01e18a495890}{%
+           family={Kompendium},
+           familyi={K\bibinitperiod},
+           given={Elektornik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab2a21633306e9517ffe01e18a495890}
+      \strng{fullhash}{ab2a21633306e9517ffe01e18a495890}
+      \strng{bibnamehash}{ab2a21633306e9517ffe01e18a495890}
+      \strng{authorbibnamehash}{ab2a21633306e9517ffe01e18a495890}
+      \strng{authornamehash}{ab2a21633306e9517ffe01e18a495890}
+      \strng{authorfullhash}{ab2a21633306e9517ffe01e18a495890}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{ESP - Encapsulating Security Payload}
+      \field{urlday}{9}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.elektronik-kompendium.de/sites/net/1410261.htm
+      \endverb
+      \verb{url}
+      \verb https://www.elektronik-kompendium.de/sites/net/1410261.htm
+      \endverb
+    \endentry
+    \entry{NATdef}{online}{}
+      \name{author}{1}{}{%
+        {{hash=1a39fc8186880cc3124ca80ffb07dfbd}{%
+           family={Kompendium},
+           familyi={K\bibinitperiod},
+           given={Elektronik},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \strng{fullhash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \strng{bibnamehash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \strng{authorbibnamehash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \strng{authornamehash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \strng{authorfullhash}{1a39fc8186880cc3124ca80ffb07dfbd}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{NAT-Network Address Translation}
+      \field{urlday}{10}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.elektronik-kompendium.de/sites/net/0812111.htm
+      \endverb
+      \verb{url}
+      \verb https://www.elektronik-kompendium.de/sites/net/0812111.htm
+      \endverb
     \endentry
     \entry{dhclient}{online}{}
       \name{author}{1}{}{%
@@ -736,6 +1149,34 @@
       \verb https://linux.die.net/man/8/dhcpd
       \endverb
     \endentry
+    \entry{NATgateway}{online}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={Microsoft},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Design virtual networks with NAT gateway}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway/nat-gateway-resource
+      \endverb
+      \verb{url}
+      \verb https://docs.microsoft.com/en-us/azure/virtual-network/nat-gateway/nat-gateway-resource
+      \endverb
+    \endentry
     \entry{mnapi}{online}{}
       \name{author}{1}{}{%
         {{hash=0bf9f9f1cc7663e9ba74b2f706364e97}{%
@@ -870,6 +1311,34 @@
       \verb 10.1109/SIBCON.2016.7491821
       \endverb
     \endentry
+    \entry{standleitung}{online}{}
+      \name{author}{1}{}{%
+        {{hash=d1738fdc0b25022b98c832d0c0417080}{%
+           family={MPC},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1738fdc0b25022b98c832d0c0417080}
+      \strng{fullhash}{d1738fdc0b25022b98c832d0c0417080}
+      \strng{bibnamehash}{d1738fdc0b25022b98c832d0c0417080}
+      \strng{authorbibnamehash}{d1738fdc0b25022b98c832d0c0417080}
+      \strng{authornamehash}{d1738fdc0b25022b98c832d0c0417080}
+      \strng{authorfullhash}{d1738fdc0b25022b98c832d0c0417080}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Standleitung Preise}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.mpcservice.com/standleitung/standleitung-preise/
+      \endverb
+      \verb{url}
+      \verb https://www.mpcservice.com/standleitung/standleitung-preise/
+      \endverb
+    \endentry
     \entry{dhcpd3}{article}{}
       \name{author}{2}{}{%
         {{hash=f9ea7462d5347c0cc9af89142bebe02b}{%
@@ -904,6 +1373,34 @@
       \verb 10.9790/0661-1803020108
       \endverb
     \endentry
+    \entry{nagiosdef}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0ac0f6fa3e0978f35e72cab6b4c088f2}{%
+           family={Nagios},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \strng{fullhash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \strng{bibnamehash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \strng{authorbibnamehash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \strng{authornamehash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \strng{authorfullhash}{0ac0f6fa3e0978f35e72cab6b4c088f2}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Server Monitoring with Nagios}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.nagios.com/solutions/server-monitoring/
+      \endverb
+      \verb{url}
+      \verb https://www.nagios.com/solutions/server-monitoring/
+      \endverb
+    \endentry
     \entry{leases}{online}{}
       \name{author}{1}{}{%
         {{hash=49f17151a1bc1d859e8db35cd7b2059b}{%
@@ -932,6 +1429,34 @@
       \verb https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE17164AAAATQZZA01%5C_V1%5C_7450%5C%20ESS%5C%207750%5C%20SR%5C%20and%5C%20VSR%5C%20Triple%5C%20Play%5C%20Service%5C%20Delivery%5C%20Architecture%5C%20Guide%5C%2021.2.R1.pdf
       \endverb
     \endentry
+    \entry{o2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=2d387ab98437e5f528a87b031a086256}{%
+           family={o2},
+           familyi={o\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d387ab98437e5f528a87b031a086256}
+      \strng{fullhash}{2d387ab98437e5f528a87b031a086256}
+      \strng{bibnamehash}{2d387ab98437e5f528a87b031a086256}
+      \strng{authorbibnamehash}{2d387ab98437e5f528a87b031a086256}
+      \strng{authornamehash}{2d387ab98437e5f528a87b031a086256}
+      \strng{authorfullhash}{2d387ab98437e5f528a87b031a086256}
+      \field{sortinit}{o}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Internet- und DSL-Tarife}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.o2business.de/festnetz-internet/dsl-business/
+      \endverb
+      \verb{url}
+      \verb https://www.o2business.de/festnetz-internet/dsl-business/
+      \endverb
+    \endentry
     \entry{ONFTung}{online}{}
       \name{author}{1}{}{%
         {{hash=dc1200f86f4e1ce8093319ecca77a951}{%
@@ -958,6 +1483,65 @@
       \endverb
       \verb{url}
       \verb https://opennetworking.org/sdn-definition/
+      \endverb
+    \endentry
+    \entry{sitetosite}{online}{}
+      \name{author}{1}{}{%
+        {{hash=fe3dd3bc60b475c91231e5de42de941f}{%
+           family={paloalto},
+           familyi={p\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe3dd3bc60b475c91231e5de42de941f}
+      \strng{fullhash}{fe3dd3bc60b475c91231e5de42de941f}
+      \strng{bibnamehash}{fe3dd3bc60b475c91231e5de42de941f}
+      \strng{authorbibnamehash}{fe3dd3bc60b475c91231e5de42de941f}
+      \strng{authornamehash}{fe3dd3bc60b475c91231e5de42de941f}
+      \strng{authorfullhash}{fe3dd3bc60b475c91231e5de42de941f}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{What is a Site-to-Site VPN?}
+      \field{urlday}{30}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.paloaltonetworks.com/cyberpedia/what-is-a-site-to-site-vpn
+      \endverb
+      \verb{url}
+      \verb https://www.paloaltonetworks.com/cyberpedia/what-is-a-site-to-site-vpn
+      \endverb
+    \endentry
+    \entry{iptablesmas}{online}{}
+      \name{author}{1}{}{%
+        {{hash=51f5c2c8b5a71e76f0d4f1c7b320dd6c}{%
+           family={PS},
+           familyi={P\bibinitperiod},
+           given={Keerthi},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \strng{fullhash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \strng{bibnamehash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \strng{authorbibnamehash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \strng{authornamehash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \strng{authorfullhash}{51f5c2c8b5a71e76f0d4f1c7b320dd6c}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Iptables nat masquerade – How we do it?}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://bobcares.com/blog/iptables-nat-masquerade/
+      \endverb
+      \verb{url}
+      \verb https://bobcares.com/blog/iptables-nat-masquerade/
       \endverb
     \endentry
     \entry{floodlightdefinition}{article}{}
@@ -1057,34 +1641,94 @@
       \field{pages}{1\bibrangedash 6}
       \range{pages}{6}
     \endentry
-    \entry{floodlightnachteil}{online}{}
+    \entry{webproxyosi}{online}{}
       \name{author}{1}{}{%
-        {{hash=0a1b2044606903a96baeaaf27374a489}{%
-           family={Room},
-           familyi={R\bibinitperiod},
-           given={Mishal},
-           giveni={M\bibinitperiod}}}%
+        {{hash=84aed9a0b84fd330637491625eea247d}{%
+           family={redefined},
+           familyi={r\bibinitperiod},
+           given={ProSec\bibnamedelima Secruity},
+           giveni={P\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
       }
-      \strng{namehash}{0a1b2044606903a96baeaaf27374a489}
-      \strng{fullhash}{0a1b2044606903a96baeaaf27374a489}
-      \strng{bibnamehash}{0a1b2044606903a96baeaaf27374a489}
-      \strng{authorbibnamehash}{0a1b2044606903a96baeaaf27374a489}
-      \strng{authornamehash}{0a1b2044606903a96baeaaf27374a489}
-      \strng{authorfullhash}{0a1b2044606903a96baeaaf27374a489}
+      \strng{namehash}{84aed9a0b84fd330637491625eea247d}
+      \strng{fullhash}{84aed9a0b84fd330637491625eea247d}
+      \strng{bibnamehash}{84aed9a0b84fd330637491625eea247d}
+      \strng{authorbibnamehash}{84aed9a0b84fd330637491625eea247d}
+      \strng{authornamehash}{84aed9a0b84fd330637491625eea247d}
+      \strng{authorfullhash}{84aed9a0b84fd330637491625eea247d}
+      \field{sortinit}{r}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Proxy Server}
+      \field{urlday}{26}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.prosec-networks.com/blog/proxy-server/
+      \endverb
+      \verb{url}
+      \verb https://www.prosec-networks.com/blog/proxy-server/
+      \endverb
+    \endentry
+    \entry{iptablesnat}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b324ba6bbe80060fa05a80690c4f588a}{%
+           family={Rupp},
+           familyi={R\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{b324ba6bbe80060fa05a80690c4f588a}
+      \strng{fullhash}{b324ba6bbe80060fa05a80690c4f588a}
+      \strng{bibnamehash}{b324ba6bbe80060fa05a80690c4f588a}
+      \strng{authorbibnamehash}{b324ba6bbe80060fa05a80690c4f588a}
+      \strng{authornamehash}{b324ba6bbe80060fa05a80690c4f588a}
+      \strng{authorfullhash}{b324ba6bbe80060fa05a80690c4f588a}
       \field{sortinit}{R}
       \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{5 Advantages and Disadvantages of SDN | Drawbacks \& Benefits of SDN}
-      \field{urlday}{24}
-      \field{urlmonth}{12}
-      \field{urlyear}{2021}
+      \field{title}{NAT- Network Address Translation}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
       \field{urldateera}{ce}
       \verb{urlraw}
-      \verb https://www.hitechwhizz.com/2021/06/5-advantages-and-disadvantages-drawbacks-benefits-of-sdn.html
+      \verb https://www.karlrupp.net/en/computer/nat_tutorial
       \endverb
       \verb{url}
-      \verb https://www.hitechwhizz.com/2021/06/5-advantages-and-disadvantages-drawbacks-benefits-of-sdn.html
+      \verb https://www.karlrupp.net/en/computer/nat_tutorial
+      \endverb
+    \endentry
+    \entry{iptables}{online}{}
+      \name{author}{1}{}{%
+        {{hash=57f0e9f18f55d65bafc25a03a66bfdc9}{%
+           family={Russel},
+           familyi={R\bibinitperiod},
+           given={Rusty},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \strng{fullhash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \strng{bibnamehash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \strng{authorbibnamehash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \strng{authornamehash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \strng{authorfullhash}{57f0e9f18f55d65bafc25a03a66bfdc9}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{iptables}
+      \field{urlday}{17}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/8/iptables
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/8/iptables
       \endverb
     \endentry
     \entry{controllers}{inproceedings}{}
@@ -1127,6 +1771,36 @@
       \range{pages}{6}
       \verb{doi}
       \verb 10.1109/MELCON.2016.7495430
+      \endverb
+    \endentry
+    \entry{webproxy}{online}{}
+      \name{author}{1}{}{%
+        {{hash=6c27f4730c5bd304a8a23ad612145743}{%
+           family={Security},
+           familyi={S\bibinitperiod},
+           given={Networx},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c27f4730c5bd304a8a23ad612145743}
+      \strng{fullhash}{6c27f4730c5bd304a8a23ad612145743}
+      \strng{bibnamehash}{6c27f4730c5bd304a8a23ad612145743}
+      \strng{authorbibnamehash}{6c27f4730c5bd304a8a23ad612145743}
+      \strng{authornamehash}{6c27f4730c5bd304a8a23ad612145743}
+      \strng{authorfullhash}{6c27f4730c5bd304a8a23ad612145743}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Web Proxy}
+      \field{urlday}{1}
+      \field{urlmonth}{2}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.networxsecurity.org/de/mitgliederbereich/glossary/w/web-proxies.html
+      \endverb
+      \verb{url}
+      \verb https://www.networxsecurity.org/de/mitgliederbereich/glossary/w/web-proxies.html
       \endverb
     \endentry
     \entry{6553676}{article}{}
@@ -1198,6 +1872,151 @@
       \verb 10.1109/MCOM.2013.6553676
       \endverb
     \endentry
+    \entry{xfrm}{online}{}
+      \name{author}{1}{}{%
+        {{hash=399cdd58324b9464a4749a33c2740a89}{%
+           family={Smurf},
+           familyi={S\bibinitperiod},
+           given={Blu},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{399cdd58324b9464a4749a33c2740a89}
+      \strng{fullhash}{399cdd58324b9464a4749a33c2740a89}
+      \strng{bibnamehash}{399cdd58324b9464a4749a33c2740a89}
+      \strng{authorbibnamehash}{399cdd58324b9464a4749a33c2740a89}
+      \strng{authornamehash}{399cdd58324b9464a4749a33c2740a89}
+      \strng{authorfullhash}{399cdd58324b9464a4749a33c2740a89}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{XFRM—A Kernel Implementation Framework of IPsec Protocol}
+      \field{urlday}{8}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{year}{2019}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://programmer.ink/think/xfrm-a-kernel-implementation-framework-of-ipsec-protocol.html
+      \endverb
+      \verb{url}
+      \verb https://programmer.ink/think/xfrm-a-kernel-implementation-framework-of-ipsec-protocol.html
+      \endverb
+    \endentry
+    \entry{tunnelimpl}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e81a0a9980d245193756ec3838436238}{%
+           family={sonicwall},
+           familyi={s\bibinitperiod}}}%
+      }
+      \strng{namehash}{e81a0a9980d245193756ec3838436238}
+      \strng{fullhash}{e81a0a9980d245193756ec3838436238}
+      \strng{bibnamehash}{e81a0a9980d245193756ec3838436238}
+      \strng{authorbibnamehash}{e81a0a9980d245193756ec3838436238}
+      \strng{authornamehash}{e81a0a9980d245193756ec3838436238}
+      \strng{authorfullhash}{e81a0a9980d245193756ec3838436238}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Working with the Mininet VM}
+      \field{urlday}{4}
+      \field{urlmonth}{12}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.sonicwall.com/support/knowledge-base/how-can-i-configure-nat-over-vpn-in-a-site-to-site-vpn/170515155805172/
+      \endverb
+      \verb{url}
+      \verb https://www.sonicwall.com/support/knowledge-base/how-can-i-configure-nat-over-vpn-in-a-site-to-site-vpn/170515155805172/
+      \endverb
+    \endentry
+    \entry{qosdef}{online}{}
+      \name{author}{1}{}{%
+        {{hash=700f0e630e939fff4cff6be3fc518b34}{%
+           family={TechTarget},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{fullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{bibnamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authorbibnamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authornamehash}{700f0e630e939fff4cff6be3fc518b34}
+      \strng{authorfullhash}{700f0e630e939fff4cff6be3fc518b34}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{quality of service(QoS)}
+      \field{urlday}{24}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.techtarget.com/searchunifiedcommunications/definition/QoS-Quality-of-Service
+      \endverb
+      \verb{url}
+      \verb https://www.techtarget.com/searchunifiedcommunications/definition/QoS-Quality-of-Service
+      \endverb
+    \endentry
+    \entry{companystart}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0bf4723116ef78e6a97bc8c9bfb376fa}{%
+           family={Telekom},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{fullhash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{bibnamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authorbibnamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authornamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authorfullhash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \field{extraname}{1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Company Start 500 (Festnetz)}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://geschaeftskunden.telekom.de/hilfe-und-service/hilfe-themen/downloads/produktinformationsblaetter/company-start-500
+      \endverb
+      \verb{url}
+      \verb https://geschaeftskunden.telekom.de/hilfe-und-service/hilfe-themen/downloads/produktinformationsblaetter/company-start-500
+      \endverb
+    \endentry
+    \entry{telekom}{online}{}
+      \name{author}{1}{}{%
+        {{hash=0bf4723116ef78e6a97bc8c9bfb376fa}{%
+           family={Telekom},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{fullhash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{bibnamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authorbibnamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authornamehash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \strng{authorfullhash}{0bf4723116ef78e6a97bc8c9bfb376fa}
+      \field{extraname}{2}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Internet- und DSL-Tarife}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://geschaeftskunden.telekom.de/internet-dsl/tarife/festnetz-internet-dsl
+      \endverb
+      \verb{url}
+      \verb https://geschaeftskunden.telekom.de/internet-dsl/tarife/festnetz-internet-dsl
+      \endverb
+    \endentry
     \entry{mnnachteile}{online}{}
       \name{author}{1}{}{%
         {{hash=b22371fabc9025ad4a68e5ce3d947a65}{%
@@ -1229,6 +2048,90 @@
       \verb https://github.com/mininet/mininet/wiki/Introduction-to-Mininet
       \endverb
     \endentry
+    \entry{resolvconf}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9b56cb084faf808d24732fec9784f60d}{%
+           family={Ubuntuusers},
+           familyi={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b56cb084faf808d24732fec9784f60d}
+      \strng{fullhash}{9b56cb084faf808d24732fec9784f60d}
+      \strng{bibnamehash}{9b56cb084faf808d24732fec9784f60d}
+      \strng{authorbibnamehash}{9b56cb084faf808d24732fec9784f60d}
+      \strng{authornamehash}{9b56cb084faf808d24732fec9784f60d}
+      \strng{authorfullhash}{9b56cb084faf808d24732fec9784f60d}
+      \field{sortinit}{U}
+      \field{sortinithash}{6901a00e45705986ee5e7ca9fd39adca}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{resolvconf}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.ubuntuusers.de/resolvconf/
+      \endverb
+      \verb{url}
+      \verb https://wiki.ubuntuusers.de/resolvconf/
+      \endverb
+    \endentry
+    \entry{NATing}{online}{}
+      \name{author}{1}{}{%
+        {{hash=e8e4d1f0fe99af04575c1e0815054845}{%
+           family={VirtualBox},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{e8e4d1f0fe99af04575c1e0815054845}
+      \strng{fullhash}{e8e4d1f0fe99af04575c1e0815054845}
+      \strng{bibnamehash}{e8e4d1f0fe99af04575c1e0815054845}
+      \strng{authorbibnamehash}{e8e4d1f0fe99af04575c1e0815054845}
+      \strng{authornamehash}{e8e4d1f0fe99af04575c1e0815054845}
+      \strng{authorfullhash}{e8e4d1f0fe99af04575c1e0815054845}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Network Address Translation}
+      \field{urlday}{11}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.virtualbox.org/manual/ch06.html
+      \endverb
+      \verb{url}
+      \verb https://www.virtualbox.org/manual/ch06.html
+      \endverb
+    \endentry
+    \entry{vodafone}{online}{}
+      \name{author}{1}{}{%
+        {{hash=9fa79a022c25390f258d71886fc68e7d}{%
+           family={Vodafone},
+           familyi={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{9fa79a022c25390f258d71886fc68e7d}
+      \strng{fullhash}{9fa79a022c25390f258d71886fc68e7d}
+      \strng{bibnamehash}{9fa79a022c25390f258d71886fc68e7d}
+      \strng{authorbibnamehash}{9fa79a022c25390f258d71886fc68e7d}
+      \strng{authornamehash}{9fa79a022c25390f258d71886fc68e7d}
+      \strng{authorfullhash}{9fa79a022c25390f258d71886fc68e7d}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Internet- und DSL-Tarife}
+      \field{urlday}{15}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://zuhauseplus.vodafone.de/business/dsl/
+      \endverb
+      \verb{url}
+      \verb https://zuhauseplus.vodafone.de/business/dsl/
+      \endverb
+    \endentry
     \entry{openvswitch1}{online}{}
       \name{author}{1}{}{%
         {{hash=cfb2bc749931d2188eca3c24ebc2145d}{%
@@ -1243,6 +2146,7 @@
       \strng{authorbibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
       \strng{authornamehash}{cfb2bc749931d2188eca3c24ebc2145d}
       \strng{authorfullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \field{extraname}{1}
       \field{sortinit}{v}
       \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
       \field{labelnamesource}{author}
@@ -1257,6 +2161,99 @@
       \endverb
       \verb{url}
       \verb https://www.openvswitch.org/
+      \endverb
+    \endentry
+    \entry{qosovs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfb2bc749931d2188eca3c24ebc2145d}{%
+           family={vSwitch},
+           familyi={v\bibinitperiod},
+           given={Open},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{fullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{bibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorbibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authornamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorfullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \field{extraname}{2}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quality of Service (QoS)}
+      \field{urlday}{12}
+      \field{urlmonth}{12}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.openvswitch.org/en/latest/faq/qos/
+      \endverb
+      \verb{url}
+      \verb https://docs.openvswitch.org/en/latest/faq/qos/
+      \endverb
+    \endentry
+    \entry{qospolicy}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfb2bc749931d2188eca3c24ebc2145d}{%
+           family={vSwitch},
+           familyi={v\bibinitperiod},
+           given={Open},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{fullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{bibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorbibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authornamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorfullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \field{extraname}{3}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quality of Service (QoS)}
+      \field{urlday}{20}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.openvswitch.org/en/latest/faq/qos/
+      \endverb
+      \verb{url}
+      \verb https://docs.openvswitch.org/en/latest/faq/qos/
+      \endverb
+    \endentry
+    \entry{usingovs}{online}{}
+      \name{author}{1}{}{%
+        {{hash=cfb2bc749931d2188eca3c24ebc2145d}{%
+           family={vSwitch},
+           familyi={v\bibinitperiod},
+           given={Open},
+           giveni={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{fullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{bibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorbibnamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authornamehash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \strng{authorfullhash}{cfb2bc749931d2188eca3c24ebc2145d}
+      \field{extraname}{4}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Using OpenFlow}
+      \field{urlday}{21}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://docs.openvswitch.org/en/latest/faq/openflow/
+      \endverb
+      \verb{url}
+      \verb https://docs.openvswitch.org/en/latest/faq/openflow/
       \endverb
     \endentry
     \entry{install}{online}{}
@@ -1308,7 +2305,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Openflow Tutorial}
-      \field{urlday}{26}
+      \field{urlday}{27}
       \field{urlmonth}{12}
       \field{urlyear}{2021}
       \field{urldateera}{ce}

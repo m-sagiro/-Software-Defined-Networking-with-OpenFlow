@@ -14,7 +14,7 @@
 \usepackage{graphicx, booktabs, float, scrhack}
 \usepackage{wrapfig}
 \usepackage{caption}
-\usepackage{listings}
+\usepackage{listings, lstautogobble}
 %\usepackage{fancyref}
 %\usepackage{showkeys}
 \usepackage[svgnames]{xcolor}
@@ -100,11 +100,12 @@ mit entsprechender Software auf Plagiate überprüft wird.
 \tableofcontents
 \listoffigures
 \listoftables
-%\lstlistoflistings
+\lstlistoflistings
 %ABKÜRZUNGSVERZECIHNIS
 \chapter{Abkürzungsverzeichnis}
 \begin{acronym}
 	\acro{k}[ADSL]{Asymmetric Digital Subscriber Line}
+	\acro{k}[API]{application programming interface}
 	\acro{k}[bzw.]{beziehungsweise}
 	\acro{k}[CLI]{Command Line Interface}
 	\acro{k}[DHCP]{Dynamic Host Configuration Protocol}
@@ -159,13 +160,15 @@ SDN ermöglicht eine andere Art der Steuerung eines Netzwerkes im Gegensatz zu k
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\vspace{-\baselineskip}
 	\centering
-	\includegraphics[width=0.45\textwidth]{Bilder/layer2}
+	\includegraphics[width=0.4\textwidth]{Bilder/layer2}
 	\caption{SDN Architektur}
 	\label{layer2}
 \end{wrapfigure}
-
-
-Software-defined Networking beschreibt einen agilen Ansatz zur Verwaltung und Administrierung von Computernetzwerken aus einer zentralen Stelle. Dabei muss nur an der zentralen Stelle eine Änderung vorgenommen werden, um Änderungen an mehrere Netzwerkkomponenten beziehungsweise -bereichen vorzunehmen. Ein sogenannter Controller stellt eine zentrale Stelle dar und steuert den ihm zugehörigen Netzwerkabschnitt. Switches und Routern leiten Pakete nach Regeln beziehungsweise Tabellen weiter, wo üblicherweise für eine Änderung der Regeln jedes Gerät einzeln angesprochen werden muss. Durch die Software im Controller werden Änderungen angenommen und auf die Netzwerkkomponenten übertragen. Diese Vorgehensweise durch Software-defined Networking erlaubt eine dynamische Anpassung des Computernetzwerkes \cite[1-2]{sdn1}. Durch das Hinzufügen eines Controllers wird die sogenannte Control Plane vom Switch und Router entbunden. Dadurch verbleiben der Switch und der Router in der Data Plane, wo sie weiterhin für die Paketweiterleitung zuständig bleiben. Der Controller hingegen ist nun für die Entscheidungen verantwortlich, wie mit einem Paket verfahren werden soll. Aus der Entkopplung der Control Plane von der Data Plane ergibt sich im Ganzen die sogenannte Application Layer, die Data Plane und dazwischen die Control Plane, was nun Änderungen leichter zulässt (siehe Abbildung \ref{layer2}). Programme können über die application programming interface (API) mit dem Controller kommunizieren und ihm Anweisungen über Pakete oder Netzwerkbereiche geben. Der Controller wiederum wendet die getroffenen Entscheidungen an den zugehörigen Netzwerkkomponenten an \cite[2]{sdn2}. Des Weiteren kann über die API verschiedene Netzwerkleistungen implementiert werden. Darunter zählen neben der Kontrolle des Paketflusses beispielsweise Implementierungen bezüglich der Sicherheit, der Quality of Service (QoS), der Zugriffskontrolle und weitere Leistungen, die für ein Netzwerk wichtig sind \cite[8-9]{sdn2}. Bei klassischen Switches werden anhand eingehender Pakete MAC-Adressen mit dem dazugehörigen Ausgangsport in einer Tabelle hinterlegt. Fehlt diese Information, wird ein Paket auf allen verfügbaren Ports ausgegeben. Hierbei würde ein Switch keine Auslastungen außerhalb seines Bereiches kennen. Aus diesem Grund würde der Switch das Paket auf die für das Ziel vorgesehene Strecke einordnen, die er vorher per Address Resolution Protocol Anfrage (ARP) in seinem Cache abgelegt hat. Der Controller jedoch hat einen Überblick auf das ganze Netzwerk, die von ihm verwaltet wird, weshalb er eine performantere Entscheidung treffen kann, wohin das Paket am besten weitergeleitet werden sollte, um beispielsweise Überlastungen zu vermeiden \cite[1-2]{sdn1}. Über ein im Vergleich zu Hypertext Transfer Protocol (HTTP) junges Protokoll namens OpenFlow (OF) kommuniziert der Controller mit bestimmten Netzwerkkomponenten wie beispielsweise ein programmierbarer Switch, um diese zu steuern. Es gibt zwei Arten von programmierbaren Switches: OpenFlow-only und OpenFlow-enabled Switches. OpenFlow-enabled Switches sind klassische Switches, die zusätzlich OpenFlow fähig sind. OpenFlow-only Switches haben keine zusätzlichen Module eingebaut, auf die Sie zurückgreifen können und müssen deswegen an einen Controller gebunden sein, der dann beispielsweise entscheidet, wohin eingehenden Pakete weiterleitet werden sollen. Dafür sendet der Switch ein Paket oder ein Teil eines Paketes an den Controller und wartet auf einen Befehl, wie er sich zu verhalten hat. Falls der Switch vorher einen Eintrag über das Paket besitzt, greift er auf diese zurück, und wenn überhaupt kein Eintrag vorhanden ist, wird das Paket nach den Einstellungen der Switch entweder verworfen, an allen Ports ausgegeben oder an den Controller gesendet. Die Fähigkeit, bestimmte Befehle auf Pakete anzuwenden, die auf einer Übereinstimmung basieren, zeichnet Software-defined Networking aus \cite[9-10]{sdn2}. Der Controller stellt einen sogenannten Single Point of Failure dar. Das bedeutet, wenn der Controller ausfällt, fallen alle vom Controller abhängigen Netzwerkkomponenten ebenfalls aus. So würde beispielsweise bei einer Denial-of-Service-Attacke durch das Überfluten des Controllers ein Zustand erfolgen, bei dem der Controller an Bandbreite, Speicher und Rechenleistung verlieren und im schlimmsten Fall auch lahmgelegt werden kann. Das ist eines der schlimmsten Szenarien und könnte durch das Hinzufügen eines zweiten Controllers kompensiert werden \cite[3]{sdn3}.
+Software-defined Networking beschreibt einen agilen Ansatz zur Verwaltung und Administrierung von Computernetzwerken aus einer zentralen Stelle. Dabei muss nur an der zentralen Stelle eine Änderung vorgenommen werden, um Änderungen an mehrere Netzwerkkomponenten beziehungsweise -bereichen vorzunehmen. Ein sogenannter Controller stellt eine zentrale Stelle dar und steuert den ihm zugehörigen Netzwerkabschnitt. Switches und Routern leiten Pakete nach Regeln beziehungsweise Tabellen weiter, wo üblicherweise für eine Änderung der Regeln jedes Gerät einzeln angesprochen werden muss. Durch die Software im Controller werden Änderungen angenommen und auf die Netzwerkkomponenten übertragen. Diese Vorgehensweise durch Software-defined Networking erlaubt eine dynamische Anpassung des Computernetzwerkes \cite[1-2]{sdn1}.\par 
+Durch das Hinzufügen eines Controllers wird die sogenannte Control Plane vom Switch und Router entbunden. Dadurch verbleiben der Switch und der Router in der Data Plane, wo sie weiterhin für die Paketweiterleitung zuständig bleiben. Der Controller hingegen ist nun für die Entscheidungen verantwortlich, wie mit einem Paket verfahren werden soll. Aus der Entkopplung der Control Plane von der Data Plane ergibt sich im Ganzen die sogenannte Application Layer, die Data Plane und dazwischen die Control Plane, was nun Änderungen leichter zulässt (siehe Abbildung \ref{layer2}). Programme können über die application programming interface (API) mit dem Controller kommunizieren und ihm Anweisungen über Pakete oder Netzwerkbereiche geben. Der Controller wiederum wendet die getroffenen Entscheidungen an den zugehörigen Netzwerkkomponenten an \cite[2]{sdn2}. Des Weiteren kann über die API verschiedene Netzwerkleistungen implementiert werden. Darunter zählen neben der Kontrolle des Paketflusses beispielsweise Implementierungen bezüglich der Sicherheit, der Quality of Service (QoS), der Zugriffskontrolle und weitere Leistungen, die für ein Netzwerk wichtig sind \cite[8-9]{sdn2}. \par
+Bei klassischen Switches werden anhand eingehender Pakete MAC-Adressen mit dem dazugehörigen Ausgangsport in einer Tabelle hinterlegt. Fehlt diese Information, wird ein Paket auf allen verfügbaren Ports ausgegeben. Hierbei würde ein Switch keine Auslastungen außerhalb seines Bereiches kennen. Aus diesem Grund würde der Switch das Paket auf die für das Ziel vorgesehene Strecke einordnen, die er vorher per Address Resolution Protocol Anfrage (ARP) in seinem Cache abgelegt hat. Der Controller jedoch hat einen Überblick auf das ganze Netzwerk, die von ihm verwaltet wird, weshalb er eine performantere Entscheidung treffen kann, wohin das Paket am besten weitergeleitet werden sollte, um beispielsweise Überlastungen zu vermeiden \cite[1-2]{sdn1}. \par
+Über ein im Vergleich zu Hypertext Transfer Protocol (HTTP) junges Protokoll namens OpenFlow (OF) kommuniziert der Controller mit bestimmten Netzwerkkomponenten wie beispielsweise ein OpenFlow Switch, um diese zu steuern. Es gibt zwei Arten von OpenFlow Switches: OpenFlow-only und OpenFlow-enabled Switches. OpenFlow-enabled Switches sind klassische Switches, die zusätzlich OpenFlow fähig sind. OpenFlow-only Switches haben keine zusätzlichen Module eingebaut, auf die Sie zurückgreifen können und müssen deswegen an einen Controller gebunden sein, der dann beispielsweise entscheidet, wohin eingehenden Pakete weiterleitet werden sollen. Dafür sendet der Switch ein Paket oder ein Teil eines Paketes an den Controller und wartet auf einen Befehl, wie er sich zu verhalten hat. Falls der Switch vorher einen Eintrag über das Paket besitzt, greift er auf diese zurück, und wenn überhaupt kein Eintrag vorhanden ist, wird das Paket nach den Einstellungen der Switch entweder verworfen, an allen Ports ausgegeben oder an den Controller gesendet. Die Fähigkeit, bestimmte Befehle auf Pakete anzuwenden, die auf einer Übereinstimmung basieren, zeichnet Software-defined Networking aus \cite[9-10]{sdn2}. \par
+Der Controller stellt einen sogenannten Single Point of Failure dar. Das bedeutet, wenn der Controller ausfällt, fallen alle vom Controller abhängigen Netzwerkkomponenten ebenfalls aus. So würde beispielsweise bei einer Denial-of-Service-Attacke durch das Überfluten des Controllers ein Zustand erfolgen, bei dem der Controller an Bandbreite, Speicher und Rechenleistung verlieren und im schlimmsten Fall auch lahmgelegt werden kann. Das ist eines der schlimmsten Szenarien und könnte durch das Hinzufügen eines zweiten Controllers kompensiert werden \cite[3]{sdn3}.
 
 
 \section*{Einleitung von Naghmeh}\label{einl-naghmeh}
@@ -375,7 +378,7 @@ Auf der Webbenutzeroberfläche sind Informationen zu dem vom Controller gesteuer
 
 \subsubsection{Nachteil}
 {\tiny Verfasst von: Mücahit\par}
-Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern\cite{failure}. Die Wartung und Konfiguration eines Controllers für komplexe Netzwerkstrukturen erfordern viele geschulte Angestellte \cite{floodlightnachteil}.
+Das ganze Netzwerk ist betroffen, wenn Floodlight ausfällt oder nicht erreichbar ist. Dieser Single Point of Failure gilt für alle Controller und stellt ein Risiko für Netzwerke, die eine hohe Verfügbarkeit und Zuverlässigkeit fordern \cite{failure}.
 
 \subsubsection{Komponenten}
 {\tiny Verfasst von: Mücahit\par}
@@ -383,7 +386,7 @@ Mit der Installation von Floodlight kommen sogenannte Module zum Einsatz. Die me
 
 \subsubsection{Installation}
 {\tiny Verfasst von: Mücahit\par}
-Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux, Mac oder Windows erfolgen. Es wird das Java Development Kit 8, Maven, Git, build-essential und das Python Development Paket benötigt. Da Floodlight in Java geschrieben wurde, wird auch zur Ausführung Java verwendet. Maven wird zum sogenannten Builden benutzt, bei dem die Software Floodlight aus mehreren Dateien zusammengestellt wird. Das Python Development Paket wird zur Ausführung und Git zum Herunterladen von Floodlight vorausgesetzt. Build-essential werden zum Kompilieren einiger Software verwendet. Im Folgenden wird die Installation auf Linux Schritt für Schritt erklärt. Befehle müssen im Linux-Terminal zeilenweise eingegeben werden.
+Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux, Mac oder Windows erfolgen. Es wird das Java Development Kit 8, Maven, Git, build-essential und das Python Development Paket benötigt. Da Floodlight in Java geschrieben wurde, wird auch zur Ausführung Java verwendet. Maven wird zum sogenannten Builden benutzt, bei dem die Software Floodlight aus mehreren Dateien zusammengestellt wird. Das Python Development Paket wird zur Ausführung und Git zum Herunterladen von Floodlight vorausgesetzt. Build-essential werden zum Kompilieren einiger Software verwendet. Im Folgenden wird die Installation auf Linux Schritt für Schritt erklärt. Befehle müssen im Linux-Terminal zeilenweise eingegeben werden \cite{install}.
 
 \begin{itemize}
 \item[1.] Alle benötigten Abhängigkeiten installieren.
@@ -414,12 +417,12 @@ Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux,
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}\par
 {\tiny Verfasst von: James\par}
 Es besteht die Möglichkeit, den Floodlight Controller mithilfe von Eclipse zu starten, somit muss Floodlight nicht im Terminal ausgeführt werden. Außerdem ist Floodlight durch die Entwicklungsumgebung Eclipse leichterer auszuführen, da alle Klassen in einem Eclipse Ordner einzusehen sind. Mit sudo mvn package –Declipse werden mehrere Dateien erstellt. Mit den neu erstellten Dateien kann ein neues Eclipse Projekt importiert werden. Anschließend wird Eclipse gestartet und eine neue Arbeitsumgebung erstellt. \textit{\textbf{File -> import -> General -> Existing Projects into Workspace}} und auf \textit{\textbf{Next}} klicken. Von \textit{\textbf{Select root directory}} auf \textit{\textbf{Browser}} klicken und Verzeichnis das Floodlight enthält auswählen. Das Projekt mit \textit{\textbf{finish}} ausführen und damit sollte Floodlight auf Eclipse importiert sein.\par
-Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden. \cite{install}
+Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden \cite{install}.
 
 
 \subsubsection{Aufbau}
 {\tiny Verfasst von: Mücahit\par}
-Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Controller standardmäßig auf Port 6653. Im Terminal werden alle informativen Ereignisse ausgegeben. Um den Controller zu stoppen, wird die Tastenkombination Steuerung und C gleichzeitig gedrückt (siehe Abbildung \ref{floodlight}).
+Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Controller standardmäßig auf Port 6653. Im Terminal werden alle informativen Ereignisse ausgegeben (siehe Abbildung \ref{floodlight}). Um den Controller zu stoppen, wird die Tastenkombination Steuerung und C gleichzeitig gedrückt.
 
 \begin{figure}[H]
  \centering
@@ -429,10 +432,9 @@ Nach erfolgreicher Installation und Ausführung von Floodlight läuft der Contro
  \label{floodlight}
 \end{figure}
 
-\newpage
 \subsection{Ergebnis}
 {\tiny Verfasst von: Tung\par}
-\begin{wrapfigure}{R}{0.5\textwidth}
+\begin{wrapfigure}{r}{0.5\textwidth}
 	\vspace{-\baselineskip}
     \centering
     \includegraphics[width=0.5\textwidth]{Bilder/ping}
@@ -456,7 +458,7 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 
 \begin{figure}[H]
  \centering
- \includegraphics[width=1.0\textwidth]{Bilder/netzwerkplan}
+ \makebox[\textwidth][c]{\includegraphics[width=1.1\textwidth]{Bilder/netzwerkplan}}
  \captionsetup{justification=centering,margin=1cm}
  \caption{Netzwerkplan aller Lokationen}
  \label{netzwerkplan}
@@ -464,7 +466,7 @@ Die topologische Struktur des Netzwerks, die in Mininet erstellt wird, ist in Ab
 
 \begin{table}[H]
 	\caption{Vergabe von IPv4-Adressen im Netzwerk}
-	\label{netzwerkplan}
+	\label{netzwerkplan-addressen}
 	\centering
 	\hspace*{-1cm}
 	\begin{tabular}{p{3.5cm} p{3cm} p{3cm} p{3cm} p{3cm}}
@@ -540,11 +542,9 @@ Nachdem für alle Lokationen der Rumpf erstellt worden ist, werden die Verbindun
 
 
 
-
-\newpage
 \subsection{Controller Implementierung}
 {\tiny Verfasst von: Tung, Mücahit\par}
-Nach der Erstellung der Topologie geht es weiter bei der Main-Funktion. Es wird ein \textit{\textbf{RemoteController-Objekt}} erstellt, der einen Namen, die Konfiguration, um was für ein Controller es sich handelt, die IP-Adresse und den Port, wo er zu erreichen ist, bekommt (siehe Abbildung \ref{mininet5}). Hier ist wichtig zu erwähnen, dass der Controller auf Ubuntu läuft und zurzeit per \textit{\textbf{localhost}} zu erreichen ist. Der Controller könnte auf einer anderen VirtualBox-Maschine laufen und per \textit{\textbf{internes Netzwerk}} verbunden werden. Ebenfalls kann der Controller auf dem Hostsystem laufen und per \textit{\textbf{Host-Only-Adapter}} in Mininet eingebunden werden. 
+Nach der Erstellung der Topologie geht es weiter bei der Main-Funktion. Es wird ein \textit{\textbf{RemoteController-Objekt}} erstellt, der einen Namen, die Konfiguration, um was für ein Controller es sich handelt, die IP-Adresse und den Port, wo er zu erreichen ist, bekommt (siehe Abbildung \ref{mininet5}). Hier ist wichtig zu erwähnen, dass der Controller auf Ubuntu läuft und zurzeit per \textit{\textbf{localhost}} zu erreichen ist. Der Controller könnte auf einer anderen VirtualBox-Maschine laufen und per \textit{\textbf{internes Netzwerk}} verbunden werden. Ebenfalls kann der Controller auf dem Hostsystem laufen und per \textit{\textbf{Host-Only-Adapter}} in Mininet eingebunden werden \cite{mnvm}. 
 
 \begin{figure}[H]
  \centering
@@ -554,7 +554,7 @@ Nach der Erstellung der Topologie geht es weiter bei der Main-Funktion. Es wird 
  \label{mininet5}
 \end{figure}
 
-Anschließend wird ein Mininet-Objekt erstellt, bei dem die erstellte Topologie, der erstellte Controller, ein \textit{\textbf{TCLink-Objekt}} für die Einstellung der Bandbreite der Netzwerkadapter und ein \textit{\textbf{OVSKernelSwitch-Objekt}} für die Erstellung der Switches als \textit{\textbf{Open vSwitches}} (siehe Abbildung \ref{mininet6}). Diese werden später verwendet, um den Quality of Service zu implementieren. Dabei werden per \textit{\textbf{ovs-vsctl-Befehle}} Queues an den Ports der Switches erstellt und die Priorisierung der Pakete vorgenommen.
+Anschließend wird ein Mininet-Objekt erstellt, bei dem die erstellte Topologie, der erstellte Controller, ein \textit{\textbf{TCLink-Objekt}} für die Einstellung der Bandbreite der Netzwerkadapter und ein \textit{\textbf{OVSKernelSwitch-Objekt}} für die Erstellung der Switches als \textit{\textbf{Open vSwitches}} (siehe Abbildung \ref{mininet6}). Diese werden später verwendet, um den Quality of Service zu implementieren. Dabei werden per \textit{\textbf{ovs-vsctl-Befehle}} Queues an den Ports der Switches erstellt und die Priorisierung der Pakete vorgenommen \cite{qosovs}.
 
 \begin{figure}[H]
  \centering
@@ -576,37 +576,38 @@ Wenn das Mininet Skript ausgeführt wird, ist eine Topologie mit 40 Hosts über 
  \label{pingall}
 \end{figure}
 
+\newpage
 \section{Verschlüsselung der Netzwerkverbindung zwischen den Lokationen}
 {\tiny Verfasst von: Mücahit\par}
 Zwischen den vier Lokationen soll ein Tunnel über das Internet konfiguriert werden. Dieser wird auch Virtual Private Network (VPN) genannt. Der gesamte Datenverkehr durch den Tunnel soll verschlüsselt und für unbeteiligte nicht einsehbar sein.
 
 \subsection{Vorüberlegung}
 {\tiny Verfasst von: Mücahit\par}
-Der Tunnel wird zwischen den Routern r1-r4 entstehen und für eine Verbindung der Netzwerke der Lokationen sorgen. Damit soll eine \textit{\textbf{Site-to-Site-VPN}} Verbindung zwischen allen Lokationen hergestellt werden. Dieser zeichnet sich durch die Verschlüsselung ab den Schnittstellen, also den Routern der Lokationen, aus. Zudem werden aus dem privaten Netzwerk eingehende Pakete an den Routern verschlüsselt und weiterverschickt. Der Router an der Ziellokation wird das Paket entschlüsseln und an die Zieladresse weiterleiten. Die Methode, die implementiert werden soll, heißt \textit{\textbf{IPSEC over GRE}} und soll alle angestellten Vorüberlegungen ermöglichen.
+Der Tunnel wird zwischen den Routern r1-r4 entstehen und für eine Verbindung der Netzwerke der Lokationen sorgen. Damit soll eine \textit{\textbf{Site-to-Site-VPN}} Verbindung zwischen allen Lokationen hergestellt werden \cite{sitetosite}. Dieser zeichnet sich durch die Verschlüsselung ab den Schnittstellen, also den Routern der Lokationen, aus. Zudem werden aus dem privaten Netzwerk eingehende Pakete an den Routern verschlüsselt und weiterverschickt. Der Router an der Ziellokation wird das Paket entschlüsseln und an die Zieladresse weiterleiten. Die Methode, die implementiert werden soll, heißt \textit{\textbf{IPSEC over GRE}} und soll alle angestellten Vorüberlegungen ermöglichen \cite{vpntunnel}.
 
 \subsection{Durchführung}
 {\tiny Verfasst von: Mücahit\par}
-Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}A remote Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router\hyp{}Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen.
+Für die Durchführung folgt in der Main-Funktion des Mininet-Skripts die Einrichtung der Tunnel zwischen den Routern beziehungsweise den Lokationen. Dafür baut jeder Router mit jedem Router einen GRE-Tunnel auf, für den der Befehl \textit{\textbf{ip tunnel add Tunnel-Name mode gre local Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}A remote Schnittstelle\hyp{}Router\hyp{}Lokation\hyp{}B ttl 255}} bei jedem Router über die Mininet-Methode \textit{\textbf{info(net[‘Router\hyp{}Name'].cmd(Befehl))}} ausgeben und ausgeführt wird (siehe Abbildung \ref{gre}). Nachdem die Verbindung definiert wurde, wird der Tunnel-Adapter per \textit{\textbf{ip link set Tunnel-Name up}} hochgefahren. Anschließend wird dem Tunnel Adapter mit dem Befehl \textit{\textbf{ip addr add Tunnel-IP dev Tunnel-Name}} die Tunnel IP vergeben. Hier ist wichtig, dass der IP-Adressbereich zwischen zwei Lokationen im selben Bereich liegt. Hier erfolgt das gleiche Prinzip wie bei der Erstellung und Simulierung des Internets zwischen den Lokationen \cite{tunnelimpl}.
 
 \begin{figure}[H]
  \centering
- \includegraphics[width=1.0\textwidth]{Bilder/gre}
+ \includegraphics[width=0.75\textwidth]{Bilder/gre}
  \captionsetup{justification=centering,margin=2cm}
  \caption{Aufstellen der GRE-Tunnel}
  \label{gre}
 \end{figure}
 
-Nachdem der Tunnel aufgesetzt worden ist, sind alle Pakete, die durch den Tunnel versendet werden, nun als Payload eines neuen Paketes, wo der neue IP-Header der IP des Tunnels entspricht (siehe Abbildung \ref{ipsecgre}). Daraus folgt, dass nun Pakete, die die Maximum Transmission Unit (MTU) erreichen, jetzt eine geringere Länge annehmen müssen, da der neue Payload aus dem ursprünglichen Payload und IP-Header besteht. Wenn der Fall eintritt, schickt der Router eine Aufforderung an den Absender zurück, das Paket kleiner zu gestalten.
+Nachdem der Tunnel aufgesetzt worden ist, sind alle Pakete, die durch den Tunnel versendet werden, nun als Payload eines neuen Paketes, wo der neue IP-Header der IP des Tunnels entspricht \cite{newpayload} (siehe Abbildung \ref{ipsecgre}). Daraus folgt, dass nun Pakete, die die Maximum Transmission Unit (MTU) erreichen, jetzt eine geringere Länge annehmen müssen, da der neue Payload aus dem ursprünglichen Payload und IP-Header besteht. Wenn der Fall eintritt, schickt der Router eine Aufforderung an den Absender zurück, das Paket kleiner zu gestalten \cite{MTU}.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1.0\textwidth]{Bilder/ipsecgre}
+	\includegraphics[width=0.8\textwidth]{Bilder/ipsecgre}
 	\captionsetup{justification=centering,margin=2cm}
 	\caption{Wandlung der Pakete bei IPSEC over GRE}
 	\label{ipsecgre}
 \end{figure}
 
-Im nächsten Schritt wird die Route zum jeweils anderen Subnetzwerkadressenbereich per \textit{\textbf{ip route add IP-anderen-Lokation via IP-Adapter dev Adapter-Name}} Befehl in die Routing-Tabelle eingefügt (siehe Abbildung \ref{route}). Da es sich hierbei um eine Simulation handelt, sollten alle Lokationen einen jeweils anderen privaten Adressenbereich besitzen. Bei Überschneidungen könnte es zu Problemen führen. Bei einer echten Umgebung mit echten öffentlichen IP-Adressen könnten dieselben privaten IP-Adressen für verschiedene Lokationen genutzt werden. Dies wird in der Realität üblicherweise so gemacht.
+Im nächsten Schritt wird die Route zum jeweils anderen Subnetzwerkadressenbereich per \textit{\textbf{ip route add IP-anderen-Lokation via IP-Adapter dev Adapter-Name}} Befehl in die Routing-Tabelle eingefügt \cite{addroute} (siehe Abbildung \ref{route}). Da es sich hierbei um eine Simulation handelt, sollten alle Lokationen einen jeweils anderen privaten Adressenbereich besitzen. Bei Überschneidungen könnte es zu Problemen führen. Bei einer echten Umgebung mit echten öffentlichen IP-Adressen könnten dieselben privaten IP-Adressen für verschiedene Lokationen genutzt werden. Dies wird in der Realität üblicherweise so gemacht.
 
 \begin{figure}[H]
  \centering
@@ -617,7 +618,7 @@ Im nächsten Schritt wird die Route zum jeweils anderen Subnetzwerkadressenberei
 \end{figure}
 
 
-Der Tunnel von und zu den Lokationen ist nun aufgesetzt. Als Nächstes sollen alle Pakete aus dem privaten IP-Adressenbereich bei der Übermittlung durch den Router verschlüsselt und weitergeleitet werden. Dazu sollen alle Pakete von außen entschlüsselt und zum Zielort weitergeleitet werden. Für diese Methode wird die Verschlüsselung und Entschlüsselung über IPSEC im Transport-Modus mit dem Encapsulating Security Payload (ESP) Protokoll benutzt. Dafür wird zuerst der Befehl \textit{\textbf{ip xfrm state add src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers proto esp Security-Parameter-Index-Key enc ‘cbc(aes)‘ 256bit-Key mode transport}} ausgeführt, um Regeln für die Ver- und Entschlüsselung auf dem Router einzufügen. Jeder Router bekommt zwei Regeln für jeweils einen anderen Router. Eine Regel ist für die Entschlüsselung bei ankommenden Paketen und die andere Regel für die Verschlüsselung bei abgehenden Paketen (siehe Abbildung \ref{state}).
+Der Tunnel von und zu den Lokationen ist nun aufgesetzt. Als Nächstes sollen alle Pakete aus dem privaten IP-Adressenbereich bei der Übermittlung durch den Router verschlüsselt und weitergeleitet werden. Dazu sollen alle Pakete von außen entschlüsselt und zum Zielort weitergeleitet werden. Für diese Methode wird die Verschlüsselung und Entschlüsselung über IPSEC im Transport-Modus mit dem Encapsulating Security Payload (ESP) Protokoll benutzt. Dafür wird zuerst der Befehl \textit{\textbf{ip xfrm state add src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers proto esp Security-Parameter-Index-Key enc ‘cbc(aes)‘ 256bit-Key mode transport}} ausgeführt, um Regeln für die Ver- und Entschlüsselung auf dem Router einzufügen \cite{esp}. Jeder Router bekommt zwei Regeln für jeweils einen anderen Router. Eine Regel ist für die Entschlüsselung bei ankommenden Paketen und die andere Regel für die Verschlüsselung bei abgehenden Paketen (siehe Abbildung \ref{state}).
 
 \begin{figure}[H]
  \centering
@@ -627,33 +628,33 @@ Der Tunnel von und zu den Lokationen ist nun aufgesetzt. Als Nächstes sollen al
  \label{state}
 \end{figure}
 
-Der Befehl legt für Pakete mit bestimmter IP-Quelladresse, IP-Zieladresse, einem Security-Parameter-Index Key (SPI) und einer 256 Bit Verschlüsselung fest, bei einer Übereinstimmung das Paket zu verschlüsseln oder zu entschlüsseln. Auf Abbildung \ref{ipsecgre} kann der Wandel von der ursprünglichen Paketstruktur auf die verschlüsselte Paketstruktur nachvollzogen werden. Es wird für eingehende und ausgehende Pakete jeweils eine Regel festgelegt. Der Unterschied ist, dass die IP-Ziel- und Quelladresse, der Security-Parameter-Index-Key und die 256 Bit Verschlüsselung verschieden sind. Durch die States wurden die Ver- und Entschlüsselungen auf den Routern installiert. Die Keys und SPI’s wurden zufällig gewählt. 
-
-Nun muss den Routern angewiesen werden, auf welchem Datenverkehr die installierten States angewandt werden sollen. Dies geschieht über Policies. Dort wird über den \textit{\textbf{ip xfrm policy add dir out src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers tmpl proto esp mode transport}} Befehl die Anweisung erteilt, dass auf den IP-Ziel- und Quelladressen die Ver- und Entschlüsselung stattfinden soll. Dabei muss der Befehl zweimal eingegeben werden, wobei die IP-Adressen vertauscht werden (siehe Abbildung \ref{policy}). Es wird nicht die Tunnel-IP, sondern die Router-IP angegeben.
+Der Befehl legt für Pakete mit bestimmter IP-Quelladresse, IP-Zieladresse, einem Security-Parameter-Index Key (SPI) und einer 256 Bit Verschlüsselung fest, bei einer Übereinstimmung das Paket zu verschlüsseln oder zu entschlüsseln. Auf Abbildung \ref{ipsecgre} kann der Wandel von der ursprünglichen Paketstruktur auf die verschlüsselte Paketstruktur nachvollzogen werden. Es wird für eingehende und ausgehende Pakete jeweils eine Regel festgelegt. Der Unterschied ist, dass die IP-Ziel- und Quelladresse, der Security-Parameter-Index-Key und die 256 Bit Verschlüsselung verschieden sind. Durch die States wurden die Ver- und Entschlüsselungen auf den Routern installiert. Die Keys und SPI’s wurden zufällig gewählt. Nun muss den Routern angewiesen werden, auf welchem Datenverkehr die installierten States angewandt werden sollen. Dies geschieht über Policies. Dort wird über den \textit{\textbf{ip xfrm policy add dir out src IP-Adresse-des-Routers dst IP-Adresse-des-Ziel-Routers tmpl proto esp mode transport}} Befehl die Anweisung erteilt, dass auf den IP-Ziel- und Quelladressen die Ver- und Entschlüsselung stattfinden soll. Dabei muss der Befehl zweimal eingegeben werden, wobei die IP-Adressen vertauscht werden (siehe Abbildung \ref{policy}). Es wird nicht die Tunnel-IP, sondern die Router-IP angegeben \cite{xfrm}.
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/policy}
- \captionsetup{justification=centering,margin=2cm}
+ \captionsetup{justification=centering}
  \caption{Erstellung der Policies für die Ver- und Entschlüsselung}
  \label{policy}
 \end{figure}
 
 \subsection{Ergebnis}
 {\tiny Verfasst von: Mücahit\par}
-Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die komplette Kommunikation zwischen den Lokationen sicherer. Dazu gehört unter anderem die Authentifizierung des Kommunikationspartners und der Verhinderung unautorisierter Veränderungen von Paketen. Zwischen den Lokationen war vorher der gesamte Datenverkehr ersichtlich, wohingegen jetzt nahezu alles verschlüsselt ist (siehe Abbildung \ref{esp}).
+Durch die Erstellung der Tunnel und der Verschlüsselung der Pakete wurde die komplette Kommunikation zwischen den Lokationen sicherer. Dazu gehört unter anderem die Authentifizierung des Kommunikationspartners und der Verhinderung unautorisierter Veränderungen von Paketen \cite{espsecurity}. Zwischen den Lokationen war vorher der gesamte Datenverkehr ersichtlich, wohingegen jetzt alles verschlüsselt ist (siehe Abbildung \ref{esp}).
 
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/esp}
- \captionsetup{justification=centering,margin=2cm}
+ \captionsetup{justification=centering}
  \caption{Verschlüsselter Verkehr zwischen Standort Frankfurt und Berlin}
  \label{esp}
 \end{figure}
 
+
 \section{Auswahl des Service-Providers}
 {\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
-Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden. Deswegen benötigen alle Lokationen eine DSL-Verbindung mit der richtigen Konfiguration zur Realisierung. Der Preis und die Bandbreite der DSL-Leitung zählen bei der Auswahl als primäre Faktoren. Zusätzlich können weitere Leistungen betrachtet werden. Im Folgenden sind in einer Tabelle die Internet-Service-Provider O2, Vodafone, 1\&1 und Telekom mit verschiedenen Bandbreiten und den dazugehörigen Nettopreisen aufgelistet (siehe Tabelle \ref{dsl}). Die Angebote sind aktuell und aus den originalen Webseiten der Provider entnommen worden.
+Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden. Deswegen benötigen alle Lokationen eine DSL-Verbindung mit der richtigen Konfiguration zur Realisierung. Der Preis und die Bandbreite der DSL-Leitung zählen bei der Auswahl als primäre Faktoren. Zusätzlich können weitere Leistungen betrachtet werden.\par 
+Im Folgenden sind in einer Tabelle die Internet-Service-Provider O2, Vodafone, 1\&1 und Telekom mit verschiedenen Bandbreiten und den dazugehörigen Nettopreisen aufgelistet \cite{o2} \cite{vodafone} \cite{1u1} \cite{telekom} (siehe Tabelle \ref{dsl}). Die Angebote sind aktuell und aus den originalen Webseiten der Provider entnommen worden.
 
 \begin{table}[H]
 \caption{DSL-Angebote verschiedener Internet-Service-Provider}
@@ -690,18 +691,18 @@ Alle Lokationen sind über einen Tunnel durch das Internet miteinander verbunden
 
 \end{table}
 
+\newpage
+Die notwendige Bandbreite für den Download und Upload wurde in der Gruppe abgestimmt. Vorher wurden kleine Tests zur Belegung und Stärkung der Argumente für die Abstimmung gemacht. Bei der Abstimmung wurde pro Arbeitsplatz mindestens 10 Megabit als Download und 5 Megabit als Upload für einen flüssigen Arbeitsrhythmus als notwendig gesehen. Demnach sind bei zehn Arbeitsplätzen ein Upload von mindestens 50 Megabit und ein Download von mindestens 100 Megabit nötig. Nach dem Preisleistungsverhältnis ist der Telekom Company Start 500 \cite{companystart} Angebot mit einer garantierten Uploadrate von mindestens 80 Megabit und einer garantierten Downloadrate von mindestens 400 Megabit die beste Wahl. Zusätzlich besitzt die Telekom jahrelange Erfahrung und beweist dadurch gute Qualitäten, welches die Entscheidung für das Produkt noch einmal gestärkt hat.\par
+Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standleitung ist sicherer als das Internet, weil der Datenverkehr über eine private Leitung verläuft. Es ist im Rahmen des Möglichen, dass bei der Leitung physikalisch von außen Pakete abgefangen werden können. Standleitungen sind meistens symmetrisch ausgelegt und besitzen die gleiche Uploadrate wie die Downloadrate. Die Preise für Standleitungen gibt es bei Service-Providern erst nach einer Anfrage mit der Angabe der Adressen der Lokationen. Demnach ist eine genauere Preisangabe nicht möglich. Die Kosten für eine Standleitung aller vier Lokationen würde nach Recherchen bei einer symmetrischen Geschwindigkeit von 100 Megabit ungefähr zwischen 500 und 1100 Euro liegen. Die Spanne zwischen den Preisen ist groß, da Preise sich selbst von Gebäude zu Gebäude ändern. Infolgedessen ist für einen genaueren Preis eine Anfrage unabdingbar \cite{standleitung}.
 
-Die notwendige Bandbreite für den Download und Upload wurde in der Gruppe abgestimmt. Vorher wurden kleine Tests zur Belegung und Stärkung der Argumente für die Abstimmung gemacht. Bei der Abstimmung wurde pro Arbeitsplatz mindestens 10 Megabit als Download und 5 Megabit als Upload für einen flüssigen Arbeitsrhythmus als notwendig gesehen. Demnach sind bei zehn Arbeitsplätzen ein Upload von mindestens 50 Megabit und ein Download von mindestens 100 Megabit nötig. Nach dem Preisleistungsverhältnis ist der Telekom Company Start 500 Angebot mit einer garantierten Uploadrate von mindestens 80 Megabit und einer garantierten Downloadrate von mindestens 400 Megabit die beste Wahl. Zusätzlich besitzt die Telekom jahrelange Erfahrung und beweist dadurch gute Qualitäten, welches die Entscheidung für das Produkt noch einmal gestärkt hat.\par
-Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standleitung ist sicherer als das Internet, weil der Datenverkehr über eine private Leitung verläuft. Es ist im Rahmen des Möglichen, dass bei der Leitung physikalisch von außen Pakete abgefangen werden können. Standleitungen sind meistens symmetrisch ausgelegt und besitzen die gleiche Uploadrate wie die Downloadrate. Die Preise für Standleitungen gibt es bei Service-Providern erst nach einer Anfrage mit der Angabe der Adressen der Lokationen. Demnach ist eine genauere Preisangabe nicht möglich. Die Kosten für eine Standleitung aller vier Lokationen würde nach Recherchen bei einer symmetrischen Geschwindigkeit von 100 Megabit ungefähr zwischen 500 und 1100 Euro liegen. Die Spanne zwischen den Preisen ist groß, da Preise sich selbst von Gebäude zu Gebäude ändern. Infolgedessen ist für einen genaueren Preis eine Anfrage unabdingbar.
-
-
+\newpage
 \section{Einrichtung des NAT-Firewalls}
 {\tiny Verfasst von: Mücahit\par}
-Durch die Network Address Translation (NAT) Firewall Funktion werden private IPv4-Adressen beziehungsweise Geräte geheim gehalten. Es wird durch die Netzwerkadressenübersetzung keine Informationen über die privaten IPv4-Adressen ins World Wide Web geschickt. Dazu wird der IPv4-Header von IP-Paketen aus dem privaten Netzwerkbereich auf die öffentliche IPv4-Adresse verändert. Hinter jeder öffentlichen IPv4-Adresse können mehrere Tausende Geräte stehen und auf das Internet zugreifen. Des Weiteren ist die Anzahl der IPv4-Adressen durch den eigenen Aufbau begrenzt. Für die vier Lokationen würde der Internet-Service-Provider vier öffentliche IPv4-Adressen vergeben. Die Adressen werden vom Internet-Service-Provider in bestimmten Zeitintervallen immer wieder neu vergeben, welches ebenfalls zu einer gewissen Sicherheit beiträgt.
+Durch die Network Address Translation (NAT) Firewall Funktion werden private IPv4-Adressen beziehungsweise Geräte geheim gehalten. Es wird durch die Netzwerkadressenübersetzung keine Informationen über die privaten IPv4-Adressen ins World Wide Web geschickt. Dazu wird der IPv4-Header von IP-Paketen aus dem privaten Netzwerkbereich auf die öffentliche IPv4-Adresse verändert. Hinter jeder öffentlichen IPv4-Adresse können mehrere Tausende Geräte stehen und auf das Internet zugreifen. Des Weiteren ist die Anzahl der IPv4-Adressen durch den eigenen Aufbau begrenzt \cite{NATdef}. Für die vier Lokationen würde der Internet-Service-Provider vier öffentliche IPv4-Adressen vergeben. Die Adressen werden vom Internet-Service-Provider in bestimmten Zeitintervallen immer wieder neu vergeben, welches ebenfalls zu einer gewissen Sicherheit beiträgt.
 
 \subsection{Vorüberlegung}
 {\tiny Verfasst von: Mücahit\par}
-Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da alle Hosts über ihn Anfragen ins Internet verschicken werden. Dazu sollte jede Anfrage ins World Wide Web mit der öffentlichen IPv4-Adresse des Routers durchgeführt werden. Zusätzlich sollte der Router beziehungsweise die Hosts den Domain Name System (DNS) Server konfiguriert bekommen, damit die Hosts nicht nur über die IPv4-Adressen aufs Internet zugreifen.
+Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da alle Hosts über ihn Anfragen ins Internet verschicken werden. Dazu sollte jede Anfrage ins World Wide Web mit der öffentlichen IPv4-Adresse des Routers durchgeführt werden. Zusätzlich sollte der Router beziehungsweise die Hosts den Domain Name System (DNS) Server konfiguriert bekommen, damit die Hosts nicht nur über die IP-Adressen aufs Internet zugreifen.
 
 \subsection{Durchführung}
 {\tiny Verfasst von: Mücahit\par}
@@ -715,7 +716,7 @@ Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da
 \end{wrapfigure}
 
 Um den Hosts der Lokationen den Internetzugang zu ermöglichen, muss zuerst den Routern der Zugang zum Internet möglich sein. Dafür wurde in VirtualBox die vier Netzwerk-Adapter für die vier vorgesehenen Lokationen aktiviert und als NAT konfiguriert (siehe Abbildung \ref{adapter}). 
-Die vier Schnittstellen wurden jeweils an die Router r1, r2, r3 und r4 per \textit{\textbf{Intf(„Schnittstellenbezeichnung“, node=Router-Objekt)}} Befehl zugewiesen. Die Schnittstellenbezeichnung kann vorher mit dem Befehl \textit{\textbf{ifconfig -a}} angezeigt werden. Die Router-Objekte werden vorher per \textit{\textbf{variabel = net.getNodeByName('Router-Bezeichnung')}} Befehl instanziiert. Jeder Router bekommt eine individuelle Schnittstelle zugewiesen. Die Router führen anschließend den \textit{\textbf{info(net['Router-Bezeichnung].cmd("dhclient Schnittstellenbezeichnung"))}} Befehl aus, um eine IPv4-Adresse des VirtualBox NAT-Services zu erhalten (siehe Abbildung \ref{interface}). Der IPv4-Adressenbereich, der vom NAT-Service vergeben wird, liegt bei \textit{\textbf{10.0.X.X/24}} und ändert sich je nach virtueller Maschine.
+Die vier Schnittstellen wurden jeweils an die Router r1, r2, r3 und r4 per \textit{\textbf{Intf(„Schnittstellenbezeichnung“, node=Router-Objekt)}} Befehl zugewiesen. Die Schnittstellenbezeichnung kann vorher mit dem Befehl \textit{\textbf{ifconfig -a}} angezeigt werden. Die Router-Objekte werden vorher per \textit{\textbf{variabel = net.getNodeByName('Router-Bezeichnung')}} Befehl instanziiert. Jeder Router bekommt eine individuelle Schnittstelle zugewiesen. Die Router führen anschließend den \textit{\textbf{info(net['Router-Bezeichnung].cmd("dhclient Schnittstellenbezeichnung"))}} Befehl aus, um eine IPv4-Adresse des VirtualBox NAT-Services zu erhalten (siehe Abbildung \ref{interface}). Der IPv4-Adressenbereich, der vom NAT-Service vergeben wird, liegt bei \textit{\textbf{10.0.X.X/24}} und ändert sich je nach virtueller Maschine \cite{NATing} \cite{NATgateway}.
 
 \begin{figure}[H]
  \centering
@@ -725,10 +726,10 @@ Die vier Schnittstellen wurden jeweils an die Router r1, r2, r3 und r4 per \text
  \label{interface}
 \end{figure}
 
-Da nun eine Internetverbindung für alle Router besteht, muss der Domain Name System Server auf dem Ubuntu-Host festgelegt werden, damit die Hosts nicht nur per IPv4 auf das Internet zugreifen können. Eine Möglichkeit besteht darin, die Datei \textit{\textbf{/etc/resolv.conf}} per Admin-Rechte zu bearbeiten und dort den Domain Name System Server festzulegen. Es kann der Domain Name Server von Google mit der IPv4 \textit{\textbf{8.8.8.8}} und/oder \textit{\textbf{8.8.4.4}} eingetragen werden. Ein Nachteil bei der Variante ist, dass nach jedem Neustart des Betriebssystems dieser Vorgang erneut durchgeführt werden muss, da der Eintrag nur temporär bis zum Ausschalten des Betriebssystems erhalten bleibt. Um dem entgegenzuwirken wurde das Paket Resolvconf per \textit{\textbf{sudo apt install resolvconf}} installiert. Dadurch wurden neue Dateien in der Konfigurationsebene von Ubuntu erstellt, wodurch ein permanenter Eintrag des DNS Servers möglich war. Dafür wurde die IPv4 des DNS Server in die Datei \textit{\textbf{/etc/resolvconf/resolv.conf.d/head}} eingetragen und gespeichert. Anschließend wurde der Netzwerkmanager per \textit{\textbf{sudo systemctl restart network-manager}} Befehl neu gestartet, um die Einstellungen zu übernehmen. Jetzt ist es den Routern möglich, das Internet auch per Domainnamen zu erreichen.
+Da nun eine Internetverbindung für alle Router besteht, muss der Domain Name System Server auf dem Ubuntu-Host festgelegt werden, damit die Hosts nicht nur per IPv4 auf das Internet zugreifen können. Eine Möglichkeit besteht darin, die Datei \textit{\textbf{/etc/resolv.conf}} per Admin-Rechte zu bearbeiten und dort den Domain Name System Server festzulegen. Es kann der Domain Name Server von Google mit der IPv4 \textit{\textbf{8.8.8.8}} und/oder \textit{\textbf{8.8.4.4}} eingetragen werden. Ein Nachteil bei dieser Variante ist, dass nach jedem Neustart des Betriebssystems dieser Vorgang erneut durchgeführt werden muss, da der Eintrag nur temporär bis zum Ausschalten des Betriebssystems erhalten bleibt. Um dem entgegenzuwirken wurde das Paket Resolvconf per \textit{\textbf{sudo apt install resolvconf}} installiert \cite{resolvconf}. Dadurch wurden neue Dateien in der Konfigurationsebene von Ubuntu erstellt, wodurch ein permanenter Eintrag des DNS-Servers möglich war. Dafür wurde die IPv4 des DNS Server in die Datei \textit{\textbf{/etc/resolvconf/resolv.conf.d/head}} eingetragen und gespeichert. Anschließend wurde der Netzwerkmanager per \textit{\textbf{sudo systemctl restart network-manager}} Befehl neu gestartet, um die Einstellungen zu übernehmen. Jetzt ist es den Routern möglich, das Internet auch per Domainnamen zu erreichen \cite{nameservers}.
 
-Die Default-Route der Hosts ist der jeweilige Router in der Lokation. Wenn ein Host eine Website aufruft, schickt er eine Anfrage an und über den Router. Im Moment wird die Anfrage beim Router fallengelassen, da der Router noch keine Regeln bezüglich solcher Anfragen besitzt. Die Regel wird über das im Ubuntu vorhandene Programm \textit{\textbf{iptables}} eingetragen, welches den Linux-Kernel umkonfiguriert. Dazu wird auf allen Routern der Befehl \textit{\textbf{sudo iptables -t nat -A POSTROUTING -o Schnittstellenbezeichnung -j MASQUERADE}} ausgeführt. Der Befehl vergibt jedem eingehenden Paket als Quelladresse die IPv4-Adresse der NAT-Schnittstelle des Routers (siehe Abbildung \ref{adapter}). Es wird \textit{\textbf{MASQUERADE}} genutzt, weil zum Zeitpunkt der Ausführung des Befehls die IPv4-Adresse der Schnittstelle unbekannt sein beziehungsweise sich ändern kann. Bei einer statischen IPv4-Adresse der NAT-Schnittstelle würde statt MASQUERADE direkt die IP eingegeben werden.
-
+Die Default-Route der Hosts ist der jeweilige Router in der Lokation. Wenn ein Host eine Website aufruft, schickt er eine Anfrage an und über den Router. Im Moment wird die Anfrage beim Router fallengelassen, da der Router noch keine Regeln bezüglich solcher Anfragen besitzt. Die Regel wird über das im Ubuntu vorhandene Programm \textit{\textbf{iptables}} eingetragen, welches den Linux-Kernel umkonfiguriert \cite{iptables}. Dazu wird auf allen Routern der Befehl \textit{\textbf{sudo iptables -t nat -A POSTROUTING -o Schnittstellenbezeichnung -j MASQUERADE}} ausgeführt. Der Befehl vergibt jedem eingehenden Paket als Quelladresse die IPv4-Adresse der NAT-Schnittstelle des Routers \cite{iptablesmas} (siehe Abbildung \ref{adapter}). Es wird \textit{\textbf{MASQUERADE}} genutzt, weil zum Zeitpunkt der Ausführung des Befehls die IPv4-Adresse der Schnittstelle unbekannt sein beziehungsweise sich ändern kann. Bei einer statischen IPv4-Adresse der NAT-Schnittstelle würde statt MASQUERADE direkt die IP eingegeben werden \cite{iptablesnat}.
+\newpage
 \subsection{Ergebnis}
 {\tiny Verfasst von: Mücahit\par}
 Zusammenfassend wurde die NAT-Firewall-Funktion an allen Lokationen konfiguriert. Den Hosts ist es nun möglich, Anfragen ins Internet zu versenden. Der Router führt die Anfragen mit der von VirtualBox zur Verfügung gestellten Schnittstelle aus und gibt dem Host die Antwort zurück (siehe Abbildung \ref{nat}).
@@ -736,35 +737,37 @@ Zusammenfassend wurde die NAT-Firewall-Funktion an allen Lokationen konfiguriert
 \begin{figure}[H]
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/nat}
- \captionsetup{justification=centering,margin=2cm}
+ \captionsetup{justification=centering}
  \caption{Anfrage von H1 wird über Public IP des Routers durchgeführt}
  \label{nat}
 \end{figure}
 
 Ein Problem bei der Durchführung war, dass die Netzwerkschnittstellen beim Beenden von Mininet auch für Ubuntu nicht mehr verfügbar waren. Deshalb musste immer wieder die virtuelle Maschine beziehungsweise Ubuntu neu gestartet werden, wenn Mininet beendet wurde. Um dem entgegenzuwirken, wurde der Befehl \textit{\textbf{ip link set Schnittstellenbezeichnung netns 1}} im Mininet-Script kurz vor dem Beenden eingefügt, damit die Schnittstelle erneut für Ubuntu verfügbar war.
 
+\newpage
 \section{Implementierung der Webproxy-Funktion}
-{\tiny Verfasst von: Mücahit\par}
-Der Proxy übernimmt jede Hypertext Transfer Protocol (HTTP) und Hypertext Transfer Protocol Secure (HTTPS) Anfrage der Hosts, führt sie selber durch und leitet die Antwort dem ursprünglichen Host wieder zurück. Der Vorteil hierbei ist, dass der Web-Proxy-Server für eine Sicherheit in allen Schichten des OSI-Modells sorgen kann. Es muss lediglich nur an dem Web-Proxy-Server Einstellungen bezüglich gewünschter Inhalte, IP-Adressen oder MAC-Adressen vorgenommen werden. Damit ist die Sicherheit für alle Geräte gewährleistet, die über den Web-Proxy-Server Anfragen verschicken. Des Weiteren wäre die Bandbreite weniger ausgelastet, da der Web-Proxy-Server jede neue Antwort in seinem Cache speichert. Bei gleicher Anfrage in einem benutzerdefinierten Zeitintervall wird die Antwort aus dem Cache statt durch erneute Anfrage ins Internet ausgegeben.
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
+Der Proxy übernimmt jede Hypertext Transfer Protocol (HTTP) und Hypertext Transfer Protocol Secure (HTTPS) Anfrage der Hosts, führt sie selber durch und leitet die Antwort dem ursprünglichen Host wieder zurück. Der Vorteil hierbei ist, dass der Web-Proxy-Server für eine Sicherheit in allen Schichten des OSI-Modells sorgen kann. Es muss lediglich nur an dem Web-Proxy-Server Einstellungen bezüglich gewünschter Inhalte, IP-Adressen oder MAC-Adressen vorgenommen werden. Damit ist die Sicherheit für alle Geräte gewährleistet, die über den Web-Proxy-Server Anfragen verschicken. Des Weiteren wäre die Bandbreite weniger ausgelastet, da der Web-Proxy-Server jede neue Antwort in seinem Cache speichert. Bei gleicher Anfrage in einem benutzerdefinierten Zeitintervall wird die Antwort aus dem Cache statt durch erneute Anfrage ins Internet ausgegeben \cite{webproxyosi}.
 
 \subsection{Vorüberlegung}
-{\tiny Verfasst von: Mücahit\par}
+{\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
 Für eine Webproxy-Funktion muss in allen Lokationen ein Webproxy-Server eingerichtet werden. Hosts müssen ohne vorher konfiguriert zu werden, Anfragen über den Proxy versenden können, wenn sie neu an das Netzwerk hinzukommen. Dem Host ist nicht bewusst, dass seine Anfragen über einen Proxy laufen. Anfragen würden über den Switch an den Webproxy weitergeleitet werden. Dieser führt die Anfrage durch und gibt dem Host die Antwort zurück. Die Umleitung sollte durch den Controller konfiguriert werden. 
 
 \subsection{Durchführung}
 {\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
-Um die Webproxy-Funktion zu realisieren, wurde in allen Lokationen jeweils ein weiterer Host in Mininet konfiguriert. Es wurde allen eine IPv4-Adresse im privaten Netzwerkadressenbereich vergeben und mit dem dazugehörigen Switch verbunden. Diese Hosts sollen nun als Webproxy-Server dienen. Es wurde zunächst per \textit{\textbf{Xterm Proxybezeichnung}} Befehl ein externes Terminal gestartet und die Internetverbindung durch das Aufrufen einer beliebigen Website als funktionsfähig getestet. Dazu wurde das Kommandozeilenprogramm \textit{\textbf{cURL}} verwendet, welcher vorher per \textit{\textbf{sudo apt install curl}} installiert werden muss.
-Als Nächstes sollte eine weitere Schnittstelle des Webproxy-Servers mit einer Schnittstelle von VirtualBox verbunden werden. Dieser sollte dann als Bridge zwischen zwei VirtualBox-Maschinen genutzt werden. Auf der zweiten VirtualBox-Maschine sollte das Programm Squid installiert werden. Im Gesamtbild sollte eine Anfrage eines Hosts über den Proxy-Server auf eine andere VirtualBox-Maschine weitergeleitet, dort durchgeführt und die Antwort anschließend zurückgeleitet werden. Leider scheiterte dieser Versuch, da bei der Haupt-VirtualBox-Maschine der Promiscuous-Modus des Netzwerkbrückenadapters auf deny eingestellt war. Dadurch kam keine Verbindung zwischen den zwei VirtualBox-Maschinen zustande. Aus diesem Grund haben wurde ein alternativer Proxy-Skript aus Github benutzt, um die Webproxy-Funktionalität direkt auf dem Host beziehungsweise Server einzurichten. Dazu wurde per Xterm ein Terminal gestartet und das Skript ausgeführt. Dieser nimmt nur HTTP Anfragen entgegen, führt sie selber durch und gibt für einen bestimmtes Zeitintervall die Antworten aus dem Cache zurück. Hier ist noch mal zu verdeutlichen, dass das Python-Skript für keine umfangreiche Web-Proxy-Funktionalität ausgelegt ist, jedoch dieser aus Testzwecken benutzt wurde. Als Nächstes wurden alle Pakete, die beim Switch eingehen und einen Ziel-Port als 80 besitzen, an den Proxy weitergeleitet. Hierfür wurde über den Controller die entsprechenden Flows als Match eingetragen, die dazugehörigen Actions implementiert und dem Switch die Anweisungen geschrieben. Dadurch bekommt der Webproxy-Server die Anfragen der Hosts, ohne dass die Geräte umkonfiguriert werden müssen. Der Proxy nimmt die Anfrage entgegen, führt sie selber durch und gibt die Antwort an das jeweilige Gerät weiter. Hier tritt das Problem auf, dass das Gerät eine Antwort von der Website erwartet, jedoch die Antwort vom Proxy geschickt bekommt. Die Antwort des Proxys könnte ebenfalls per Controller modifiziert und an das jeweilige Gerät weitergeleitet werden. Jedoch fehlte die Information des Absenders aus dem Internet zu dem Zeitpunkt, an dem die Antwort vom Proxy an den Host geschickt wurde.
+Um die Webproxy-Funktion zu realisieren, wurde in allen Lokationen jeweils ein weiterer Host in Mininet konfiguriert. Es wurde allen eine IPv4-Adresse im jeweiligen privaten Netzwerkadressenbereich vergeben und mit dem dazugehörigen Switch verbunden. Diese Hosts sollen nun als Webproxy-Server dienen. Es wurde zunächst per \textit{\textbf{Xterm Proxybezeichnung}} Befehl ein externes Terminal gestartet und die Internetverbindung durch das Aufrufen einer beliebigen Website als funktionsfähig getestet. Dazu wurde das Kommandozeilenprogramm \textit{\textbf{cURL}} verwendet, welcher vorher per \textit{\textbf{sudo apt install curl}} installiert werden muss.
+Als Nächstes sollte eine weitere Schnittstelle des Webproxy-Servers mit einer Schnittstelle von VirtualBox verbunden werden. Dieser sollte dann als Bridge zwischen zwei VirtualBox-Maschinen genutzt werden. Auf der zweiten VirtualBox-Maschine sollte das Programm Squid installiert werden. Im Gesamtbild sollte eine Anfrage eines Hosts über den Proxy-Server-Host auf eine andere VirtualBox-Maschine weitergeleitet, dort durchgeführt und die Antwort anschließend zurückgeleitet werden. Leider scheiterte dieser Versuch, da bei der Haupt-VirtualBox-Maschine der Promiscuous-Modus des Netzwerkbrückenadapters auf deny eingestellt war. Dadurch kam keine Verbindung zwischen den zwei VirtualBox-Maschinen zustande. Aus diesem Grund wurde ein alternativer Proxy-Skript aus Github benutzt, um die Webproxy-Funktionalität direkt auf dem Host beziehungsweise Server einzurichten. Dazu wurde per Xterm ein Host-Terminal gestartet und das Skript ausgeführt. Dieser nimmt nur HTTP Anfragen entgegen, führt sie selber durch und gibt für einen bestimmtes Zeitintervall die Antworten aus dem Cache zurück. Hier ist noch mal zu verdeutlichen, dass das Python-Skript für keine umfangreiche Web-Proxy-Funktionalität ausgelegt ist, jedoch dieser aus Testzwecken benutzt wurde. Als Nächstes wurden alle Pakete, die beim Switch eingehen und einen Ziel-Port als 80 besitzen, an den Proxy weitergeleitet. Hierfür wurde über den Controller die entsprechenden Flows als Match eingetragen, die dazugehörigen Actions implementiert und dem Switch die Anweisungen geschrieben. Dadurch bekommt der Webproxy-Server die Anfragen der Hosts, ohne dass die Geräte umkonfiguriert werden müssen. Der Proxy nimmt die Anfrage entgegen, führt sie selber durch und gibt die Antwort an das jeweilige Gerät weiter. Hier tritt das Problem auf, dass das Gerät eine Antwort von der Website erwartet, jedoch die Antwort vom Proxy geschickt bekommt. Die Antwort des Proxys könnte ebenfalls per Controller modifiziert und an das jeweilige Gerät weitergeleitet werden. Jedoch fehlte die Information des Absenders aus dem Internet zu dem Zeitpunkt, an dem die Antwort vom Proxy an den Host geschickt wurde.
 
 \subsection{Ergebnis}
 {\tiny Verfasst von: Tung, Naghmeh, James, Mücahit\par}
-Resultierend war es nicht möglich, die Webproxy-Funktion zu implementieren. Alternativ könnte eine transparente Web-Proxy-Funktion an dem Router der jeweiligen Lokationen eingerichtet werden. Dieser führt die Anfragen selber durch, speichert und sendet die Antwort an den jeweiligen Host zurück. Auch das Eintragen des Proxyservers an den jeweiligen Hosts, die mit dem Switch verbunden sind, würde sich als funktionsfähig erweisen. Diese Art wird direkter Proxy genannt und trägt viel Aufwand mit sich.
+Resultierend war es nicht möglich, die Webproxy-Funktion zu implementieren. Alternativ könnte eine transparente Web-Proxy-Funktion an dem Router der jeweiligen Lokationen eingerichtet werden. Dieser führt die Anfragen selber durch, speichert und sendet die Antwort an den jeweiligen Host zurück. Auch das Eintragen des Proxyservers an den jeweiligen Hosts, die mit dem Switch verbunden sind, würde sich als funktionsfähig erweisen. Diese Art wird direkter Proxy genannt und trägt viel Aufwand mit sich \cite{webproxy}.
 
+\newpage
 \section{Aufbau eines zentralen Topologie-Viewers und einer Monitoring-Lösung}
 
 \subsection{Topologie}
 {\tiny Verfasst von: Mücahit\par}
-Die Topologie unseres Netzwerkes kann auf dem Web User Interface des Floodlight-Controllers eingesehen werden. Ein mit der Standardinstallation geliefertes Floodlight-Modul stellt die Information der Topologie in einer Weboberfläche zur Verfügung. Zum Einsehen der Topologie muss auf einem Webbrowser die Benutzeroberfläche des Controllers über den Link \textit{\textbf{http://<controller-ip>:8080/ui/index.html}} aufgerufen werden. Anschließend wird auf dem linken Reiter die Option Topology angeklickt, wodurch die Topologie angezeigt wird (siehe Abbildung \ref{topo}). Durch die Benutzung einer VirtualBox werden vier getrennte Topologien angezeigt. Die Verbindungen zwischen den Routern werden bei der Visualisierung vom Controller ignoriert. Dies schränkt jedoch nicht die Funktionsweise des Netzwerkes ein. Bei der Nutzung vier getrennter VirtualBox-Maschinen, würde die Topologie korrekt dargestellt werden.
+Die Topologie unseres Netzwerkes kann auf dem Web User Interface des Floodlight-Controllers eingesehen werden. Ein mit der Standardinstallation geliefertes Floodlight-Modul stellt die Information der Topologie in einer Weboberfläche zur Verfügung. Zum Einsehen der Topologie muss auf einem Webbrowser die Benutzeroberfläche des Controllers über den Link \textit{\textbf{http://<controller-ip>:8080/ui/index.html}} aufgerufen werden \cite{restapi}. Anschließend wird auf dem linken Reiter die Option Topology angeklickt, wodurch die Topologie angezeigt wird (siehe Abbildung \ref{topo}). Durch die Benutzung einer VirtualBox werden vier getrennte Topologien angezeigt. Die Verbindungen zwischen den Routern werden bei der Visualisierung vom Controller ignoriert. Dies schränkt jedoch nicht die Funktionsweise des Netzwerkes ein. Bei der Nutzung vier getrennter VirtualBox-Maschinen, würde die Topologie korrekt dargestellt werden.
 
 \begin{figure}[H]
  \centering
@@ -774,10 +777,10 @@ Die Topologie unseres Netzwerkes kann auf dem Web User Interface des Floodlight-
  \label{topo}
 \end{figure}
 
-
+\newpage
 \subsection{Monitoring-Lösung}
 {\tiny Verfasst von: Mücahit\par}
-Für das zentrale Monitoring wird Nagios Core zum Einsatz kommen. Es kann auf einer großen Anzahl an Umgebungen installiert werden. Die Software bietet eine Weboberfläche, die von allen Netzwerkteilnehmern erreicht werden kann. Dabei kann die Verfügbarkeit, Geschwindigkeit und Dienste der Netzwerkkomponenten überprüft werden. Bei entstehenden Fehlern können Administratoren benachrichtigt werden, um die Fehler zu beheben. Bei großen Netzwerken spielt dies eine wichtige Rolle, da die Verfügbarkeit bei kritischen Anwendungen von großer Bedeutung ist.\par
+Für das zentrale Monitoring wird Nagios Core zum Einsatz kommen. Es kann auf einer großen Anzahl an Umgebungen installiert werden. Die Software bietet eine Weboberfläche, die von allen Netzwerkteilnehmern erreicht werden kann. Dabei kann die Verfügbarkeit, Geschwindigkeit und Dienste der Netzwerkkomponenten überprüft werden. Bei entstehenden Fehlern können Administratoren benachrichtigt werden, um die Fehler zu beheben. Bei großen Netzwerken spielt dies eine wichtige Rolle, da die Verfügbarkeit bei kritischen Anwendungen von großer Bedeutung ist \cite{nagiosdef}.\par
 Zunächst wird Nagios Core auf der VirtualBox-Maschine installiert, wo auch Mininet und Floodlight laufen. Bis jetzt lief Floodlight auf dem localhost, also der \textit{\textbf{127.0.0.1}} IP, welches nun geändert werden muss damit die Netzwerkteilnehmer auf die Floodlight REST-API und im Moment wichtiger auf den Nagios Core Dienst zugreifen können. Dafür werden im Mininet-Skript Befehle eingefügt, um den Switches 1-4 eine IP-Adresse zuzuweisen (siehe Abbildung \ref{switch}). Ebenfalls wird die Default-Route als \textit{\textbf{192.168.1.1}} hinzugefügt, da Nagios Core auf der IP \textit{\textbf{192.168.1.20}} laufen wird. Der Controller wurde auch konfiguriert auf dieser IP zu laufen. Nagios Core und der Controller sind nun von allen Netzwerkteilnehmern erreichbar.
 
 \begin{figure}[H]
@@ -856,6 +859,7 @@ Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt 
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo ./configure --with-nagios-user=nagios --with-nagios-group=nagios}}}}\\
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo make}}}}\\
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo make install}}}}
+\newpage
 \begin{itemize}
 \item[13.] Nagios bei Systemstart starten und Nagios ausführen
 \end{itemize}
@@ -863,7 +867,7 @@ Die Installation von Nagios Core findet auf der Haupt-VirtualBox-Maschine statt 
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ sudo systemctl start nagios}}}}
 
 
-Mit all den Schritten wurde Nagios Core inklusive der Plugins installiert. Der Webserver von Nagios läuft nach Neustarten des Dienstes auf den IP-Adressen der Switches. Dazu muss die IP inklusive des Pfades \textit{\textbf{/nagios}} aufgerufen werden. Dort sind im Moment nur Informationen über das System, welches Nagios ausführt, enthalten. Die Netzwerkkomponenten müssen manuell in Nagios eingefügt werden. Bevor das funktioniert, muss für die Switches eine Einstellung in der \textit{\textbf{nagios.cfg}} vorgenommen werden. Dort muss die Raute vor dem \textit{\textbf{cfg\_file=/usr/local/nagios/etc/objects/switch.cfg}} Befehl entfernt werden, damit die \textit{\textbf{switch.cfg}} in Nagios mitübernommen wird. Nun werden in der \textit{\textbf{switch.cfg}} alle Switches mit der Bezeichnung, deren IP und der zugehörigen Gruppe aufgelistet (siehe Abbildung \ref{nagios-switch}). Danach können sogenannte Services für die Überwachung der Verfügbarkeit, der Geschwindigkeit und weitere Informationen hinzugefügt werden (siehe Abbildung \ref{nagios-service}). Anschließend muss der Nagios Dienst neu gestartet werden. Um Fehler zu vermeiden, sollte per \textit{\textbf{sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg}} Befehl geschaut werden, ob Unstimmigkeiten bei den geänderten Konfigurationen existieren.\par
+Mit all den Schritten wurde Nagios Core inklusive der Plugins installiert \cite{nagiosinstall}. Der Webserver von Nagios läuft nach Neustarten des Dienstes auf den IP-Adressen der Switches. Dazu muss die IP inklusive des Pfades \textit{\textbf{/nagios}} aufgerufen werden. Dort sind im Moment nur Informationen über das System, welches Nagios ausführt, enthalten. Die Netzwerkkomponenten müssen manuell in Nagios eingefügt werden. Bevor das funktioniert, muss für die Switches eine Einstellung in der \textit{\textbf{nagios.cfg}} vorgenommen werden. Dort muss die Raute vor dem \textit{\textbf{cfg\_file=/usr/local/nagios/etc/objects/switch.cfg}} Befehl entfernt werden, damit die \textit{\textbf{switch.cfg}} in Nagios mitübernommen wird. Nun werden in der \textit{\textbf{switch.cfg}} alle Switches mit der Bezeichnung, deren IP und der zugehörigen Gruppe aufgelistet (siehe Abbildung \ref{nagios-switch}). Danach können sogenannte Services für die Überwachung der Verfügbarkeit, der Geschwindigkeit und weitere Informationen hinzugefügt werden (siehe Abbildung \ref{nagios-service}). Anschließend muss der Nagios Dienst neu gestartet werden. Um Fehler zu vermeiden, sollte per \textit{\textbf{sudo /usr/local/nagios/bin/nagios -v /usr/local/nagios/etc/nagios.cfg}} Befehl geschaut werden, ob Unstimmigkeiten bei den geänderten Konfigurationen existieren \cite{nagiosrouter}.\par
 
 \begin{figure}[H]
  \centering
@@ -891,20 +895,20 @@ Nachdem alle Netzwerkteilnehmer und -komponenten hinzugefügt und die gewünscht
  \label{nagios}
 \end{figure}
 
-
+\newpage
 \section{Realisierung einer Quality of Service Funktion}
 {\tiny Verfasst von: Mücahit\par}
-Die Quality of Service Funktion gewährleistet die Fähigkeit des Netzwerkes, Anwendungen und Datenverkehr selbst bei begrenzter Netzwerkkapazität zuverlässig mit hoher Priorität auszuführen. Das Netzwerkes muss für alle Audio- und Video-Konferenzen innerhalb der Lokationen genügend Bandbreite zur Verfügung stellen. Die Verbindung zwischen den Lokationen besteht aus einer Standleitung mit einer Geschwindigkeit von 20 Megabit.
+Die Quality of Service Funktion gewährleistet die Fähigkeit des Netzwerkes, Anwendungen und Datenverkehr selbst bei begrenzter Netzwerkkapazität zuverlässig mit hoher Priorität auszuführen \cite{qosdef}. Das Netzwerkes muss für alle Audio- und Video-Konferenzen innerhalb der Lokationen genügend Bandbreite zur Verfügung stellen. Die Verbindung zwischen den Lokationen besteht aus einer Standleitung mit einer Geschwindigkeit von 20 Megabit.
 
 \subsection{Vorüberlegung}
 {\tiny Verfasst von: Mücahit\par}
-Pakete, die für die Audio- und Videokonferenzen verantwortlich sind, müssen an dem Switch über den Controller priorisiert werden. Durch die Priorisierung sollen bei einer Auslastung des Netzwerkes die Audio- und Videokonferenzen stabil und flüssig laufen. Nach einer ausgiebigen Recherche kam der Entschluss, UDP Pakete zu priorisieren, da die meisten Videokonferenzprogramme wie beispielsweise Skype und Zoom diese verwenden. Zusätzlich muss getestet werden, wie viel Megabit pro Host eine ausreichende Bandbreite darstellen.\par
-An dem Port der Switch, der zum Router der Lokationen führt, werden zwei sogenannte Queues erstellt. Eine Queue wird für die Audio- und Videokonferenzen und die andere Queue für den restlichen Datenverkehr verwendet. Dabei erhalten die Queues Eigenschaften wie der minimalen und/oder maximalen Bandbreite zur Gewährleistung der Quality of Service. Nach der Konfiguration sollte gezeigt werden, ob Pakete tatsächlich über die Queue verlaufen. 
+Pakete, die für die Audio- und Videokonferenzen verantwortlich sind, müssen an dem Switch über den Controller priorisiert werden. Durch die Priorisierung sollen bei einer Auslastung des Netzwerkes die Audio- und Videokonferenzen stabil und flüssig laufen. Nach einer ausgiebigen Recherche kam der Entschluss, UDP Pakete zu priorisieren, da die meisten Videokonferenzprogramme wie beispielsweise Skype und Zoom diese verwenden. Zusätzlich muss getestet werden, wie viel Megabit pro Host eine ausreichende Bandbreite darstellen \cite{qosbenefits}.\par
+An dem Port der Switch, der zum Router der Lokationen führt, werden zwei sogenannte Queues erstellt. Eine Queue wird für die Audio- und Videokonferenzen und die andere Queue für den restlichen Datenverkehr verwendet. Dabei erhalten die Queues Eigenschaften wie der minimalen und/oder maximalen Bandbreite zur Gewährleistung der Quality of Service \cite[952]{qosof}. Nach der Konfiguration sollte gezeigt werden, ob Pakete tatsächlich über die Queue verlaufen. 
 
 \subsection{Durchführung}
 {\tiny Verfasst von: Mücahit\par}
 Auf allen vier Switches wird zuerst der Befehl \textit{\textbf{sudo ovs\hyp{}vsctl set port Router\hyp{}Port qos=@newqos \hyp{}\hyp{} \hyp{}\hyp{}id=@newqos create qos type=linux\hyp{}htb other\hyp{}config:max\hyp{}rate=20000000 queues:0=@newqueue0 queues:1=@newqueue1 \hyp{}\hyp{} \hyp{}\hyp{}id=@newqueue0 create queue other\hyp{}config:max\hyp{}rate=20000000 \hyp{}\hyp{} \hyp{}\hyp{}id=\linebreak{}@newqueue1 create queue other\hyp{}config:min\hyp{}rate=7000000 other\hyp{}config:max\hyp{}rate=20000000}} mit der Angabe der Bezeichnung für den Port zum Router ausgeführt. Das Ganze geschieht im Ubuntu\hyp{}Terminal während Mininet ausgeführt wird. Dabei wird auf dem Switch die Quality of Service und genau zwei Queues konfiguriert, die sich anhand der ID unterscheiden. Die allgemeine Bandbreite des Ports wird auf \textit{\textbf{20 Megabit}}, die \textit{\textbf{Queue 0}} auf \textit{\textbf{maximal 20 Megabit}} und die \textit{\textbf{Queue 1}} auf \textit{\textbf{minimal sieben}} und \textit{\textbf{maximal 20 Megabit}} gesetzt. Die minimale Bandbreite für die Priorisierung wurde anhand eines Selbst\hyp{}Tests mit Zoom und der Information des Ressourcenmonitors von Windows festgelegt. Dabei wurde mit Video\hyp{} und Audioübertragungen eine Uploadrate zwischen \textit{\textbf{500\hyp{}900 Kilobit}} pro Sekunde gemessen. Daraus resultierend wurden für zehn Arbeitsplätzen die Geschwindigkeit auf Minimum sieben Megabit eingestellt.\par
-Der Datenverkehr wird über den Open vSwitch konfiguriert. Der Verkehr soll entweder auf die \textit{\textbf{Queue 0}} oder \textit{\textbf{Queue 1}} weitergeleitet werden. So erhält der Verkehr die Eigenschaften dieser Queue bezüglicher der festgelegten Raten. Dazu wird über das Mininet-Skript im Ubuntu-Terminal für alle Switches der Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=1000, actions=set\_queue:0, normal}} ausgeführt. Der Befehl leitet jedes Paket an die Queue 0. Somit wäre jeglicher Datenverkehr auf maximal 20 Megabit begrenzt. Als Nächstes werden nur die UDP-Pakete mit dem angegebenen Adressenbereich mit dem Befehl \textit{\textbf{sudo ovs-ofctl add-flow Switch-Bezeichnung priority=65535, udp, nw\_src=192.168.0.0/16, nw\_dst=192.168.0.0/16, actions=set\_queue:1, normal}} bei allen Switches auf die Queue 1 weitergeleitet. Damit hätten die UDP-Pakete eine minimale Bandbreite von sieben und eine maximale Bandbreite von 20 Megabit. Bei den Bedingungen wurde zusätzlich die Priorität eingegeben. Desto höher die Priorität gesetzt wird, desto höher ist die Priorität des Flows und auch somit die Wichtigkeit. Bei der Bedingung für die Quality of Service wird die Priorität auf das Maximum, nämlich \textit{\textbf{65535}}, gestellt. Beim restlichen Datenverkehr kann dieser beliebig größer null gewählt werden. Zusätzlich wird am Ende jeder Bedingung der Flow auf normal gesetzt. Dieser bedeutet, dass das Paket wie gewöhnlich im Layer zwei weiterverarbeitet wird.
+Der Datenverkehr wird über den Open vSwitch konfiguriert \cite{qospolicy}. Der Verkehr soll entweder auf die \textit{\textbf{Queue 0}} oder \textit{\textbf{Queue 1}} weitergeleitet werden. So erhält der Verkehr die Eigenschaften dieser Queue bezüglicher der festgelegten Raten. Dazu wird über das Mininet-Skript im Ubuntu-Terminal für alle Switches der Befehl \textit{\textbf{sudo ovs\hyp{}ofctl add\hyp{}flow Switch-Bezeichnung priority=1000, actions=set\_queue:0, normal}} ausgeführt. Der Befehl leitet jedes Paket an die Queue 0. Somit wäre jeglicher Datenverkehr auf maximal 20 Megabit begrenzt. Als Nächstes werden nur die UDP-Pakete mit dem angegebenen Adressenbereich mit dem Befehl \textit{\textbf{sudo ovs\hyp{}ofctl add\hyp{}flow Switch\hyp{}Bezeichnung priority=65535, udp, nw\_src=192.168.0.0/16, nw\_dst=192.168.0.0/16, actions=set\_queue:1, normal}} bei allen Switches auf die Queue 1 weitergeleitet. Damit hätten die UDP-Pakete eine minimale Bandbreite von sieben und eine maximale Bandbreite von 20 Megabit. Bei den Bedingungen wurde zusätzlich die Priorität eingegeben. Desto höher die Priorität gesetzt wird, desto höher ist die Priorität des Flows und auch somit die Wichtigkeit. Bei der Bedingung für die Quality of Service wird die Priorität auf das Maximum, nämlich \textit{\textbf{65535}}, gestellt. Beim restlichen Datenverkehr kann dieser beliebig größer null gewählt werden. Zusätzlich wird am Ende jeder Bedingung der Flow auf normal gesetzt. Dieser bedeutet, dass das Paket wie gewöhnlich im Layer zwei weiterverarbeitet wird.
 
 \subsection{Ergebnis}
 {\tiny Verfasst von: Mücahit\par}
@@ -945,10 +949,11 @@ Um nun die Quality of Service und Queue Konfiguration zu testen, wurde auf dem S
  \label{udp2}
 \end{figure}
 
+\newpage
 \section{Priorisierung der Datenübertragung über API}
 \subsection{Vorüberlegung}
 {\tiny Verfasst von: Mücahit\par}
-Anhand des Schlüsselwortes \textit{\textbf{priority}} soll der Flow einer Datenübertragung zwischen der Lokation Berlin und Frankfurt priorisiert werden. Allen anderen Flows werden auf der Strecke eine geringere Priorität zugewiesen, sodass die Datenübertragung bevorzugt wird. Falls die gleiche Priorität bei zwei Flows existiert, wird der Flow mit der genaueren Bedingung verwendet. Die Datenübertragung soll über einem in der Zentrale eingerichteten \textit{\textbf{Secure-Shell}} (SSH) Server laufen. Dazu wird auf dem Host in Berlin ein \textit{\textbf{SSH-Client}} benötigt. Bei der Übertragung nutzt SSH üblicherweise den \textit{\textbf{Port 22}} über dem \textit{\textbf{Transport Control Protocol}} (TCP). Mit dieser Information wird die Bedingung für die Priorisierung des Flows festgelegt. Die Übertragung und die Priorisierung werden versucht, in einem ausführbaren Python-Skript zu realisieren, bei der die Angabe der IPv4-Adresse des Hosts in Berlin und des Hosts in der Zentrale als Parameter nötig werden. Es könnte die IPv4-Adresse der Quelle und des Ziels auch automatisch vom Skript durch das System ermittelt werden. Das Skript sollte folgende Schritte beinhalten:
+Anhand des Schlüsselwortes \textit{\textbf{priority}} soll der Flow einer Datenübertragung zwischen der Lokation Berlin und Frankfurt priorisiert werden. Allen anderen Flows werden auf der Strecke eine geringere Priorität zugewiesen, sodass die Datenübertragung bevorzugt wird. Falls die gleiche Priorität bei zwei Flows existiert, wird der Flow mit der genaueren Bedingung verwendet \cite{usingovs}. Die Datenübertragung soll über einem in der Zentrale eingerichteten \textit{\textbf{Secure-Shell}} (SSH) Server laufen. Dazu wird auf dem Host in Berlin ein \textit{\textbf{SSH-Client}} benötigt. Bei der Übertragung nutzt SSH üblicherweise den \textit{\textbf{Port 22}} über dem \textit{\textbf{Transport Control Protocol}} (TCP). Mit dieser Information wird die Bedingung für die Priorisierung des Flows festgelegt. Die Übertragung und die Priorisierung werden versucht, in einem ausführbaren Python-Skript zu realisieren, bei der die Angabe der IPv4-Adresse des Hosts in Berlin und des Hosts in der Zentrale als Parameter nötig werden. Es könnte die IPv4-Adresse der Quelle und des Ziels auch automatisch vom Skript durch das System ermittelt werden. Das Skript sollte folgende Schritte beinhalten:
 \begin{itemize}
 \item[1.] IP-Quelle und Ziel eingeben und einlesen (später -> automatisieren)
 \item[2.] Voraussichtlichen Flow über API priorisieren. Restlichen Datenverkehr drosseln
@@ -958,19 +963,19 @@ Anhand des Schlüsselwortes \textit{\textbf{priority}} soll der Flow einer Daten
 \end{itemize}
 Der Controller, genauer der OpenFlow-Server und der Restserver laufen unter der IP-Adresse \textit{\textbf{192.168.1.20}} und kann von jedem Host erreicht werden. Dies ist wichtig, da die Priorisierung von außen durchgeführt wird. Ansonsten kann der Controller, wenn dieser auf \textit{\textbf{localhost}} läuft, nicht erreicht werden.
 
-
+\newpage
 \subsection{Durchführung}
 {\tiny Verfasst von: Mücahit\par}
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\vspace{-\baselineskip}
  	\centering
- 	\includegraphics[width=0.35\textwidth]{Bilder/transfer-flow}
+ 	\includegraphics[width=0.4\textwidth]{Bilder/transfer-flow}
  	\caption{Flows für die Priorisierung und die Drosselung}
  	\label{transfer-flow}
 \end{wrapfigure}
 Die Durchführung erfolgt mit den im vorherigen Kapitel aufgestellten VirtualBox Maschinen. Auf dem Server in Frankfurt wurde per \textit{\textbf{sudo apt install openssh-server}} Befehl der SSH-Server installiert. Dieser wurde eingestellt, auf der IP des Servers zu laufen. Dafür wurde per \textit{\textbf{sudo nano /etc/ssh/sshd\_config}} Befehl in der Konfigurationsdatei des SSH-Servers die IP-Adresse geändert und die Publickeyauthentication ausgeschaltet. Anschließend wurde der SSH-Server-Dienst mit dem Befehl \textit{\textbf{sudo systemctl restart ssh}} neugestartet, um die Einstellungen zu übernehmen. Auf dem Berliner Host wurde per \textit{\textbf{dd if=/dev/zero of=wichtige\_datei bs=50MB count=1}} Befehl eine Dummy-Datei für die Übertragung auf dem Schreibtisch erstellt.\par
 
-Der Server betreibt einen SSH-Server und der Host einen SSH-Client, womit wichtige Dateien übertragen werden. Dafür wurde auf dem Host ein Python-Skript erstellt, welcher näher erläutert wird. Vorher muss per \textit{\textbf{sudo pip install paramiko scp}} Befehl die benötigten Python-Module für die SSH-Verbindung installiert werden. Die Installation geschieht mit pip dem Paketverwaltungsprogramm von Python. Das Skript holt sich automatisch die IP-Adresse des Senders anhand der \textit{\textbf{get\_IP-Methode}} und speichert diese in eine Variable. Anschließend wird die Angabe der Informationen zur Übermittlung verlangt. Dazu gehört der Dateipfad, die IP-Adresse des Empfängers, den Servernamen, das Serverpasswort und den Pfad, wohin die Datei im Ziel gespeichert werden soll (siehe Abbildung \ref{transfer-daten}). Danach wird ein Objekt als Rest-Client zur Übermittlung der Prioritätensetzung erstellt. Dieser bekommt die \textit{\textbf{192.168.1.20}} als IP-Adresse des Controllers gesetzt. Jetzt werden die Flows zur Priorisierung erstellt. Dabei werden jeweils drei gleiche Flows auf den Switch in der Berliner Lokation mit der ID 2 und auf den Switch in der Frankfurter Lokation mit der ID 1 zugewiesen. Die zwei Flows priorisieren TCP-Pakete mit dem Port 22 und der angegebenen Quell- und Zieladresse. Beide Flows decken eingehende und ausgehende Pakete ab und bekommen \textit{\textbf{32768}} als die maximale Priorität gesetzt. Der dritte Flow drosselt den restlichen Verkehr. Hierbei wird nur der Ethernettyp auf IPv4 und die Priorität auf \textit{\textbf{100}} gesetzt (siehe Abbildung \ref{transfer-flow}). Damit ist die Priorität im Vergleich zu der Datenübertragung deutlich gering und wird an nächster Stelle bearbeitet. Die Flows werden nun mit der \textit{\textbf{Set-Methode}} dem Controller über die REST-API übertragen, der diese dann an die Switches zuweist. Nachdem die Priorisierung abgeschlossen ist, wird im nächsten Schritt die Datei per SSH übertragen. Dazu wird im Skript die vom Benutzer vorher gefragten Informationen zur Datenübertragung benutzt, um eine SSH-Verbindung aufzubauen, um die Datei zu senden (siehe Abbildung \ref{ssh}). Nachdem die Übertragung beendet wurde, wird mit der \textit{\textbf{Remove-Methode}} alle Priorisierungen von den Switches über die REST-API entfernt.
+Der Server betreibt einen SSH-Server und der Host einen SSH-Client, womit wichtige Dateien übertragen werden. Dafür wurde auf dem Host ein Python-Skript erstellt, welcher näher erläutert wird. Vorher muss per \textit{\textbf{sudo pip install paramiko scp}} Befehl die benötigten Python-Module für die SSH-Verbindung installiert werden. Die Installation geschieht mit pip dem Paketverwaltungsprogramm von Python. Das Skript holt sich automatisch die IP-Adresse des Senders anhand der \textit{\textbf{get\_IP-Methode}} und speichert diese in eine Variable. Anschließend wird die Angabe der Informationen zur Übermittlung verlangt. Dazu gehört der Dateipfad, die IP-Adresse des Empfängers, den Servernamen, das Serverpasswort und den Pfad, wohin die Datei im Ziel gespeichert werden soll (siehe Abbildung \ref{transfer-daten}). Danach wird ein Objekt als Rest-Client zur Übermittlung der Prioritätensetzung erstellt. Dieser bekommt die \textit{\textbf{192.168.1.20}} als IP-Adresse des Controllers gesetzt. Jetzt werden die Flows zur Priorisierung erstellt. Dabei werden jeweils drei gleiche Flows auf den Switch in der Berliner Lokation mit der ID 2 und auf den Switch in der Frankfurter Lokation mit der ID 1 zugewiesen. Die zwei Flows priorisieren TCP-Pakete mit dem Port 22 und der angegebenen Quell- und Zieladresse. Beide Flows decken eingehende und ausgehende Pakete ab und bekommen \textit{\textbf{32768}} als die maximale Priorität gesetzt. Der dritte Flow drosselt den restlichen Verkehr. Hierbei wird nur der Ethernettyp auf IPv4, die Priorität auf \textit{\textbf{100}} und die Queue auf 2 gesetzt (siehe Abbildung \ref{transfer-flow}). Die Queue 2 wurde vorher mit Maximal 2 Megabit eingestellt. Auch ist die Priorität im Vergleich zu der Datenübertragung deutlich gering und wird an nächster Stelle bearbeitet. Die Flows werden nun mit der \textit{\textbf{Set-Methode}} dem Controller über die REST-API übertragen, der diese dann an die Switches zuweist. Nachdem die Priorisierung abgeschlossen ist, wird im nächsten Schritt die Datei per SSH übertragen. Dazu wird im Skript die vom Benutzer vorher gefragten Informationen zur Datenübertragung benutzt, um eine SSH-Verbindung aufzubauen, um die Datei zu senden (siehe Abbildung \ref{ssh}). Nachdem die Übertragung beendet wurde, wird mit der \textit{\textbf{Remove-Methode}} alle Priorisierungen von den Switches über die REST-API entfernt.
 
 \begin{figure}[H]
  \centering
@@ -992,7 +997,7 @@ Der Server betreibt einen SSH-Server und der Host einen SSH-Client, womit wichti
 {\tiny Verfasst von: Mücahit\par}
 Über das Python-Skript ist es nun möglich eine Datei priorisiert auf einen Server an der Zentrale zu senden. Das Skript enthält einige Überprüfungen, um beispielsweise zu schauen, ob die eingegebene IP-Adresse und der Dateipfad gültig sind.
 
-
+\newpage
 \section{Analyse weiterer Netzwerkfunktionen}
 
 \subsection{Hub}
@@ -1049,7 +1054,7 @@ Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manue
  	\caption{DHCP-Konfiguration für alle Standorte}
  	\label{dhcp2}
 \end{wrapfigure}
-Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP Server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Abbildung \ref{netzwerkplan}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden \cite{dhcpd}. 
+Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP Server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Tabelle \ref{netzwerkplan-addressen}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden \cite{dhcpd}. 
 
 \subsubsection{Ergebnis}
 {\tiny Verfasst von: James\par}
@@ -1142,7 +1147,7 @@ Nachdem Mininet gestartet wurde, kann mithilfe von \textit{\textbf{systemd-resol
 	\label{dns3}
 \end{figure}
 
-
+\newpage
 \chapter{Diskussion der Ergebnisse}
 {\tiny Verfasst von: James\par}
 Am Anfang des Projektberichtes wurde von einer “dramatischen Zunahme der Netzwerkkomplexität” gesprochen, wobei eine traditionelle Vorgehensweise der Netzwerkadministration ineffizient sei. Mithilfe des Konzepts SDN, sollte eine effizientere Methode der Netzwerkadministration realisiert werden. Durch die Lösung der Problemstellungen konnten diese zugrunde gelegte Behauptung bestätigt werden. Beispielsweise mussten vier Lokationen realisiert werden, also wurde zu Beginn eine Lokation mit den gewünschten Funktionen erstellt. Anschließend wurden Kopien dieser Lokation für alle weiteren Lokationen genutzt. Durch die Strategie eine kleinstmögliche Umgebung mit den gewünschten Kriterien zu konstruieren, erleichterte es die Vorgehensweise auf Ergebnisse zu kommen. Mininet und der Floodlight Controller ermutigten diese Vorgehensweise, da die Anpassungen leicht umsetzbar waren. Während der Durchführung der Problemstellungen wurde auch festgestellt, dass viele manuelle Einrichtungen mithilfe von SDN automatisiert werden konnten. Die erforschten Ergebnisse werden hier nochmals zusammengefasst und die automatisierten Netzwerkfunktionen durch SDN mit den manuellen Vorgehensweisen verglichen. Anschließend wird kritisch reflektiert, was in der Durchführung mithilfe von SDN nicht reibungslos funktioniert hat.  
@@ -1171,5 +1176,31 @@ Inwiefern können die Ergebnisse des Projekts weiter genutzt werden?
 
 
 \printbibliography[title=Literaturverzeichnis]
+
+\appendix
+\chapter{Mininet-Skript}
+
+\begin{lstlisting}[language=Python,
+	caption={Das in Python geschrieben Mininet-Skript},
+	backgroundcolor = \color{lightgray},
+	captionpos=b,
+	numbers=left,
+	keywordstyle=\color{RoyalBlue},
+	rulecolor=\color{black},
+	upquote=true, 
+	showstringspaces=false,
+	breaklines=true,
+	frame=single,
+	aboveskip=2em,
+	label={interface-deklaration},
+	autogobble=true,
+	]
+	public interface Interface1 extends Interface2, Interface3 {
+		...
+		public int methode(int zahl1, int zahl2);
+		...
+	}
+\end{lstlisting}
+\captionsetup{justification=centering,margin=2cm}
 
 \end{document}
