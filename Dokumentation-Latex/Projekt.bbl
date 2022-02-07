@@ -550,6 +550,192 @@
       \field{year}{2018}
       \keyw{Networking}
     \endentry
+    \entry{dhclient}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhclient.conf(5)}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/5/dhclient.leases
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/5/dhclient.leases
+      \endverb
+    \endentry
+    \entry{dhclient3}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhclient.conf(5)}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/5/dhclient.conf
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/5/dhclient.conf
+      \endverb
+    \endentry
+    \entry{system}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{3}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhclient.conf(5)}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://wiki.ubuntuusers.de/systemd/systemd-resolved/
+      \endverb
+      \verb{url}
+      \verb https://wiki.ubuntuusers.de/systemd/systemd-resolved/
+      \endverb
+    \endentry
+    \entry{dhclient2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{4}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhclient.conf(8)}
+      \field{urlday}{28}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/8/dhclient
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/8/dhclient
+      \endverb
+    \endentry
+    \entry{dhcpd}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{5}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhcpd.conf(5)}
+      \field{urlday}{22}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/5/dhcpd.conf
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/5/dhcpd.conf
+      \endverb
+    \endentry
+    \entry{dhcpd2}{online}{}
+      \name{author}{1}{}{%
+        {{hash=b93c34ab2eab4e7447af413db45e166b}{%
+           family={Lemon},
+           familyi={L\bibinitperiod},
+           given={Ted},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{fullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{bibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorbibnamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authornamehash}{b93c34ab2eab4e7447af413db45e166b}
+      \strng{authorfullhash}{b93c34ab2eab4e7447af413db45e166b}
+      \field{extraname}{6}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Linux man page - dhcpd.conf(8)}
+      \field{urlday}{23}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://linux.die.net/man/8/dhcpd
+      \endverb
+      \verb{url}
+      \verb https://linux.die.net/man/8/dhcpd
+      \endverb
+    \endentry
     \entry{mnapi}{online}{}
       \name{author}{1}{}{%
         {{hash=0bf9f9f1cc7663e9ba74b2f706364e97}{%
@@ -682,6 +868,68 @@
       \range{pages}{5}
       \verb{doi}
       \verb 10.1109/SIBCON.2016.7491821
+      \endverb
+    \endentry
+    \entry{dhcpd3}{article}{}
+      \name{author}{2}{}{%
+        {{hash=f9ea7462d5347c0cc9af89142bebe02b}{%
+           family={Naaz},
+           familyi={N\bibinitperiod},
+           given={Sameena},
+           giveni={S\bibinitperiod}}}%
+        {{hash=d2014d5abc6e9cd43b3ffdebc46d99e3}{%
+           family={Badroo},
+           familyi={B\bibinitperiod},
+           given={Firdos},
+           giveni={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{354a3a9ce1b9240121e27139f6209c09}
+      \strng{fullhash}{354a3a9ce1b9240121e27139f6209c09}
+      \strng{bibnamehash}{354a3a9ce1b9240121e27139f6209c09}
+      \strng{authorbibnamehash}{354a3a9ce1b9240121e27139f6209c09}
+      \strng{authornamehash}{354a3a9ce1b9240121e27139f6209c09}
+      \strng{authorfullhash}{354a3a9ce1b9240121e27139f6209c09}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IOSR Journal of Computer Engineering (IOSR-JCE)}
+      \field{month}{06}
+      \field{title}{Investigating DHCP and DNS Protocols Using Wireshark}
+      \field{volume}{18}
+      \field{year}{2016}
+      \field{pages}{2278\bibrangedash 661}
+      \range{pages}{384}
+      \verb{doi}
+      \verb 10.9790/0661-1803020108
+      \endverb
+    \endentry
+    \entry{leases}{online}{}
+      \name{author}{1}{}{%
+        {{hash=49f17151a1bc1d859e8db35cd7b2059b}{%
+           family={Nokia},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \strng{fullhash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \strng{bibnamehash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \strng{authorbibnamehash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \strng{authornamehash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \strng{authorfullhash}{49f17151a1bc1d859e8db35cd7b2059b}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{TRIPLE PLAY RELEASE 21.2.R1)}
+      \field{urlday}{25}
+      \field{urlmonth}{1}
+      \field{urlyear}{2022}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE17164AAAATQZZA01\_V1\_7450\%20ESS\%207750\%20SR\%20and\%20VSR\%20Triple\%20Play\%20Service\%20Delivery\%20Architecture\%20Guide\%2021.2.R1.pdf
+      \endverb
+      \verb{url}
+      \verb https://documentation.nokia.com/cgi-bin/dbaccessfilename.cgi/3HE17164AAAATQZZA01%5C_V1%5C_7450%5C%20ESS%5C%207750%5C%20SR%5C%20and%5C%20VSR%5C%20Triple%5C%20Play%5C%20Service%5C%20Delivery%5C%20Architecture%5C%20Guide%5C%2021.2.R1.pdf
       \endverb
     \endentry
     \entry{ONFTung}{online}{}
@@ -1009,6 +1257,36 @@
       \endverb
       \verb{url}
       \verb https://www.openvswitch.org/
+      \endverb
+    \endentry
+    \entry{install}{online}{}
+      \name{author}{1}{}{%
+        {{hash=07a750250bc37c9181998579542af8c2}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qing},
+           giveni={Q\bibinitperiod}}}%
+      }
+      \strng{namehash}{07a750250bc37c9181998579542af8c2}
+      \strng{fullhash}{07a750250bc37c9181998579542af8c2}
+      \strng{bibnamehash}{07a750250bc37c9181998579542af8c2}
+      \strng{authorbibnamehash}{07a750250bc37c9181998579542af8c2}
+      \strng{authornamehash}{07a750250bc37c9181998579542af8c2}
+      \strng{authorfullhash}{07a750250bc37c9181998579542af8c2}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Floodlight Controller Installation Guide}
+      \field{urlday}{20}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343544/Installation+Guide
+      \endverb
+      \verb{url}
+      \verb https://floodlight.atlassian.net/wiki/spaces/floodlightcontroller/pages/1343544/Installation+Guide
       \endverb
     \endentry
     \entry{broadcast}{online}{}

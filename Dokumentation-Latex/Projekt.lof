@@ -91,7 +91,19 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {3.33}{\ignorespaces Datenverkehr zwischen h1 und h11\relax }}{53}{figure.caption.53}%
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.34}{\ignorespaces Wireshark-Aufnahme der Switch s1 (Frankfurt)\relax }}{54}{figure.caption.54}%
+\contentsline {figure}{\numberline {3.34}{\ignorespaces Wireshark-Aufnahme von Switch s1\relax }}{54}{figure.caption.54}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.35}{\ignorespaces Kommunikation zwischen DHCP-Client und DHCP-Server\relax }}{54}{figure.caption.55}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.36}{\ignorespaces Wireshark-Aufnahme vom gekürzten DHCP Prozess\relax }}{55}{figure.caption.56}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.37}{\ignorespaces Kommunikation zwischen DHCP-Client und DHCP-Server\relax }}{55}{figure.caption.57}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.38}{\ignorespaces DHCP-Konfiguration für alle Standorte\relax }}{56}{figure.caption.58}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.39}{\ignorespaces Im DHCP ACK Protokoll werden die DNS Informationen vermittelt\relax }}{57}{figure.caption.59}%
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.40}{\ignorespaces Terminalausgabe von h1\relax }}{57}{figure.caption.60}%
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

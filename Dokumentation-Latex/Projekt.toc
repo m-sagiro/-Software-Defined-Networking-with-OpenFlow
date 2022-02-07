@@ -132,22 +132,30 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.10.5}Dynamic Host Configuration Protocol}{51}{subsection.3.10.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.10.5.1}Durchführung}{52}{subsubsection.3.10.5.1}%
+\contentsline {subsubsection}{\numberline {3.10.5.1}Vorüberlegung}{51}{subsubsection.3.10.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {3.10.5.2}Ergebnis}{53}{subsubsection.3.10.5.2}%
+\contentsline {subsubsection}{\numberline {3.10.5.2}Durchführung}{52}{subsubsection.3.10.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.10.6}Domain Name System}{54}{subsection.3.10.6}%
+\contentsline {subsubsection}{\numberline {3.10.5.3}Ergebnis}{53}{subsubsection.3.10.5.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Diskussion der Ergebnisse}{55}{chapter.4}%
+\contentsline {subsection}{\numberline {3.10.6}Domain Name System}{56}{subsection.3.10.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Analyse der Ergebnisse}{55}{section.4.1}%
+\contentsline {subsubsection}{\numberline {3.10.6.1}Vorüberlegung}{56}{subsubsection.3.10.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Kritische Betrachtung}{55}{section.4.2}%
+\contentsline {subsubsection}{\numberline {3.10.6.2}Durchführung}{56}{subsubsection.3.10.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Fazit}{56}{chapter.5}%
+\contentsline {subsubsection}{\numberline {3.10.6.3}Ergebnis}{57}{subsubsection.3.10.6.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{56}{section.5.1}%
+\contentsline {chapter}{\numberline {4}Diskussion der Ergebnisse}{58}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{57}{chapter*.55}%
+\contentsline {section}{\numberline {4.1}Analyse der Ergebnisse}{58}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Kritische Betrachtung}{59}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Fazit}{61}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{61}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{62}{chapter*.61}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

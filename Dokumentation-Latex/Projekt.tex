@@ -413,8 +413,8 @@ Die Installation des Floodlight-Controllers kann auf den Betriebssystemen Linux,
 \end{itemize}
 \colorbox{CadetBlue}{\textcolor{white}{\textbf{\textsf{\$ java -jar target/floodlight.jar}}}}\par
 {\tiny Verfasst von: James\par}
-Es besteht die Möglichkeit, den Floodlight Controller mithilfe von Eclipse zu starten, somit muss Floodlight nicht im Terminal ausgeführt werden. Außerdem ist Floodlight durch die Entwicklungsumgebung Eclipse leichterer auszuführen und eine Bearbeitung ist übersichtlicher. Zudem hat man eine schnelle Übersicht vom kompletten Conroller, da alle Klassen in einem Eclipse Ordner einzusehen sind. Mit sudo mvn package –Declipse werden mehrere Dateien erstellt. Mit den neu erstellten Dateien kann ein neues Eclipse Projekt importiert werden. Anschließend wird Eclipse gestartet und eine neue Arbeitsumgebung erstellt. \textit{\textbf{File -> import -> General -> Existing Projects into Workspace}} und auf \textit{\textbf{Next}} klicken. Von \textit{\textbf{Select root directory}} auf \textit{\textbf{Browser}} klicken und Verzeichnis das Floodlight enthält auswählen. Das Projekt mit \textit{\textbf{finish}} ausführen und damit sollte Floodlight auf Eclipse importiert sein.\par
-Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden.
+Es besteht die Möglichkeit, den Floodlight Controller mithilfe von Eclipse zu starten, somit muss Floodlight nicht im Terminal ausgeführt werden. Außerdem ist Floodlight durch die Entwicklungsumgebung Eclipse leichterer auszuführen, da alle Klassen in einem Eclipse Ordner einzusehen sind. Mit sudo mvn package –Declipse werden mehrere Dateien erstellt. Mit den neu erstellten Dateien kann ein neues Eclipse Projekt importiert werden. Anschließend wird Eclipse gestartet und eine neue Arbeitsumgebung erstellt. \textit{\textbf{File -> import -> General -> Existing Projects into Workspace}} und auf \textit{\textbf{Next}} klicken. Von \textit{\textbf{Select root directory}} auf \textit{\textbf{Browser}} klicken und Verzeichnis das Floodlight enthält auswählen. Das Projekt mit \textit{\textbf{finish}} ausführen und damit sollte Floodlight auf Eclipse importiert sein.\par
+Um Floodlight auf Eclipse auszuführen, wählt man \textit{\textbf{run configuration}} aus, rechts klickt auf \textit{\textbf{java application}} und \textit{\textbf{new}}. Anschließend wird die neue Java Application \textit{\textbf{FloodlightLaunch}} genannt, es nutzt das Projekt Floodlight und \textit{\textbf{net.floodlight.controller-\\.core.Main}} in der Main-Klasse. Nachdem dies konfiguriert wurde, kann das Programm in Eclipse ausgeführt werden. \cite{install}
 
 
 \subsubsection{Aufbau}
@@ -1010,12 +1010,17 @@ Das Funktionsprinzip einer Bridge besteht darin, dass sie die Daten abhängig vo
 Layer-2-Switch sind ähnlich wie Bridge. Sie verbinden Netze auf Schicht 2 und arbeiten als Brücken, indem sie Tabellen für die Übertragung von Rahmen zwischen Netzen erstellen. Der Zweck der Layer-2-Switch ist es, Daten auf der Grundlage von Flusstabelleneinträgen weiterzuleiten \cite{networkdevices}.\par
 Im Falle der Layer-2-Switching, Der Controller ist dafür verantwortlich, den physikalischen Elementen mitzuteilen, wie sie eingehende Datenpakete behandeln sollen. Er ist auch dafür verantwortlich, Datenströme in die Datenstromtabelle des Switches zu schieben. Der Switch ist in der Lage zu lernen, wie Pakete zu behandeln sind, die am Eingangsanschluss ankommen und den Ausgangsanschluss verlassen. Immer wenn ein Paket zum ersten Mal am Eingangsport des Switches ankommt, wird es an den Controller weitergeleitet. Nach dem Empfang eines Pakets, bestimmt der Controller, was damit zu tun ist und ob es weitergeleitet werden soll \cite{7840116}.\par
 In dieser Simulation wurden, wie bereits erwähnt, die Open vSwitches verwendet. Open vSwitch ist ein virtueller Mehrschicht-Switch. Er verwendet virtuelle Netzwerkbrücken und Flussregeln, um Pakete zwischen Hosts weiterzuleiten. Er verhält sich wie ein physischer Switch. Ähnlich wie ein herkömmlicher Switch verwaltet OVS Informationen über angeschlossene Geräte wie z. B. die MAC-Adresse \cite{openvswitch1}. Obwohl er nicht nur die Aufgaben von Layer-2-Switch, sondern auch die Aufgaben von Layer-3-Switch durchführen kann, waren für diese Simulation die Funktionalitäten  des Layer-2 Switches ausreichend. Deswegen wurden die 4 Switches als Layer-2-Switch betrachtet.
+
+
 \subsection{Layer-3-Switch}
 {\tiny Verfasst von: James\par}
-Da Switching schneller als Routing ist, werden in LANS fast nur mit Switches gearbeitet und an zentralen Stellen Router genutzt, um das Internet zu erreichen. Im Netzwerkplan wurde an jeder Lokation nur ein Switch benötigt, dieser musste nicht VLAN fähig sein. Ein Layer-3-Switch ist beispielsweise ein VLAN-fähiger Switch, der grundlegende Routingfunktionalität bietet und auf Ebene 3 des OSI-Modells arbeitet, die Vermittlungsschicht. Das heißt, ein Layer-3-Switch arbeitet mit IP-Adressen und hat mit der Vermittlung von Paketen zu tun. Innerhalb unseres Projekts entschied man sich keine Layer-3-Switches zu nutzen, da die Funktionalitäten des Layer-2-Switches ausgereicht haben.  
+Da Switching schneller als Routing ist, werden in LANS fast nur mit Switches gearbeitet und an zentralen Stellen Router genutzt, um das Internet zu erreichen. Im Netzwerkplan wurde an jeder Lokation nur ein Switch benötigt, dieser musste nicht VLAN fähig sein. Ein Layer-3-Switch ist beispielsweise ein VLAN-fähiger Switch, der grundlegende Routingfunktionalität bietet und auf Ebene 3 des OSI-Modells arbeitet, die Vermittlungsschicht. Das heißt, ein Layer-3-Switch arbeitet mit IP-Adressen und hat mit der Vermittlung von Paketen zu tun. Innerhalb unseres Projekts entschied man sich keine Layer-3-Switches zu nutzen, da die Funktionalitäten des Layer-2-Switches ausgereicht haben \cite{baun2019grundlagen}.
+
+
 \subsection{Dynamic Host Configuration Protocol}
+\subsubsection{Vorüberlegung}
 {\tiny Verfasst von: James\par}
-DHCP ist ein Dienst, der an das Netzwerk angeschlossene Geräte mit einer Netzwerkkonfiguration versorgt. Falls ein Gerät eine Konfiguration benötigt, wird dies mithilfe vom DHCP Server konfiguriert, dieser kann beispielsweise im Router des Netzwerks sein. Mithilfe von Mininet konnte eine DHCP Konfiguration realisiert werden. Bis zu diesem Punkt wurde die IP-Adressverwaltung ohne DHCP realisiert. Das heißt, jeder Host musste manuell eine IP-Adresse zugewiesen bekommen. Diese manuelle Konfiguration wurde durch eine for-Schleife im Skript (siehe Abbildung \ref{fororig}) durchgeführt.
+DHCP ist ein Dienst, der an das Netzwerk angeschlossene Geräte mit einer Netzwerkkonfiguration versorgt. Falls ein Gerät eine Konfiguration benötigt, wird dies mithilfe vom DHCP Server konfiguriert, dieser kann beispielsweise im Router des Netzwerks sein. Mithilfe von Mininet konnte eine DHCP Konfiguration realisiert werden. Bis zu diesem Punkt wurde die IP-Adressverwaltung ohne DHCP realisiert. Das heißt, jeder Host musste manuell eine IP-Adresse zugewiesen bekommen. Diese manuelle Konfiguration wurde durch eine for-Schleife im Skript (siehe Abbildung \ref{fororig}) durchgeführt \cite{baun2019grundlagen}.
 
 \begin{figure}[H]
  \centering
@@ -1044,14 +1049,14 @@ Bei aktivierten DHCP in Mininet verwaltet der DHCP-Server IP-Adressen ohne manue
  	\caption{DHCP-Konfiguration für alle Standorte}
  	\label{dhcp2}
 \end{wrapfigure}
-Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Abbildung \ref{netzwerkplan}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden. 
+Um ein DHCP Server im Netzwerk zu realisieren, muss als erstes der DHCP Server auf die VM installiert werden. Dies wird mit dem Befehl \textit{\textbf{sudo apt-get install isc.dhcp-server}} durchgeführt. Als zweites muss im Mininet-Skript die Zeile \textit{\textbf{os.system(“service isc-dhcp-server restart”)}} ergänzt werden, um den DHCP-Server neu zu starten. Anschließend wird der DHCP server konfiguriert. Dies erfolgt in der \textit{\textbf{dhcpd.conf}} Datei, die sich im Pfad \textit{\textbf{/etc/dhcp}} befindet (siehe Abbildung \ref{dhcp2}). In dieser Datei werden die von den DHCP-Clients benötigten Netzwerkkonfigurationsinformationen gespeichert. Da das Netzwerk aus vier Subnetzen besteht, die mit dem DHCP-Server verbunden sein sollen, müssen vier Subnetze in der \textit{\textbf{dhcpd.conf}} Datei definiert werden. Diese Subnetze benötigen folgende Parameter: \textit{\textbf{subnet, netmask, range, option routers, default-lease-time, max-lease-time}} und \textit{\textbf{INTERFACES}}. Wie in der Tabelle des Netzwerkplans vorgezeigt (siehe Abbildung \ref{netzwerkplan}), hat jede Lokation eine festgelegte Subnetz IP (\textit{\textbf{subnet}}), Netzwerkmaske (\textit{\textbf{netmask}}) und Router IP (\textit{\textbf{option routers}}) und wird hier definiert. Um allen Hosts in den jeweiligen Subnetzen dynamisch Adressen zuzuweisen, muss innerhalb der Subnetz-Deklaration ein Bereich definiert werden (\textit{\textbf{range}}). Anschließend wird definiert, an welches Netzwerkgerät der DHCP-Server verbunden werden soll (\textit{\textbf{INTERFACES}}). Es kann auch die Gültigkeitsdauer definiert werden, die angibt wie lange einem Host die IP-Adresse zu Verfügung steht. Normalerweise reichen die Voreinstellungen aus, können aber mit \textit{\textbf{default-lease-time}} und \textit{\textbf{max-lease-time}} erhöhen oder herabsetzen, je nach Notwendigkeit. Anhand dieser Informationen, kann für jeden Standort ein Subnetz definiert werden \cite{dhcpd}. 
 
 \subsubsection{Ergebnis}
 {\tiny Verfasst von: James\par}
 Nachdem das Mininet Skript ausgeführt wird, kann mit Wireshark geprüft werden, ob ein DHCP-Server richtig implementiert wurde. Aus der folgenden Abbildung \ref{wireshark} ist ersichtlich, dass die Pakete zwischen h1 (192.168.1.2) und h11 (192.168.2.2) übertragen werden.
 \begin{figure}[H]
  \centering
- \includegraphics[width=1.0\textwidth]{Bilder/wireshark}
+ \includegraphics[width=1.0\textwidth]{Bilder/wireshark2}
  \captionsetup{justification=centering}
  \caption{Datenverkehr zwischen h1 und h11}
  \label{wireshark}
@@ -1063,24 +1068,91 @@ Um die Netzwerkkonfiguration vom DHCP-Server zu betrachten, muss Wireshark vor M
  \centering
  \includegraphics[width=1.0\textwidth]{Bilder/s1}
  \captionsetup{justification=centering}
- \caption{Wireshark-Aufnahme der Switch s1 (Frankfurt)}
+ \caption{Wireshark-Aufnahme von Switch s1}
  \label{s1}
 \end{figure}
 
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\vspace{-\baselineskip}
+	\centering
+	\includegraphics[width=0.6\textwidth]{Bilder/dhcpablauf}
+	\caption{Kommunikation zwischen DHCP-Client und DHCP-Server}
+	\label{dhcp3}
+\end{wrapfigure}
+
+Anhand von Abbildung \ref{s1} sind die gewöhnlichen Schritte vom DHCP Prozess zu erkennen.  
+Als erstes schickt ein Client einen \textit{\textbf{Broadcast}} an einem erreichbaren Server (\textit{\textbf{DHCP Discover}}). Die Absender-IP-Adresse ist \textbf{0.0.0.0} und die Zieladresse ist \textbf{255.255.255.255}. Der voreingestellte DHCP-Server empfängt den \textit{\textbf{Broadcast}} und antwortet (\textit{\textbf{DHCP Offer}}). Diese Antwort wird an die angebotene IP-Adresse ({\textbf{192.168.1.2}) gesendet (\textit{\textbf{Unicast}}). Der Client nimmt per Broadcast (\textbf{255.255.255.255}) das Angebot an (\textit{\textbf{DHCP Request}}). Der Server akzeptiert die Adressanfrage an (\textit{\textbf{ACK}}) und speichert im Adresspool die IP als vergeben ab \cite{baun2019grundlagen}. 
+\newpage %kannst weg machen falls nicht notwendig
+
+Die übermittelten Informationen vom DHCP Prozess werden im Pfad \textit{\textbf{/var/lib/dhcp/}} gespeichert.  Die Datei \textit{\textbf{dhcpd.leases}} ist eine DHCP client Datenbank, die eine Reihe von lease Deklarationen enthält. Wenn ein lease erworben, erneuert oder freigegeben wird, kann man dies in der Datei einsehen \cite{dhcpd2}. In der Datei \textit{\textbf{dhclient.leases}} werden alle gültigen leases gespeichert\cite{dhclient}.Somit kann der Schritt \textit{\textbf{DHCP Discover}} bei einem wiederholten Durchlauf innerhalb der Lease-Time übersprungen werden, da der Client seine IP-Adresse schon erhalten hat \cite{leases} (siehe Abbildung \ref{wireshark2}). 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\textwidth]{Bilder/wireshark}
+	\captionsetup{justification=centering}
+	\caption{Wireshark-Aufnahme vom gekürzten DHCP Prozess}
+	\label{wireshark2}
+\end{figure}
+Falls die Protokolle \textit{\textbf{DHCP Discover}} und \textit{\textbf{DHCP Offer}} nicht übersprungen werden sollen, können die zuständigen Dateien \textit{\textbf{dhcpd.leases}} und \textit{\textbf{dhclient.leases}} gelöscht werden. Diese werden beim nächsten Durchlauf neu erstellt.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Bilder/dhcpshort}
+	\captionsetup{justification=centering}
+	\caption{Kommunikation zwischen DHCP-Client und DHCP-Server}
+	\label{s1}
+\end{figure}
+\newpage
 
 \subsection{Domain Name System}
+\subsubsection{Vorüberlegung}
 {\tiny Verfasst von: James\par}
+
+Durch das DNS-Protokoll werden Domainnamen zu IP-Adressen umgewandelt \cite{baun2019grundlagen}. Dies wurde bei der Einrichtung des NAT-Firewalls manuell implementiert, sodass Hosts die Möglichkeit haben, nicht nur per IPv4 auf das Internet zugreifen zu können. Es wurde die IP-Adresse des DNS-Servers in die Datei \textit{\textbf{/etc/resolvconf/resolv.conf/head}} eingetragen und gespeichert. Zudem kann mithilfe des implementierten DHCP Servers und dem dhclient auch ein Ergebnis erzielt werden.  
+\subsubsection{Durchführung}
+{\tiny Verfasst von: James\par}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+	\vspace{-\baselineskip}
+	\centering
+	\includegraphics[width=0.4\textwidth]{Bilder/dns}
+	\caption{DHCP-Konfiguration für alle Standorte}
+	\label{dns}
+\end{wrapfigure}
+Es werden innerhalb der \textit{\textbf{dhcpd.conf}} Datei im Pfad \textit{\textbf{/etc/dhcp/}} zwei Zeilen in jedem Subnetz hinzugefügt. Mit \textit{\textbf{option domain-name-servers 8.8.8.8, 8.8.4.4;}} wird der verfügbare DNS Server für den Client definiert. Durch \textit{\textbf{option domain-name “dns.google.com”;}} wird der Domänenamen angegeben, der zur Auflösung von Hostnamen verwendet werden soll \cite{dhcpd} (siehe \ref{dns}). Es kann auch der dhclient genutzt werden, um einen DNS Server zu definieren \cite{dhclient2}. Im Pfad /etc/dhcp/ befindet sich die dhclient.conf Datei, die mit prepend domain-name-servers 8.8.8.8 ergänzt werden muss \cite{dhclient3}. \par
+
+\newpage
+\subsubsection{Ergebnis}
+{\tiny Verfasst von: James\par}
+Die Übermittlung des Domain Namen und des Servers kann beobachtet werden, indem die DHCP Protokolle in Wireshark betrachtet werden \cite{dhcpd3}(siehe Abbildung \ref{dns2}).  
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{Bilder/dns2}
+	\captionsetup{justification=centering}
+	\caption{Im DHCP ACK Protokoll werden die DNS Informationen vermittelt}
+	\label{dns2}
+\end{figure}
+
+Nachdem Mininet gestartet wurde, kann mithilfe von \textit{\textbf{systemd-resolve –status}} der genutzte DNS Server betrachtet werden \cite{system}(Siehe Abb. \ref{dns3}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.64\textwidth]{Bilder/dns3}
+	\captionsetup{justification=centering}
+	\caption{Terminalausgabe von h1}
+	\label{dns3}
+\end{figure}
 
 
 \chapter{Diskussion der Ergebnisse}
-{\tiny Verfasst von: ?, ?, ?, ?\par}
-Analyse der Ergebnisse
-Kritische Betrachtung
-Hier erwähnen welche Teile der Aufgaben nicht geklappt haben, wie beispielsweise Aufgabe 5 Webproxy
+{\tiny Verfasst von: James\par}
+Am Anfang des Projektberichtes wurde von einer “dramatischen Zunahme der Netzwerkkomplexität” gesprochen, wobei eine traditionelle Vorgehensweise der Netzwerkadministration ineffizient sei. Mithilfe des Konzepts SDN, sollte eine effizientere Methode der Netzwerkadministration realisiert werden. Durch die Lösung der Problemstellungen konnten diese zugrunde gelegte Behauptung bestätigt werden. Beispielsweise mussten vier Lokationen realisiert werden, also wurde zu Beginn eine Lokation mit den gewünschten Funktionen erstellt. Anschließend wurden Kopien dieser Lokation für alle weiteren Lokationen genutzt. Durch die Strategie eine kleinstmögliche Umgebung mit den gewünschten Kriterien zu konstruieren, erleichterte es die Vorgehensweise auf Ergebnisse zu kommen. Mininet und der Floodlight Controller ermutigten diese Vorgehensweise, da die Anpassungen leicht umsetzbar waren. Während der Durchführung der Problemstellungen wurde auch festgestellt, dass viele manuelle Einrichtungen mithilfe von SDN automatisiert werden konnten. Die erforschten Ergebnisse werden hier nochmals zusammengefasst und die automatisierten Netzwerkfunktionen durch SDN mit den manuellen Vorgehensweisen verglichen. Anschließend wird kritisch reflektiert, was in der Durchführung mithilfe von SDN nicht reibungslos funktioniert hat.  
 \section{Analyse der Ergebnisse}
-{\tiny Verfasst von: ?, ?, ?, ?\par}
+{\tiny Verfasst von: James\par}
+Bei der Verschlüsselung der Netzwerkverbindung zwischen den einzelnen Lokationen konnte über Mininet zwischen den Routern von jedem Standort die VPN Verbindung hergestellt werden. Anstatt eine manuelle Verschlüsselung an jedem Router einzurichten, konnte zentralisiert über Mininet ein Ergebnis erzielt werden. Um private IP-Adressen auf öffentliche IP-Adressen abbilden zu lassen, musste ein NAT eingerichtet werden. Normalerweise wird dies mit der firewalling software “iptables” umgesetzt. Mit “iptables” werden Regeln definiert die für das Filtern und Modifizieren von Paketen zuständig sind. Diese manuelle Einrichtung des NAT-Firewalls an einem Router konnte mithilfe von Mininet übersprungen werden und automatisiert im Skript ergänzt werden. Somit regelt Mininet die Anbindung von einem privaten Netz über NAT an das Internet bei jedem Standort. Der Aufbau eines zentralen Topologie-Viewers des Netzwerkes konnte mit dem standardinstallierten Floodlight-Modul dargestellt werden. Indem die Benutzeroberfläche des Controllers in einem Webbrowser aufgerufen wird und auf den Reiter Topology klickt, wird eine Topologie dargestellt. Die Erstellung der Topologie vom Controller ist nur möglich, da der Controller die verbundenen Links von den Hosts und den Switches erkennt. Die Realisierung einer zentralen Monitoring Lösung konnte durch eine Konfigurationsänderung in Mininet erstellt werden. Dadurch hatte jeder Netzwerkteilnehmer auf Nagios Core und dem Floodlight Controller Zugriff bekommen. Anstatt manuell bei jedem Netzwerkteilnehmer dies einstellen zu müssen, konnte durch eine Ergänzung des Mininet Skripts die Konfiguration automatisch für alle Hosts eingestellt werden. Eine QoS Funktion innerhalb eines Netzwerkes ohne SDN zu realisieren, ist sehr aufwendig und enthält viele Beschränkungen. Mit SDN kann wegen der zentralisierten Struktur eine Queueliste erstellt werden, die bestimmten Datenverkehr selbst bei begrenzter Netzwerkkapazität priorisiert. Diese Idee wurde mit zwei verschiedenen Queues nachgeahmt. Audio- und Videokonferenzen wurden in einer Queue definiert und der restliche Datenverkehr in einer anderen. Umgesetzt wurde es im Mininet Skript. Zudem konnte durch eine weitere Ergänzung des Skripts eine Priorisierung der Datenübertragung hergestellt werden. Bei einer Datenübertragung zwischen Berlin und Frankfurt sollte der Datenaustausch priorisiert und alle parallel dazu laufenden Datenübertragungen gedrosselt werden. Indem ein SSH Client in Berlin und ein SSH Server in Frankfurt eingerichtet wird, konnte mithilfe eines Python Skripts auf dem Host die gewünschte Prioritätensetzung ins Netzwerk implementiert werden. Die Realisierung eines DHCP Servers sowohl eines DNS-Dienst für jede Lokation kann automatisiert werden. Somit kann durch Änderung des Mininet Skripts und der dhcpd.conf sowie dhclient.conf Datei ein DHCP Server und DNS-Dienst realisiert werden. Dies erspart die Zeit an jeder Lokation eine manuelle Konfiguration durchzuführen und kann in einer Weise implementiert werden, dass beim Ausführen des Mininet Skripts die Dienste für alle Hosts konfiguriert werden. \par
+Bei einer Änderung der vorgelegten Anforderungen, wie beispielsweise eine Quality of Service Funktion von einer anderen Datenübertragung, kann dies durch SDN und mithilfe des Mininet Skript leicht verändert werden. Somit müsste ein Administrator nicht alle Schnittstellen umprogrammieren, sondern kann effizienter in einem automatisierten Schritt das Netzwerk ändern.
 \section{Kritische Betrachtung}
-{\tiny Verfasst von: ?, ?, ?, ?\par}
+{\tiny Verfasst von: James\par}
+Obwohl SDN viele Vorteile hat, war der Einstieg in das Thema sehr zeitaufwendig. Viele Installationsanleitungen haben auf Anhieb nicht funktioniert und mussten individuell mit Alternativen Möglichkeiten angepasst werden. Vorkonfigurierte VMs mit mininet und einem  Floodlight controller haben nicht funktioniert, somit musste selbstständig eine VM konstruiert werden. Zudem war die Vorstellung des Netzwerkes zu Beginn anders als das am Ende erstellte Ergebnis, da SDN viele Funktionalitäten und Alternativmöglichkeiten besitzt. Dadurch kann eine Art der Entscheidungslähmung entstehen, da die Optionen und Einstellungen sehr vielfältig sind. Da der Floodlight Controller in SDN an zentraler Stelle steht, müssen alle Konfigurationen korrekt eingestellt werden. Es muss logischerweise der Controller konstant im Hintergrund laufen und wenn der Controller ausfällt, fällt das gesamte System aus. Das heißt, der Controller muss fehlersicher und mit allen Lokationen verbunden sein. Der Floodlight Controller befindet sich im Netzwerkplan am Standort Frankfurt, jedoch sollte in der Theorie ein zweiter Controller an einer anderen Lokation existieren, der beim Ausfall des Frankfurter Controllers einspringt.  
 
 \chapter{Fazit}\label{ch:fazit}
 {\tiny Verfasst von: ?, ?, ?, ?\par}
