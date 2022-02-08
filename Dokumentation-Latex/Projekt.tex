@@ -697,15 +697,15 @@ Neben einer DSL-Leitung benötigen die Lokationen eine Standleitung. Eine Standl
 
 \newpage
 \section{Einrichtung des NAT-Firewalls}
-{\tiny Verfasst von: Mücahit\par}
+{\tiny Verfasst von: Mücahit, Naghmeh\par}
 Durch die Network Address Translation (NAT) Firewall Funktion werden private IPv4-Adressen beziehungsweise Geräte geheim gehalten. Es wird durch die Netzwerkadressenübersetzung keine Informationen über die privaten IPv4-Adressen ins World Wide Web geschickt. Dazu wird der IPv4-Header von IP-Paketen aus dem privaten Netzwerkbereich auf die öffentliche IPv4-Adresse verändert. Hinter jeder öffentlichen IPv4-Adresse können mehrere Tausende Geräte stehen und auf das Internet zugreifen. Des Weiteren ist die Anzahl der IPv4-Adressen durch den eigenen Aufbau begrenzt \cite{NATdef}. Für die vier Lokationen würde der Internet-Service-Provider vier öffentliche IPv4-Adressen vergeben. Die Adressen werden vom Internet-Service-Provider in bestimmten Zeitintervallen immer wieder neu vergeben, welches ebenfalls zu einer gewissen Sicherheit beiträgt.
 
 \subsection{Vorüberlegung}
-{\tiny Verfasst von: Mücahit\par}
+{\tiny Verfasst von: Mücahit, Naghmeh\par}
 Die NAT-Firewall Funktion muss am Router einer Lokation implementiert werden, da alle Hosts über ihn Anfragen ins Internet verschicken werden. Dazu sollte jede Anfrage ins World Wide Web mit der öffentlichen IPv4-Adresse des Routers durchgeführt werden. Zusätzlich sollte der Router beziehungsweise die Hosts den Domain Name System (DNS) Server konfiguriert bekommen, damit die Hosts nicht nur über die IP-Adressen aufs Internet zugreifen.
 
 \subsection{Durchführung}
-{\tiny Verfasst von: Mücahit\par}
+{\tiny Verfasst von: Mücahit, Naghmeh\par}
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\vspace{-\baselineskip}
  	\centering
@@ -731,7 +731,7 @@ Da nun eine Internetverbindung für alle Router besteht, muss der Domain Name Sy
 Die Default-Route der Hosts ist der jeweilige Router in der Lokation. Wenn ein Host eine Website aufruft, schickt er eine Anfrage an und über den Router. Im Moment wird die Anfrage beim Router fallengelassen, da der Router noch keine Regeln bezüglich solcher Anfragen besitzt. Die Regel wird über das im Ubuntu vorhandene Programm \textit{\textbf{iptables}} eingetragen, welches den Linux-Kernel umkonfiguriert \cite{iptables}. Dazu wird auf allen Routern der Befehl \textit{\textbf{sudo iptables -t nat -A POSTROUTING -o Schnittstellenbezeichnung -j MASQUERADE}} ausgeführt. Der Befehl vergibt jedem eingehenden Paket als Quelladresse die IPv4-Adresse der NAT-Schnittstelle des Routers \cite{iptablesmas} (siehe Abbildung \ref{adapter}). Es wird \textit{\textbf{MASQUERADE}} genutzt, weil zum Zeitpunkt der Ausführung des Befehls die IPv4-Adresse der Schnittstelle unbekannt sein beziehungsweise sich ändern kann. Bei einer statischen IPv4-Adresse der NAT-Schnittstelle würde statt MASQUERADE direkt die IP eingegeben werden \cite{iptablesnat}.
 \newpage
 \subsection{Ergebnis}
-{\tiny Verfasst von: Mücahit\par}
+{\tiny Verfasst von: Mücahit, Naghmeh\par}
 Zusammenfassend wurde die NAT-Firewall-Funktion an allen Lokationen konfiguriert. Den Hosts ist es nun möglich, Anfragen ins Internet zu versenden. Der Router führt die Anfragen mit der von VirtualBox zur Verfügung gestellten Schnittstelle aus und gibt dem Host die Antwort zurück (siehe Abbildung \ref{nat}).
 
 \begin{figure}[H]
