@@ -153,6 +153,30 @@
       \field{year}{2013}
       \keyw{Networking}
     \endentry
+    \entry{james1}{article}{}
+      \name{author}{1}{}{%
+        {{hash=de91f5e0435c19f803e98735ac55dd8c}{%
+           family={Badotra},
+           familyi={B\bibinitperiod},
+           given={Sumit},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{de91f5e0435c19f803e98735ac55dd8c}
+      \strng{fullhash}{de91f5e0435c19f803e98735ac55dd8c}
+      \strng{bibnamehash}{de91f5e0435c19f803e98735ac55dd8c}
+      \strng{authorbibnamehash}{de91f5e0435c19f803e98735ac55dd8c}
+      \strng{authornamehash}{de91f5e0435c19f803e98735ac55dd8c}
+      \strng{authorfullhash}{de91f5e0435c19f803e98735ac55dd8c}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Advanced Computer Research}
+      \field{month}{03}
+      \field{title}{A Review Paper on Software Defined Networking}
+      \field{volume}{8}
+      \field{year}{2017}
+    \endentry
     \entry{baun2019grundlagen}{incollection}{}
       \name{author}{1}{}{%
         {{hash=c8362ec3de9dbb4de64fee2d8b9cfe70}{%
@@ -1149,6 +1173,36 @@
       \verb https://linux.die.net/man/8/dhcpd
       \endverb
     \endentry
+    \entry{james3}{online}{}
+      \name{author}{1}{}{%
+        {{hash=309887f7487ea3bb9882f5ad92384a1e}{%
+           family={Luber\bibnamedelima Stefan},
+           familyi={L\bibinitperiod\bibinitdelim S\bibinitperiod},
+           given={Donner\bibnamedelima Andreas},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{fullhash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{bibnamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authorbibnamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authornamehash}{309887f7487ea3bb9882f5ad92384a1e}
+      \strng{authorfullhash}{309887f7487ea3bb9882f5ad92384a1e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Was ist Software Defined Networking}
+      \field{urlday}{1}
+      \field{urlmonth}{11}
+      \field{urlyear}{2021}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ip-insider.de/was-ist-software-defined-networking-sdn-a-657442/
+      \endverb
+      \verb{url}
+      \verb https://www.ip-insider.de/was-ist-software-defined-networking-sdn-a-657442/
+      \endverb
+    \endentry
     \entry{NATgateway}{online}{}
       \name{author}{1}{}{%
         {{hash=140864078aeca1c7c35b4beb33c53c34}{%
@@ -1731,6 +1785,49 @@
       \verb https://linux.die.net/man/8/iptables
       \endverb
     \endentry
+    \entry{james5}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=081b1379afceeca770566cf8b8121c9e}{%
+           family={Salman},
+           familyi={S\bibinitperiod},
+           given={Ola},
+           giveni={O\bibinitperiod}}}%
+        {{hash=037487b1cc207efe3d93e2286c67155c}{%
+           family={Elhajj},
+           familyi={E\bibinitperiod},
+           given={Imad\bibnamedelima H.},
+           giveni={I\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=51b6bb83d47f4294f0fd400e937405da}{%
+           family={Chehab},
+           familyi={C\bibinitperiod},
+           given={Ali},
+           giveni={A\bibinitperiod}}}%
+        {{hash=47acae888fc2af6c02d23a0303378240}{%
+           family={Kayssi},
+           familyi={K\bibinitperiod},
+           given={Ayman},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{fullhash}{455feb652dcdb7cc1b1a83238112f1ab}
+      \strng{bibnamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authorbibnamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authornamehash}{5b5f506bb7810af45380516b2fbd53fc}
+      \strng{authorfullhash}{455feb652dcdb7cc1b1a83238112f1ab}
+      \field{extraname}{1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2017 8th International Conference on the Network of the Future (NOF)}
+      \field{title}{QoS guarantee over hybrid SDN/non-SDN networks}
+      \field{year}{2017}
+      \field{pages}{141\bibrangedash 143}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1109/NOF.2017.8251237
+      \endverb
+    \endentry
     \entry{controllers}{inproceedings}{}
       \name{author}{4}{}{%
         {{hash=081b1379afceeca770566cf8b8121c9e}{%
@@ -1760,6 +1857,7 @@
       \strng{authorbibnamehash}{5b5f506bb7810af45380516b2fbd53fc}
       \strng{authornamehash}{5b5f506bb7810af45380516b2fbd53fc}
       \strng{authorfullhash}{1750f843327d2d190a907fe2410f6394}
+      \field{extraname}{2}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
