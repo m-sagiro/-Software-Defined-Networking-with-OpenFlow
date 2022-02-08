@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  8 FEB 2022 13:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  8 FEB 2022 15:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -866,14 +866,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
- (Projekt.aux
-
-LaTeX Warning: Label `s1' multiply defined.
-
-
-LaTeX Warning: Label `interface-deklaration' multiply defined.
-
-)
+ (Projekt.aux)
 \openout1 = `Projekt.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
@@ -1090,7 +1083,7 @@ Overfull \hbox (6.76631pt too wide) in paragraph at lines 138--138
 
 ]
 chapter 1.
-<Bilder/layer1.png, id=229, 253.6677pt x 513.8397pt>
+<Bilder/layer1.png, id=231, 253.6677pt x 513.8397pt>
 File: Bilder/layer1.png Graphic file (type png)
 <use Bilder/layer1.png>
 Package pdftex.def Info: Bilder/layer1.png  used on input line 152.
@@ -1099,7 +1092,7 @@ Package pdftex.def Info: Bilder/layer1.png  used on input line 152.
 
 
  <./Bilder/layer1.png>] [2]
-<Bilder/layer2.png, id=253, 874.01532pt x 785.93625pt>
+<Bilder/layer2.png, id=255, 874.01532pt x 785.93625pt>
 File: Bilder/layer2.png Graphic file (type png)
 <use Bilder/layer2.png>
 Package pdftex.def Info: Bilder/layer2.png  used on input line 163.
@@ -1120,7 +1113,7 @@ chapter 2.
 [11
 
 ]
-<Bilder/meilensteine.png, id=329, 1240.635pt x 733.74126pt>
+<Bilder/meilensteine.png, id=331, 1240.635pt x 733.74126pt>
 File: Bilder/meilensteine.png Graphic file (type png)
 <use Bilder/meilensteine.png>
 Package pdftex.def Info: Bilder/meilensteine.png  used on input line 251.
@@ -1132,26 +1125,26 @@ Overfull \hbox (9.33807pt too wide) in paragraph at lines 285--285
  []
 
 [13] [14] [15]
-<Bilder/sudomn.png, id=365, 538.01pt x 395.4775pt>
+<Bilder/sudomn.png, id=367, 538.01pt x 395.4775pt>
 File: Bilder/sudomn.png Graphic file (type png)
 <use Bilder/sudomn.png>
 Package pdftex.def Info: Bilder/sudomn.png  used on input line 349.
 (pdftex.def)             Requested size: 224.06548pt x 164.70544pt.
  [16 <./Bilder/sudomn.png>] [17]
-<Bilder/webui.png, id=390, 2569.6pt x 1334.9875pt>
+<Bilder/webui.png, id=392, 2569.6pt x 1334.9875pt>
 File: Bilder/webui.png Graphic file (type png)
 <use Bilder/webui.png>
 Package pdftex.def Info: Bilder/webui.png  used on input line 372.
 (pdftex.def)             Requested size: 448.13095pt x 232.81151pt.
  [18 <./Bilder/webui.png>]
 [19]
-<Bilder/floodlight.png, id=417, 1389.19pt x 828.09375pt>
+<Bilder/floodlight.png, id=419, 1389.19pt x 828.09375pt>
 File: Bilder/floodlight.png Graphic file (type png)
 <use Bilder/floodlight.png>
 Package pdftex.def Info: Bilder/floodlight.png  used on input line 429.
 (pdftex.def)             Requested size: 448.13095pt x 267.13084pt.
  [20]
-<Bilder/ping.png, id=423, 731.73375pt x 744.7825pt>
+<Bilder/ping.png, id=425, 731.73375pt x 744.7825pt>
 File: Bilder/ping.png Graphic file (type png)
 <use Bilder/ping.png>
 Package pdftex.def Info: Bilder/ping.png  used on input line 440.
@@ -1163,447 +1156,452 @@ Underfull \hbox (badness 2012) in paragraph at lines 445--446
 
 [21 <./Bilder/floodlight.png> <./Bilder/ping.png>]
 chapter 3.
-<Bilder/netzwerkplan.png, id=434, 2098.84125pt x 1802.735pt>
+<Bilder/any-to-any.png, id=436, 455.7025pt x 490.83376pt>
+File: Bilder/any-to-any.png Graphic file (type png)
+<use Bilder/any-to-any.png>
+Package pdftex.def Info: Bilder/any-to-any.png  used on input line 461.
+(pdftex.def)             Requested size: 179.24963pt x 193.07208pt.
+<Bilder/netzwerkplan.png, id=437, 2098.84125pt x 1802.735pt>
 File: Bilder/netzwerkplan.png Graphic file (type png)
 <use Bilder/netzwerkplan.png>
-Package pdftex.def Info: Bilder/netzwerkplan.png  used on input line 461.
+Package pdftex.def Info: Bilder/netzwerkplan.png  used on input line 469.
 (pdftex.def)             Requested size: 492.94678pt x 423.39522pt.
 [22
 
-]
-Overfull \hbox (27.04448pt too wide) in paragraph at lines 471--491
+ <./Bilder/any-to-any.png>]
+Overfull \hbox (27.04448pt too wide) in paragraph at lines 479--499
  []|  [] 
  []
 
 [23 <./Bilder/netzwerkplan.png>]
-<Bilder/mininet1.png, id=445, 477.785pt x 183.68625pt>
+<Bilder/mininet1.png, id=449, 477.785pt x 183.68625pt>
 File: Bilder/mininet1.png Graphic file (type png)
 <use Bilder/mininet1.png>
-Package pdftex.def Info: Bilder/mininet1.png  used on input line 507.
+Package pdftex.def Info: Bilder/mininet1.png  used on input line 515.
 (pdftex.def)             Requested size: 268.8813pt x 103.3709pt.
  [24 <./Bilder/mininet1.png>]
-<Bilder/mininet2.png, id=454, 682.55pt x 246.9225pt>
+<Bilder/mininet2.png, id=458, 682.55pt x 246.9225pt>
 File: Bilder/mininet2.png Graphic file (type png)
 <use Bilder/mininet2.png>
-Package pdftex.def Info: Bilder/mininet2.png  used on input line 517.
+Package pdftex.def Info: Bilder/mininet2.png  used on input line 525.
 (pdftex.def)             Requested size: 313.69029pt x 113.48398pt.
-<Bilder/mininet3.png, id=456, 771.88374pt x 140.525pt>
+<Bilder/mininet3.png, id=460, 771.88374pt x 140.525pt>
 File: Bilder/mininet3.png Graphic file (type png)
 <use Bilder/mininet3.png>
-Package pdftex.def Info: Bilder/mininet3.png  used on input line 527.
+Package pdftex.def Info: Bilder/mininet3.png  used on input line 535.
 (pdftex.def)             Requested size: 358.50612pt x 65.26625pt.
-<Bilder/mininet4.png, id=458, 626.34pt x 197.73875pt>
+<Bilder/mininet4.png, id=462, 626.34pt x 197.73875pt>
 File: Bilder/mininet4.png Graphic file (type png)
 <use Bilder/mininet4.png>
-Package pdftex.def Info: Bilder/mininet4.png  used on input line 537.
+Package pdftex.def Info: Bilder/mininet4.png  used on input line 545.
 (pdftex.def)             Requested size: 313.69029pt x 99.03508pt.
  [25 <./Bilder/mininet2.png> <./Bilder/mininet3.png>]
-<Bilder/mininet5.png, id=467, 424.58624pt x 63.23625pt>
+<Bilder/mininet5.png, id=471, 424.58624pt x 63.23625pt>
 File: Bilder/mininet5.png Graphic file (type png)
 <use Bilder/mininet5.png>
-Package pdftex.def Info: Bilder/mininet5.png  used on input line 551.
+Package pdftex.def Info: Bilder/mininet5.png  used on input line 559.
 (pdftex.def)             Requested size: 313.69029pt x 46.72171pt.
-<Bilder/mininet6.png, id=470, 674.52pt x 67.25125pt>
+<Bilder/mininet6.png, id=474, 674.52pt x 67.25125pt>
 File: Bilder/mininet6.png Graphic file (type png)
 <use Bilder/mininet6.png>
-Package pdftex.def Info: Bilder/mininet6.png  used on input line 561.
+Package pdftex.def Info: Bilder/mininet6.png  used on input line 569.
 (pdftex.def)             Requested size: 448.13095pt x 44.68045pt.
  [26 <./Bilder/mininet4.png> <./Bilder/mininet5.png> <./Bilder/mininet6.png>]
-<Bilder/pingall.png, id=482, 1577.895pt x 1293.83376pt>
+<Bilder/pingall.png, id=486, 1577.895pt x 1293.83376pt>
 File: Bilder/pingall.png Graphic file (type png)
 <use Bilder/pingall.png>
-Package pdftex.def Info: Bilder/pingall.png  used on input line 573.
+Package pdftex.def Info: Bilder/pingall.png  used on input line 581.
 (pdftex.def)             Requested size: 448.13095pt x 367.44347pt.
  [27 <./Bilder/pingall.png>]
-Overfull \hbox (0.20499pt too wide) in paragraph at lines 590--591
+Overfull \hbox (0.20499pt too wide) in paragraph at lines 598--599
 \T1/cmr/bx/it/12 Tunnel-Name mo-de gre lo-cal Schnitt-stel-le-Rou-ter-Lo-ka-ti-
 on-A re-mo-te Schnitt-
  []
 
-<Bilder/gre.png, id=494, 1324.95pt x 498.86375pt>
+<Bilder/gre.png, id=498, 1324.95pt x 498.86375pt>
 File: Bilder/gre.png Graphic file (type png)
 <use Bilder/gre.png>
-Package pdftex.def Info: Bilder/gre.png  used on input line 594.
+Package pdftex.def Info: Bilder/gre.png  used on input line 602.
 (pdftex.def)             Requested size: 336.0982pt x 126.54251pt.
 [28]
-<Bilder/ipsecgre.png, id=507, 1000.48781pt x 336.50719pt>
+<Bilder/ipsecgre.png, id=511, 1000.48781pt x 336.50719pt>
 File: Bilder/ipsecgre.png Graphic file (type png)
 <use Bilder/ipsecgre.png>
-Package pdftex.def Info: Bilder/ipsecgre.png  used on input line 604.
+Package pdftex.def Info: Bilder/ipsecgre.png  used on input line 612.
 (pdftex.def)             Requested size: 358.50612pt x 120.58281pt.
-<Bilder/route.png, id=510, 1363.0925pt x 129.48375pt>
+<Bilder/route.png, id=514, 1363.0925pt x 129.48375pt>
 File: Bilder/route.png Graphic file (type png)
 <use Bilder/route.png>
-Package pdftex.def Info: Bilder/route.png  used on input line 614.
+Package pdftex.def Info: Bilder/route.png  used on input line 622.
 (pdftex.def)             Requested size: 448.13095pt x 42.56972pt.
  [29 <./Bilder/gre.png> <./Bilder/ipsecgre.png>]
-<Bilder/state.png, id=522, 1412.27625pt x 172.645pt>
+<Bilder/state.png, id=526, 1412.27625pt x 172.645pt>
 File: Bilder/state.png Graphic file (type png)
 <use Bilder/state.png>
-Package pdftex.def Info: Bilder/state.png  used on input line 625.
+Package pdftex.def Info: Bilder/state.png  used on input line 633.
 (pdftex.def)             Requested size: 448.13095pt x 54.78123pt.
 
-Overfull \hbox (6.89114pt too wide) in paragraph at lines 631--632
+Overfull \hbox (6.89114pt too wide) in paragraph at lines 639--640
 []\T1/cmr/m/n/12 Der Be-fehl legt für Pa-ke-te mit be-stimm-ter IP-Quelladresse
 , IP-Zieladresse, ei-nem Security-
  []
 
-<Bilder/policy.png, id=526, 1545.775pt x 144.54pt>
+<Bilder/policy.png, id=530, 1545.775pt x 144.54pt>
 File: Bilder/policy.png Graphic file (type png)
 <use Bilder/policy.png>
-Package pdftex.def Info: Bilder/policy.png  used on input line 635.
+Package pdftex.def Info: Bilder/policy.png  used on input line 643.
 (pdftex.def)             Requested size: 448.13095pt x 41.90228pt.
 [30 <./Bilder/route.png> <./Bilder/state.png>]
-<Bilder/esp.png, id=537, 2569.6pt x 1336.995pt>
+<Bilder/esp.png, id=541, 2569.6pt x 1336.995pt>
 File: Bilder/esp.png Graphic file (type png)
 <use Bilder/esp.png>
-Package pdftex.def Info: Bilder/esp.png  used on input line 647.
+Package pdftex.def Info: Bilder/esp.png  used on input line 655.
 (pdftex.def)             Requested size: 448.13095pt x 233.16159pt.
  [31 <./Bilder/policy.png> <./Bilder/esp.png>]
-Overfull \hbox (1.69478pt too wide) in paragraph at lines 665--665
+Overfull \hbox (1.69478pt too wide) in paragraph at lines 673--673
 []\T1/cmr/m/n/12 Anbieter| 
  []
 
 
-Underfull \hbox (badness 1424) in paragraph at lines 665--665
+Underfull \hbox (badness 1424) in paragraph at lines 673--673
 []\T1/cmr/m/n/12 Download in Mbit/s
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--665
+Underfull \hbox (badness 10000) in paragraph at lines 673--673
 []\T1/cmr/m/n/12 Upload in Mbit/s
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 665--666
+Underfull \hbox (badness 10000) in paragraph at lines 673--674
 []\T1/cmr/m/n/12 Monatl.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 667--667
+Underfull \hbox (badness 10000) in paragraph at lines 675--675
 []\T1/cmr/m/n/12 Company
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 668--668
+Underfull \hbox (badness 10000) in paragraph at lines 676--676
 []\T1/cmr/m/n/12 Company
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 669--669
-[]\T1/cmr/m/n/12 Company
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 670--670
-[]\T1/cmr/m/n/12 Company
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 671--671
-[]\T1/cmr/m/n/12 Company
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 672--672
+Underfull \hbox (badness 10000) in paragraph at lines 677--677
 []\T1/cmr/m/n/12 Company
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 678--678
+[]\T1/cmr/m/n/12 Company
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 679--679
+[]\T1/cmr/m/n/12 Company
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 680--680
+[]\T1/cmr/m/n/12 Company
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 686--686
 []\T1/cmr/m/n/12 Glasfaser
  []
 
 
-Overfull \hbox (4.95786pt too wide) in paragraph at lines 679--679
+Overfull \hbox (4.95786pt too wide) in paragraph at lines 687--687
 []\T1/cmr/m/n/12 Vodafone| 
  []
 
 
-Overfull \hbox (21.58853pt too wide) in paragraph at lines 663--691
+Overfull \hbox (21.58853pt too wide) in paragraph at lines 671--699
  [][] 
  []
 
 [32] [33]
-<Bilder/adapter.png, id=569, 237.88875pt x 54.2025pt>
+<Bilder/adapter.png, id=573, 237.88875pt x 54.2025pt>
 File: Bilder/adapter.png Graphic file (type png)
 <use Bilder/adapter.png>
-Package pdftex.def Info: Bilder/adapter.png  used on input line 712.
+Package pdftex.def Info: Bilder/adapter.png  used on input line 720.
 (pdftex.def)             Requested size: 224.06548pt x 51.05539pt.
 
-Underfull \hbox (badness 1360) in paragraph at lines 718--720
+Underfull \hbox (badness 1360) in paragraph at lines 726--728
 \T1/cmr/m/n/12 viert und als NAT kon-fi-gu-riert (sie-he
  []
 
 
-Underfull \hbox (badness 1642) in paragraph at lines 718--720
-\T1/cmr/m/n/12 Ab-bil-dung []3.15[]). Die vier Schnitt-stel-len wur-den je-weil
+Underfull \hbox (badness 1642) in paragraph at lines 726--728
+\T1/cmr/m/n/12 Ab-bil-dung []3.16[]). Die vier Schnitt-stel-len wur-den je-weil
 s an die Rou-ter r1, r2,
  []
 
 
-Underfull \hbox (badness 2035) in paragraph at lines 718--720
+Underfull \hbox (badness 2035) in paragraph at lines 726--728
 \T1/cmr/m/n/12 r3 und r4 per \T1/cmr/bx/it/12 Intf(Schnittstellenbezeichnung,
  node=Router-Objekt) \T1/cmr/m/n/12 Be-
  []
 
 
-Underfull \hbox (badness 1533) in paragraph at lines 718--720
+Underfull \hbox (badness 1533) in paragraph at lines 726--728
 \T1/cmr/m/n/12 fehl zu-ge-wie-sen. Die Schnitt-stel-len-be-zeich-nung kann vor-
 her mit dem Be-fehl \T1/cmr/bx/it/12 if-
  []
 
 
-Underfull \hbox (badness 1194) in paragraph at lines 718--720
+Underfull \hbox (badness 1194) in paragraph at lines 726--728
 \T1/cmr/bx/it/12 net.getNodeByName('Router-Bezeichnung') \T1/cmr/m/n/12 Be-fehl
  in-stan-zi-iert. Je-der Rou-ter
  []
 
 
-Underfull \hbox (badness 1360) in paragraph at lines 718--720
+Underfull \hbox (badness 1360) in paragraph at lines 726--728
 \T1/cmr/m/n/12 be-kommt ei-ne in-di-vi-du-el-le Schnitt-stel-le zu-ge-wie-sen. 
 Die Rou-ter füh-ren an-schlie-
  []
 
 [34 <./Bilder/adapter.png>]
-<Bilder/interface.png, id=582, 1339.0025pt x 137.51375pt>
+<Bilder/interface.png, id=586, 1339.0025pt x 137.51375pt>
 File: Bilder/interface.png Graphic file (type png)
 <use Bilder/interface.png>
-Package pdftex.def Info: Bilder/interface.png  used on input line 723.
+Package pdftex.def Info: Bilder/interface.png  used on input line 731.
 (pdftex.def)             Requested size: 448.13095pt x 46.02174pt.
  [35 <./Bilder/interface.png>]
-<Bilder/nat.png, id=602, 2569.6pt x 1336.995pt>
+<Bilder/nat.png, id=606, 2569.6pt x 1336.995pt>
 File: Bilder/nat.png Graphic file (type png)
 <use Bilder/nat.png>
-Package pdftex.def Info: Bilder/nat.png  used on input line 739.
+Package pdftex.def Info: Bilder/nat.png  used on input line 747.
 (pdftex.def)             Requested size: 448.13095pt x 233.16159pt.
  [36 <./Bilder/nat.png>] [37] [38]
-<Bilder/topo.png, id=626, 2569.6pt x 1336.995pt>
+<Bilder/topo.png, id=630, 2569.6pt x 1336.995pt>
 File: Bilder/topo.png Graphic file (type png)
 <use Bilder/topo.png>
-Package pdftex.def Info: Bilder/topo.png  used on input line 774.
+Package pdftex.def Info: Bilder/topo.png  used on input line 782.
 (pdftex.def)             Requested size: 448.13095pt x 233.16159pt.
  [39 <./Bilder/topo.png>]
-<Bilder/switch.png, id=636, 846.16125pt x 70.2625pt>
+<Bilder/switch.png, id=640, 846.16125pt x 70.2625pt>
 File: Bilder/switch.png Graphic file (type png)
 <use Bilder/switch.png>
-Package pdftex.def Info: Bilder/switch.png  used on input line 788.
+Package pdftex.def Info: Bilder/switch.png  used on input line 796.
 (pdftex.def)             Requested size: 313.69029pt x 26.04709pt.
 \myboxwidth=\skip91
 
-Overfull \hbox (11.74713pt too wide) in paragraph at lines 807--808
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 815--816
 [][][][][][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--818
+Underfull \hbox (badness 10000) in paragraph at lines 826--826
 [][]\T1/cmss/bx/n/12 $ wget https://assets.nagios.com/downloads/nagioscore/rele
 ases/nagios-
  []
 
 
-Overfull \hbox (11.74713pt too wide) in paragraph at lines 818--819
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 826--827
 [][][][][][] 
  []
 
 [40 <./Bilder/switch.png>]
-Overfull \hbox (11.74713pt too wide) in paragraph at lines 827--828
+Overfull \hbox (11.74713pt too wide) in paragraph at lines 835--836
 [][][][][][] 
  []
 
 [41]
-<Bilder/nagios-switch.png, id=652, 1689.31125pt x 354.32375pt>
+<Bilder/nagios-switch.png, id=656, 1689.31125pt x 354.32375pt>
 File: Bilder/nagios-switch.png Graphic file (type png)
 <use Bilder/nagios-switch.png>
-Package pdftex.def Info: Bilder/nagios-switch.png  used on input line 874.
+Package pdftex.def Info: Bilder/nagios-switch.png  used on input line 882.
 (pdftex.def)             Requested size: 448.13095pt x 93.99266pt.
-<Bilder/nagios-service.png, id=653, 2375.87625pt x 420.57124pt>
+<Bilder/nagios-service.png, id=657, 2375.87625pt x 420.57124pt>
 File: Bilder/nagios-service.png Graphic file (type png)
 <use Bilder/nagios-service.png>
-Package pdftex.def Info: Bilder/nagios-service.png  used on input line 882.
+Package pdftex.def Info: Bilder/nagios-service.png  used on input line 890.
 (pdftex.def)             Requested size: 448.13095pt x 79.32538pt.
  [42 <./Bilder/nagios-switch.png> <./Bilder/nagios-service.png>]
-<Bilder/nagios.png, id=663, 2569.6pt x 1335.99126pt>
+<Bilder/nagios.png, id=667, 2569.6pt x 1335.99126pt>
 File: Bilder/nagios.png Graphic file (type png)
 <use Bilder/nagios.png>
-Package pdftex.def Info: Bilder/nagios.png  used on input line 892.
+Package pdftex.def Info: Bilder/nagios.png  used on input line 900.
 (pdftex.def)             Requested size: 448.13095pt x 232.98654pt.
  [43 <./Bilder/nagios.png>]
-Underfull \hbox (badness 2213) in paragraph at lines 910--910
+Underfull \hbox (badness 2213) in paragraph at lines 918--918
 \T1/cmr/bx/it/12 id=@newqueue0 crea-te queue other-con-fig:max-ra-te=20000000 -
 - --id=
  []
 
 [44]
-Overfull \hbox (8.089pt too wide) in paragraph at lines 911--912
+Overfull \hbox (8.089pt too wide) in paragraph at lines 919--920
 \T1/cmr/bx/it/12 nung prio-ri-ty=65535, udp, nw_-src=192.168.0.0/16, nw_-dst=19
 2.168.0.0/16,
  []
 
-<Bilder/queue-qos.png, id=683, 955.57pt x 1264.725pt>
+<Bilder/queue-qos.png, id=687, 955.57pt x 1264.725pt>
 File: Bilder/queue-qos.png Graphic file (type png)
 <use Bilder/queue-qos.png>
-Package pdftex.def Info: Bilder/queue-qos.png  used on input line 919.
+Package pdftex.def Info: Bilder/queue-qos.png  used on input line 927.
 (pdftex.def)             Requested size: 313.69029pt x 415.17986pt.
 [45] [46 <./Bilder/queue-qos.png>]
-<Bilder/pidgin.png, id=699, 1123.94907pt x 486.31688pt>
+<Bilder/pidgin.png, id=703, 1123.94907pt x 486.31688pt>
 File: Bilder/pidgin.png Graphic file (type png)
 <use Bilder/pidgin.png>
-Package pdftex.def Info: Bilder/pidgin.png  used on input line 930.
+Package pdftex.def Info: Bilder/pidgin.png  used on input line 938.
 (pdftex.def)             Requested size: 358.50612pt x 155.11998pt.
-<Bilder/udp.png, id=700, 1121.69063pt x 146.04562pt>
+<Bilder/udp.png, id=704, 1121.69063pt x 146.04562pt>
 File: Bilder/udp.png Graphic file (type png)
 <use Bilder/udp.png>
-Package pdftex.def Info: Bilder/udp.png  used on input line 938.
+Package pdftex.def Info: Bilder/udp.png  used on input line 946.
 (pdftex.def)             Requested size: 358.50612pt x 46.6776pt.
-<Bilder/udp2.png, id=701, 1579.40062pt x 588.69937pt>
+<Bilder/udp2.png, id=705, 1579.40062pt x 588.69937pt>
 File: Bilder/udp2.png Graphic file (type png)
 <use Bilder/udp2.png>
-Package pdftex.def Info: Bilder/udp2.png  used on input line 946.
+Package pdftex.def Info: Bilder/udp2.png  used on input line 954.
 (pdftex.def)             Requested size: 358.50612pt x 133.62839pt.
  [47 <./Bilder/pidgin.png> <./Bilder/udp.png>] [48 <./Bilder/udp2.png>] [49]
-<Bilder/transfer-flow.png, id=720, 609.27625pt x 919.435pt>
+<Bilder/transfer-flow.png, id=724, 609.27625pt x 919.435pt>
 File: Bilder/transfer-flow.png Graphic file (type png)
 <use Bilder/transfer-flow.png>
-Package pdftex.def Info: Bilder/transfer-flow.png  used on input line 972.
+Package pdftex.def Info: Bilder/transfer-flow.png  used on input line 980.
 (pdftex.def)             Requested size: 179.24963pt x 270.50143pt.
 
-Underfull \hbox (badness 1383) in paragraph at lines 976--976
+Underfull \hbox (badness 1383) in paragraph at lines 984--984
 [][]\T1/cmr/m/n/12 Die Durch-füh-rung er-folgt mit den im
  []
 
 
-Underfull \hbox (badness 1648) in paragraph at lines 976--976
+Underfull \hbox (badness 1648) in paragraph at lines 984--984
 \T1/cmr/m/n/12 vor-he-ri-gen Ka-pi-tel auf-ge-stell-ten Vir-tu-
  []
 
 
-Underfull \hbox (badness 1769) in paragraph at lines 976--976
+Underfull \hbox (badness 1769) in paragraph at lines 984--984
 \T1/cmr/m/n/12 al-Box Ma-schi-nen. Auf dem Ser-ver in
  []
 
 
-Underfull \hbox (badness 3849) in paragraph at lines 976--976
+Underfull \hbox (badness 3849) in paragraph at lines 984--984
 \T1/cmr/m/n/12 Frank-furt wur-de per \T1/cmr/bx/it/12 su-do apt in-
  []
 
 
-Underfull \hbox (badness 1895) in paragraph at lines 976--976
+Underfull \hbox (badness 1895) in paragraph at lines 984--984
 \T1/cmr/m/n/12 Server in-stal-liert. Die-ser wur-de ein-ge-
  []
 
 [50 <./Bilder/transfer-flow.png>]
-<Bilder/transfer-daten.png, id=730, 1239.63126pt x 609.27625pt>
+<Bilder/transfer-daten.png, id=734, 1239.63126pt x 609.27625pt>
 File: Bilder/transfer-daten.png Graphic file (type png)
 <use Bilder/transfer-daten.png>
-Package pdftex.def Info: Bilder/transfer-daten.png  used on input line 982.
+Package pdftex.def Info: Bilder/transfer-daten.png  used on input line 990.
 (pdftex.def)             Requested size: 358.50612pt x 176.20215pt.
-<Bilder/ssh.png, id=731, 967.615pt x 364.36125pt>
+<Bilder/ssh.png, id=735, 967.615pt x 364.36125pt>
 File: Bilder/ssh.png Graphic file (type png)
 <use Bilder/ssh.png>
-Package pdftex.def Info: Bilder/ssh.png  used on input line 990.
+Package pdftex.def Info: Bilder/ssh.png  used on input line 998.
 (pdftex.def)             Requested size: 358.50612pt x 134.99501pt.
  [51 <./Bilder/transfer-daten.png> <./Bilder/ssh.png>] [52] [53]
-<Bilder/fororig.png, id=768, 1381.41093pt x 143.03438pt>
+<Bilder/fororig.png, id=772, 1381.41093pt x 143.03438pt>
 File: Bilder/fororig.png Graphic file (type png)
 <use Bilder/fororig.png>
-Package pdftex.def Info: Bilder/fororig.png  used on input line 1032.
+Package pdftex.def Info: Bilder/fororig.png  used on input line 1040.
 (pdftex.def)             Requested size: 358.50612pt x 37.12039pt.
-<Bilder/forneu.png, id=770, 1379.1525pt x 144.54pt>
+<Bilder/forneu.png, id=774, 1379.1525pt x 144.54pt>
 File: Bilder/forneu.png Graphic file (type png)
 <use Bilder/forneu.png>
-Package pdftex.def Info: Bilder/forneu.png  used on input line 1042.
+Package pdftex.def Info: Bilder/forneu.png  used on input line 1050.
 (pdftex.def)             Requested size: 358.50612pt x 37.57289pt.
-<Bilder/dhcp2.png, id=771, 810.02625pt x 760.8425pt>
+<Bilder/dhcp2.png, id=775, 810.02625pt x 760.8425pt>
 File: Bilder/dhcp2.png Graphic file (type png)
 <use Bilder/dhcp2.png>
-Package pdftex.def Info: Bilder/dhcp2.png  used on input line 1053.
+Package pdftex.def Info: Bilder/dhcp2.png  used on input line 1061.
 (pdftex.def)             Requested size: 179.24963pt x 168.36105pt.
 
-Underfull \hbox (badness 5417) in paragraph at lines 1054--1054
+Underfull \hbox (badness 5417) in paragraph at lines 1062--1062
 [][][]|\T1/cmr/m/n/12 DHCP-Konfiguration für
  []
 
 
-Underfull \hbox (badness 1281) in paragraph at lines 1057--1058
-\T1/cmr/m/n/12 bil-dung []3.32[]). In die-ser Da-tei wer-den
+Underfull \hbox (badness 1281) in paragraph at lines 1065--1066
+\T1/cmr/m/n/12 bil-dung []3.33[]). In die-ser Da-tei wer-den
  []
 
 
-Underfull \hbox (badness 1325) in paragraph at lines 1057--1058
+Underfull \hbox (badness 1325) in paragraph at lines 1065--1066
 \T1/cmr/m/n/12 die von den DHCP-Clients be-nö-tig-ten
  []
 
 [54 <./Bilder/fororig.png> <./Bilder/forneu.png> <./Bilder/dhcp2.png>]
-<Bilder/wireshark2.png, id=784, 1393.45593pt x 731.73375pt>
+<Bilder/wireshark2.png, id=788, 1393.45593pt x 731.73375pt>
 File: Bilder/wireshark2.png Graphic file (type png)
 <use Bilder/wireshark2.png>
-Package pdftex.def Info: Bilder/wireshark2.png  used on input line 1064.
+Package pdftex.def Info: Bilder/wireshark2.png  used on input line 1072.
 (pdftex.def)             Requested size: 448.13095pt x 235.32077pt.
-<Bilder/s1.png, id=786, 1390.44469pt x 750.55406pt>
+<Bilder/s1.png, id=790, 1390.44469pt x 750.55406pt>
 File: Bilder/s1.png Graphic file (type png)
 <use Bilder/s1.png>
-Package pdftex.def Info: Bilder/s1.png  used on input line 1074.
+Package pdftex.def Info: Bilder/s1.png  used on input line 1082.
 (pdftex.def)             Requested size: 448.13095pt x 241.88863pt.
  [55 <./Bilder/wireshark2.png>]
-<Bilder/dhcpablauf.png, id=794, 319.4334pt x 182.1204pt>
+<Bilder/dhcpablauf.png, id=798, 319.4334pt x 182.1204pt>
 File: Bilder/dhcpablauf.png Graphic file (type png)
 <use Bilder/dhcpablauf.png>
-Package pdftex.def Info: Bilder/dhcpablauf.png  used on input line 1083.
+Package pdftex.def Info: Bilder/dhcpablauf.png  used on input line 1091.
 (pdftex.def)             Requested size: 268.8813pt x 153.31078pt.
 
-Overfull \hbox (44.81583pt too wide) in paragraph at lines 1083--1084
+Overfull \hbox (44.81583pt too wide) in paragraph at lines 1091--1092
  [][] 
  []
 
 
-Underfull \hbox (badness 1132) in paragraph at lines 1084--1084
+Underfull \hbox (badness 1132) in paragraph at lines 1092--1092
 [][][]|\T1/cmr/m/n/12 Kom-mu-ni-ka-ti-on zwi-schen
  []
 
 [56 <./Bilder/s1.png> <./Bilder/dhcpablauf.png>]
-<Bilder/wireshark.png, id=807, 1392.70313pt x 730.22812pt>
+<Bilder/wireshark.png, id=811, 1392.70313pt x 730.22812pt>
 File: Bilder/wireshark.png Graphic file (type png)
 <use Bilder/wireshark.png>
-Package pdftex.def Info: Bilder/wireshark.png  used on input line 1096.
+Package pdftex.def Info: Bilder/wireshark.png  used on input line 1104.
 (pdftex.def)             Requested size: 448.13095pt x 234.95914pt.
-<Bilder/dhcpshort.png, id=808, 1275.26437pt x 439.6425pt>
+<Bilder/dhcpshort.png, id=812, 1275.26437pt x 439.6425pt>
 File: Bilder/dhcpshort.png Graphic file (type png)
 <use Bilder/dhcpshort.png>
-Package pdftex.def Info: Bilder/dhcpshort.png  used on input line 1104.
+Package pdftex.def Info: Bilder/dhcpshort.png  used on input line 1112.
 (pdftex.def)             Requested size: 224.06548pt x 77.24046pt.
  [57 <./Bilder/wireshark.png> <./Bilder/dhcpshort.png>]
-<Bilder/dns.png, id=820, 320.69812pt x 360.59718pt>
+<Bilder/dns.png, id=824, 320.69812pt x 360.59718pt>
 File: Bilder/dns.png Graphic file (type png)
 <use Bilder/dns.png>
-Package pdftex.def Info: Bilder/dns.png  used on input line 1122.
+Package pdftex.def Info: Bilder/dns.png  used on input line 1130.
 (pdftex.def)             Requested size: 179.24963pt x 201.55339pt.
 
-Underfull \hbox (badness 5417) in paragraph at lines 1123--1123
+Underfull \hbox (badness 5417) in paragraph at lines 1131--1131
 [][][]|\T1/cmr/m/n/12 DHCP-Konfiguration für
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1126--1126
+Underfull \hbox (badness 1708) in paragraph at lines 1134--1134
 \T1/cmr/m/n/12 tei im Pfad \T1/cmr/bx/it/12 /et-c/d-h-cp/ \T1/cmr/m/n/12 zwei Z
 ei-len
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 1126--1126
+Underfull \hbox (badness 1448) in paragraph at lines 1134--1134
 \T1/cmr/bx/it/12 ti-on domain-name-servers 8.8.8.8,
  []
 
 [58 <./Bilder/dns.png>]
-<Bilder/dns2.png, id=837, 1391.95032pt x 733.23938pt>
+<Bilder/dns2.png, id=841, 1391.95032pt x 733.23938pt>
 File: Bilder/dns2.png Graphic file (type png)
 <use Bilder/dns2.png>
-Package pdftex.def Info: Bilder/dns2.png  used on input line 1135.
+Package pdftex.def Info: Bilder/dns2.png  used on input line 1143.
 (pdftex.def)             Requested size: 448.13095pt x 236.06232pt.
-<Bilder/dns3.png, id=840, 606.76688pt x 397.485pt>
+<Bilder/dns3.png, id=844, 606.76688pt x 397.485pt>
 File: Bilder/dns3.png Graphic file (type png)
 <use Bilder/dns3.png>
-Package pdftex.def Info: Bilder/dns3.png  used on input line 1144.
+Package pdftex.def Info: Bilder/dns3.png  used on input line 1152.
 (pdftex.def)             Requested size: 286.80353pt x 187.88544pt.
  [59 <./Bilder/dns2.png> <./Bilder/dns3.png>]
 chapter 4.
@@ -1616,20 +1614,20 @@ chapter 5.
 ] [64] [65]
 chapter without number
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-169.
+177.
 (C:\Users\k42br\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 [66
 
 ]
-Overfull \hbox (19.83438pt too wide) in paragraph at lines 1169--1169
+Overfull \hbox (19.83438pt too wide) in paragraph at lines 1177--1177
 []\T1/cmr/m/n/12 firewall.cx. \T1/cmr/m/it/12 UN-DER-STAN-DING VPN IP-SEC TUN-N
 EL MO-DE AND IP-SEC TRANS-
  []
 
 
-Overfull \hbox (7.75128pt too wide) in paragraph at lines 1169--1169
+Overfull \hbox (7.75128pt too wide) in paragraph at lines 1177--1177
 []\T1/cmr/m/n/12 Alexander Gel-ber-ger, Niv Ye-mi-ni und Ran Gi-la-di.   Per-f
 or-man-ce ana-ly-sis of software-
  []
@@ -1643,9 +1641,6 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 
 ] [73] [74] [75] [76] [77] [78] [79] [80] [81] [82] [83]
 [84]) [85] (Code/Transfer.py [86] [87] [88] [89]) [90] (Projekt.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
 Package rerunfilecheck Info: File `Projekt.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 Package logreq Info: Writing requests to 'Projekt.run.xml'.
@@ -1654,13 +1649,13 @@ Package logreq Info: Writing requests to 'Projekt.run.xml'.
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 1089 ({)
+### simple group (level 1) entered at line 1097 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 29947 strings out of 478659
- 567748 string characters out of 2845919
- 1887481 words of memory out of 3000000
- 46651 multiletter control sequences out of 15000+600000
+ 29962 strings out of 478659
+ 568077 string characters out of 2845919
+ 1888664 words of memory out of 3000000
+ 46664 multiletter control sequences out of 15000+600000
  421259 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,20n,106p,10644b,2565s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1682,9 +1677,9 @@ s1200.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (100 pages, 7577233 bytes).
+Output written on Projekt.pdf (100 pages, 7590031 bytes).
 PDF statistics:
- 2851 PDF objects out of 2984 (max. 8388607)
- 951 named destinations out of 1000 (max. 500000)
- 494 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2855 PDF objects out of 2984 (max. 8388607)
+ 952 named destinations out of 1000 (max. 500000)
+ 499 words of extra memory for PDF output out of 10000 (max. 10000000)
 
