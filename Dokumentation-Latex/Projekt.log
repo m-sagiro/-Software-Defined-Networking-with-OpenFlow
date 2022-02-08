@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  8 FEB 2022 11:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  8 FEB 2022 13:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1103,7 +1103,12 @@ Package pdftex.def Info: Bilder/layer1.png  used on input line 152.
 File: Bilder/layer2.png Graphic file (type png)
 <use Bilder/layer2.png>
 Package pdftex.def Info: Bilder/layer2.png  used on input line 163.
-(pdftex.def)             Requested size: 179.24963pt x 161.17793pt.
+(pdftex.def)             Requested size: 188.21417pt x 169.24883pt.
+
+Underfull \hbox (badness 1975) in paragraph at lines 167--167
+[]\T1/cmr/m/n/12 Software-defined Net-wor-king be-schreibt einen
+ []
+
 
 Overfull \hbox (2.3762pt too wide) in paragraph at lines 170--170
 \T1/cmr/m/n/12 enabled Swit-ches sind klas-si-sche Swit-ches, die zu-sätz-lich 
@@ -1654,7 +1659,7 @@ Package logreq Info: Writing requests to 'Projekt.run.xml'.
 Here is how much of TeX's memory you used:
  29947 strings out of 478659
  567748 string characters out of 2845919
- 1888481 words of memory out of 3000000
+ 1887481 words of memory out of 3000000
  46651 multiletter control sequences out of 15000+600000
  421259 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1677,7 +1682,7 @@ s1200.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (100 pages, 7577230 bytes).
+Output written on Projekt.pdf (100 pages, 7577215 bytes).
 PDF statistics:
  2851 PDF objects out of 2984 (max. 8388607)
  951 named destinations out of 1000 (max. 500000)
