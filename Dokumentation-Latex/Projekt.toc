@@ -156,7 +156,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Fazit}{63}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{66}{chapter*.63}%
+\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{65}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{66}{chapter*.64}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {A}Anhang}{72}{appendix.A}%
 \defcounter {refsection}{0}\relax 
