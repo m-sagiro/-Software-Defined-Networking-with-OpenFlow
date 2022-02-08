@@ -21,6 +21,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage[automark]{scrlayer-scrpage}
 \usepackage[backend=biber,style=numeric]{biblatex} %,sortcase=false,
+\usepackage{url}
 \usepackage[nohyperlinks]{acronym}
 \usepackage{etoolbox}
 \usepackage{hyphenat}
@@ -39,6 +40,10 @@
 \setcounter{secnumdepth}{3}
 \addtocontents{toc}{\setcounter{tocdepth}{1}}
 \hyphenation{every-where}
+
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
 %*************************************************************************
 % Dokumentanfang
 %*************************************************************************
@@ -150,6 +155,7 @@ Im folgenden Abschnitt werden die jeweiligen Einleitungen jedes Mitgliedes vorge
 \end{wrapfigure}
 Gegenwärtig gibt es im Bereich der Verwaltung von Computernetzwerken viele neue komplexe Anforderungen und notwendige Konfigurationen, die berücksichtigt werden müssen.  Der Datenaustausch innerhalb eines Netzwerkes ist um ein Vielfaches gestiegen, somit steigt die Auslastung das ein Netzwerksystem aushalten muss. Bei einem traditionellen Netzwerk würde das heißen, dass ein Netzwerkadministrator alle Netzwerkkomponenten wie Router, Switches und Firewalls etc. manuell konfigurieren müsste, um allen entsprechenden Anforderungen zu verwirklichen. Ferner müssen Netzwerkadministratoren viel Zeit in die Konfiguration legen, um alles korrekt zu implementieren.\par
 Software Defined Networking bietet hierzu eine Alternativmöglichkeit zur Verwaltung einer Netzwerkumgebung. Im Gegensatz zu traditionellen Netzwerken trennt SDN die Kontrollschicht und die Datenschicht, und ermöglicht dadurch die Kontrolle des Netwerkes über das Netz. Im Mittelpunkt des Netzwerkes befindet sich ein SDN-Controller, der zur Konfiguration von allen Netzwerkkomponenten genutzt wird \cite{sdn1}. Die SDN-Architektur ist auf drei Ebenen aufgeteilt und wird anhand von Abbildung \ref{layer1} nochmals visuell dargestellt. Die Anwendungsschicht enthält Applikationen für SDN wie Firewall und Loadbalancer und wird mithilfe der REST API bereitgestellt \cite{james1}. Die Kontrollschicht enthält den SND-Controller, worüber das gesamte Netzwerk gesteuert wird. Die Infrastrukturschicht enthält die Netzwerkkomponenten wie Switches und Router und sind mit dem SDN-Controller verbunden, um die eingestellten Anforderungen vom Controller durchzusetzen. Die Architektur enthält mehrere Schnittstellen, sowohl eine Northbound API zwischen Anwendungsschicht und Kontrollschicht als auch eine Soutbound API zwischen Kontrollschicht und Infrastrukturschicht. Die Datenübertragung beim Southbound API erfolgt mit OpenFlow Protokolle. Bei der Weiterleitung eines Datenpakets wird die Weiterleitung auf der Datenschicht von einem Switch oder einem Router aufgenommen. Der SDN-Controller, der sich auf der Kontrollschicht befindet, entscheidet, wie das Datenpaket weitergeleitet wird \cite{james1}. Dadurch können verschiedene Netzwerkfunktionen implementiert werden, die von den Switches und Routern umgesetzt werden müssen. Die Kommunikation zwischen dem SDN-Controller und den Switches in der Infrastrukturschicht wird durch Openflow realisiert. Durch die Änderung des flow tables im Switch, kann der Controller das Verhalten des Switches beeinflussen und so einstellen, dass die Instruktionen des Controllers umgesetzt werden \cite{james1}. Im Gegensatz zu der traditionellen Weise die Netzwerkkomponenten manuell zu konfigurieren, kann durch die Trennung von Kontrollschicht und Datenschicht der Controller genutzt werden, um alle Konfigurationen von Komponenten im Netzwerk umzusetzen \cite{james3}. Zudem kann durch das zentrale Management des Netzwerkes und das der SDN-Controller programmierbar ist, ein Administrator effizienter, flexibler und agiler Handeln \cite{james1}. Besonders im Bereich Quality of Service muss ein Netzwerk agiler und flexibler als in der Vergangenheit sein. Somit kann Quality of Service mit SDN gewährleistet und einfacher umgesetzt werden \cite{james5}.Logischerweise kann auch argumentiert werden, dass durch das zentrale Management über das Netz geringere Betriebskosten aufkommen, da die Konfigurationsänderungen effizienter umgesetzt werden können.  Jedoch ist ein erwähnenswerter Nachteil, dass beim Ausfall eines SDN-Controllers in einem Netzwerk das gesamte Netzwerk ausfällt. Dies könnte durch eine Denial of Service attack ausgelöst werden. Somit könnte die Möglichkeit bestehen, mehrere Ausweichcontroller für solche Ereignisse vorzubereiten.
+\newpage
 \section*{Einleitung von Mücahit}\label{einl-müco}
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\vspace{-\baselineskip}
@@ -164,7 +170,7 @@ Bei klassischen Switches werden anhand eingehender Pakete MAC-Adressen mit dem d
 Über ein im Vergleich zu Hypertext Transfer Protocol (HTTP) junges Protokoll namens OpenFlow (OF) kommuniziert der Controller mit bestimmten Netzwerkkomponenten wie beispielsweise ein OpenFlow Switch, um diese zu steuern. Es gibt zwei Arten von OpenFlow Switches: OpenFlow-only und OpenFlow-enabled Switches. OpenFlow-enabled Switches sind klassische Switches, die zusätzlich OpenFlow fähig sind. OpenFlow-only Switches haben keine zusätzlichen Module eingebaut, auf die Sie zurückgreifen können und müssen deswegen an einen Controller gebunden sein, der dann beispielsweise entscheidet, wohin eingehenden Pakete weiterleitet werden sollen. Dafür sendet der Switch ein Paket oder ein Teil eines Paketes an den Controller und wartet auf einen Befehl, wie er sich zu verhalten hat. Falls der Switch vorher einen Eintrag über das Paket besitzt, greift er auf diese zurück, und wenn überhaupt kein Eintrag vorhanden ist, wird das Paket nach den Einstellungen der Switch entweder verworfen, an allen Ports ausgegeben oder an den Controller gesendet. Die Fähigkeit, bestimmte Befehle auf Pakete anzuwenden, die auf einer Übereinstimmung basieren, zeichnet Software-defined Networking aus \cite[9-10]{sdn2}. \par
 Der Controller stellt einen sogenannten Single Point of Failure dar. Das bedeutet, wenn der Controller ausfällt, fallen alle vom Controller abhängigen Netzwerkkomponenten ebenfalls aus. So würde beispielsweise bei einer Denial-of-Service-Attacke durch das Überfluten des Controllers ein Zustand erfolgen, bei dem der Controller an Bandbreite, Speicher und Rechenleistung verlieren und im schlimmsten Fall auch lahmgelegt werden kann. Das ist eines der schlimmsten Szenarien und könnte durch das Hinzufügen eines zweiten Controllers kompensiert werden \cite[3]{sdn3}.
 
-
+\newpage
 \section*{Einleitung von Naghmeh}\label{einl-naghmeh}
 In Kommunikationsnetzwerke werden immer größer und komplexer und traditionelle Infrastrukturen, Netzwerksysteme können kaum eine Lösung bitten, um die heutigen Netzwerkanforderungen angemessen zu erfüllen. Dies hat zu einem anderen Ansatz für die Netzwerksystemarchitektur geführt, der als Software defined Networking (SDN) bekannt ist. SDN-Ansätze wurden bereits Mitte der 1990er Jahre eingeführt, sind aber erst seit letzten Jahren ein etablierter Industriestandard geworden. Viele Netzwerkarchitekturen und -systeme haben SDN eingeführt, und Anbieter entscheiden sich für SDN als eine bessere Alternative zu festen und unflexiblen Protokollstapeln. SDN ist eine moderne Netzwerkarchitektur, die die Netzwerksteuerung von Datenübertragungsgeräten entkoppelt und die Netzwerkprogrammierung unterstützt \cite{gelberger2013performance}.\par
 SDN trennt die Netzarchitekturen in drei verschiedene Ebenen: Daten-, Kontroll- und Anwendungsebene. Die Datenebene umfasst alle Routing-Geräte, die Weiterleitungsregeln speichern, um den Datenverkehr zu verarbeiten. Die Steuerungsebene besteht aus einem oder mehreren Controllern. Controller ist dafür verantwortlich, den Datenverkehr zu überprüft, Entscheidungen zu treffen und die Netzwerkkonfiguration zu ändert. Der Controller kann auch die Ressourcen optimieren und die Fehlerbehebungsverfahren implementieren. Die Anwendungsebene gruppiert Anwendungen und verarbeitet die Daten für den Controller. SDN definiert auch Schnittstellen für die Kommunikation zwischen Ebenen: Anwendungs- und Steuerungsebene kommunizieren über die Northbound API, und Daten- und Steuerungsebenen verwenden die Southbound-API \cite{rastogi2016comparative}.\par
@@ -173,7 +179,7 @@ Das von SDN eingeführte modulare Konzept und die moderne Schichtenstruktur erm�
 SDN eignet sich auch ideal für die Entwicklung von Mechanismen zur Bewältigung von Sicherheitsproblemen, aber dazu müssen die Administratoren die Controller für die Ausführung bestimmter Aufgaben erweitern. Diese Art von Mechanismus kann auf der Steuerungsebene oder als eine Reihe von Teilen auf der Anwendungs- und Steuerungsebene ausgeführt werden \cite{morales2015extending}.\par
 Die wichtigste Funktion, die SDN für Computernetzwerke bietet, ist die Möglichkeit, das Netzwerk zu programmieren und es flexibler und einfacher zu verwalten. Diese Fähigkeit spielt eine wichtige Rolle bei der Reduzierung des Gesamtsystemkapitals und der Verwaltungskosten sowie bei der Verbesserung von Leistung, Zuverlässigkeit und Servicequalität. Die ständige Nachfrage nach Neukonfiguration bestehender Netzwerke aufgrund von Bandbreite und neuen Technologien (Hard- und Software) ist sehr anspruchsvoll und komplex. Mit der SDN-Technologie wird dieser Prozess im Vergleich zu herkömmlichen Netzwerken vereinfacht\cite{hasan2020sdn}.
 
-
+\newpage
 \section*{Einleitung von Tung}\label{einl-tung}
 Derzeit gibt es viele Definitionen von SDN, aber laut ONF (Open Networking Foundation – eine gemeinnützige Organisation, die die Entwicklung von SDN durch das Studium geeigneter offener Standards unterstützt), ist SDN definiert als: „Software-Defined Networking (SDN) ist eine aufstrebende Architektur, die dynamisch, verwaltbar, kostengünstig und anpassungsfähig ist, wodurch sie sich ideal für die hohe Bandbreite und Dynamik heutiger Anwendungen eignet. Diese Architektur entkoppelt die Netzwerksteuerungs- und Weiterleitungsfunktionen, wodurch die Netzwerksteuerung direkt programmierbar und die zugrunde liegende Infrastruktur für Anwendungen und Netzwerkdienste abstrahiert werden kann.”\cite{ONFTung} Diese Definition kann sehr allgemein und verwirrend sein. Um zu verstehen, was SDN ist, erinnern wir uns zunächst ein wenig an die traditionelle Netzwerkarchitektur.
 
@@ -202,7 +208,7 @@ Mit SDN kann der Administrator des Netzwerks alle Switching-Regeln des Netzwerks
 Weitere Vorteile von SDN sind, dass es Verwaltung und Einblick in die Komponenten und Konfiguration des Netzwerks bietet. Administratoren müssen nur mit einem einzigen zentralen Controller interagieren, um Richtlinien an verbundene Switches im Netzwerk zu verteilen, anstatt mehrere Geräte einzeln konfigurieren zu müssen. Diese Fähigkeit ist auch in Bezug auf die Sicherheit ein großer Vorteil, da der Controller den Datenverkehr überwachen und Sicherheitsrichtlinien zentral, synchron und einfach implementieren kann. Wenn der Controller beispielsweise verdächtigen Datenverkehr sieht, kann er das Paket sofort umleiten oder verwerfen, ohne es an einen anderen Handler weiterzuleiten.\cite{sdnbenefitstung}
 
 
-
+\newpage
 \section{Motivation}
 {\tiny Verfasst von: James\par}
 Das Modul “Informatik Projekt” wird im 5. Semester des Bachelorstudiengangs Informatik durchgeführt. Nach erfolgreichem Abschluss des Moduls sollten Studierende gewisse Kompetenzen erlernt haben, wie beispielsweise den Software-Engineering Prozess planen und durchführen, als auch auf einem vertieften Niveau gemeinsam programmieren zu können. Außerdem sollten Studierende fähig sein, gemeinsam ein Team zu bilden und einen selbsterstellten Zeitplan einzuhalten sowie auf einem technisch hohen Niveau zu kommunizieren, um als Team auf Ergebnisse zu kommen. Falls unerwartete Komplikationen sowohl technischer als auch sozialer Art entstehen, sollte als Team diese Hürde überwunden werden. Infolgedessen entstand dieser Projektbericht, der als Projektergebnis und als Dokumentation dient, um die erlernten Kompetenzen widerzuspiegeln.\par
@@ -1163,9 +1169,9 @@ Aus den Ergebnissen geht hervor, dass durch SDN eine dynamischere Administration
 \printbibliography[title=Literaturverzeichnis]
 
 \appendix
-\chapter{Mininet-Skript}
+\chapter{Anhang}
 
-\begin{lstlisting}[language=Python,
+\lstinputlisting[language=Python,
 	caption={Das in Python geschrieben Mininet-Skript},
 	backgroundcolor = \color{lightgray},
 	captionpos=b,
@@ -1178,14 +1184,26 @@ Aus den Ergebnissen geht hervor, dass durch SDN eine dynamischere Administration
 	frame=single,
 	aboveskip=2em,
 	label={interface-deklaration},
-	autogobble=true,
-	]
-	public interface Interface1 extends Interface2, Interface3 {
-		...
-		public int methode(int zahl1, int zahl2);
-		...
-	}
-\end{lstlisting}
+	%autogobble=true,
+	]{Code/site.py}
+\captionsetup{justification=centering,margin=2cm}
+
+\newpage
+\lstinputlisting[language=Python,
+caption={Das in Python geschrieben SSH-Transfer-Skript},
+backgroundcolor = \color{lightgray},
+captionpos=b,
+numbers=left,
+keywordstyle=\color{RoyalBlue},
+rulecolor=\color{black},
+upquote=true, 
+showstringspaces=false,
+breaklines=true,
+frame=single,
+aboveskip=2em,
+label={interface-deklaration},
+%autogobble=true,
+]{Code/Transfer.py}
 \captionsetup{justification=centering,margin=2cm}
 
 \end{document}
