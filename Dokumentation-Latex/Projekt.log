@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  9 FEB 2022 17:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  9 FEB 2022 21:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1673,10 +1673,10 @@ Package logreq Info: Writing requests to 'Projekt.run.xml'.
 ### simple group (level 1) entered at line 1107 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 29990 strings out of 478659
- 568621 string characters out of 2845919
+ 29992 strings out of 478659
+ 568651 string characters out of 2845919
  1888800 words of memory out of 3000000
- 46687 multiletter control sequences out of 15000+600000
+ 46689 multiletter control sequences out of 15000+600000
  421259 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  108i,20n,106p,10644b,2567s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1698,7 +1698,7 @@ s1200.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (100 pages, 7926591 bytes).
+Output written on Projekt.pdf (100 pages, 7926459 bytes).
 PDF statistics:
  2871 PDF objects out of 2984 (max. 8388607)
  955 named destinations out of 1000 (max. 500000)
