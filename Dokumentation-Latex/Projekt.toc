@@ -156,10 +156,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Fazit}{64}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{66}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Zukunftsaussichten}{65}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{67}{chapter*.65}%
+\contentsline {chapter}{\nonumberline Literaturverzeichnis}{66}{chapter*.65}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {A}Anhang}{73}{appendix.A}%
+\contentsline {chapter}{\numberline {A}Anhang}{72}{appendix.A}%
 \defcounter {refsection}{0}\relax 
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
