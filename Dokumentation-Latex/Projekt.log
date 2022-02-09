@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.3)  9 FEB 2022 23:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12) (preloaded format=pdflatex 2022.2.3)  10 FEB 2022 00:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1564,36 +1564,37 @@ Underfull \hbox (badness 1132) in paragraph at lines 1102--1102
 [][][]|\T1/cmr/m/n/12 Kom-mu-ni-ka-ti-on zwi-schen
  []
 
-[56 <./Bilder/wireshark2.png> <./Bilder/s1.png>] [57 <./Bilder/dhcpablauf.png>]
-<Bilder/wireshark.png, id=824, 1392.70313pt x 730.22812pt>
+[56 <./Bilder/wireshark2.png> <./Bilder/s1.png>]
+<Bilder/wireshark.png, id=818, 1392.70313pt x 730.22812pt>
 File: Bilder/wireshark.png Graphic file (type png)
 <use Bilder/wireshark.png>
-Package pdftex.def Info: Bilder/wireshark.png  used on input line 1114.
+Package pdftex.def Info: Bilder/wireshark.png  used on input line 1113.
 (pdftex.def)             Requested size: 448.13095pt x 234.95914pt.
-<Bilder/dhcpshort.png, id=825, 1275.26437pt x 439.6425pt>
+<Bilder/dhcpshort.png, id=819, 1275.26437pt x 439.6425pt>
 File: Bilder/dhcpshort.png Graphic file (type png)
 <use Bilder/dhcpshort.png>
-Package pdftex.def Info: Bilder/dhcpshort.png  used on input line 1122.
+Package pdftex.def Info: Bilder/dhcpshort.png  used on input line 1121.
 (pdftex.def)             Requested size: 224.06548pt x 77.24046pt.
-[58 <./Bilder/wireshark.png> <./Bilder/dhcpshort.png>]
+ [57 <./Bilder/dhcpablauf.png> <./Bilder/wireshark.png>] [58 <./Bilder/dhcpshor
+t.png>]
 <Bilder/dns.png, id=836, 320.69812pt x 360.59718pt>
 File: Bilder/dns.png Graphic file (type png)
 <use Bilder/dns.png>
-Package pdftex.def Info: Bilder/dns.png  used on input line 1140.
+Package pdftex.def Info: Bilder/dns.png  used on input line 1139.
 (pdftex.def)             Requested size: 179.24963pt x 201.55339pt.
 
-Underfull \hbox (badness 5417) in paragraph at lines 1141--1141
+Underfull \hbox (badness 5417) in paragraph at lines 1140--1140
 [][][]|\T1/cmr/m/n/12 DHCP-Konfiguration für
  []
 
 
-Underfull \hbox (badness 1708) in paragraph at lines 1144--1144
+Underfull \hbox (badness 1708) in paragraph at lines 1143--1143
 \T1/cmr/m/n/12 tei im Pfad \T1/cmr/bx/it/12 /et-c/d-h-cp/ \T1/cmr/m/n/12 zwei Z
 ei-len
  []
 
 
-Underfull \hbox (badness 1448) in paragraph at lines 1144--1144
+Underfull \hbox (badness 1448) in paragraph at lines 1143--1143
 \T1/cmr/bx/it/12 ti-on domain-name-servers 8.8.8.8,
  []
 
@@ -1601,12 +1602,12 @@ Underfull \hbox (badness 1448) in paragraph at lines 1144--1144
 <Bilder/dns2.png, id=853, 1391.95032pt x 733.23938pt>
 File: Bilder/dns2.png Graphic file (type png)
 <use Bilder/dns2.png>
-Package pdftex.def Info: Bilder/dns2.png  used on input line 1153.
+Package pdftex.def Info: Bilder/dns2.png  used on input line 1152.
 (pdftex.def)             Requested size: 448.13095pt x 236.06232pt.
 <Bilder/dns3.png, id=856, 606.76688pt x 397.485pt>
 File: Bilder/dns3.png Graphic file (type png)
 <use Bilder/dns3.png>
-Package pdftex.def Info: Bilder/dns3.png  used on input line 1162.
+Package pdftex.def Info: Bilder/dns3.png  used on input line 1161.
 (pdftex.def)             Requested size: 286.80353pt x 187.88544pt.
  [60 <./Bilder/dns2.png> <./Bilder/dns3.png>]
 chapter 4.
@@ -1620,35 +1621,35 @@ chapter 5.
 <Bilder/neuetopo.png, id=883, 913.91437pt x 727.21687pt>
 File: Bilder/neuetopo.png Graphic file (type png)
 <use Bilder/neuetopo.png>
-Package pdftex.def Info: Bilder/neuetopo.png  used on input line 1193.
+Package pdftex.def Info: Bilder/neuetopo.png  used on input line 1192.
 (pdftex.def)             Requested size: 224.06548pt x 178.2862pt.
 
-Overfull \hbox (3.69641pt too wide) in paragraph at lines 1197--1198
+Overfull \hbox (3.69641pt too wide) in paragraph at lines 1196--1197
 \T1/cmr/bx/it/12 ip='0.0.0.0', defaul-t-Rou-ter='via 192.
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 1197--1198
+Underfull \hbox (badness 1221) in paragraph at lines 1196--1197
 \T1/cmr/m/n/12 einen Broad-cast, einen Default Rou-te,
  []
 
 [65 <./Bilder/neuetopo.png>]
 chapter without number
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-202.
+201.
 (C:\Users\James\AppData\Local\Programs\MiKTeX\tex/latex/base\t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 [66
 
 ]
-Overfull \hbox (19.83438pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (19.83438pt too wide) in paragraph at lines 1201--1201
 []\T1/cmr/m/n/12 firewall.cx. \T1/cmr/m/it/12 UN-DER-STAN-DING VPN IP-SEC TUN-N
 EL MO-DE AND IP-SEC TRANS-
  []
 
 
-Overfull \hbox (7.75128pt too wide) in paragraph at lines 1202--1202
+Overfull \hbox (7.75128pt too wide) in paragraph at lines 1201--1201
 []\T1/cmr/m/n/12 Alexander Gel-ber-ger, Niv Ye-mi-ni und Ran Gi-la-di.   Per-f
 or-man-ce ana-ly-sis of software-
  []
@@ -1698,7 +1699,7 @@ s1200.pk> <C:\Users\James\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\James\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\James\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (100 pages, 7926403 bytes).
+Output written on Projekt.pdf (100 pages, 7926416 bytes).
 PDF statistics:
  2871 PDF objects out of 2984 (max. 8388607)
  955 named destinations out of 1000 (max. 500000)
