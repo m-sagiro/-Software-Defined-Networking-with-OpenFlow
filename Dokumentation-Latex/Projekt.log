@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  8 FEB 2022 22:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  9 FEB 2022 15:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1628,25 +1628,8 @@ Overfull \hbox (3.69641pt too wide) in paragraph at lines 1199--1200
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 1199--1200
-\T1/cmr/m/n/12 Nun be-nö-tigt der neue Host \T1/cmr/bx/it/12 h0 \T1/cmr/m/n/12 
-ei-
- []
-
-
-Underfull \hbox (badness 2012) in paragraph at lines 1199--1200
-\T1/cmr/m/n/12 Rou-te und einen neu-en Port an der
- []
-
-
-Underfull \hbox (badness 1742) in paragraph at lines 1199--1200
-\T1/cmr/m/n/12 dung von s1 und h0 aus-ge-führt. Als
- []
-
-
-Underfull \hbox (badness 2213) in paragraph at lines 1199--1200
-\T1/cmr/m/n/12 nächs-tes be-kommt \T1/cmr/bx/it/12 h0 \T1/cmr/m/n/12 die IP-Adr
-esse
+Underfull \hbox (badness 1221) in paragraph at lines 1199--1200
+\T1/cmr/m/n/12 einen Broad-cast, einen Default Rou-te,
  []
 
 [66 <./Bilder/neuetopo.png>]
@@ -1715,7 +1698,7 @@ s1200.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (101 pages, 7929780 bytes).
+Output written on Projekt.pdf (101 pages, 7930100 bytes).
 PDF statistics:
  2875 PDF objects out of 2984 (max. 8388607)
  956 named destinations out of 1000 (max. 500000)
