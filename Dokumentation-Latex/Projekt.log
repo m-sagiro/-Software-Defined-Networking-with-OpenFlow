@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  9 FEB 2022 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 21.12.10) (preloaded format=pdflatex 2021.12.14)  9 FEB 2022 17:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1211,13 +1211,13 @@ File: Bilder/mininet6.png Graphic file (type png)
 <use Bilder/mininet6.png>
 Package pdftex.def Info: Bilder/mininet6.png  used on input line 578.
 (pdftex.def)             Requested size: 448.13095pt x 44.68045pt.
- [26 <./Bilder/mininet4.png> <./Bilder/mininet5.png> <./Bilder/mininet6.png>]
-<Bilder/pingall.png, id=494, 1577.895pt x 1293.83376pt>
+ [26 <./Bilder/mininet4.png> <./Bilder/mininet5.png>]
+<Bilder/pingall.png, id=493, 1577.895pt x 1293.83376pt>
 File: Bilder/pingall.png Graphic file (type png)
 <use Bilder/pingall.png>
 Package pdftex.def Info: Bilder/pingall.png  used on input line 590.
 (pdftex.def)             Requested size: 448.13095pt x 367.44347pt.
- [27 <./Bilder/pingall.png>]
+ [27 <./Bilder/mininet6.png> <./Bilder/pingall.png>]
 Overfull \hbox (0.20499pt too wide) in paragraph at lines 607--608
 \T1/cmr/bx/it/12 Tunnel-Name mo-de gre lo-cal Schnitt-stel-le-Rou-ter-Lo-ka-ti-
 on-A re-mo-te Schnitt-
@@ -1675,7 +1675,7 @@ Package logreq Info: Writing requests to 'Projekt.run.xml'.
 Here is how much of TeX's memory you used:
  29990 strings out of 478659
  568621 string characters out of 2845919
- 1887800 words of memory out of 3000000
+ 1888800 words of memory out of 3000000
  46687 multiletter control sequences out of 15000+600000
  421259 words of font info for 69 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
@@ -1698,7 +1698,7 @@ s1200.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 c/dpi600\ecss2488.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfour/jkna
 ppen/ec/dpi600\ecbx1728.pk> <C:\Users\k42br\AppData\Local\MiKTeX\fonts/pk/ljfou
 r/jknappen/ec/dpi600\ecrm1200.pk>
-Output written on Projekt.pdf (100 pages, 7926614 bytes).
+Output written on Projekt.pdf (100 pages, 7926591 bytes).
 PDF statistics:
  2871 PDF objects out of 2984 (max. 8388607)
  955 named destinations out of 1000 (max. 500000)
